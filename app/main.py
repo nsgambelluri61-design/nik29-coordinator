@@ -635,4 +635,4 @@ FRONTEND_HTML = """<!DOCTYPE html>
 @app.get("/", response_class=HTMLResponse)
 async def frontend():
     """Serve il frontend della chat."""
-    return FRONTEND_HTML
+    return HTMLResponse(content=open("/app/static/index.html").read())
