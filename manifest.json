@@ -1,0 +1,15 @@
+{
+  "version": "0.6.0",
+  "release_date": "2026-06-17",
+  "download_url": "https://github.com/nsgambelluri61-design/nik29-coordinator/archive/refs/tags/v0.6.0.tar.gz",
+  "changelog": [
+    "Integrazione completa tutti i tool (21 totali)",
+    "Auto-update da GitHub con backup e rollback",
+    "WebSocket non-bloccante per chat real-time",
+    "Meta-tool create_tool per creare nuovi tool a runtime",
+    "Tool cognitivi (think, verify, retry, summary, reminder)",
+    "Self-improve con lessons learned e regole auto-imposte"
+  ],
+  "min_version": "0.5.0",
+  "checksum": ""
+}

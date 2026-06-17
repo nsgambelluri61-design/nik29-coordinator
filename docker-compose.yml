@@ -1,0 +1,28 @@
+services:
+  nik29-coordinator:
+    build: .
+    container_name: nik29-coordinator
+    restart: unless-stopped
+    ports:
+      - "4001:4001"
+    volumes:
+      - ./data/memory:/data/memory
+      - ./data/workspace:/data/workspace
+    env_file:
+      - .env
+    environment:
+      - WORKSPACE_DIR=/data/workspace
+      - MEMORY_DIR=/data/memory
+      - HOST_URL=http://localhost:4001
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4001/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - nik29-net
+
+networks:
+  nik29-net:
+    driver: bridge

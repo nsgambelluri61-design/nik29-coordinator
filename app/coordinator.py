@@ -1,0 +1,744 @@
+"""
+Coordinatore principale: gestisce la conversazione con l'utente,
+decide quando usare tool nativi o delegare a sub-agenti.
+Usa OpenAI function calling per decidere le azioni.
+
+v0.6.0 - Tool cognitivi, self-improve, auto-update, instructions, memory_v2
+"""
+
+import os
+import json
+import asyncio
+import logging
+from pathlib import Path
+from typing import AsyncGenerator, Optional
+from openai import AsyncOpenAI
+
+from app.memory import memory
+from app import memory_v2
+from app.agent_client import agent_client
+from app.tools.shell_tool import ShellTool
+from app.tools.web_tool import WebSearchTool
+from app.tools.file_tool import FileManagerTool
+from app.tools.delegate_tool import DelegateTool
+from app.tools.manus_tool import manus_tool
+from app.tools.create_tool import CreateToolTool
+from app.tools.think_tool import ThinkTool
+from app.tools.think_tool import TOOL_DEFINITION as THINK_TOOL_DEFINITION
+from app.tools.verify_tool import VerifyTool
+from app.tools.verify_tool import TOOL_DEFINITION as VERIFY_TOOL_DEFINITION
+from app.tools.retry_strategy_tool import RetryStrategyTool
+from app.tools.retry_strategy_tool import TOOL_DEFINITION as RETRY_STRATEGY_TOOL_DEFINITION
+from app.tools.conversation_summary_tool import ConversationSummaryTool
+from app.tools.conversation_summary_tool import TOOL_DEFINITION as CONVERSATION_SUMMARY_TOOL_DEFINITION
+from app.tools.reminder_tool import ReminderTool
+from app.tools.reminder_tool import TOOL_DEFINITION as REMINDER_TOOL_DEFINITION
+from app.tools.self_improve_tool import SelfImproveTool
+from app.tools.self_improve_tool import TOOL_DEFINITION as SELF_IMPROVE_TOOL_DEFINITION
+from app.tools.instructions_tool import InstructionsTool
+from app.tools.instructions_tool import TOOL_DEFINITION as INSTRUCTIONS_TOOL_DEFINITION
+from app.tools.auto_update_tool import auto_update_tool, AUTO_UPDATE_TOOL_DEFINITION
+
+logger = logging.getLogger("coordinator")
+
+# Carica system prompt dal file se esiste, altrimenti usa default
+SYSTEM_PROMPT_FILE = Path("/app/config/system_prompt.txt")
+if SYSTEM_PROMPT_FILE.exists():
+    SYSTEM_PROMPT = SYSTEM_PROMPT_FILE.read_text(encoding="utf-8")
+else:
+    SYSTEM_PROMPT = """Sei nik29, un coordinatore autonomo universale al servizio di Nicola.
+Rispondi in italiano. Usa i tool disponibili per completare i task.
+
+## Sub-agenti: {agents_info}
+## Tool custom: {custom_tools_info}
+## Memoria: {memory_context}
+## Lezioni: {lessons_context}
+## Regole: {rules_context}
+"""
+
+
+# Definizione dei tool per OpenAI function calling
+TOOLS_DEFINITION = [
+    {
+        "type": "function",
+        "function": {
+            "name": "shell",
+            "description": "Esegui un comando shell sul sistema. Utile per operazioni di sistema, listare file, controllare processi.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "command": {
+                        "type": "string",
+                        "description": "Il comando da eseguire (es. 'ls -la', 'cat file.txt', 'echo hello')"
+                    }
+                },
+                "required": ["command"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "web_search",
+            "description": "Cerca informazioni su internet. Restituisce risultati rilevanti.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "La query di ricerca"
+                    }
+                },
+                "required": ["query"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "file_manager",
+            "description": "Gestisci file nel workspace: leggi, scrivi, lista, elimina.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "action": {
+                        "type": "string",
+                        "enum": ["read", "write", "list", "delete", "info"],
+                        "description": "Azione da eseguire"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Percorso del file (relativo al workspace)"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "Contenuto da scrivere (solo per action=write)"
+                    }
+                },
+                "required": ["action"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "delegate_task",
+            "description": "Delega un task a un sub-agente specializzato. Usa per: editing immagini (resize, scontorno, compressione, info).",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "agent_name": {
+                        "type": "string",
+                        "description": "Nome del sub-agente (es. 'immagini')"
+                    },
+                    "instruction": {
+                        "type": "string",
+                        "description": "Istruzione dettagliata per il sub-agente"
+                    },
+                    "files": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string"},
+                                "url": {"type": "string"}
+                            }
+                        },
+                        "description": "File da passare al sub-agente"
+                    }
+                },
+                "required": ["agent_name", "instruction"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "save_memory",
+            "description": "Salva un fatto o una preferenza nella memoria a lungo termine.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["fact", "preference"],
+                        "description": "Tipo di informazione da salvare"
+                    },
+                    "key": {
+                        "type": "string",
+                        "description": "Chiave/categoria"
+                    },
+                    "value": {
+                        "type": "string",
+                        "description": "Il valore da memorizzare"
+                    }
+                },
+                "required": ["type", "key", "value"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "recall_memory",
+            "description": "Recupera informazioni dalla memoria a lungo termine.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "type": "string",
+                        "description": "Categoria da cercare (opzionale, vuoto per tutto)"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    # ASK_MANUS
+    {
+        "type": "function",
+        "function": {
+            "name": "ask_manus_propose",
+            "description": "Prepara una richiesta di aiuto per Manus (AI avanzata). NON esegue nulla - salva la proposta e chiede conferma all'utente.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "request": {
+                        "type": "string",
+                        "description": "Descrizione dettagliata di cosa chiedere a Manus."
+                    },
+                    "reason": {
+                        "type": "string",
+                        "description": "Perche' serve aiuto esterno"
+                    },
+                    "urgency": {
+                        "type": "string",
+                        "enum": ["low", "medium", "high"],
+                        "description": "Livello di urgenza"
+                    }
+                },
+                "required": ["request", "reason"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "ask_manus_execute",
+            "description": "Esegue una richiesta Manus precedentemente proposta, SOLO dopo conferma esplicita dell'utente.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "request_id": {
+                        "type": "string",
+                        "description": "ID della richiesta da eseguire (opzionale: se omesso, esegue l'ultima pendente)"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "ask_manus_pending",
+            "description": "Mostra le richieste Manus in attesa di conferma.",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
+    },
+    # CREATE_TOOL
+    {
+        "type": "function",
+        "function": {
+            "name": "create_tool_propose",
+            "description": "Proponi la creazione di un nuovo tool. NON crea nulla - prepara la proposta e chiede conferma.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Nome del tool (snake_case)"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Cosa fa il tool"
+                    },
+                    "capabilities": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Lista di azioni che il tool puo' fare"
+                    },
+                    "reason": {
+                        "type": "string",
+                        "description": "Perche' serve questo tool"
+                    }
+                },
+                "required": ["name", "description", "capabilities", "reason"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "create_tool_generate",
+            "description": "Genera e installa un tool precedentemente proposto. SOLO dopo conferma utente.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Nome del tool da generare"
+                    }
+                },
+                "required": ["name"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "create_tool_test",
+            "description": "Testa un tool custom appena creato.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Nome del tool da testare"
+                    }
+                },
+                "required": ["name"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "create_tool_list",
+            "description": "Elenca i tool custom registrati.",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
+    },
+]
+
+# Aggiungi tool cognitivi
+TOOLS_DEFINITION.append(THINK_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(VERIFY_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(RETRY_STRATEGY_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(CONVERSATION_SUMMARY_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(REMINDER_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(SELF_IMPROVE_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(INSTRUCTIONS_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(AUTO_UPDATE_TOOL_DEFINITION)
+
+
+class Coordinator:
+    """Coordinatore principale che gestisce la logica di decisione."""
+
+    def __init__(self):
+        self.client = AsyncOpenAI()
+        self.shell_tool = ShellTool()
+        self.web_tool = WebSearchTool()
+        self.file_tool = FileManagerTool()
+        self.delegate_tool = DelegateTool()
+        self.think_tool = ThinkTool()
+        self.verify_tool = VerifyTool()
+        self.retry_strategy_tool = RetryStrategyTool()
+        self.conversation_summary_tool = ConversationSummaryTool()
+        self.reminder_tool = ReminderTool()
+        self.self_improve_tool = SelfImproveTool()
+        self.instructions_tool = InstructionsTool()
+        self.create_tool = CreateToolTool()
+        # Queue per status updates durante operazioni lunghe
+        self._status_queue: Optional[asyncio.Queue] = None
+        # Tool custom
+        self._custom_tools: dict = {}
+        self._load_custom_tools()
+
+    async def _send_status(self, message: str):
+        """Callback per inviare status updates durante operazioni lunghe."""
+        if self._status_queue:
+            await self._status_queue.put(message)
+
+    def _load_custom_tools(self):
+        """Carica i tool custom dal registro e li aggiunge alle definizioni."""
+        try:
+            loaded = CreateToolTool.load_custom_tools()
+            for tool_data in loaded:
+                name = tool_data["name"]
+                self._custom_tools[name] = tool_data["instance"]
+                func_name = f"custom_{name}"
+                existing_names = [
+                    t["function"]["name"] for t in TOOLS_DEFINITION
+                    if t.get("function", {}).get("name")
+                ]
+                if func_name not in existing_names:
+                    TOOLS_DEFINITION.append(tool_data["definition"])
+                logger.info(f"Tool custom caricato: {name}")
+        except Exception as e:
+            logger.error(f"Errore caricamento tool custom: {e}")
+
+    def _safe_truncate_messages(self, messages: list, max_messages: int = 20) -> list:
+        """
+        Ritorna gli ultimi max_messages messaggi garantendo che la lista
+        non inizi con un messaggio di role 'tool' orfano.
+        """
+        truncated = messages[-max_messages:]
+        while truncated and truncated[0].get("role") == "tool":
+            truncated = truncated[1:]
+        return truncated
+
+    def reload_custom_tools(self):
+        """Ricarica i tool custom (chiamato dopo creazione di un nuovo tool)."""
+        global TOOLS_DEFINITION
+        TOOLS_DEFINITION[:] = [
+            t for t in TOOLS_DEFINITION
+            if not t.get("function", {}).get("name", "").startswith("custom_")
+        ]
+        self._custom_tools.clear()
+        self._load_custom_tools()
+
+    def _build_system_prompt(self) -> str:
+        """Costruisce il system prompt con contesto aggiornato."""
+        agents = agent_client.registry.list_agents()
+        agents_info = ""
+        for a in agents:
+            caps = ", ".join(a.get("capabilities", []))
+            agents_info += f"- **{a['name']}**: {a.get('description', '')} (capacita': {caps})\n"
+
+        if not agents_info:
+            agents_info = "Nessun sub-agente configurato al momento."
+
+        memory_context = memory.get_context_summary()
+
+        custom_tools_info = ""
+        if self._custom_tools:
+            for name, instance in self._custom_tools.items():
+                actions = instance.list_actions() if hasattr(instance, 'list_actions') else []
+                custom_tools_info += f"- **custom_{name}**: azioni: {', '.join(actions)}\n"
+        else:
+            custom_tools_info = "Nessun tool custom attivo."
+
+        # Contesto da memory_v2
+        lessons_context = memory_v2.get_lessons_context()
+        rules_context = memory_v2.get_rules_context()
+
+        return SYSTEM_PROMPT.format(
+            agents_info=agents_info,
+            memory_context=memory_context,
+            custom_tools_info=custom_tools_info,
+            lessons_context=lessons_context,
+            rules_context=rules_context
+        )
+
+    async def process_message(
+        self,
+        user_message: str,
+        conversation_id: str,
+        uploaded_files: list = None
+    ) -> AsyncGenerator[dict, None]:
+        """
+        Processa un messaggio utente e genera risposte in streaming.
+        Yield dizionari con tipo e contenuto per aggiornamenti real-time.
+
+        Event types: "chunk", "progress", "status", "response", "error", "done"
+        """
+        # Inizializza la queue per status updates
+        self._status_queue = asyncio.Queue()
+
+        # Carica conversazione precedente
+        messages = memory.load_conversation(conversation_id)
+
+        # System prompt
+        system_msg = {"role": "system", "content": self._build_system_prompt()}
+
+        # Gestisci file caricati
+        file_info = ""
+        if uploaded_files:
+            for f in uploaded_files:
+                file_info += f"\n[File caricato: {f.get('name', 'unknown')} -> workspace/{f.get('name', '')}]"
+
+        # Aggiungi messaggio utente
+        content = user_message + file_info
+        messages.append({"role": "user", "content": content})
+
+        # Loop di esecuzione tool (max 15 iterazioni per task complessi)
+        for iteration in range(15):
+            api_messages = [system_msg] + self._safe_truncate_messages(messages, max_messages=20)
+
+            try:
+                response = await self.client.chat.completions.create(
+                    model="gpt-4.1-mini",
+                    messages=api_messages,
+                    tools=TOOLS_DEFINITION,
+                    tool_choice="auto",
+                    temperature=0.7,
+                    max_tokens=2000
+                )
+            except Exception as e:
+                yield {"type": "error", "content": f"Errore comunicazione LLM: {str(e)}"}
+                return
+
+            choice = response.choices[0]
+
+            # Se il modello vuole chiamare tool
+            if choice.message.tool_calls:
+                assistant_msg = {
+                    "role": "assistant",
+                    "content": choice.message.content or "",
+                    "tool_calls": [
+                        {
+                            "id": tc.id,
+                            "type": "function",
+                            "function": {
+                                "name": tc.function.name,
+                                "arguments": tc.function.arguments
+                            }
+                        }
+                        for tc in choice.message.tool_calls
+                    ]
+                }
+                messages.append(assistant_msg)
+
+                # Esegui ogni tool call
+                for tool_call in choice.message.tool_calls:
+                    func_name = tool_call.function.name
+                    try:
+                        args = json.loads(tool_call.function.arguments)
+                    except json.JSONDecodeError:
+                        args = {}
+
+                    # Notifica progresso
+                    yield {"type": "progress", "content": self._progress_message(func_name, args)}
+
+                    # Esegui il tool con status updates
+                    exec_task = asyncio.create_task(self._execute_tool(func_name, args))
+
+                    # Yield status updates dalla queue durante l'esecuzione
+                    while not exec_task.done():
+                        try:
+                            status_msg = await asyncio.wait_for(
+                                self._status_queue.get(), timeout=1.0
+                            )
+                            yield {"type": "status", "content": status_msg}
+                        except asyncio.TimeoutError:
+                            continue
+
+                    # Recupera risultato
+                    result = exec_task.result()
+
+                    # Svuota status residui
+                    while not self._status_queue.empty():
+                        try:
+                            status_msg = self._status_queue.get_nowait()
+                            yield {"type": "status", "content": status_msg}
+                        except asyncio.QueueEmpty:
+                            break
+
+                    # Aggiungi risultato alla conversazione
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool_call.id,
+                        "content": result
+                    })
+
+            else:
+                # Risposta finale senza tool call
+                final_content = choice.message.content or ""
+                messages.append({"role": "assistant", "content": final_content})
+
+                # Salva conversazione
+                memory.save_conversation(conversation_id, messages)
+
+                yield {"type": "response", "content": final_content}
+                return
+
+        # Se arriviamo qui, troppe iterazioni
+        yield {"type": "response", "content": "Ho completato le operazioni richieste. Se serve altro, dimmi pure."}
+        memory.save_conversation(conversation_id, messages)
+
+    def _progress_message(self, func_name: str, args: dict) -> str:
+        """Genera un messaggio di progresso per l'utente."""
+        progress_map = {
+            "delegate_task": lambda a: f"Delegando a agente **{a.get('agent_name', 'sconosciuto').capitalize()}**...",
+            "shell": lambda a: f"Eseguo comando: `{a.get('command', '')}`",
+            "web_search": lambda a: f"Cerco: \"{a.get('query', '')}\"",
+            "file_manager": lambda a: f"File: {a.get('action', '')} {a.get('path', '')}",
+            "save_memory": lambda a: "Salvo nella memoria...",
+            "recall_memory": lambda a: "Recupero dalla memoria...",
+            "ask_manus_propose": lambda a: "Preparo una richiesta per Manus...",
+            "ask_manus_execute": lambda a: "Invio richiesta a Manus (puo' richiedere qualche minuto)...",
+            "ask_manus_pending": lambda a: "Controllo richieste Manus pendenti...",
+            "create_tool_propose": lambda a: "Propongo la creazione di un nuovo tool...",
+            "create_tool_generate": lambda a: "Genero il codice del nuovo tool...",
+            "create_tool_test": lambda a: "Testo il nuovo tool...",
+            "create_tool_list": lambda a: "Elenco tool custom...",
+            "think": lambda a: f"Pianifico: {a.get('action', '')}...",
+            "verify": lambda a: "Verifico il risultato...",
+            "retry_strategy": lambda a: "Valuto strategia di retry...",
+            "conversation_summary": lambda a: "Riassumo la conversazione...",
+            "reminder": lambda a: f"Promemoria: {a.get('action', '')}...",
+            "self_improve": lambda a: f"Auto-miglioramento: {a.get('action', '')}...",
+            "instructions": lambda a: f"Istruzioni: {a.get('action', '')}...",
+            "auto_update": lambda a: f"Auto-update: {a.get('action', '')}...",
+        }
+
+        handler = progress_map.get(func_name)
+        if handler:
+            return handler(args)
+
+        if func_name.startswith("custom_"):
+            tool_name = func_name.replace("custom_", "")
+            action = args.get("action", "")
+            return f"Tool custom `{tool_name}`: {action}..."
+
+        return f"Eseguo {func_name}..."
+
+    async def _execute_tool(self, name: str, args: dict) -> str:
+        """Esegue un tool e restituisce il risultato come stringa."""
+        try:
+            if name == "shell":
+                return await self.shell_tool.execute(args.get("command", ""))
+            elif name == "web_search":
+                return await self.web_tool.execute(args.get("query", ""))
+            elif name == "file_manager":
+                return await self.file_tool.execute(
+                    action=args.get("action", "list"),
+                    path=args.get("path"),
+                    content=args.get("content")
+                )
+            elif name == "delegate_task":
+                result = await self.delegate_tool.execute(
+                    agent_name=args.get("agent_name", ""),
+                    instruction=args.get("instruction", ""),
+                    files=args.get("files")
+                )
+                success = "completed" in result.lower() or "successo" in result.lower()
+                memory.log_delegation(
+                    args.get("agent_name", ""),
+                    args.get("instruction", ""),
+                    result,
+                    success
+                )
+                return result
+            elif name == "save_memory":
+                mem_type = args.get("type", "fact")
+                key = args.get("key", "general")
+                value = args.get("value", "")
+                if mem_type == "preference":
+                    return memory.save_preference(key, value)
+                else:
+                    return memory.save_fact(value, category=key)
+            elif name == "recall_memory":
+                category = args.get("category")
+                facts = memory.recall_facts(category=category)
+                if facts:
+                    return json.dumps(facts, ensure_ascii=False, indent=2)
+                return "Nessun ricordo trovato per questa categoria."
+            # ASK_MANUS
+            elif name == "ask_manus_propose":
+                return manus_tool.propose(
+                    request=args.get("request", ""),
+                    reason=args.get("reason", ""),
+                    urgency=args.get("urgency", "medium")
+                )
+            elif name == "ask_manus_execute":
+                return await manus_tool.execute(
+                    request_id=args.get("request_id"),
+                    status_callback=self._send_status
+                )
+            elif name == "ask_manus_pending":
+                return manus_tool.get_pending()
+            # CREATE_TOOL
+            elif name == "create_tool_propose":
+                return self.create_tool.propose(
+                    name=args.get("name", ""),
+                    description=args.get("description", ""),
+                    capabilities=args.get("capabilities", []),
+                    reason=args.get("reason", "")
+                )
+            elif name == "create_tool_generate":
+                return await self.create_tool.generate(name=args.get("name", ""))
+            elif name == "create_tool_test":
+                result = await self.create_tool.test(name=args.get("name", ""))
+                if "ATTIVATO" in result:
+                    self.reload_custom_tools()
+                return result
+            elif name == "create_tool_list":
+                return self.create_tool.list_custom()
+            # TOOL COGNITIVI
+            elif name == "think":
+                return await self.think_tool.execute(
+                    action=args.get("action", "plan"),
+                    task=args.get("task"),
+                    plan_id=args.get("plan_id")
+                )
+            elif name == "verify":
+                return await self.verify_tool.execute(
+                    action=args.get("action", "check"),
+                    result_text=args.get("result_text"),
+                    context=args.get("context")
+                )
+            elif name == "retry_strategy":
+                return await self.retry_strategy_tool.execute(
+                    action=args.get("action", "evaluate"),
+                    error_description=args.get("error_description"),
+                    attempt_number=args.get("attempt_number", 1),
+                    context=args.get("context")
+                )
+            elif name == "conversation_summary":
+                return await self.conversation_summary_tool.execute(
+                    action=args.get("action", "summarize"),
+                    messages=args.get("messages"),
+                    conversation_id=args.get("conversation_id")
+                )
+            elif name == "reminder":
+                return await self.reminder_tool.execute(
+                    action=args.get("action", "list"),
+                    text=args.get("text"),
+                    due_date=args.get("due_date"),
+                    reminder_id=args.get("reminder_id")
+                )
+            elif name == "self_improve":
+                return await self.self_improve_tool.execute(
+                    action=args.get("action", "reflect"),
+                    task_description=args.get("task_description"),
+                    outcome=args.get("outcome"),
+                    rule=args.get("rule")
+                )
+            elif name == "instructions":
+                return await self.instructions_tool.execute(
+                    action=args.get("action", "read"),
+                    section=args.get("section"),
+                    content=args.get("content")
+                )
+            elif name == "auto_update":
+                return await auto_update_tool.execute(
+                    action=args.get("action", "status")
+                )
+            # CUSTOM TOOLS
+            elif name.startswith("custom_"):
+                tool_name = name.replace("custom_", "")
+                if tool_name in self._custom_tools:
+                    instance = self._custom_tools[tool_name]
+                    action = args.get("action", "")
+                    params = args.get("params", {})
+                    return await instance.execute(action, **params)
+                else:
+                    return f"Tool custom '{tool_name}' non trovato o non attivo."
+            else:
+                return f"Tool '{name}' non riconosciuto."
+        except Exception as e:
+            return f"Errore nell'esecuzione di {name}: {str(e)}"
+
+
+# Singleton
+coordinator = Coordinator()
