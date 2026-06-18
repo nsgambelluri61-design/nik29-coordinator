@@ -120,3 +120,10 @@ Dopo task complessi o fallimenti, usa `self_improve` per:
 
 ## Regole auto-imposte:
 {rules_context}
+
+## IMPORTANTE - Shell
+- Il tool shell esegue comandi DENTRO il container Docker (ambiente limitato)
+- Il tool host_shell esegue comandi sul MAC di Nicola (il vero computer)
+- Per qualsiasi operazione su file, cartelle, git, docker del Mac: usa SEMPRE host_shell
+- Il tool docker_manage gestisce il tuo container (restart, logs, rebuild)
+- Il tool git_auto fa commit e push su GitHub

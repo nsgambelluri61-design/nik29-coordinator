@@ -39,6 +39,10 @@ from app.tools.self_improve_tool import TOOL_DEFINITION as SELF_IMPROVE_TOOL_DEF
 from app.tools.instructions_tool import InstructionsTool
 from app.tools.instructions_tool import TOOL_DEFINITION as INSTRUCTIONS_TOOL_DEFINITION
 from app.tools.auto_update_tool import auto_update_tool, AUTO_UPDATE_TOOL_DEFINITION
+from app.tools.host_tools import (
+    HostShellTool, DockerManageTool, GitAutoTool,
+    HOST_SHELL_TOOL_DEFINITION, DOCKER_MANAGE_TOOL_DEFINITION, GIT_AUTO_TOOL_DEFINITION
+)
 
 logger = logging.getLogger("coordinator")
 
@@ -339,6 +343,9 @@ TOOLS_DEFINITION.append(REMINDER_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(SELF_IMPROVE_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(INSTRUCTIONS_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(AUTO_UPDATE_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(HOST_SHELL_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(DOCKER_MANAGE_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(GIT_AUTO_TOOL_DEFINITION)
 
 
 class Coordinator:
@@ -346,6 +353,9 @@ class Coordinator:
 
     def __init__(self):
         self.client = AsyncOpenAI(timeout=180.0)
+        self.host_shell_tool = HostShellTool()
+        self.docker_manage_tool = DockerManageTool()
+        self.git_auto_tool = GitAutoTool()
         self.shell_tool = ShellTool()
         self.web_tool = WebSearchTool()
         self.file_tool = FileManagerTool()
@@ -762,6 +772,24 @@ class Coordinator:
             elif name == "auto_update":
                 return await auto_update_tool.execute(
                     action=args.get("action", "status")
+                )
+            elif name == "host_shell":
+                return await self.host_shell_tool.execute(
+                    command=args.get("command", ""),
+                    timeout=args.get("timeout", 30),
+                    cwd=args.get("cwd")
+                )
+            elif name == "docker_manage":
+                return await self.docker_manage_tool.execute(
+                    action=args.get("action", "status"),
+                    lines=args.get("lines", 50)
+                )
+            elif name == "git_auto":
+                return await self.git_auto_tool.execute(
+                    action=args.get("action", "status"),
+                    message=args.get("message"),
+                    files=args.get("files"),
+                    count=args.get("count", 10)
                 )
             # CUSTOM TOOLS
             elif name.startswith("custom_"):

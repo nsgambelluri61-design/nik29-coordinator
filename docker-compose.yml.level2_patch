@@ -1,0 +1,9 @@
+
+# === LEVEL 2 AUTONOMY PATCH ===
+# Aggiungere dentro il servizio nik29-coordinator:
+#
+#     extra_hosts:
+#       - "host.docker.internal:host-gateway"
+#     environment:
+#       - HOST_BRIDGE_URL=http://host.docker.internal:4002
+#       - HOST_PROJECT_DIR=/Users/nicolasgambelluri/Downloads/nik29-coordinator-v0.6.0
