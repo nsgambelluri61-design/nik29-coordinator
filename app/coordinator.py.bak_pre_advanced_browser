@@ -50,9 +50,6 @@ from app.tools.scheduler_tools import SCHEDULER_TOOLS, SCHEDULER_TOOL_HANDLERS
 from app.tools.web_tools import WEB_TOOLS, WEB_TOOL_HANDLERS
 from app.monitoring.monitor import create_monitor_task
 from app.tools.browser_tools import BROWSER_TOOLS, BROWSER_TOOL_HANDLERS
-from app.tools.web_agent import WEB_AGENT_TOOL_DEFINITION, execute_web_agent
-from app.tools.screenshot_analyzer import ANALYZE_SCREENSHOT_TOOL_DEFINITION, execute_analyze_screenshot
-from app.routing.model_router import route_model
 from app.scheduler.scheduler import start_scheduler
 
 logger = logging.getLogger("coordinator")
@@ -348,8 +345,6 @@ TOOLS_DEFINITION = [
     *SCHEDULER_TOOLS,
     *WEB_TOOLS,
     *BROWSER_TOOLS,
-    WEB_AGENT_TOOL_DEFINITION,
-    ANALYZE_SCREENSHOT_TOOL_DEFINITION,
 ]
 
 # Aggiungi tool cognitivi
@@ -538,7 +533,7 @@ class Coordinator:
 
             try:
                 response = await self.client.chat.completions.create(
-                    model=route_model(user_message=user_message, message_history=messages),
+                    model="gpt-4.1-mini",
                     messages=api_messages,
                     tools=TOOLS_DEFINITION,
                     tool_choice="auto",
@@ -656,8 +651,6 @@ class Coordinator:
             "self_improve": lambda a: f"Auto-miglioramento: {a.get('action', '')}...",
             "instructions": lambda a: f"Istruzioni: {a.get('action', '')}...",
             "auto_update": lambda a: f"Auto-update: {a.get('action', '')}...",
-        "web_agent": lambda a: f"Navigazione autonoma: {a.get('goal', '')}...",
-        "analyze_screenshot": lambda a: "Analizzo screenshot visivamente...",
         }
 
         handler = progress_map.get(func_name)
@@ -828,46 +821,6 @@ class Coordinator:
             elif name in BROWSER_TOOL_HANDLERS:
                 handler = BROWSER_TOOL_HANDLERS[name]
                 return str(await handler(**args))
-
-            # === Advanced Browser Tools ===
-            elif name == "web_agent":
-                from app.tools.browser_tools import BROWSER_TOOL_HANDLERS as _bt_handlers
-                import base64, os
-                async def _screenshot_base64():
-                    page = await browser_manager.get_new_page()
-                    img_bytes = await page.screenshot(full_page=False)
-                    await page.close()
-                    return base64.b64encode(img_bytes).decode('utf-8')
-                browser_fns = {
-                    'browser_navigate': lambda url, **kw: _bt_handlers['browser_navigate'](url),
-                    'browser_click': lambda selector, **kw: _bt_handlers['browser_click'](selector),
-                    'browser_fill': lambda selector, text, **kw: _bt_handlers['browser_fill'](selector, text),
-                    'browser_screenshot': _screenshot_base64,
-                    'browser_evaluate': lambda expression, **kw: _bt_handlers['browser_evaluate'](expression),
-                }
-                result = await execute_web_agent(
-                    goal=args.get('goal', ''),
-                    start_url=args.get('start_url'),
-                    max_steps=args.get('max_steps', 10),
-                    browser_tools=browser_fns,
-                    screenshot_analyzer_fn=lambda img, q: execute_analyze_screenshot(question=q, screenshot_base64=img),
-                )
-                return json.dumps(result, ensure_ascii=False)
-
-            elif name == "analyze_screenshot":
-                from app.tools.browser_tools import browser_manager
-                import base64
-                async def _take_screenshot_b64():
-                    page = await browser_manager.get_new_page()
-                    img_bytes = await page.screenshot(full_page=False)
-                    await page.close()
-                    return base64.b64encode(img_bytes).decode('utf-8')
-                result = await execute_analyze_screenshot(
-                    question=args.get('question', ''),
-                    screenshot_base64=args.get('screenshot_base64'),
-                    browser_screenshot_fn=_take_screenshot_b64,
-                )
-                return json.dumps(result, ensure_ascii=False)
             # CUSTOM TOOLS
             elif name.startswith("custom_"):
                 tool_name = name.replace("custom_", "")
