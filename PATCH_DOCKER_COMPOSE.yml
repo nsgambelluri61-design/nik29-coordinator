@@ -1,0 +1,43 @@
+# =============================================================================
+# PATCH INSTRUCTIONS FOR docker-compose.yml
+# =============================================================================
+# Add these sections to your existing docker-compose.yml for the coordinator service.
+# DO NOT replace the file — merge these additions.
+# =============================================================================
+
+# --- ADD to 'environment' section of the coordinator service: ---
+#
+#   environment:
+#     - BRAVE_API_KEY=${BRAVE_API_KEY:-your_brave_api_key_here}
+#     - MONITOR_SITE_URL=https://ildormire.com
+#     - HOST_BRIDGE_URL=http://host.docker.internal:4003
+#     # TELEGRAM_BOT_TOKEN and TELEGRAM_ALLOWED_USER_ID should already be there
+
+# --- ADD to 'volumes' section of the coordinator service: ---
+#
+#   volumes:
+#     - ./data/monitoring:/data/monitoring
+#     - ./data/scheduler:/data/scheduler
+#     # ... keep existing volumes
+
+# --- FULL EXAMPLE (merge with yours): ---
+
+# services:
+#   coordinator:
+#     build: .
+#     ports:
+#       - "4001:4001"
+#     environment:
+#       - OPENAI_API_KEY=${OPENAI_API_KEY}
+#       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+#       - TELEGRAM_ALLOWED_USER_ID=${TELEGRAM_ALLOWED_USER_ID:-7072645786}
+#       - BRAVE_API_KEY=${BRAVE_API_KEY:-}
+#       - MONITOR_SITE_URL=https://ildormire.com
+#       - HOST_BRIDGE_URL=http://host.docker.internal:4003
+#     volumes:
+#       - ./data:/data
+#       - ./data/monitoring:/data/monitoring
+#       - ./data/scheduler:/data/scheduler
+#     extra_hosts:
+#       - "host.docker.internal:host-gateway"
+#     restart: unless-stopped

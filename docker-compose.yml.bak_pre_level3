@@ -11,8 +11,6 @@ services:
       - ./data/memory:/data/memory
       - ./data/workspace:/data/workspace
       - ./config:/app/config
-      - ./data/monitoring:/data/monitoring
-      - ./data/scheduler:/data/scheduler
     env_file:
       - .env
     environment:
@@ -21,8 +19,6 @@ services:
       - HOST_URL=http://localhost:4001
       - HOST_BRIDGE_URL=http://host.docker.internal:4003
       - HOST_PROJECT_DIR=/Users/nicolasgambelluri/Downloads/nik29-coordinator-v0.6.0
-      - BRAVE_API_KEY=${BRAVE_API_KEY:-}
-      - MONITOR_SITE_URL=https://ildormire.com
     healthcheck:
       test: [CMD, curl, -f, http://localhost:4001/health]
       interval: 30s
