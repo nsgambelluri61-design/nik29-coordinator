@@ -14,7 +14,6 @@ build/
 env/
 
 # Data (creato a runtime)
-data/
 
 # IDE
 .idea/

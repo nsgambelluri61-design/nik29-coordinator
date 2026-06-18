@@ -1,0 +1,13 @@
+{
+  "reminders": [
+    {
+      "id": "rem_20260618_160534",
+      "text": "Controllare i log",
+      "due": "2026-06-18T17:05:34.798452",
+      "priority": "medium",
+      "status": "active",
+      "created_at": "2026-06-18T16:05:34.798569",
+      "completed_at": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "a47261c5-888c-4d92-8f70-be0e2ddd298c",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mi riferivo al monolite ed al orchestratore coordinatore"
+    },
+    {
+      "role": "assistant",
+      "content": "Ti riferisci al concetto di monolite e orchestratore/coordinatore in ambito software o sistemi? Vuoi che ti spieghi la differenza o come gestire uno rispetto all'altro?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:27:24.848245+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "878df6a8-9f8f-4423-830b-3c70bf9ce762",
+  "messages": [
+    {
+      "role": "user",
+      "content": "imposta un reminder: tra 5 minuti ricordami di controllare i log"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_9uOLATBuK6iyKyRY3iI1dZkj",
+          "type": "function",
+          "function": {
+            "name": "reminder",
+            "arguments": "{\"action\":\"add\",\"text\":\"Controllare i log\",\"due\":\"tra 5 minuti\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_9uOLATBuK6iyKyRY3iI1dZkj",
+      "content": "PROMEMORIA AGGIUNTO:\n  ID: rem_20260618_160534\n  Testo: Controllare i log\n  Scadenza: 2026-06-18 17:05\n  Priorità: medium"
+    },
+    {
+      "role": "assistant",
+      "content": "Fatto, ti ricorderò tra 5 minuti di controllare i log."
+    }
+  ],
+  "updated_at": "2026-06-18T16:05:39.038418+00:00"
+}

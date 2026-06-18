@@ -1,0 +1,14 @@
+{
+  "conversation_id": "f62bb5b9-44b9-4567-8401-99f2aba51418",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao, chi sei?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Sono nik29, il tuo assistente digitale autonomo e universale al servizio di Nicola. Posso aiutarti con programmazione, ricerca, gestione file, automazioni e molto altro. Sono qui per facilitarti qualsiasi esigenza digitale in modo intelligente, efficiente e proattivo. Come posso aiutarti oggi?"
+    }
+  ],
+  "updated_at": "2026-06-17T16:46:17.835954+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "e67ed9ec-c17b-4c00-b64b-00cf55a97195",
+  "messages": [
+    {
+      "role": "user",
+      "content": "fai uno screenshot della pagina corrente nel browser"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_Q3nrvI0L7pltFIegV850wJWs",
+          "type": "function",
+          "function": {
+            "name": "browser_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_Q3nrvI0L7pltFIegV850wJWs",
+      "content": "Screenshot salvato in: /app/screenshot_260414.826395914.png"
+    },
+    {
+      "role": "assistant",
+      "content": "Ho fatto lo screenshot della pagina corrente e l'ho salvato. Vuoi che te lo invii o lo analizzi?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:06:21.329023+00:00"
+}

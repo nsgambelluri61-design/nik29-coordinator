@@ -1,0 +1,33 @@
+{
+  "conversation_id": "62761ce0-386f-40f4-ac89-f20cef04e562",
+  "messages": [
+    {
+      "role": "user",
+      "content": "puoi controllarti ?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_tBodh8c33s3kVkjCV3rXs5Xs",
+          "type": "function",
+          "function": {
+            "name": "health_check",
+            "arguments": "{\"check_type\":\"all\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_tBodh8c33s3kVkjCV3rXs5Xs",
+      "content": "{'timestamp': '2026-06-18T15:43:32.739149+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error': None}, 'docker': {'containers': [], 'count': 0, 'bridge_reachable': False}, 'disk': {'root_usage': 'unknown', 'warning': False}, 'memory': {'raw': 'unavailable', 'bridge_reachable': False}}, 'overall_status': 'degraded'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Il sito ildormire.com risponde correttamente (status 200). Però il sistema Docker sul Mac host non è raggiungibile e la memoria non è disponibile, quindi c'è un problema sul sistema locale che potrebbe limitare alcune funzioni. Vuoi che cerchi di risolverlo?"
+    }
+  ],
+  "updated_at": "2026-06-18T15:43:35.285313+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "preferences": {
+    "pref_language": {
+      "value": "Language: always Italian, informal ('tu', not 'lei')"
+    },
+    "pref_communication_style": {
+      "value": "Communication: direct, no unnecessary questions, act first then report"
+    },
+    "pref_instructions": {
+      "value": "Instructions: one command at a time, simple and clear"
+    },
+    "pref_security": {
+      "value": "Security: never access personal data, never use browser, work from server/sandbox"
+    },
+    "pref_deploy_isolation": {
+      "value": "Deploy: NEVER deploy multiple changes together. Test each one individually."
+    },
+    "pref_deploy_verification": {
+      "value": "Before any deploy: verify server starts and APIs respond"
+    },
+    "pref_rollback": {
+      "value": "If deploy breaks something: rollback first, analyze later"
+    },
+    "pref_action_over_asking": {
+      "value": "Prefer action over asking permission — do it, then tell him what you did"
+    },
+    "pref_multiple_tasks": {
+      "value": "When multiple tasks are given: proceed autonomously, update only at the end with results"
+    },
+    "pref_jargon": {
+      "value": "No technical jargon unless explaining something he asked about"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "e3fcbea0-198d-4106-8b3b-33d3184e038d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quale la differenza tra gpt4.1 e gpt4.1mini"
+    },
+    {
+      "role": "assistant",
+      "content": "La differenza principale tra GPT-4.1 e GPT-4.1-mini sta nelle capacità e risorse:\n\n- GPT-4.1 è la versione completa, più potente, con risposte più accurate e complesse, ma richiede più risorse e costa di più.\n- GPT-4.1-mini è una versione ridotta, più leggera, più veloce e meno costosa, ma con capacità leggermente inferiori, adatta a risposte più semplici o a risparmiare risorse.\n\nIn pratica, il mini è un compromesso tra qualità e prestazioni/costi."
+    }
+  ],
+  "updated_at": "2026-06-18T16:20:45.480278+00:00"
+}

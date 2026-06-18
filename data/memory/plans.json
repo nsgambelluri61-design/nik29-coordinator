@@ -1,0 +1,57 @@
+{
+  "plans": [
+    {
+      "id": "plan_20260618_160519",
+      "task": "pianificare una strategia di retry per un'operazione di rete che fallisce intermittentemente",
+      "context": "",
+      "created_at": "2026-06-18T16:05:19.262510",
+      "status": "active",
+      "steps": [
+        {
+          "n": 1,
+          "action": "ANALIZZA",
+          "description": "Comprendi il task: pianificare una strategia di retry per un'operazione di rete che fallisce intermittentemente",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "n": 2,
+          "action": "VERIFICA_PREREQUISITI",
+          "description": "Controlla che tutti i dati e le risorse necessarie siano disponibili",
+          "status": "pending",
+          "dependencies": [
+            1
+          ]
+        },
+        {
+          "n": 3,
+          "action": "ESEGUI",
+          "description": "Esegui l'azione principale per: pianificare una strategia di retry per un'operazione di rete che fallisce intermittentemente",
+          "status": "pending",
+          "dependencies": [
+            2
+          ]
+        },
+        {
+          "n": 4,
+          "action": "VERIFICA_RISULTATO",
+          "description": "Verifica che il risultato sia corretto e completo",
+          "status": "pending",
+          "dependencies": [
+            3
+          ]
+        },
+        {
+          "n": 5,
+          "action": "COMUNICA",
+          "description": "Comunica il risultato all'utente",
+          "status": "pending",
+          "dependencies": [
+            4
+          ]
+        }
+      ],
+      "current_step": 0
+    }
+  ]
+}

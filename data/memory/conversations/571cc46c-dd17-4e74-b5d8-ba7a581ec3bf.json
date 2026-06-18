@@ -1,0 +1,33 @@
+{
+  "conversation_id": "571cc46c-dd17-4e74-b5d8-ba7a581ec3bf",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mostra le lezioni apprese finora"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_yST6hd5HIV6ZSnMBne7Ewf5Q",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{\"category\":\"Lezioni Apprese\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_yST6hd5HIV6ZSnMBne7Ewf5Q",
+      "content": "Nessun ricordo trovato per questa categoria."
+    },
+    {
+      "role": "assistant",
+      "content": "Al momento non ho lezioni apprese salvate esplicitamente come categoria \"Lezioni Apprese\" in memoria. Vuoi che ti mostri comunque gli appunti importanti o le regole che ho registrato finora?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:12.333297+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "0dc598f7-9843-45be-b1a6-8a91b03c09ff",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca su internet i prezzi dei materassi Emma Sleep\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_4es2vefKivvZRddojDakibUx",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"num_pages\":3,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_4es2vefKivvZRddojDakibUx",
+      "content": "{'error': 'Search failed: Brave API error (HTTP 422): {\"type\":\"ErrorResponse\",\"error\":{\"id\":\"d8b4b8e0-629c-47a8-a142-ad105f240640\",\"status\":422,\"detail\":\"The provided subscription token is invalid.\",\"meta\":{\"component\":\"authentication\"},\"code\":\"SUBSCRIPT'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Errore: non riesco a cercare online perché l’accesso alle ricerche web è bloccato (token non valido). Serve aggiornare la configurazione di Brave Search per sbloccare le ricerche. Vuoi che ti avvisi appena è risolto?"
+    }
+  ],
+  "updated_at": "2026-06-18T17:27:24.531743+00:00"
+}

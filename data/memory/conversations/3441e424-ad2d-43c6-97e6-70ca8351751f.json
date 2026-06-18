@@ -1,0 +1,33 @@
+{
+  "conversation_id": "3441e424-ad2d-43c6-97e6-70ca8351751f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "usa browser_navigate per andare su https://example.com"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_GYm4XZu9ODJWAkDw5qVgins0",
+          "type": "function",
+          "function": {
+            "name": "browser_navigate",
+            "arguments": "{\"url\":\"https://example.com\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_GYm4XZu9ODJWAkDw5qVgins0",
+      "content": "Contenuto estratto da https://example.com:\nExample DomainThis domain is for use in documentation examples without needing permission. Avoid use in operations.Learn more\n..."
+    },
+    {
+      "role": "assistant",
+      "content": "Sono andato su https://example.com e ho trovato la pagina di esempio con il testo \"Example Domain\" e una breve descrizione che dice che questo dominio serve per esempi e documentazione. Vuoi che faccia qualcosa di specifico su questa pagina?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:06:17.378398+00:00"
+}

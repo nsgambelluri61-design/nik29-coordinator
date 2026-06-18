@@ -1,0 +1,33 @@
+{
+  "conversation_id": "7f31066a-ef25-4fc1-8099-7ca572ee2518",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca su internet i prezzi dei materassi Emma Sleep\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_7eQuxVdban5eLUMCJ8XYsjts",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"num_pages\":3,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_7eQuxVdban5eLUMCJ8XYsjts",
+      "content": "{'error': 'Search failed: Brave API error (HTTP 422): {\"type\":\"ErrorResponse\",\"error\":{\"id\":\"6de827f2-cd31-42d6-bdbf-14809e0418ee\",\"status\":422,\"detail\":\"The provided subscription token is invalid.\",\"meta\":{\"component\":\"authentication\"},\"code\":\"SUBSCRIPT'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Errore: non riesco a cercare online i prezzi dei materassi Emma Sleep per un problema temporaneo con la ricerca web. Appena risolto riprovo, oppure posso cercare manualmente su siti specifici se vuoi."
+    }
+  ],
+  "updated_at": "2026-06-18T17:29:43.486959+00:00"
+}

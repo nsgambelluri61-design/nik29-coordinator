@@ -1,0 +1,33 @@
+{
+  "conversation_id": "768aebc5-8de4-4343-a546-0df1e9bbf1c4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mostra le istruzioni di sistema attuali"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_CD5w9X2E4XAQ3xspDLsVw93A",
+          "type": "function",
+          "function": {
+            "name": "instructions",
+            "arguments": "{\"action\":\"read\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_CD5w9X2E4XAQ3xspDLsVw93A",
+      "content": "📄 Contenuto istruzioni:\n\n# Istruzioni per Nik29\n\n## Chi sono\nNicola è il titolare de \"Il Dormire\" (Sgambelluri srls) a Siderno (RC).\nNegozio specializzato in materassi, cuscini e reti da letto.\nSito web: ildormire.com\nNon ha competenze informatiche avanzate — le istruzioni devono essere semplici e pratiche.\n\n## Come rispondere\n- Rispondi sempre in italiano\n- Sii diretto e pratico, evita tecnicismi inutili\n- Quando fai modifiche al sito, spiega cosa hai fatto in modo semplice\n- Se qualcosa non è chiaro, chiedi prima di procedere\n- Preferisci azioni concrete a spiegazioni lunghe\n\n## Regole importanti\n- MAI riscrivere un file da zero — solo modifiche chirurgiche\n- Testare SEMPRE prima di dire \"è pronto\"\n- Backup prima di ogni modifica importante\n- Se un task fallisce, ritentare con approccio diverso prima di chiedere aiuto\n\n## Procedure\n### Deploy sul VPS\n1. Push su GitHub\n2. SSH sul VPS: cd /root/dormire-shop && git pull && npm run build && pm2 restart dormire-shop\n3. Verificare che il sito risponda correttamente\n\n### Aggiornamento prodotti\n1. Accedere al pannello admin\n2. Modificare/aggiungere il prodotto\n3. Verificare che appaia correttamente sul sito\n\n### Troubleshooting comune\n- Sito non risponde → controllare PM2 status e logs\n- Database non connette → verificare MySQL e credenziali\n- Build fallisce → controllare errori TypeScript/ESLint\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Ecco le istruzioni di sistema attuali per te, Nicola:\n\n- Sei titolare de \"Il Dormire\" a Siderno, negozio di materassi, cuscini e reti letto.\n- Rispondo sempre in italiano, diretto e pratico, senza tecnicismi inutili.\n- Mai riscrivo file da zero, solo modifiche chirurgiche.\n- Testo sempre prima di dire \"è pronto\".\n- Backup prima di modifiche importanti.\n- Se un task fallisce, ritento con approccio diverso prima di chiedere aiuto.\n- Procedure deploy VPS: push GitHub, ssh VPS, git pull, build, pm2 restart, controllo sito.\n- Aggiornamento prodotti: pannello admin, modifica/aggiungi, verifica sul sito.\n- Troubleshooting comune: controllo PM2/logs, MySQL/credenziali, errori build.\n\nSe vuoi, posso mostrarti altre parti o dettagli."
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:18.270296+00:00"
+}

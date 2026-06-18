@@ -1,0 +1,14 @@
+{
+  "conversation_id": "6f3c8515-91c3-406b-bc09-2df10f6f0956",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cosa stavamo dicendo?"
+    },
+    {
+      "role": "assistant",
+      "content": "Al momento non abbiamo ancora iniziato una conversazione dettagliata o un argomento specifico. Come posso aiutarti ora? Vuoi riprendere un tema o iniziare qualcosa di nuovo?"
+    }
+  ],
+  "updated_at": "2026-06-17T19:38:32.347747+00:00"
+}

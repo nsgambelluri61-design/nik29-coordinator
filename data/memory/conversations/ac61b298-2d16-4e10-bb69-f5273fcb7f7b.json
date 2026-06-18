@@ -1,0 +1,14 @@
+{
+  "conversation_id": "ac61b298-2d16-4e10-bb69-f5273fcb7f7b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quindi e piu affidabile?"
+    },
+    {
+      "role": "assistant",
+      "content": "Se ti riferisci all'orchestratore rispetto al monolite, sì, è generalmente più affidabile perché distribuisce i compiti su più servizi indipendenti. Così se uno cade, gli altri continuano a funzionare. Però richiede più gestione e controllo. Vuoi che ti spieghi come funziona esattamente?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:24:31.789368+00:00"
+}

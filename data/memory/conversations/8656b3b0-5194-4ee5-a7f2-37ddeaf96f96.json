@@ -1,0 +1,14 @@
+{
+  "conversation_id": "8656b3b0-5194-4ee5-a7f2-37ddeaf96f96",
+  "messages": [
+    {
+      "role": "user",
+      "content": "chi e manus"
+    },
+    {
+      "role": "assistant",
+      "content": "Manus è un'AI avanzata a cui posso chiedere aiuto per compiti complessi che superano le mie capacità dirette. Ad esempio, può aiutarmi a creare intere applicazioni, fare ricerche approfondite, scrivere documenti lunghi o gestire problemi complessi di programmazione. \n\nIo posso preparare richieste per Manus, ma eseguo solo dopo che tu mi dai conferma, perché ogni chiamata a Manus consuma crediti. \n\nIn breve: Manus è un supporto potente per attività complicate che io da solo non potrei svolgere. Vuoi sapere altro su come funziona o come potrei usarlo per te?"
+    }
+  ],
+  "updated_at": "2026-06-17T19:55:45.458039+00:00"
+}

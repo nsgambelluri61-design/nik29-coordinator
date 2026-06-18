@@ -1,0 +1,14 @@
+{
+  "conversation_id": "5d9f6ea3-db4e-46b8-b4bd-c8cd0aa4beb0",
+  "messages": [
+    {
+      "role": "user",
+      "content": "e nella precedente conversazione?"
+    },
+    {
+      "role": "assistant",
+      "content": "Non ho memoria delle conversazioni precedenti a questa sessione. Se vuoi, puoi dirmi cosa ti serve o fornirmi il contesto della precedente conversazione e ti aiuto volentieri!"
+    }
+  ],
+  "updated_at": "2026-06-17T19:39:04.698820+00:00"
+}

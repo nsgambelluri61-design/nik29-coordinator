@@ -1,0 +1,52 @@
+{
+  "conversation_id": "378b18fb-9ec7-41f2-9dbc-0a14a4402d7d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca i prezzi dei materassi Emma\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_KCuKBCcXWaTjq1AfbBi5ltjW",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"num_pages\":3,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_KCuKBCcXWaTjq1AfbBi5ltjW",
+      "content": "{'error': 'Search failed: Brave API error (HTTP 422): {\"type\":\"ErrorResponse\",\"error\":{\"id\":\"9384e0a4-3290-4e7b-aa97-9933f8862644\",\"status\":422,\"detail\":\"Unable to validate request parameter(s)\",\"meta\":{\"errors\":[{\"type\":\"enum\",\"loc\":[\"query\",\"ui_lang\"],'}"
+    },
+    {
+      "role": "assistant",
+      "content": "C'è stato un errore tecnico cercando i prezzi dei materassi Emma Sleep. Riprovo subito con un altro metodo.",
+      "tool_calls": [
+        {
+          "id": "call_sQ7T7DDQl4Qd0WqqiNkWlOFi",
+          "type": "function",
+          "function": {
+            "name": "brave_search",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"count\":5,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_sQ7T7DDQl4Qd0WqqiNkWlOFi",
+      "content": "{'error': 'Brave API error (HTTP 422): {\"type\":\"ErrorResponse\",\"error\":{\"id\":\"05e7136e-e6f0-499d-a412-f5519f0c821f\",\"status\":422,\"detail\":\"Unable to validate request parameter(s)\",\"meta\":{\"errors\":[{\"type\":\"enum\",\"loc\":[\"query\",\"ui_lang\"],'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Errore tecnico con la ricerca prezzi Emma Sleep (problema con Brave Search). Appena il servizio torna operativo, ti aggiorno subito. Vuoi che provi con un altro tipo di ricerca o su un sito preciso?"
+    }
+  ],
+  "updated_at": "2026-06-18T17:58:02.611527+00:00"
+}

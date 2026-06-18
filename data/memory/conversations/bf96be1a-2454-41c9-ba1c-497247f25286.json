@@ -1,0 +1,33 @@
+{
+  "conversation_id": "bf96be1a-2454-41c9-ba1c-497247f25286",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mostra i task schedulati attualmente"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_vO9qcF1FHzI94nsV7DdxmOd5",
+          "type": "function",
+          "function": {
+            "name": "schedule_task",
+            "arguments": "{\"operation\":\"list\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_vO9qcF1FHzI94nsV7DdxmOd5",
+      "content": "{'tasks': [{'id': 'morning', 'name': 'morning_briefing', 'cron_expression': '0 9 * * *', 'action': 'morning_briefing', 'action_params': {}, 'enabled': True, 'last_run': None, 'last_result': None, 'created_at': '2025-06-18T00:00:00+00:00'}, {'id': 'hourly', 'name': 'site_health_check', 'cron_expression': '0 * * * *', 'action': 'site_health_check', 'action_params': {}, 'enabled': True, 'last_run': None, 'last_result': None, 'created_at': '2025-06-18T00:00:00+00:00'}, {'id': 'weekly', 'name': 'weekly_report', 'cron_expression': '0 9 * * 1', 'action': 'weekly_report', 'action_params': {}, 'enabled': True, 'last_run': None, 'last_result': None, 'created_at': '2025-06-18T00:00:00+00:00'}], 'count': 3, 'scheduler_running': False}"
+    },
+    {
+      "role": "assistant",
+      "content": "Ci sono 3 task schedulati attivi:\n- morning_briefing: ogni giorno alle 9:00\n- site_health_check: ogni ora, all'inizio dell'ora\n- weekly_report: ogni lunedì alle 9:00\n\nAl momento il scheduler non è in esecuzione. Vuoi che lo avvii?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:05:53.416760+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "c09df6e1-7efe-4f27-82f7-fcd3b2c4cb32",
+  "messages": [
+    {
+      "role": "user",
+      "content": "e i tool come li generi ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Per creare un tool nuovo propongo prima cosa deve fare, come funziona e perché serve (con create_tool_propose). Se confermi, genero il codice vero e proprio (create_tool_generate), poi lo testo (create_tool_test) prima di usarlo davvero. Così evito di fare casino e ho sempre il controllo. Vuoi che ti faccia un esempio pratico?"
+    }
+  ],
+  "updated_at": "2026-06-17T20:29:35.025602+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "4960582c-b730-4621-b407-1b50e1a8188f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "sai fare app ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Nicola, so creare app, ma dipende che tipo vuoi: semplice app per smartphone, web app, o altro? Dimmi cosa ti serve di preciso e vedo come aiutarti."
+    }
+  ],
+  "updated_at": "2026-06-17T20:27:34.707828+00:00"
+}

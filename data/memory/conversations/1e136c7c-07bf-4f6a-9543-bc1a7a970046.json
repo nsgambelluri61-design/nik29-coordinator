@@ -1,0 +1,14 @@
+{
+  "conversation_id": "1e136c7c-07bf-4f6a-9543-bc1a7a970046",
+  "messages": [
+    {
+      "role": "user",
+      "content": "e quindi?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Per poterti aiutare al meglio, potresti dirmi a cosa ti riferisci o cosa vorresti fare esattamente? Così posso darti una risposta precisa e utile."
+    }
+  ],
+  "updated_at": "2026-06-17T19:22:16.098211+00:00"
+}

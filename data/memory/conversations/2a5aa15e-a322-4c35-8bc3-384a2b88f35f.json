@@ -1,0 +1,14 @@
+{
+  "conversation_id": "2a5aa15e-a322-4c35-8bc3-384a2b88f35f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "se un cliente mi chiede qual è la differenza tra memory foam e lattice, cosa gli dico?"
+    },
+    {
+      "role": "assistant",
+      "content": "Gli spiego così, semplice e diretto:  \n- Il memory foam si adatta al corpo, offre un sostegno morbido che elimina i punti di pressione. È perfetto se vuoi sensazione avvolgente.  \n- Il lattice è più elastico e naturale, offre un supporto più reattivo e traspirante, ideale se cerchi freschezza e durata.  \n\nIn pratica: memory foam è morbido e avvolgente, lattice più elastico e fresco."
+    }
+  ],
+  "updated_at": "2026-06-18T16:33:03.892918+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "a85d0272-7235-48b5-93d1-4aac93d542d6",
+  "messages": [
+    {
+      "role": "user",
+      "content": "salva in memoria: 'chiave_test_integration: il roundtrip funziona perfettamente il 2024-01-01'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_avXfakXyw6G8vD0buvXDHg66",
+          "type": "function",
+          "function": {
+            "name": "save_memory",
+            "arguments": "{\"type\":\"fact\",\"key\":\"chiave_test_integration\",\"value\":\"il roundtrip funziona perfettamente il 2024-01-01\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_avXfakXyw6G8vD0buvXDHg66",
+      "content": "Fatto salvato nella categoria 'chiave_test_integration'."
+    },
+    {
+      "role": "assistant",
+      "content": "Fatto, ho salvato in memoria \"il roundtrip funziona perfettamente il 2024-01-01\" con chiave \"chiave_test_integration\"."
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:42.127268+00:00"
+}

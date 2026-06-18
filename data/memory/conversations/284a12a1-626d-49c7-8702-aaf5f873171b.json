@@ -1,0 +1,33 @@
+{
+  "conversation_id": "284a12a1-626d-49c7-8702-aaf5f873171b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "esegui un health check completo del sistema"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_QJj3mAfJStZbG96uEhZzNEQV",
+          "type": "function",
+          "function": {
+            "name": "health_check",
+            "arguments": "{\"check_type\":\"all\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_QJj3mAfJStZbG96uEhZzNEQV",
+      "content": "{'timestamp': '2026-06-18T16:05:40.572240+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error': None}, 'docker': {'containers': [], 'count': 0, 'bridge_reachable': False}, 'disk': {'root_usage': 'unknown', 'warning': False}, 'memory': {'raw': 'unavailable', 'bridge_reachable': False}}, 'overall_status': 'degraded'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Controllo sistema completo fatto. \n- Il sito ildormire.com risponde correttamente (200 OK).\n- Docker non ha container attivi e il bridge non è raggiungibile (problema).\n- Uso disco non disponibile ma senza warning.\n- Memoria non disponibile per controllo, bridge Docker non raggiungibile.\n\nDocker sembra non funzionare correttamente o non è in esecuzione. Vuoi che provi a riavviare il servizio Docker o controllo i log?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:05:43.849863+00:00"
+}

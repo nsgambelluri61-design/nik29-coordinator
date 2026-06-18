@@ -1,0 +1,33 @@
+{
+  "conversation_id": "e3ebf589-e6a8-4ac4-a9a7-a962c8e14d02",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i miei competors sono piu a carattere locale"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_U5rsGB84BTdmY6XiJB7vLKnc",
+          "type": "function",
+          "function": {
+            "name": "save_memory",
+            "arguments": "{\"type\":\"fact\",\"key\":\"competitors_local\",\"value\":\"I principali competitor di Nicola Sgambelluri per Il Dormire sono a carattere locale, non solo grandi marchi online.\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_U5rsGB84BTdmY6XiJB7vLKnc",
+      "content": "Fatto salvato nella categoria 'competitors_local'."
+    },
+    {
+      "role": "assistant",
+      "content": "Ricevuto. Ho salvato che i tuoi principali competitor sono a carattere locale, non solo grandi marchi online."
+    }
+  ],
+  "updated_at": "2026-06-18T19:10:47.113879+00:00"
+}

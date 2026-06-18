@@ -1,0 +1,14 @@
+{
+  "conversation_id": "7e1dffd4-2312-44cd-ba75-7683742f608e",
+  "messages": [
+    {
+      "role": "user",
+      "content": "si"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi cosa vuoi che faccia."
+    }
+  ],
+  "updated_at": "2026-06-18T16:27:37.137121+00:00"
+}

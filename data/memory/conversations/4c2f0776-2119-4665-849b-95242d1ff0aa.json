@@ -1,0 +1,33 @@
+{
+  "conversation_id": "4c2f0776-2119-4665-849b-95242d1ff0aa",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cosa ricordi riguardo a 'test_key_2024'?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_c0mmRsfRmhcUKwnmeafqvoUx",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{\"category\":\"test_key_2024\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_c0mmRsfRmhcUKwnmeafqvoUx",
+      "content": "[\n  {\n    \"fact\": \"il test automatico funziona correttamente\",\n    \"category\": \"test_key_2024\",\n    \"saved_at\": \"2026-06-18T16:03:10.148810+00:00\"\n  },\n  {\n    \"fact\": \"il test automatico funziona correttamente\",\n    \"category\": \"test_key_2024\",\n    \"saved_at\": \"2026-06-18T16:05:04.120146+00:00\"\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "content": "Ricordo che riguardo a 'test_key_2024' hai salvato che il test automatico funziona correttamente. Questo fatto è stato registrato due volte."
+    }
+  ],
+  "updated_at": "2026-06-18T16:05:10.877586+00:00"
+}

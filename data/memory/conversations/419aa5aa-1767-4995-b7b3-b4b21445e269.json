@@ -1,0 +1,33 @@
+{
+  "conversation_id": "419aa5aa-1767-4995-b7b3-b4b21445e269",
+  "messages": [
+    {
+      "role": "user",
+      "content": "usa brave_search per cercare: 'materassi memory foam prezzo'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_o7AvBS5aOg5r6s1976lYDSdI",
+          "type": "function",
+          "function": {
+            "name": "brave_search",
+            "arguments": "{\"query\":\"materassi memory foam prezzo\",\"count\":5,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_o7AvBS5aOg5r6s1976lYDSdI",
+      "content": "{'error': 'BRAVE_API_KEY not configured. Set it in environment variables.'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Non posso usare Brave Search perché manca la chiave API necessaria. Vuoi che cerchi su internet con un altro metodo o che provi a trovare info da altre fonti?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:04:57.669039+00:00"
+}

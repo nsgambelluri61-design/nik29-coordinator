@@ -1,0 +1,14 @@
+{
+  "conversation_id": "7fb150f6-96c1-4478-be9b-201dbe2e9f2b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "si"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi pure cosa devo fare."
+    }
+  ],
+  "updated_at": "2026-06-18T12:27:00.980084+00:00"
+}

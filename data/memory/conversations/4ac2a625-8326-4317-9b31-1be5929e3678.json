@@ -1,0 +1,14 @@
+{
+  "conversation_id": "4ac2a625-8326-4317-9b31-1be5929e3678",
+  "messages": [
+    {
+      "role": "user",
+      "content": "no"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi pure cosa vuoi fare o correggere, così agisco subito."
+    }
+  ],
+  "updated_at": "2026-06-18T15:44:13.085416+00:00"
+}

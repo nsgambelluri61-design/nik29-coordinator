@@ -1,0 +1,33 @@
+{
+  "conversation_id": "ba432783-55cb-4c92-9b57-55341020fafb",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ricordatelo"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_3pAfKJBjMEj5AXilVyNsYTrU",
+          "type": "function",
+          "function": {
+            "name": "save_memory",
+            "arguments": "{\"type\":\"fact\",\"key\":\"come_mi_chiami\",\"value\":\"Nicola\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3pAfKJBjMEj5AXilVyNsYTrU",
+      "content": "Fatto salvato nella categoria 'come_mi_chiami'."
+    },
+    {
+      "role": "assistant",
+      "content": "Ho memorizzato che ti chiami Nicola. Se vuoi che ricordi altro, dimmi pure!"
+    }
+  ],
+  "updated_at": "2026-06-17T19:55:24.053774+00:00"
+}

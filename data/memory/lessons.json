@@ -1,0 +1,116 @@
+{
+  "lessons": [
+    {
+      "id": "l_001",
+      "category": "errore",
+      "lesson": "macOS Smart Dashes converte '-' in em-dash (U+2014) causando errori nei token API. Verificare sempre che i trattini siano ASCII 0x2D.",
+      "context": "Errore durante l'inserimento di token API o comandi su macOS",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_002",
+      "category": "soluzione",
+      "lesson": "Per l'elaborazione immagini con Sharp su PM2: impostare max_memory_restart a 1GB, aggiungere sharp.cache(false) e sharp.concurrency(1).",
+      "context": "Riavvio continuo di PM2 dormire-shop a causa del limite di memoria di 300MB superato da Sharp",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_003",
+      "category": "soluzione",
+      "lesson": "Se il plugin auth di MySQL cambia dopo un aggiornamento: eseguire ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password.",
+      "context": "Impossibile connettersi al database dopo aggiornamento MySQL (auth_socket)",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_004",
+      "category": "procedura",
+      "lesson": "GPT-4.1-mini tende a chiedere chiarimenti invece di usare i tool. Aggiungere regole esplicite nel system prompt per forzare l'uso dei tool.",
+      "context": "Ottimizzazione del comportamento dell'agente",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_005",
+      "category": "procedura",
+      "lesson": "Quando Maestro crea PR con file grandi, verificare che il numero di righe corrisponda all'originale per evitare troncamenti.",
+      "context": "Rischio di merge di file parziali o troncati",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_006",
+      "category": "procedura",
+      "lesson": "Il VPS non ha auto-deploy webhook. Usare scripts/safe-deploy.sh oppure: cd /root/dormire-shop && git pull && npm run build && pm2 restart",
+      "context": "Deploy manuale o tramite script sicuro",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_007",
+      "category": "soluzione",
+      "lesson": "Per generare immagini, usare gpt-image-1 (non dall-e-3), rimuovere il parametro response_format e gestire la risposta in base64.",
+      "context": "Errore 'model does not exist' o 'unknown parameter' con chiavi di progetto",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_008",
+      "category": "errore",
+      "lesson": "Le Pipe Functions di Open WebUI bypassano il meccanismo di tool-calling. Usare modelli diretti come base per i modelli custom.",
+      "context": "Tool non funzionanti con modelli custom basati su Pipe Functions",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_009",
+      "category": "soluzione",
+      "lesson": "Per ottenere JSON da LLM: approccio a due passaggi (rilevamento intent con regex, poi chiamata dedicata con response_format: json_object).",
+      "context": "LLM che ignora le istruzioni di restituire solo JSON",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_010",
+      "category": "soluzione",
+      "lesson": "Ollama su macOS imposta OLLAMA_HOST senza http://. Aggiungere ensureProtocol() nel client per evitare errori di parsing URL.",
+      "context": "Errore 'Failed to parse URL' con Ollama locale",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_011",
+      "category": "errore",
+      "lesson": "Brave Search API: non usare il parametro ui_lang perché causa errore 422. Usare solo q, count, search_lang.",
+      "context": "Errore 422 durante chiamate a Brave Search API",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_012",
+      "category": "procedura",
+      "lesson": "Le modifiche fatte con sed nei container Docker non persistono al riavvio. Modificare i file sorgente e ricostruire l'immagine.",
+      "context": "Modifiche perse dopo il riavvio del container",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_013",
+      "category": "procedura",
+      "lesson": "Istruzioni per Manus: chiedere UNA modifica alla volta, indicare le righe esatte e ribadire 'MAI riscrivere un file da zero'.",
+      "context": "Manus che riscrive file interi invece di applicare modifiche mirate",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_014",
+      "category": "soluzione",
+      "lesson": "La funzione resolveLocalUrl() per il rendering video deve essere definita a scope GLOBALE nel render server.",
+      "context": "Errore 'Invalid URL' o 'resolveLocalUrl is not defined' durante il rendering Video 2.0",
+      "date": "2026-06-18",
+      "times_used": 0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "ec741dd5-5ecf-4e61-82fe-02c26e86a860",
+  "messages": [
+    {
+      "role": "user",
+      "content": "esegui il comando shell: echo 'test_nik29_ok'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_SDlMzSOLqxExnlaWh1XhDW04",
+          "type": "function",
+          "function": {
+            "name": "shell",
+            "arguments": "{\"command\":\"echo 'test_nik29_ok'\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_SDlMzSOLqxExnlaWh1XhDW04",
+      "content": "test_nik29_ok\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Eseguito comando echo, output: test_nik29_ok"
+    }
+  ],
+  "updated_at": "2026-06-18T16:02:54.573572+00:00"
+}

@@ -1,0 +1,46 @@
+{
+  "conversation_id": "3e898c64-8c38-4505-b5bb-2c8a63f7ae1c",
+  "messages": [
+    {
+      "role": "user",
+      "content": "che versione sei? quanti tool hai attivi?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_d7wq9cnSdvKnHDx109EJegS4",
+          "type": "function",
+          "function": {
+            "name": "auto_update",
+            "arguments": "{\"action\": \"status\"}"
+          }
+        },
+        {
+          "id": "call_GrI3SXCEUugKUWf1Vf545whq",
+          "type": "function",
+          "function": {
+            "name": "create_tool_list",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_d7wq9cnSdvKnHDx109EJegS4",
+      "content": "**Versione corrente:** 0.6.0\n**Manifest URL:** https://raw.githubusercontent.com/nsgambelluri61-design/nik29-coordinator/main/manifest.json\n**Aggiornamenti eseguiti:** 0"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_GrI3SXCEUugKUWf1Vf545whq",
+      "content": "📋 Nessun tool custom creato."
+    },
+    {
+      "role": "assistant",
+      "content": "Sono la versione 0.6.0 di nik29. Al momento non ho tool custom attivi, uso solo quelli di base."
+    }
+  ],
+  "updated_at": "2026-06-18T16:32:09.824251+00:00"
+}

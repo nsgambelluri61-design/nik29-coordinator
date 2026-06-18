@@ -1,0 +1,33 @@
+{
+  "conversation_id": "625c0d3a-b923-452a-bb7d-05bbbcc1f304",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\"pusha tutto su github\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_rVlzFQevpyrZtF88f6IXccrO",
+          "type": "function",
+          "function": {
+            "name": "git_auto",
+            "arguments": "{\"action\":\"add_commit_push\",\"message\":\"chore: push tutte le modifiche locali\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_rVlzFQevpyrZtF88f6IXccrO",
+      "content": "Nessuna modifica da committare (working tree pulito)."
+    },
+    {
+      "role": "assistant",
+      "content": "Nessuna modifica da pushare: il repository è già aggiornato."
+    }
+  ],
+  "updated_at": "2026-06-18T19:15:26.570653+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "7174cabc-2092-4d40-a9cd-456b04289d98",
+  "messages": [
+    {
+      "role": "user",
+      "content": "e la diffrenz atra un agente monolite ed un agente coordinatore ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ti spiego in modo semplice:\n\n- Agente monolite: è un sistema unico che fa tutto da solo, senza suddividere i compiti. Gestisce internamente ogni funzione o task.\n\n- Agente coordinatore: non fa tutto da solo, ma coordina altri agenti o moduli specializzati, assegnando a ognuno compiti specifici e orchestrando il lavoro complessivo.\n\nIn sostanza, il coordinatore organizza e gestisce più agenti, mentre il monolite è un tutto unico che gestisce tutto internamente."
+    }
+  ],
+  "updated_at": "2026-06-18T16:22:12.012696+00:00"
+}

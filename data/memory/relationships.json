@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rel-manus",
+    "content": "Manus: cloud AI assistant (this system), used for complex development tasks, website building, research",
+    "category": "agents",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "rel-maestro",
+    "content": "Maestro: local AI agent for ildormire.com management (port 4002), handles site CMS, products, images",
+    "category": "agents",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "rel-nik29",
+    "content": "nik29: personal coordinator assistant (port 4001), handles general tasks, Telegram interface, memory",
+    "category": "agents",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "rel-open-webui",
+    "content": "Open WebUI (localhost:8080): local LLM interface on Mac with Ollama models",
+    "category": "systems",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  },
+  {
+    "id": "rel-ildormire",
+    "content": "ildormire.com: e-commerce site on VPS, managed by Maestro",
+    "category": "systems",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "rel-future-goal",
+    "content": "Future goal: nik29 becomes the coordinator that can delegate to Maestro and other agents",
+    "category": "roadmap",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  }
+]

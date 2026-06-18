@@ -1,0 +1,33 @@
+{
+  "conversation_id": "2b423d17-5218-4ca4-b6bc-38006c78759b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "di che cosa stavamo parlando prima?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_oQt7MA37Df49d3W54xuu17Kb",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_oQt7MA37Df49d3W54xuu17Kb",
+      "content": "[\n  {\n    \"fact\": \"come mi chiamo\",\n    \"category\": \"auto_learned\",\n    \"saved_at\": \"2026-06-17T19:54:23.460044+00:00\",\n    \"source_conversation\": \"69b85a5f-8896-41b7-a9f9-29dffbe76c81\"\n  },\n  {\n    \"fact\": \"Nicola\",\n    \"category\": \"come_mi_chiami\",\n    \"saved_at\": \"2026-06-17T19:55:21.701039+00:00\"\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "content": "Non abbiamo parlato di un argomento specifico prima, ma ho memorizzato che ti chiami Nicola. Vuoi riprendere una conversazione o un argomento particolare?"
+    }
+  ],
+  "updated_at": "2026-06-17T20:00:47.740366+00:00"
+}

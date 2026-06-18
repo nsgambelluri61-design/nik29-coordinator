@@ -1,0 +1,92 @@
+{
+  "lessons": [
+    {
+      "id": "macos-smart-dashes",
+      "lesson": "macOS 'Smart Dashes' converts '-' (ASCII 0x2D) to '–' (em-dash U+2014) when pasting in Terminal. This corrupts API tokens, env variables, and code. Solution: use Python chr(45) or write to .py files, never paste tokens directly in Terminal.",
+      "category": "troubleshooting",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "telegram-bot-token-401",
+      "lesson": "If a Telegram bot token gives HTTP 401 Unauthorized, the token is invalid/revoked. Solution: go to @BotFather, use /revoke, get a new token.",
+      "category": "api",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "openai-api-key-verify",
+      "lesson": "OpenAI API keys can expire or be revoked silently. Always verify with: curl https://api.openai.com/v1/models -H \"Authorization: Bearer KEY\" before debugging other issues.",
+      "category": "api",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "macos-terminal-python-paste",
+      "lesson": "Never paste multi-line Python code in macOS Terminal — indentation gets lost. Solution: write a .py file first, then run it with python3.",
+      "category": "development",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "docker-crash-logs",
+      "lesson": "When Docker container crashes in a loop, check logs with: docker logs CONTAINER 2>&1 | head -30 to see the FIRST error, not the repeated ones.",
+      "category": "docker",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "zsh-printf-multiline",
+      "lesson": "printf in zsh with \\n may not work as expected. Use echo or Python for writing multi-line files.",
+      "category": "shell",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "env-github-gitignore",
+      "lesson": "The .env file is NOT pushed to GitHub (it's in .gitignore). API keys stay private on the local machine.",
+      "category": "security",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "api-key-typos",
+      "lesson": "When debugging 'invalid API key' errors: check the LAST 4 characters carefully — 'l' (lowercase L) and '1' (number one) look identical in many fonts.",
+      "category": "troubleshooting",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "git-push-pull",
+      "lesson": "git push uploads local changes to GitHub (online backup). git pull downloads from GitHub to local.",
+      "category": "git",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "docker-compose-recreate",
+      "lesson": "Docker compose up -d --force-recreate restarts the container with new .env values without rebuilding.",
+      "category": "docker",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "docker-compose-build",
+      "lesson": "Docker compose build is needed only when Dockerfile or code files change, not for .env changes.",
+      "category": "docker",
+      "context": "",
+      "date": "2026-06-18",
+      "times_used": 0
+    }
+  ]
+}

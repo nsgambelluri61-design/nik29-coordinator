@@ -1,0 +1,14 @@
+{
+  "conversation_id": "9462de82-86fb-4d88-b0e5-e85637d974be",
+  "messages": [
+    {
+      "role": "user",
+      "content": "scrivi un breve testo promozionale per un materasso Made in Italy in memory foam, massimo 3 righe"
+    },
+    {
+      "role": "assistant",
+      "content": "Scopri il comfort unico del nostro materasso Made in Italy in memory foam: supporto perfetto e morbidezza avvolgente per notti di puro relax. Qualità artigianale italiana che dura nel tempo. Provalo subito!"
+    }
+  ],
+  "updated_at": "2026-06-18T16:33:05.942886+00:00"
+}

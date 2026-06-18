@@ -1,0 +1,52 @@
+{
+  "conversation_id": "9c51c474-8c16-480b-96c1-6cb6e29b0a49",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca su internet i prezzi dei materassi Emma Sleep\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_FudpoTgKx0GOlguLvXJ25r4W",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_FudpoTgKx0GOlguLvXJ25r4W",
+      "content": "{'error': 'Search failed: Brave API error (HTTP 422): {\"type\":\"ErrorResponse\",\"error\":{\"id\":\"d61c2f51-e44d-4a67-b561-96c65a7661dc\",\"status\":422,\"detail\":\"Unable to validate request parameter(s)\",\"meta\":{\"errors\":[{\"type\":\"enum\",\"loc\":[\"query\",\"ui_lang\"],'}"
+    },
+    {
+      "role": "assistant",
+      "content": "C'è stato un errore temporaneo nella ricerca. Riprovo subito.",
+      "tool_calls": [
+        {
+          "id": "call_y5P3PXZCEA4BCoh2f0Wt72OC",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_y5P3PXZCEA4BCoh2f0Wt72OC",
+      "content": "{'error': 'Search failed: Brave API error (HTTP 422): {\"type\":\"ErrorResponse\",\"error\":{\"id\":\"b9e1ec00-dc45-475e-b659-17f153f0dfeb\",\"status\":422,\"detail\":\"Unable to validate request parameter(s)\",\"meta\":{\"errors\":[{\"type\":\"enum\",\"loc\":[\"query\",\"ui_lang\"],'}"
+    },
+    {
+      "role": "assistant",
+      "content": "C'è un problema tecnico con la ricerca automatica. Se vuoi, posso provare con un altro metodo o riprovare più tardi. Fammi sapere come preferisci procedere."
+    }
+  ],
+  "updated_at": "2026-06-18T17:40:48.268281+00:00"
+}

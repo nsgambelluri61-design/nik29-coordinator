@@ -1,0 +1,14 @@
+{
+  "conversation_id": "178ae7ef-ffb8-40e6-86f4-6acf7f714afa",
+  "messages": [
+    {
+      "role": "user",
+      "content": "tu puoi creare un agente"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì, posso creare un agente (ad esempio uno specialista per immagini, SEO, social, ecc.) oppure proporre la creazione di nuovi tool su misura. Se hai bisogno di un agente specifico, dimmi che compito vuoi che svolga: preparo tutto io e, se serve, chiedo conferma prima di attivarlo. Vuoi un esempio concreto o hai già in mente che tipo di agente ti serve?"
+    }
+  ],
+  "updated_at": "2026-06-18T19:12:23.063392+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "930b0fb2-f386-4c7e-9282-7add4f6a7307",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ma perche mi rispondi cosi?"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi tu come vuoi che ti risponda, così cambio subito tono o stile."
+    }
+  ],
+  "updated_at": "2026-06-18T16:25:15.003490+00:00"
+}

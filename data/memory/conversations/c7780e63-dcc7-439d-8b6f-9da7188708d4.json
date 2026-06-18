@@ -1,0 +1,33 @@
+{
+  "conversation_id": "c7780e63-dcc7-439d-8b6f-9da7188708d4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "leggi questa pagina: https://ildormire.com\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_i43Hi8mXUYoeQ5rkn64M7LXK",
+          "type": "function",
+          "function": {
+            "name": "browse_url",
+            "arguments": "{\"url\":\"https://ildormire.com\",\"max_chars\":4000}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_i43Hi8mXUYoeQ5rkn64M7LXK",
+      "content": "{'url': 'https://ildormire.com', 'content': 'Il Dormire® — Materassi e Reti Made in Italy', 'length': 44}"
+    },
+    {
+      "role": "assistant",
+      "content": "La pagina https://ildormire.com mostra il titolo \"Il Dormire® — Materassi e Reti Made in Italy\". Vuoi che estragga o controlli qualcosa di specifico su questa pagina?"
+    }
+  ],
+  "updated_at": "2026-06-18T12:28:28.025816+00:00"
+}

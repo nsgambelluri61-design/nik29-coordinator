@@ -1,0 +1,33 @@
+{
+  "conversation_id": "641f21b3-830f-4b12-ba7d-49d9b7f4a9dd",
+  "messages": [
+    {
+      "role": "user",
+      "content": "controlla lo stato dello scheduler, ci sono task programmati?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_JK1LS0F6GRfE93zCIRtHtYDj",
+          "type": "function",
+          "function": {
+            "name": "schedule_task",
+            "arguments": "{\"operation\":\"list\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_JK1LS0F6GRfE93zCIRtHtYDj",
+      "content": "{'tasks': [{'id': 'morning', 'name': 'morning_briefing', 'cron_expression': '0 9 * * *', 'action': 'morning_briefing', 'action_params': {}, 'enabled': True, 'last_run': None, 'last_result': None, 'created_at': '2025-06-18T00:00:00+00:00'}, {'id': 'hourly', 'name': 'site_health_check', 'cron_expression': '0 * * * *', 'action': 'site_health_check', 'action_params': {}, 'enabled': True, 'last_run': '2026-06-18T16:05:57.419009+00:00', 'last_result': {'success': True, 'output': 'Site OK (HTTP 200)'}, 'created_at': '2025-06-18T00:00:00+00:00'}, {'id': 'weekly', 'name': 'weekly_report', 'cron_expression': '0 9 * * 1', 'action': 'weekly_report', 'action_params': {}, 'enabled': True, 'last_run': None, 'last_result': None, 'created_at': '2025-06-18T00:00:00+00:00'}], 'count': 3, 'scheduler_running': False}"
+    },
+    {
+      "role": "assistant",
+      "content": "Lo scheduler non è attivo al momento, ma ci sono 3 task programmati: briefing mattutino alle 9 ogni giorno, controllo salute sito ogni ora (ultimo controllo OK), e report settimanale ogni lunedì alle 9. Vuoi che riattivi lo scheduler?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:32:05.423524+00:00"
+}

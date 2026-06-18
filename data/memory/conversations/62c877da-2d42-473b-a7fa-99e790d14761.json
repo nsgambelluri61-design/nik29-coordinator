@@ -1,0 +1,14 @@
+{
+  "conversation_id": "62c877da-2d42-473b-a7fa-99e790d14761",
+  "messages": [
+    {
+      "role": "user",
+      "content": "chi sono io"
+    },
+    {
+      "role": "assistant",
+      "content": "Sei Nicola Sgambelluri, titolare de Il Dormire (Sgambelluri srls) a Siderno (RC), Calabria. Gestisci un negozio specializzato in materassi, cuscini e reti letto, tutti Made in Italy. Non hai competenze informatiche avanzate, quindi preferisci spiegazioni semplici e pratiche."
+    }
+  ],
+  "updated_at": "2026-06-18T19:09:27.667609+00:00"
+}

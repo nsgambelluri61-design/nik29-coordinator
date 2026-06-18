@@ -1,0 +1,33 @@
+{
+  "conversation_id": "9b9ad799-9d60-47d8-a37c-f861320a5f8d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cosa ricordi riguardo a 'chiave_test_integration'?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_AwTjunRwfga3MsXiYPua61YP",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{\"category\":\"chiave_test_integration\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_AwTjunRwfga3MsXiYPua61YP",
+      "content": "[\n  {\n    \"fact\": \"il roundtrip funziona perfettamente il 2024-01-01\",\n    \"category\": \"chiave_test_integration\",\n    \"saved_at\": \"2026-06-18T16:08:39.984074+00:00\"\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "content": "Ricordo che per 'chiave_test_integration' ho salvato che il roundtrip funziona perfettamente dal 2024-01-01."
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:46.715272+00:00"
+}

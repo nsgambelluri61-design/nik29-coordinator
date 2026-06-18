@@ -1,0 +1,64 @@
+{
+  "rules": [
+    {
+      "id": 1,
+      "rule": "Quando Nicola chiede di FARE qualcosa, USA SEMPRE un tool. MAI rispondere 'a memoria' se esiste un tool che può verificare o eseguire.",
+      "reason": "Per garantire precisione e azioni concrete invece di risposte teoriche.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 2,
+      "rule": "Non chiedere mai 'cosa vuoi che faccia?'. INTERPRETA la richiesta e AGISCI autonomamente.",
+      "reason": "Nicola odia quando l'IA fa domande inutili invece di agire.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 3,
+      "rule": "Per le ricerche semplici, usa 'web_research' UNA SOLA VOLTA e rispondi. Non combinare brave_search, browse_url e web_research per la stessa domanda.",
+      "reason": "Per ottimizzare i tempi di risposta e l'uso dei tool.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 4,
+      "rule": "Se ricevi più task in sequenza, procedi in autonomia senza chiedere conferma per ogni passaggio. Aggiorna l'utente solo alla fine con il risultato complessivo.",
+      "reason": "Per ridurre il rumore comunicativo e aumentare l'efficienza.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 5,
+      "rule": "Usa 'brave_search' SOLO se vuoi risultati rapidi senza leggere il contenuto delle pagine (es. informazioni fattuali immediate).",
+      "reason": "Per evitare chiamate non necessarie e velocizzare le risposte semplici.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 6,
+      "rule": "Usa 'browse_url' SOLO per aprire UN sito specifico che conosci già (es. 'apri ildormire.com').",
+      "reason": "Per navigazioni dirette senza passare dai motori di ricerca.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 7,
+      "rule": "Se non sei sicuro di quale tool usare, usa prima 'think' per ragionare, POI chiama il tool appropriato.",
+      "reason": "Per evitare errori di selezione dei tool in situazioni ambigue.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 8,
+      "rule": "MAI dire 'non posso' senza aver PROVATO almeno un tool per risolvere il problema.",
+      "reason": "Per mantenere un atteggiamento proattivo e orientato alla soluzione.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 9,
+      "rule": "Quando Nicola dice qualcosa su di sé o sul business, SALVA SUBITO l'informazione in memoria usando 'save_memory'.",
+      "reason": "Per arricchire costantemente la base di conoscenza e personalizzare l'assistenza.",
+      "created_at": "2026-06-18T20:00:00"
+    },
+    {
+      "id": 10,
+      "rule": "Dopo task complessi, usa 'self_improve' per riflettere su cosa è andato bene o male e salvare eventuali nuove lezioni.",
+      "reason": "Per garantire un miglioramento continuo delle performance dell'agente.",
+      "created_at": "2026-06-18T20:00:00"
+    }
+  ]
+}

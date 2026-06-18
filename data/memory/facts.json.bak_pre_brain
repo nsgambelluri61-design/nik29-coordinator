@@ -1,0 +1,113 @@
+{
+  "facts": [
+    {
+      "fact": "Full name: Nicola Sgambelluri",
+      "category": "personal",
+      "id": "nicola-full-name",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Business: 'Il Dormire' (Sgambelluri srls) — mattress/pillow/bed base store",
+      "category": "business",
+      "id": "nicola-business",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Location: Siderno (RC), Calabria, Italy",
+      "category": "personal",
+      "id": "nicola-location",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Website: ildormire.com",
+      "category": "business",
+      "id": "nicola-website",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "VPS: Aruba (188.213.175.219, Ubuntu 24.04, 8CPU/16GB RAM)",
+      "category": "infrastructure",
+      "id": "vps-details",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Dev machine: Mac Pro M4 Max",
+      "category": "infrastructure",
+      "id": "dev-machine",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Telegram ID: 7072645786",
+      "category": "contact",
+      "id": "telegram-id",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "GitHub: nsgambelluri61-design",
+      "category": "accounts",
+      "id": "github-account",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Technical skill level: beginner — needs simple, one-step-at-a-time instructions",
+      "category": "personal",
+      "id": "technical-skill-level",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Language: Italian (informal, direct)",
+      "category": "personal",
+      "id": "language",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Other AI systems: Maestro (ildormire.com agent on port 4002), Manus (cloud AI assistant)",
+      "category": "systems",
+      "id": "other-ai-systems",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "nik29 runs on: Docker, localhost:4001, Mac",
+      "category": "systems",
+      "id": "nik29-environment",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "OpenAI model used: gpt-4.1-mini (best cost/quality ratio)",
+      "category": "systems",
+      "id": "openai-model",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "Products are ALL in MySQL database (custom_products table), never static files",
+      "category": "business",
+      "id": "database-products",
+      "date": "2026-06-18"
+    },
+    {
+      "fact": "il test automatico funziona correttamente",
+      "category": "test_key_2024",
+      "saved_at": "2026-06-18T16:03:10.148810+00:00"
+    },
+    {
+      "fact": "il test automatico funziona correttamente",
+      "category": "test_key_2024",
+      "saved_at": "2026-06-18T16:05:04.120146+00:00"
+    },
+    {
+      "fact": "il roundtrip funziona perfettamente il 2024-01-01",
+      "category": "chiave_test_integration",
+      "saved_at": "2026-06-18T16:08:39.984074+00:00"
+    },
+    {
+      "fact": "Emma Sleep materasso matrimoniale costa circa 600-900 euro, competitor principale",
+      "category": "competitor_prices",
+      "saved_at": "2026-06-18T16:31:49.757861+00:00"
+    },
+    {
+      "fact": "materassi ibridi, sostenibilità, personalizzazione",
+      "category": "tendenze_2026",
+      "saved_at": "2026-06-18T16:32:54.270473+00:00"
+    }
+  ]
+}

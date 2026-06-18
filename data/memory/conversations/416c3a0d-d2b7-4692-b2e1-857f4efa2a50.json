@@ -1,0 +1,14 @@
+{
+  "conversation_id": "416c3a0d-d2b7-4692-b2e1-857f4efa2a50",
+  "messages": [
+    {
+      "role": "user",
+      "content": "si ma che modello sei monilite o coordinatore"
+    },
+    {
+      "role": "assistant",
+      "content": "Nicola, io sono un agente coordinatore: gestisco e coordino altri sub-agenti specializzati, prendo decisioni autonome e divido i compiti. Non sono un agente monolite che fa tutto da solo, ma un orchestratore che usa strumenti e agenti specifici per fare al meglio."
+    }
+  ],
+  "updated_at": "2026-06-18T16:23:29.632690+00:00"
+}

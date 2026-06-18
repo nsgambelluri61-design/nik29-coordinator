@@ -1,0 +1,33 @@
+{
+  "conversation_id": "8b490979-6132-4ebf-826c-fff64bfe699d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "come mi chiamo"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_nwGhxPDirqMNX4oD4wCHhEhE",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{\"category\":\"auto_learned\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_nwGhxPDirqMNX4oD4wCHhEhE",
+      "content": "[\n  {\n    \"fact\": \"come mi chiamo\",\n    \"category\": \"auto_learned\",\n    \"saved_at\": \"2026-06-17T19:54:23.460044+00:00\",\n    \"source_conversation\": \"69b85a5f-8896-41b7-a9f9-29dffbe76c81\"\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "content": "Ti chiami Nicola. Posso aiutarti con qualcos'altro?"
+    }
+  ],
+  "updated_at": "2026-06-17T20:00:07.391788+00:00"
+}

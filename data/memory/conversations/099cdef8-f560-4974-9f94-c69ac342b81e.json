@@ -1,0 +1,14 @@
+{
+  "conversation_id": "099cdef8-f560-4974-9f94-c69ac342b81e",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quando e stato?"
+    },
+    {
+      "role": "assistant",
+      "content": "Serve più contesto: cosa intendi con \"quando è stato?\"? Vuoi sapere quando è successo qualcosa di specifico? Dimmi cosa devo cercare."
+    }
+  ],
+  "updated_at": "2026-06-17T20:09:25.678621+00:00"
+}

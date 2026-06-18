@@ -1,0 +1,33 @@
+{
+  "conversation_id": "3531bdbb-f258-4bbd-ab96-8aeede7a592a",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca sul web: 'Python asyncio tutorial 2024'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_Dlbo3PIhWUzPjIM0z09Mvg9l",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\":\"Python asyncio tutorial 2024\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_Dlbo3PIhWUzPjIM0z09Mvg9l",
+      "content": "Risultati per: \"Python asyncio tutorial 2024\"\n\n1. **Asyncio Course - Learn Python Asyncio**\n   URL: https://duckduckgo.com/y.js?ad_domain=udemy.com&amp;ad_provider=bingv7aa&amp;ad_type=txad&amp;click_metadata=AMWrAcfCc6PK6KatJR1m2DBSlxUXBTgIgKihUMjqTL1JzTNnAd1NJ7hrmhXI5f5_XzdbxOnsfVKTZASBYCPQJUK05ukjzivFVn61LS_xXsQZoT5Yj6ZpbgYCzh6A9Q81wu7W9Qe769UrenYqV8cujzStLXoDAhB3hgEZt%2DIqD5I.MpIK6DefoNdGJY1loDNzAg&amp;rut=f433432b6c79a4094c6b4b721100fd84f464a589e25444e0adba5ffcf5b8025f&amp;u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De86pI80gaUEt_nne0OLmRzezVUCUzfvSNJpF4_t5n1hctjcQGHFPdBUqQtzGaHqCrT7hWoa1gB8HlxxG4T8jTQX0Al7OcuoUhGaAGmHrkQsaEwj4bIOcayAVMqlLLp2hULQ9%2D4ClYkrsp7mAL2mM_F3l%2Dydms5aNNfoiOOlmELURcUTTb3SKV8fud8mZ7EV%2Dt5j0FATt3c6T85Mm8je7Z5ATeajII%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmY291cnNlJTJmcHl0aG9uLWFzeW5jaW8taGlnaC1sZXZlbC1hcGklMmYlM2Z1dG1fY2FtcGFpZ24lM2RCRy1TZWFyY2hfRFNBX0FscGhhX1Byb2ZfbGEuRU5fY2MuUk9XLUVuZ2xpc2glMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwYWlkLXNlYXJjaCUyNnBvcnRmb2xpbyUzZEJpbmctUk9XLUVuZ2xpc2glMjZ1dG1fYXVkaWVuY2UlM2RteCUyNnV0bV90YWN0aWMlM2RuYiUyNnV0bV90ZXJtJTNkXy5fYWdfMTMxNjExNzgwNjY4ODE3OV8uX2FkX18uX2t3X1B5dGhvbiUyNTIwZW4lMjZ1dG1fY29udGVudCUzZHMlMjZmdW5uZWwlM2QlMjZ0ZXN0JTNkJTI2dXRtX2NhbXBhaWduX2lkJTNkNjM4NTk2MjI4JTI2bXNjbGtpZCUzZGMxZGE3ZjQ0YWQ0MDEzZjY3MjdjMTU3MGJiZjE2Yjdj%26rlid%3Dc1da7f44ad4013f6727c1570bbf16b7c&amp;vqd=4-330315853476439916121835131120358234689&amp;iurl=%7B1%7DIG%3DF0EBB63DD5A448A8A8F07AD2DFAE5888%26CID%3D2D8E97D6454064AE225C80AA44D0656B%26ID%3DDevEx%2C5039.1\n   Master Python and become a pro. Start today and improve your skills. Find the right instructor for you. Choose from many topics, skill levels, and languages.\n\n2. **Python&#x27;s asyncio: A Hands-On Walkthrough - Real Python**\n   URL: https://realpython.com/async-io-python/\n   Python&#x27;s asyncio library enables you to write concurrent code using the async and await keywords. The core building blocks of async I/O in Python are awaitable objects—most often coroutines—that an event loop schedules and executes asynchronously. This programming model lets you efficiently manage multiple I/O-bound tasks within a single thread of execution. In this tutorial, you&#x27;ll ...\n\n3. **asyncio — Asynchronous I/O — Python 3.14.6 documentation**\n   URL: https://docs.python.org/3/library/asyncio.html\n   asyncio is a library to write concurrent code using the async/await syntax. asyncio is used as a foundation for multiple Python asynchronous frameworks that provide high-performance network and web-servers, database connection libraries, distributed task queues, etc. asyncio is often a perfect fit for IO-bound and high-level structured network code.\n\n4. **Python Async Programming: The Complete Guide - DataCamp**\n   URL: https://www.datacamp.com/tutorial/python-async-programming\n   Speed up your code with Python async programming. A step-by-step guide to asyncio, concurrency, efficient HTTP requests, and database integration.\n\n5. **Python AsyncIO Tutorial: A Comprehensive Guide To Async Python**\n   URL: https://codesamplez.com/programming/python-asyncio-tutorial\n   Learn Python AsyncIO with our beginner-friendly tutorial. Master asynchronous programming, coroutines, and more. Start coding efficiently!\n\n6. **Python Asyncio: The Complete Guide - SuperFastPython**\n   URL: https://superfastpython.com/python-asyncio/\n   We can implement asynchronous programming in Python in various ways, although a few are most relevant for Python concurrency. The first and obvious example is the asyncio module. This module directly offers an asynchronous programming environment using the async/await syntax and non-blocking I/O with sockets and subprocesses.\n\n7. **Python Asyncio Tutorial: A Complete Guide | TestMu AI (Formerly LambdaTest)**\n   URL: https://www.testmuai.com/blog/python-asyncio/\n   Python Asyncio Tutorial: A Complete Guide Learn to optimize test execution time and manage coroutines for efficient concurrency with Python asyncio, ideal for developers looking to streamline workflows.\n\n8. **asyncio in Python - GeeksforGeeks**\n   URL: https://www.geeksforgeeks.org/python/asyncio-in-python/\n   Asyncio is used as a foundation for multiple Python asynchronous frameworks that provide high-performance network and web servers, database connection libraries, distributed task queues, etc Asynchronous Programming with Asyncio in Python In the example below, we&#x27;ll create a function and make it asynchronous using the async keyword.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Ho trovato vari tutorial aggiornati su Python asyncio 2024, tra cui:\n\n- Un corso Udemy per imparare asyncio in modo completo.\n- Un tutorial pratico su Real Python che spiega async/await e gestione asincrona.\n- La documentazione ufficiale Python 3.14 su asyncio.\n- Guide passo-passo su DataCamp e CodeSamplez per principianti.\n- Articoli approfonditi su SuperFastPython e GeeksforGeeks.\n\nSe vuoi, posso riassumere o estrarre i punti principali da uno di questi."
+    }
+  ],
+  "updated_at": "2026-06-18T16:03:01.542245+00:00"
+}

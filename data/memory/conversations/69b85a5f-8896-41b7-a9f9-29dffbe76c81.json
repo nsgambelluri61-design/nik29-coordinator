@@ -1,0 +1,33 @@
+{
+  "conversation_id": "69b85a5f-8896-41b7-a9f9-29dffbe76c81",
+  "messages": [
+    {
+      "role": "user",
+      "content": "come mi chiamo"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_etlASNPf037qkIHruZyQJ2dv",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_etlASNPf037qkIHruZyQJ2dv",
+      "content": "Nessun ricordo trovato per questa categoria."
+    },
+    {
+      "role": "assistant",
+      "content": "Non ho ancora memorizzato il tuo nome. Come ti chiami? Così posso ricordarmelo per te."
+    }
+  ],
+  "updated_at": "2026-06-17T19:54:23.457858+00:00"
+}

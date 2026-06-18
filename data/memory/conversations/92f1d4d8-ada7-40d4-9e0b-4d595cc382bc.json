@@ -1,0 +1,33 @@
+{
+  "conversation_id": "92f1d4d8-ada7-40d4-9e0b-4d595cc382bc",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca su internet il prezzo dei materassi memory foam"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_NHSLazlUxINHYKlJywavfjlV",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\":\"prezzo materassi memory foam\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_NHSLazlUxINHYKlJywavfjlV",
+      "content": "Risultati per: \"prezzo materassi memory foam\"\n\n1. **Acquista offerte materassi memory foam - Amazon.it®**\n   URL: https://duckduckgo.com/y.js?ad_domain=amazon.it&amp;ad_provider=bingv7aa&amp;ad_type=txad&amp;click_metadata=x_afgAXgsg1iuRQud9tLKJK9vJZxjOzIAQ54gRszSJlBtjpoYBn6p6eTfe6ChAgF2Bd5k9m_1s6gie1i0_AvyUTunMlrtr5Odckgpx%2DyXuzwKQZ3g4Gwb5pMrfU21g5dM3K0NINssFiSoMRxioG4jGGb8EB9LlLXTTYVumswtQY.Dc3FkDPplCpmIAp_U7zOdw&amp;rut=e8e17fb6676cfd3ad848ed9749ec20b50115fa670c980ca690335c8c0be75ce0&amp;u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8N_cQnHpP8Pc4FtJxiTspvTVUCUzEDm61%2DS0_eOQxJd21NUCq47k%2DLNKqvw9XrarVBPWiiq0CNRVAo8%2D%2D3oFl11nqtmklHcrD80RDP0YNDA0l8uZ9lurxcD9U11eczrtHzeoLHhSRLddE5AJ%2Diat2Lfty%2DfGA9wikAcXVGzLQHhXY2ucWfNWyzK%2DliOpqmhXGUgg_Uz1r%2DTNVcdnt0wu00ylN0Ss%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuYW1hem9uLml0JTJmcyUyZiUzZmllJTNkVVRGOCUyNmtleXdvcmRzJTNkb2ZmZXJ0ZSUyYm1hdGVyYXNzaSUyYm1lbW9yeSUyYmZvYW0lMjZpbmRleCUzZGFwcyUyNnRhZyUzZGFtYW1pdHNwLTIxJTI2cmVmJTNkcGRfc2xfMWU1NDZlOTQxNF9lJTI2YWRncnBpZCUzZDEyMzI1NTI4NTE4MTEwOTUlMjZodmFkaWQlM2Q3NzAzNDcxNzU5NjkyMyUyNmh2bmV0dyUzZHMlMjZodnFtdCUzZGUlMjZodmJtdCUzZGJlJTI2aHZkZXYlM2RjJTI2aHZsb2NpbnQlM2QlMjZodmxvY3BoeSUzZDI0MDYzOSUyNmh2dGFyZ2lkJTNka3dkLTc3MDM0NzkxMTMyOTk4JTNhbG9jLTkzJTI2aHlkYWRjciUzZDIyMDNfMjIyMTA4NiUyNm1jaWQlM2RiNmQ2NTQ4MzgwNGUzMTY0YjEzMWE4NGNlYmFjYWEwNCUyNm1zY2xraWQlM2RkMzE5YTE5YTNiYmMxNjBjNmJmMWNiYWUyZDcwY2YzNQ%26rlid%3Dd319a19a3bbc160c6bf1cbae2d70cf35&amp;vqd=4-80362563762782211009770100392602637528&amp;iurl=%7B1%7DIG%3D70811C083EAB48F3BBD80B0B6087DA4A%26CID%3D0216C6493B7966140411D1353A9167CB%26ID%3DDevEx%2C5039.1\n   Ricevi offerte su offerte materassi memory foam nella categoria tessili per la casa su Amazon. Scopri Migliaia di Prodotti. Leggi le Recensioni dei Clienti e Trova i Più Venduti\n\n2. **Materassi Memory Foam 7cm 140x200 - Confronta prezzi**\n   URL: https://duckduckgo.com/y.js?ad_domain=trovaprezzi.it&amp;ad_provider=bingv7aa&amp;ad_type=txad&amp;click_metadata=opGG4NpXBKKrK1GqiLy8wi67owElfHbqIn7IVFN9hQLcng_BoAUy_S99zY2zHagCxBiaJqp4tDCmYJwR9VnHveTYvZpKgQFDIHS3bTR0xWI3ZgvYe8UHqcL49rlUJXv7hsmjTpW2nUxMUXul72M9YVph_lxpHmcRD8%2Ds3tGqPhc.Oz3CfW_Yr3wFs8m4%2DXw%2DUg&amp;rut=84c6fa38b07555aee1a5d08e8aed2dd0351d14fecad77718ae4e46de7f0b85c7&amp;u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8cP8kuptSVDTyO2gXxUytPTVUCUz69pRqC8ioA88ruzzQBBXe0gQP7L6HDiURbuH4_2HanAcOGXky3u1MsnmUYX2y_5CHcxTggvfMkcOpkcuvSKVKj7CPz9blKntw2Pow8AQBqUWMJ75eukrb7XBwuU8im2ZaChjvUGoIgdDq2%2DJWqM78FUhHfutbnev%2DTyQal_7mfTgblaMuhw2NvCyxf7diTkQ%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cudHJvdmFwcmV6emkuaXQlMmZwcmV6em9fbWF0ZXJhc3NpX21hdGVyYXNzaV9tZW1vcnlfZm9hbV83Y21fMTQweDIwMC5hc3B4JTNmZ2Nsc3JjJTNkM3AuZHMlMjYlMjZtc2Nsa2lkJTNkNDYzMmMwM2M3M2M0MWVlN2RiYTdhYTA4NjUwODRkNTIlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RUUF9EU0FfR2VuZXJpYyUyNnV0bV90ZXJtJTNkdHJvdmFwcmV6emklMjZ1dG1fY29udGVudCUzZERTQV9HZW5lcmlj%26rlid%3D4632c03c73c41ee7dba7aa0865084d52&amp;vqd=4-195874830859978011626044569162708757528&amp;iurl=%7B1%7DIG%3D70811C083EAB48F3BBD80B0B6087DA4A%26CID%3D0216C6493B7966140411D1353A9167CB%26ID%3DDevEx%2C5043.1\n   Chi risparmia, Trovaprezzi.it\n\n3. **Materassi memory prezzi di fabbrica**\n   URL: https://www.italymaterassi.com/it/34-materassi-memory-foam\n   Materassi memory detraibili fiscalmente, prodotti in ITALIA e spediti GRATUITAMENTE. Benvenuto nel nostro negozio online di materassi memory! Siamo orgogliosi di offrire materassi memory made in Italy, anche su misura per soddisfare le tue esigenze.\n\n4. **Materassi memory - scopri i modelli e confronta i prezzi - MaterassINLinea**\n   URL: https://www.materassinlinea.it/13-materassi-memory-foam\n   I prezzi dei Materassi Memory singoli vanno dai 70 ai 200 euro, in base anche alle dimensioni del prodotto e dei trattamenti che ne migliorano ulteriormente la qualità.\n\n5. **Materassi Memory Foam in Offerta -50%**\n   URL: https://www.materassimemory.eu/\n   Scopri la nostra selezione di materassi in offerta: prezzi competitivi, spedizione gratuita e un&#x27;ampia scelta di modelli in memory foam, a molle e in lattice, materassi singoli, matrimoniali e su misura.\n\n6. **Materassi in memory foam - Leroy Merlin**\n   URL: https://www.leroymerlin.it/prodotti/arredamento/arredamento-camera-da-letto/letti-e-materassi/materassi/materassi-in-memory-foam/\n   Materassi in memory foam - Marchi, disponibilità e consegna rapida da Leroy Merlin. Una vasta selezione di prodotti ai migliori prezzi.\n\n7. **Materassi Memory Foam: scopri i modelli e confronta le offerte**\n   URL: https://www.inmaterassi.it/it/3-materassi-memory\n   Scoprite la nostra gamma di materassi realizzati in memory foam e scegliete quello più adatto a voi per godere di notti serene e riposanti tra vari modelli disponibili: matrimoniali, singoli e una piazza e mezza.\n\n8. **Materassi in memory foam: prezzi, offerte e recensioni**\n   URL: https://www.altroconsumo.it/casa-energia/materassi/comparatore/caratteristiche/materassi-memory-foam\n   Vuoi acquistare un materasso in memory foam ma non sai quale scegliere? Scopri il risultato dei test di Altroconsumo sul miglior materasso in commercio.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "I prezzi dei materassi memory foam variano molto in base a dimensioni e qualità, ma indicativamente:\n\n- Materassi singoli: da circa 70 a 200 euro\n- Materassi matrimoniali o più grandi: possono superare i 200 euro, fino a diverse centinaia\n\nCi sono offerte online su Amazon, Leroy Merlin, e negozi specializzati come MaterassiMemory.eu e MaterassINLinea. Vuoi che ti cerchi prezzi più precisi su qualche negozio specifico?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:03:28.623228+00:00"
+}

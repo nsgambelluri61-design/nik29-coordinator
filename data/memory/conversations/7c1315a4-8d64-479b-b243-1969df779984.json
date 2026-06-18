@@ -1,0 +1,14 @@
+{
+  "conversation_id": "7c1315a4-8d64-479b-b243-1969df779984",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao Nicola. Dimmi."
+    }
+  ],
+  "updated_at": "2026-06-17T20:08:29.060736+00:00"
+}

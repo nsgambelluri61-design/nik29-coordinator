@@ -1,0 +1,33 @@
+{
+  "conversation_id": "0c40007f-32dc-4f93-9ecf-59529579505b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "naviga su https://httpbin.org/get e mostrami il contenuto"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_d3gXov8iu8p4W9qH02rSEitU",
+          "type": "function",
+          "function": {
+            "name": "browser_navigate",
+            "arguments": "{\"url\":\"https://httpbin.org/get\",\"wait_seconds\":2}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_d3gXov8iu8p4W9qH02rSEitU",
+      "content": "Contenuto estratto da https://httpbin.org/get:\n\n503 Service Temporarily Unavailable\n\n\n\n\n\n\n\n\n..."
+    },
+    {
+      "role": "assistant",
+      "content": "Il sito https://httpbin.org/get attualmente risponde con errore 503 \"Service Temporarily Unavailable\", quindi non è disponibile in questo momento. Vuoi che riprovi più tardi o faccia altro?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:06:05.248465+00:00"
+}

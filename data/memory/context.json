@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ctx-nik29-version",
+    "content": "nik29-coordinator v0.6.0 running in Docker on localhost:4001",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "ctx-web-ui",
+    "content": "Web UI: Matrix green theme at localhost:4001 (static/index.html)",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  },
+  {
+    "id": "ctx-telegram-bot",
+    "content": "Telegram bot: @nik29coordinatorbot (polling mode, whitelist)",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "ctx-memory",
+    "content": "Memory: persistent in data/memory/ (Docker volume mount)",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "ctx-auto-update",
+    "content": "Auto-update: checks GitHub manifest.json for new versions",
+    "category": "features",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  },
+  {
+    "id": "ctx-github-repo",
+    "content": "GitHub repo: nsgambelluri61-design/nik29-coordinator (PUBLIC)",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "ctx-stack",
+    "content": "Stack: Python 3.11, FastAPI, uvicorn, WebSocket, python-telegram-bot 20+",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "ctx-startup",
+    "content": "startup.py runs uvicorn + telegram bot in parallel via asyncio",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "high"
+  },
+  {
+    "id": "ctx-system-prompt",
+    "content": "System prompt in config/system_prompt.txt",
+    "category": "architecture",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  },
+  {
+    "id": "ctx-docker-compose-path",
+    "content": "Docker compose path on Mac: /Applications/Docker.app/Contents/Resources/bin/docker compose",
+    "category": "environment",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  },
+  {
+    "id": "ctx-project-path",
+    "content": "Project path on Mac: ~/Downloads/nik29-coordinator-v0.6.0/",
+    "category": "environment",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  },
+  {
+    "id": "ctx-future-plans",
+    "content": "Future plans: Maestro integration (nik29 as coordinator over Maestro), web browsing, email/calendar, upgrade to gpt-4.1 for complex tasks",
+    "category": "roadmap",
+    "created": "2026-06-18",
+    "source": "manus-session",
+    "importance": "medium"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "aaf10104-f213-475b-9364-c8d41af016e8",
+  "messages": [
+    {
+      "role": "user",
+      "content": "di che cosa parlava o"
+    },
+    {
+      "role": "assistant",
+      "content": "Potresti per favore specificare a cosa ti riferisci con \"o\"? Così posso aiutarti meglio a capire di cosa parlava."
+    }
+  ],
+  "updated_at": "2026-06-17T19:38:08.691199+00:00"
+}

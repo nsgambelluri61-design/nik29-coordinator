@@ -1,0 +1,33 @@
+{
+  "conversation_id": "1e2074bc-ab0c-40f7-8fa4-ca2bac0e41e0",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca su internet il prezzo dei materassi memory foam"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_znLYbwxctNWPnDfCwEqFkXrU",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\":\"prezzo materassi memory foam\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_znLYbwxctNWPnDfCwEqFkXrU",
+      "content": "Risultati per: \"prezzo materassi memory foam\"\n\n1. **Materassi memory prezzi di fabbrica**\n   URL: https://www.italymaterassi.com/it/34-materassi-memory-foam\n   Materassi memory detraibili fiscalmente, prodotti in ITALIA e spediti GRATUITAMENTE. Benvenuto nel nostro negozio online di materassi memory! Siamo orgogliosi di offrire materassi memory made in Italy, anche su misura per soddisfare le tue esigenze.\n\n2. **Materassi in memory foam - Leroy Merlin**\n   URL: https://www.leroymerlin.it/prodotti/arredamento/arredamento-camera-da-letto/letti-e-materassi/materassi/materassi-in-memory-foam/\n   Materassi in memory foam - Marchi, disponibilità e consegna rapida da Leroy Merlin. Una vasta selezione di prodotti ai migliori prezzi.\n\n3. **Materassi Memory Foam in Offerta -50%**\n   URL: https://www.materassimemory.eu/\n   Scopri la nostra selezione di materassi in offerta: prezzi competitivi, spedizione gratuita e un&#x27;ampia scelta di modelli in memory foam, a molle e in lattice, materassi singoli, matrimoniali e su misura.\n\n4. **Materassi memory - scopri i modelli e confronta i prezzi - MaterassINLinea**\n   URL: https://www.materassinlinea.it/13-materassi-memory-foam\n   I prezzi dei Materassi Memory singoli vanno dai 70 ai 200 euro, in base anche alle dimensioni del prodotto e dei trattamenti che ne migliorano ulteriormente la qualità.\n\n5. **Materassi in memory foam: prezzi, offerte e recensioni**\n   URL: https://www.altroconsumo.it/casa-energia/materassi/comparatore/caratteristiche/materassi-memory-foam\n   Vuoi acquistare un materasso in memory foam ma non sai quale scegliere? Scopri il risultato dei test di Altroconsumo sul miglior materasso in commercio.\n\n6. **Materassi in memory foam: confronta i prezzi da diversi negozi**\n   URL: https://occhioaiprezzi.com/prodotti/materassi-in-memory-foam/\n   Scopri come scegliere il materasso in memory foam ideale con la nostra guida dettagliata.\n\n7. **Migliori Materassi memory foam 2026 - Classifica e Recensioni**\n   URL: https://www.migliori24.it/materassi-memory-foam\n   Controlla il prezzo di ogni prodotto nella classifica di materassi memory foam, per trovare sottocosto o offerte con il miglior rapporto qualità prezzo. Avrai a disposizione 7 occasioni per comprare un nuovo materasso memory foam a prezzi bassi.\n\n8. **Materassi: prezzi e offerte | Leroy Merlin**\n   URL: https://www.leroymerlin.it/prodotti/arredamento/arredamento-camera-da-letto/letti-e-materassi/materassi/\n   Da Leroy Merlin, trovi la nostra selezione di 2116 prodotti al miglior prezzo, su un&#x27;ampia scelta di brand e referenze, disponibili in negozio o consegnati rapidamente a casa tua.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "I prezzi dei materassi memory foam variano molto a seconda del modello e delle dimensioni. In generale, si trovano materassi singoli dai 70 ai 200 euro, mentre i prezzi possono salire per prodotti più grandi o con trattamenti speciali. Ci sono offerte con sconti fino al 50% su alcuni siti. Vuoi che ti trovi prezzi specifici da qualche negozio online italiano?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:24.003903+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "a5fda8bf-1d12-4e98-8554-a486b7b6ff6c",
+  "messages": [
+    {
+      "role": "user",
+      "content": "voglio veder come parli"
+    },
+    {
+      "role": "assistant",
+      "content": "Vai tranquillo: dimmi pure cosa vuoi sapere o che test vuoi fare. Scrivo sempre così, diretto e senza fronzoli. Fai una domanda o dammi un task, ti mostro subito come lavoro."
+    }
+  ],
+  "updated_at": "2026-06-18T19:11:50.095974+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "878a0279-0b42-46b4-9c7a-47a56cb48b85",
+  "messages": [
+    {
+      "role": "user",
+      "content": "dammi il link"
+    },
+    {
+      "role": "assistant",
+      "content": "Quale link ti serve? Specifica a cosa ti riferisci (sito, prodotto, file, ecc)."
+    }
+  ],
+  "updated_at": "2026-06-18T19:04:26.292786+00:00"
+}

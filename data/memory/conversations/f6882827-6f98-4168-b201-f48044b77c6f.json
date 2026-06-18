@@ -1,0 +1,14 @@
+{
+  "conversation_id": "f6882827-6f98-4168-b201-f48044b77c6f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ma tu crei agenti?"
+    },
+    {
+      "role": "assistant",
+      "content": "Posso proporti di creare nuovi tool personalizzati per fare cose specifiche, che poi funzionano come agenti dedicati su compiti particolari. Ma non creo agenti autonomi complessi da zero senza una procedura guidata. Vuoi che ti proponga un nuovo tool/ agente per qualche funzione?"
+    }
+  ],
+  "updated_at": "2026-06-17T20:28:55.909336+00:00"
+}

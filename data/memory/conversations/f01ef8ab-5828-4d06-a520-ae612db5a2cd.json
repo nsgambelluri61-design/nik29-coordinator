@@ -1,0 +1,33 @@
+{
+  "conversation_id": "f01ef8ab-5828-4d06-a520-ae612db5a2cd",
+  "messages": [
+    {
+      "role": "user",
+      "content": "naviga su https://questo-sito-non-esiste-xyz-12345.com e mostrami il contenuto"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_LiD69AkcCz27dzCHi8PGvv0X",
+          "type": "function",
+          "function": {
+            "name": "browser_navigate",
+            "arguments": "{\"url\":\"https://questo-sito-non-esiste-xyz-12345.com\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_LiD69AkcCz27dzCHi8PGvv0X",
+      "content": "Errore: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://questo-sito-non-esiste-xyz-12345.com/\nCall log:\n  - navigating to \"https://questo-sito-non-esiste-xyz-12345.com/\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Il sito https://questo-sito-non-esiste-xyz-12345.com non esiste o non è raggiungibile, quindi non posso mostrarne il contenuto. Vuoi provare con un altro sito?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:57.486941+00:00"
+}

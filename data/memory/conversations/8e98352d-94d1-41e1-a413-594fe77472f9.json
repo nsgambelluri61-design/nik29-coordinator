@@ -1,0 +1,14 @@
+{
+  "conversation_id": "8e98352d-94d1-41e1-a413-594fe77472f9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "sei sicuro?"
+    },
+    {
+      "role": "assistant",
+      "content": "Su cosa vuoi che sia sicuro esattamente? Dimmi pure, così ti rispondo preciso."
+    }
+  ],
+  "updated_at": "2026-06-18T15:32:21.144092+00:00"
+}

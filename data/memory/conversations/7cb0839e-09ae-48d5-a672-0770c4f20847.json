@@ -1,0 +1,14 @@
+{
+  "conversation_id": "7cb0839e-09ae-48d5-a672-0770c4f20847",
+  "messages": [
+    {
+      "role": "user",
+      "content": "non hai capito"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi pure cosa non ho capito, così sistemo subito."
+    }
+  ],
+  "updated_at": "2026-06-18T16:26:57.402427+00:00"
+}

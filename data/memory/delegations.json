@@ -1,0 +1,39 @@
+{
+  "delegations": [
+    {
+      "agent": "immagini",
+      "instruction": "scatta uno screenshot della pagina https://ildormire.com e salva l'immagine",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-18T15:30:39.149456+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Vai su https://ildormire.com, fai uno screenshot della homepage e poi analizza visivamente l'immagine risultante, descrivendo layout, colori, bottoni, testi e struttura generale della pagina.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-18T15:47:30.336779+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scatta uno screenshot della pagina https://example.com, analizza visivamente layout e contenuti, descrivendo struttura, colori, testi, bottoni, e cosa viene mostrato.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-18T16:08:34.466702+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Visita la homepage https://ildormire.com e scatta uno screenshot della pagina per analizzarne il layout e l'aspetto visivo.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-18T16:31:39.329984+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Visita la pagina https://www.emmasleep.it, scatta uno screenshot completo della homepage e analizza il design. Descrivi i colori principali usati, il layout generale della pagina, e le call to action ",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-18T16:32:31.657207+00:00"
+    }
+  ]
+}

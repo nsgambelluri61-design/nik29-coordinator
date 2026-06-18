@@ -1,0 +1,14 @@
+{
+  "conversation_id": "04142e89-7f03-4cb4-aba4-018cbca4424c",
+  "messages": [
+    {
+      "role": "user",
+      "content": "bravo cosi mi devi rispondre"
+    },
+    {
+      "role": "assistant",
+      "content": "Ricevuto, Nicola. Risposte dirette e pratiche d’ora in poi."
+    }
+  ],
+  "updated_at": "2026-06-18T15:44:57.653349+00:00"
+}

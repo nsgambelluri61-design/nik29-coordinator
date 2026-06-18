@@ -1,0 +1,14 @@
+{
+  "conversation_id": "190028aa-f1e2-46c8-961f-0505b4d4f960",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quanto tempo fa"
+    },
+    {
+      "role": "assistant",
+      "content": "Serve contesto: di cosa vuoi sapere quanto tempo fa? Dammi più dettagli."
+    }
+  ],
+  "updated_at": "2026-06-17T20:10:12.068413+00:00"
+}

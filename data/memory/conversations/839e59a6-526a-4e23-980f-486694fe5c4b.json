@@ -1,0 +1,14 @@
+{
+  "conversation_id": "839e59a6-526a-4e23-980f-486694fe5c4b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "no non ti serve lagente"
+    },
+    {
+      "role": "assistant",
+      "content": "Ricevuto, niente agente esterno Manus per ora. Dimmi pure cosa vuoi fare o controllare."
+    }
+  ],
+  "updated_at": "2026-06-18T15:47:55.430028+00:00"
+}

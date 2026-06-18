@@ -1,0 +1,33 @@
+{
+  "conversation_id": "efe99daf-e0b1-4fe2-a6c4-9a36ea8f2387",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca i prezzi dei materassi Emma Sleep\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_njS9Y671IgTfq2rUQpBFADWN",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"num_pages\":3,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_njS9Y671IgTfq2rUQpBFADWN",
+      "content": "{'query': 'prezzi materassi Emma Sleep', 'findings': [{'title': 'Materassi Memory e Molle per il tuo comfort | Emma Materasso', 'url': 'https://www.emma-materasso.it/materassi/', 'snippet': 'Materiali: Molle a 7 zone, schiume confortevoli, bordi rinforzati e AirGrid® · Molle a 7 zone, schiume confortevoli, bordi rinforzati e AirGrid® · Da · <strong>949,00 €</strong> · Consegna in 2-5 giorni lavorativi · Dormi, sogna, decidi - senza alcun ...', 'content': \"Collezione Performance\\nProgettata con precisione per il DeepCalm Comfort™ e un'imbottitura fresca.\\nMaterassi di alta qualità, scelti da oltre 4,5 milioni di persone.1\\nQual è quello giusto per te?\\nL'innovazione in fatto di comfort\\nComprane uno, ricevine due.\\nQual è quello giusto per te?\\nPer un sonno senza pensieri\", 'error': None}, {'title': 'Materassi, Letti e Accessori | Emma Materasso', 'url': 'https://www.emma-materasso.it/', 'snippet': 'Emma offre materassi, letti e accessori di qualità per un riposo ottimale. Scopri soluzioni pensate per garantire comfort e benessere ogni notte.', 'content': 'Loading\\nCoprimaterasso GRATIS sui Materassi Performance\\nOttieni il tuo Coprimaterasso Impermeabile gratuito!\\nSaldi al Mare: fino a -60% di sconto\\nInizia l’estate con il comfort Emma 1\\n- Affidati ai prodotti Emma e non potrai più farne a meno. Se così non fosse, nessun problema: consegna e reso sono completamente gratuiti. \\n- Hai 100 notti per provare i nostri prodotti, nella comodità di casa tua. \\n- Non abbiamo dubbi sulla qualità dei nostri prodotti, quindi ti offriamo fino a 10 anni di garanzia. Puoi dormire sonni tranquilli.\\n- Non hai più scuse per non fare acquisti. Puoi dilazionare il pagamento in più quote mensili, senza costi aggiuntivi e senza documento di reddito. Che aspetti?\\nI Nostri Migliori Prodotti in Offerta\\nI nostri Premi\\nMaterasso Emma Original - Versione 2025: Migliore del Test Atroconsumo 2026', 'error': None}, {'title': 'Saldi e Offerte su Materassi | Emma Materasso', 'url': 'https://www.emma-materasso.it/promozioni-emma/', 'snippet': 'Materasso, cuscini e accessori: il necessario per notti più fresche. Selezionati per te in un solo pack a un prezzo intelligente.', 'content': \"Saldi al Mare: fino a -60% di sconto\\nInizia l’estate con il comfort Emma 1\\n- Best Sellers\\n- Materassi\\n- I Kit Emma\\n- Letti\\n- Cuscini\\n- Topper\\n- Biancheria da letto\\n- Tutte le Offerte\\n- Compara i nostri cuscini\\nPer un sonno senza pensieri\\nAcquista senza stress\\n- Hai 100 notti per provare i nostri prodotti, senza fretta nella comodità di casa tua. E 100 giorni per scoprire la versione migliore di te, a ogni risveglio.\\n- Non abbiamo dubbi sulla qualità dei nostri prodotti, quindi ti offriamo fino a 10 anni di garanzia. Puoi dormire sonni tranquilli.\\n- Affidati ai prodotti Emma e non potrai più farne a meno. Se così non fosse, nessun problema: consegna e reso sono completamente gratuiti!\\n- Scegli di pagare in comode rate senza interessi aggiuntivi. Ti basterà scegliere l'opzione rateale al momento dell'acqusto!\", 'error': None}], 'pages_read': 3}"
+    },
+    {
+      "role": "assistant",
+      "content": "Prezzi materassi Emma Sleep:\n- Il prezzo di listino di un materasso Emma Performance è circa 949 € (matrimoniale).\n- Sono spesso attive promo e sconti fino al 60%.\n- Spedizione e reso gratuiti, 100 notti di prova, pagamenti anche a rate senza interessi.\n\nPer il prezzo preciso del modello che ti interessa, conviene sempre controllare sul sito Emma perché cambiano spesso in base alle offerte."
+    }
+  ],
+  "updated_at": "2026-06-18T18:02:29.978303+00:00"
+}

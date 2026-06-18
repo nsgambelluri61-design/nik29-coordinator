@@ -1,0 +1,58 @@
+{
+  "rules": [
+    {
+      "rule": "nik29-coordinator v0.6.0 running in Docker on localhost:4001"
+    },
+    {
+      "rule": "Web UI: Matrix green theme at localhost:4001 (static/index.html)"
+    },
+    {
+      "rule": "Telegram bot: @nik29coordinatorbot (polling mode, whitelist)"
+    },
+    {
+      "rule": "Memory: persistent in data/memory/ (Docker volume mount)"
+    },
+    {
+      "rule": "Auto-update: checks GitHub manifest.json for new versions"
+    },
+    {
+      "rule": "GitHub repo: nsgambelluri61-design/nik29-coordinator (PUBLIC)"
+    },
+    {
+      "rule": "Stack: Python 3.11, FastAPI, uvicorn, WebSocket, python-telegram-bot 20+"
+    },
+    {
+      "rule": "startup.py runs uvicorn + telegram bot in parallel via asyncio"
+    },
+    {
+      "rule": "System prompt in config/system_prompt.txt"
+    },
+    {
+      "rule": "Docker compose path on Mac: /Applications/Docker.app/Contents/Resources/bin/docker compose"
+    },
+    {
+      "rule": "Project path on Mac: ~/Downloads/nik29-coordinator-v0.6.0/"
+    },
+    {
+      "rule": "Future plans: Maestro integration (nik29 as coordinator over Maestro), web browsing, email/calendar, upgrade to gpt-4.1 for complex tasks"
+    },
+    {
+      "rule": "Manus: cloud AI assistant (this system), used for complex development tasks, website building, research"
+    },
+    {
+      "rule": "Maestro: local AI agent for ildormire.com management (port 4002), handles site CMS, products, images"
+    },
+    {
+      "rule": "nik29: personal coordinator assistant (port 4001), handles general tasks, Telegram interface, memory"
+    },
+    {
+      "rule": "Open WebUI (localhost:8080): local LLM interface on Mac with Ollama models"
+    },
+    {
+      "rule": "ildormire.com: e-commerce site on VPS, managed by Maestro"
+    },
+    {
+      "rule": "Future goal: nik29 becomes the coordinator that can delegate to Maestro and other agents"
+    }
+  ]
+}

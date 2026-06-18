@@ -1,0 +1,33 @@
+{
+  "conversation_id": "11426038-a1de-4d8c-8c0d-a8f266cae863",
+  "messages": [
+    {
+      "role": "user",
+      "content": "salva in memoria: 'test_key_2024: il test automatico funziona correttamente'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_mes9suGXFOP7YkYS33yc9J6P",
+          "type": "function",
+          "function": {
+            "name": "save_memory",
+            "arguments": "{\"type\":\"fact\",\"key\":\"test_key_2024\",\"value\":\"il test automatico funziona correttamente\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_mes9suGXFOP7YkYS33yc9J6P",
+      "content": "Fatto salvato nella categoria 'test_key_2024'."
+    },
+    {
+      "role": "assistant",
+      "content": "Ho salvato in memoria: 'test_key_2024: il test automatico funziona correttamente'."
+    }
+  ],
+  "updated_at": "2026-06-18T16:03:12.400847+00:00"
+}

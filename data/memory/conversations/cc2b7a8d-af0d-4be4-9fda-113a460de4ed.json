@@ -1,0 +1,14 @@
+{
+  "conversation_id": "cc2b7a8d-af0d-4be4-9fda-113a460de4ed",
+  "messages": [
+    {
+      "role": "user",
+      "content": "sai programmare?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì, so programmare. Posso scrivere, modificare e correggere codice in diversi linguaggi (come JavaScript, TypeScript, Python, ecc.). Se ti serve uno script, una modifica al sito o vuoi automatizzare qualcosa, dimmelo e lo faccio."
+    }
+  ],
+  "updated_at": "2026-06-18T19:05:46.165225+00:00"
+}

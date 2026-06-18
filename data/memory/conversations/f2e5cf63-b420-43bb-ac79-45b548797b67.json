@@ -1,0 +1,33 @@
+{
+  "conversation_id": "f2e5cf63-b420-43bb-ac79-45b548797b67",
+  "messages": [
+    {
+      "role": "user",
+      "content": "chi sono io"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_qtWW0BFm3E6pH5DnWklu6eOI",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{\"category\":\"business\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_qtWW0BFm3E6pH5DnWklu6eOI",
+      "content": "[\n  {\n    \"fact\": \"Nicola Sgambelluri e' il titolare de 'Il Dormire' (Sgambelluri srls).\",\n    \"category\": \"business\",\n    \"timestamp\": \"2026-06-18T12:00:00Z\",\n    \"source\": \"auto\"\n  },\n  {\n    \"fact\": \"Il negozio si trova a Siderno (RC).\",\n    \"category\": \"business\",\n    \"timestamp\": \"2026-06-18T12:00:00Z\",\n    \"source\": \"auto\"\n  },\n  {\n    \"fact\": \"Vende materassi, cuscini e reti letto.\",\n    \"category\": \"business\",\n    \"timestamp\": \"2026-06-18T12:00:00Z\",\n    \"source\": \"auto\"\n  },\n  {\n    \"fact\": \"Tutti i prodotti venduti sono Made in Italy.\",\n    \"category\": \"business\",\n    \"timestamp\": \"2026-06-18T12:00:00Z\",\n    \"source\": \"auto\"\n  },\n  {\n    \"fact\": \"Il sito e' ottimizzato SEO per tutta la provincia di Reggio Calabria.\",\n    \"category\": \"business\",\n    \"timestamp\": \"2026-06-18T12:00:00Z\",\n    \"source\": \"auto\"\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "content": "Tu sei Nicola Sgambelluri, titolare de \"Il Dormire\" (Sgambelluri srls) a Siderno (RC). Vendi materassi, cuscini e reti letto, tutti Made in Italy. Il tuo sito è ottimizzato SEO per la provincia di Reggio Calabria."
+    }
+  ],
+  "updated_at": "2026-06-18T19:05:15.147326+00:00"
+}

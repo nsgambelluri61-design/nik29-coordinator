@@ -1,0 +1,33 @@
+{
+  "conversation_id": "8b04c072-99e9-4069-9b41-af40af0db2aa",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quale l'ultimo?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_MrBExaDeYVlCxISPsZ0k4O9j",
+          "type": "function",
+          "function": {
+            "name": "git_auto",
+            "arguments": "{\"action\":\"log\",\"count\":1}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_MrBExaDeYVlCxISPsZ0k4O9j",
+      "content": "Ultimi 1 commit:\n* e0572fc Fix Brave Search (ui_lang 422), search rules, brain transplant"
+    },
+    {
+      "role": "assistant",
+      "content": "L'ultimo commit è: \"Fix Brave Search (ui_lang 422), search rules, brain transplant\"."
+    }
+  ],
+  "updated_at": "2026-06-18T19:15:58.208321+00:00"
+}

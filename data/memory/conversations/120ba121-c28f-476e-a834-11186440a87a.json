@@ -1,0 +1,14 @@
+{
+  "conversation_id": "120ba121-c28f-476e-a834-11186440a87a",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ma un orchestratore e piu potente di un monolite?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì Nicola, un orchestratore è più potente e flessibile di un agente monolite. \n\n- Il monolite fa tutto da solo, un unico blocco che gestisce tutto.\n- L’orchestratore coordina più agenti specializzati, delega compiti e gestisce flussi complessi.\n\nQuindi l’orchestratore è migliore per sistemi grandi e complessi, perché divide e organizza il lavoro meglio."
+    }
+  ],
+  "updated_at": "2026-06-18T16:24:04.043468+00:00"
+}

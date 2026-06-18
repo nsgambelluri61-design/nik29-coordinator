@@ -1,0 +1,14 @@
+{
+  "conversation_id": "57629a01-a301-4874-ac8a-d39fc0a73437",
+  "messages": [
+    {
+      "role": "user",
+      "content": "facciamo una chiacchierata"
+    },
+    {
+      "role": "assistant",
+      "content": "Vai, dimmi pure! Di cosa vuoi parlare?"
+    }
+  ],
+  "updated_at": "2026-06-18T19:11:29.203283+00:00"
+}

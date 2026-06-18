@@ -1,0 +1,14 @@
+{
+  "conversation_id": "c4bfd99a-3a37-46aa-a6fd-7c71fda6c698",
+  "messages": [
+    {
+      "role": "user",
+      "content": "un app x iphone 13"
+    },
+    {
+      "role": "assistant",
+      "content": "Vuoi che ti crei un'app per iPhone 13? Serve sapere a cosa deve servire l'app, cosa deve fare e se hai già contenuti o design. Dammi dettagli pratici così inizio a pianificare."
+    }
+  ],
+  "updated_at": "2026-06-17T20:27:58.070012+00:00"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "morning",
+    "name": "morning_briefing",
+    "cron_expression": "0 9 * * *",
+    "action": "morning_briefing",
+    "action_params": {},
+    "enabled": true,
+    "last_run": null,
+    "last_result": null,
+    "created_at": "2025-06-18T00:00:00+00:00"
+  },
+  {
+    "id": "hourly",
+    "name": "site_health_check",
+    "cron_expression": "0 * * * *",
+    "action": "site_health_check",
+    "action_params": {},
+    "enabled": true,
+    "last_run": "2026-06-18T16:05:57.419009+00:00",
+    "last_result": {
+      "success": true,
+      "output": "Site OK (HTTP 200)"
+    },
+    "created_at": "2025-06-18T00:00:00+00:00"
+  },
+  {
+    "id": "weekly",
+    "name": "weekly_report",
+    "cron_expression": "0 9 * * 1",
+    "action": "weekly_report",
+    "action_params": {},
+    "enabled": true,
+    "last_run": null,
+    "last_result": null,
+    "created_at": "2025-06-18T00:00:00+00:00"
+  }
+]

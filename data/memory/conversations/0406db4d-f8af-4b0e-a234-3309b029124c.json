@@ -1,0 +1,33 @@
+{
+  "conversation_id": "0406db4d-f8af-4b0e-a234-3309b029124c",
+  "messages": [
+    {
+      "role": "user",
+      "content": "salva in memoria: Emma Sleep materasso matrimoniale costa circa 600-900 euro, competitor principale"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_YwUavMeAIhrJVT8SUfw7Dltx",
+          "type": "function",
+          "function": {
+            "name": "save_memory",
+            "arguments": "{\"type\":\"fact\",\"key\":\"competitor_prices\",\"value\":\"Emma Sleep materasso matrimoniale costa circa 600-900 euro, competitor principale\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_YwUavMeAIhrJVT8SUfw7Dltx",
+      "content": "Fatto salvato nella categoria 'competitor_prices'."
+    },
+    {
+      "role": "assistant",
+      "content": "Ho salvato in memoria che il materasso matrimoniale Emma Sleep costa circa 600-900 euro ed è un competitor principale."
+    }
+  ],
+  "updated_at": "2026-06-18T16:31:52.622641+00:00"
+}

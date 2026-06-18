@@ -1,0 +1,14 @@
+{
+  "conversation_id": "c16f9074-071c-4411-afad-5a4f721cdba5",
+  "messages": [
+    {
+      "role": "user",
+      "content": "si spiegamenlo bene"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi cosa devo spiegarti bene, così vado dritto al punto senza perdermi in chiacchiere."
+    }
+  ],
+  "updated_at": "2026-06-18T16:24:54.009545+00:00"
+}

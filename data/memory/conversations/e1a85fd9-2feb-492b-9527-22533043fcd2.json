@@ -1,0 +1,33 @@
+{
+  "conversation_id": "e1a85fd9-2feb-492b-9527-22533043fcd2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "aggiornati"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_NqcFphaD6R2i3yfQmz6tEA2Y",
+          "type": "function",
+          "function": {
+            "name": "auto_update",
+            "arguments": "{\"action\":\"update\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_NqcFphaD6R2i3yfQmz6tEA2Y",
+      "content": "Errore download manifest: HTTP 404"
+    },
+    {
+      "role": "assistant",
+      "content": "Ho tentato di aggiornarmi ma ho riscontrato un errore nel download del manifesto di aggiornamento (errore 404). Vuoi che riprovi oppure preferisci che ti aiuti con qualcos'altro?"
+    }
+  ],
+  "updated_at": "2026-06-17T19:23:31.438142+00:00"
+}

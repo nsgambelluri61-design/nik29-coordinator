@@ -1,0 +1,33 @@
+{
+  "conversation_id": "766768c4-8529-4fa8-b6e4-fdaa3af44748",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca sul web: 'Python asyncio tutorial 2024'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_U6wS9hZFS073FIWtMf8LhqbA",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\":\"Python asyncio tutorial 2024\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_U6wS9hZFS073FIWtMf8LhqbA",
+      "content": "Risultati per: \"Python asyncio tutorial 2024\"\n\n1. **Python&#x27;s asyncio: A Hands-On Walkthrough - Real Python**\n   URL: https://realpython.com/async-io-python/\n   Python&#x27;s asyncio library enables you to write concurrent code using the async and await keywords. The core building blocks of async I/O in Python are awaitable objects—most often coroutines—that an event loop schedules and executes asynchronously. This programming model lets you efficiently manage multiple I/O-bound tasks within a single thread of execution. In this tutorial, you&#x27;ll ...\n\n2. **asyncio — Asynchronous I/O — Python 3.14.6 documentation**\n   URL: https://docs.python.org/3/library/asyncio.html\n   asyncio is a library to write concurrent code using the async/await syntax. asyncio is used as a foundation for multiple Python asynchronous frameworks that provide high-performance network and web-servers, database connection libraries, distributed task queues, etc. asyncio is often a perfect fit for IO-bound and high-level structured network code.\n\n3. **Python Async Programming: The Complete Guide - DataCamp**\n   URL: https://www.datacamp.com/tutorial/python-async-programming\n   Speed up your code with Python async programming. A step-by-step guide to asyncio, concurrency, efficient HTTP requests, and database integration.\n\n4. **Python Asyncio Tutorial: A Complete Guide - testmuai.com**\n   URL: https://www.testmuai.com/blog/python-asyncio/\n   Python Asyncio Tutorial: A Complete Guide Learn to optimize test execution time and manage coroutines for efficient concurrency with Python asyncio, ideal for developers looking to streamline workflows.\n\n5. **Python AsyncIO Tutorial: A Comprehensive Guide To Async Python**\n   URL: https://codesamplez.com/programming/python-asyncio-tutorial\n   Learn Python AsyncIO with our beginner-friendly tutorial. Master asynchronous programming, coroutines, and more. Start coding efficiently!\n\n6. **Mastering Python&#x27;s Asyncio: A Practical Guide - Medium**\n   URL: https://medium.com/@moraneus/mastering-pythons-asyncio-a-practical-guide-0a673265cf04\n   Mastering Python&#x27;s Asyncio: A Practical Guide When you dive into Python&#x27;s world, one gem that truly shines for handling modern web and network tasks is asyncio.\n\n7. **Python Asynchronous Programming Tutorial: Asyncio, async &amp; await ...**\n   URL: https://www.youtube.com/watch?v=ngXbyui-weA\n   In this step-by-step Python asynchronous programming tutorial, we break down Asyncio, async, and await so you can write faster, more efficient, and modern Python code. 👉 Join my Python ...\n\n8. **Python Asyncio: The Complete Guide - SuperFastPython**\n   URL: https://superfastpython.com/python-asyncio/\n   Python Asyncio provides asynchronous programming with coroutines. Asynchronous programming is a popular programming paradigm that allows a large number of lightweight tasks to run concurrently with very little memory overhead, compared to threads.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Ho trovato diversi tutorial aggiornati al 2024 su Python asyncio. I più rilevanti:\n\n1. Real Python: \"Python's asyncio: A Hands-On Walkthrough\" (realpython.com/async-io-python)\n2. Documentazione ufficiale Python 3.14: asyncio (docs.python.org/3/library/asyncio.html)\n3. DataCamp guida completa a Python async (datacamp.com/tutorial/python-async-programming)\n4. Tutorial completo su testmuai.com\n5. Guida pratica su Medium \"Mastering Python's Asyncio\"\n6. Video tutorial su YouTube \"Python Asynchronous Programming Tutorial\"\n\nQuale preferisci? Ti posso sintetizzare o scaricare il contenuto di uno in particolare."
+    }
+  ],
+  "updated_at": "2026-06-18T16:04:53.468946+00:00"
+}

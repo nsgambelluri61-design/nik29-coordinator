@@ -1,0 +1,14 @@
+{
+  "conversation_id": "d6f0ab92-6225-4d0e-99b3-b6108c812b54",
+  "messages": [
+    {
+      "role": "user",
+      "content": "saluta"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Come posso aiutarti oggi?"
+    }
+  ],
+  "updated_at": "2026-06-17T19:17:56.460023+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "013f3b65-d9fb-4772-a9a3-598005f62ec4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "che ore sono adesso? usa il comando date"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_mMibFChBxTh4xORRWjPOkN4V",
+          "type": "function",
+          "function": {
+            "name": "shell",
+            "arguments": "{\"command\":\"date\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_mMibFChBxTh4xORRWjPOkN4V",
+      "content": "Thu Jun 18 16:08:48 UTC 2026\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Sono le 16:08 del 18 giugno 2026 (orario UTC). Vuoi che ti dica l'ora in un fuso orario specifico?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:08:51.037392+00:00"
+}

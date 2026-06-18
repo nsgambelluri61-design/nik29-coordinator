@@ -1,0 +1,33 @@
+{
+  "conversation_id": "22372208-4c34-48e7-9dd0-9ca51b105c0b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "di che cosa  stavamo parlando ?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_y0ijoNTXBWQKWBnFHVCWby11",
+          "type": "function",
+          "function": {
+            "name": "conversation_summary",
+            "arguments": "{\"action\":\"get_summary\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_y0ijoNTXBWQKWBnFHVCWby11",
+      "content": "Nessun riassunto disponibile."
+    },
+    {
+      "role": "assistant",
+      "content": "Non abbiamo ancora iniziato a parlare di un argomento specifico in questa conversazione. Come posso aiutarti oggi?"
+    }
+  ],
+  "updated_at": "2026-06-17T19:22:39.007801+00:00"
+}

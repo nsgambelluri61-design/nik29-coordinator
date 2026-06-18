@@ -1,0 +1,33 @@
+{
+  "conversation_id": "e2b4f6be-1b6a-42e9-bc9a-7506ce1420b3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "fai una ricerca web approfondita su: 'benefici del materasso in memory foam per la schiena'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_LICv0t6AQqxf46DWv2nRkSwj",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"benefici del materasso in memory foam per la schiena\",\"num_pages\":3,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_LICv0t6AQqxf46DWv2nRkSwj",
+      "content": "{'error': 'Search failed: BRAVE_API_KEY not configured. Set it in environment variables.'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Non ho la chiave BRAVE_API_KEY configurata per fare ricerche web approfondite. Posso però cercare informazioni con strumenti alternativi o darti un riassunto basato su dati noti. Come preferisci?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:06:10.269605+00:00"
+}

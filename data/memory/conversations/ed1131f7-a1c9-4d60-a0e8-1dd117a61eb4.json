@@ -1,0 +1,33 @@
+{
+  "conversation_id": "ed1131f7-a1c9-4d60-a0e8-1dd117a61eb4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "esegui un health check completo del sistema"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_mP4z7BzqeNjkJh19CHoZjpSU",
+          "type": "function",
+          "function": {
+            "name": "health_check",
+            "arguments": "{\"check_type\":\"all\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_mP4z7BzqeNjkJh19CHoZjpSU",
+      "content": "{'timestamp': '2026-06-18T16:31:57.641335+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error': None}, 'docker': {'containers': [], 'count': 0, 'bridge_reachable': False}, 'disk': {'root_usage': 'unknown', 'warning': False}, 'memory': {'raw': 'unavailable', 'bridge_reachable': False}}, 'overall_status': 'degraded'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Il sito ildormire.com è raggiungibile e risponde con codice 200.  \nTuttavia, non ci sono container Docker attivi e il bridge Docker non è raggiungibile, inoltre i dati su disco e memoria non sono disponibili.  \nLo stato complessivo è degradato, serve controllo Docker sul Mac host. Vuoi che controllo da lì?"
+    }
+  ],
+  "updated_at": "2026-06-18T16:32:00.305575+00:00"
+}

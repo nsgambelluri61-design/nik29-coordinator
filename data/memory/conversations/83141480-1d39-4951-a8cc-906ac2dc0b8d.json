@@ -1,0 +1,14 @@
+{
+  "conversation_id": "83141480-1d39-4951-a8cc-906ac2dc0b8d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ragiona passo passo: se ho 3 materassi da 200€ e uno sconto del 15%, quanto pago in totale?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ecco il ragionamento passo passo:\n\n1. Prezzo totale senza sconto: 3 materassi × 200€ = 600€\n2. Calcolo dello sconto: 15% di 600€ = 600€ × 0,15 = 90€\n3. Prezzo finale: 600€ – 90€ = 510€\n\nTotale da pagare: 510€"
+    }
+  ],
+  "updated_at": "2026-06-18T16:05:13.334536+00:00"
+}

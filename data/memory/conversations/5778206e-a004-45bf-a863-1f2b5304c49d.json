@@ -1,0 +1,14 @@
+{
+  "conversation_id": "5778206e-a004-45bf-a863-1f2b5304c49d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "continuiamo"
+    },
+    {
+      "role": "assistant",
+      "content": "Dimmi pure cosa vuoi fare o continuare, sono qui per aiutarti!"
+    }
+  ],
+  "updated_at": "2026-06-17T20:00:25.659809+00:00"
+}

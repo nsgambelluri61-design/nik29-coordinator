@@ -1,0 +1,33 @@
+{
+  "conversation_id": "a3417a2a-949e-4e1e-953a-526a1d61b47f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quando te lo detto ciao la prima volta"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_AyzKrIMLDbJhjZ2zgG25VxdO",
+          "type": "function",
+          "function": {
+            "name": "recall_memory",
+            "arguments": "{\"category\":\"\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_AyzKrIMLDbJhjZ2zgG25VxdO",
+      "content": "[\n  {\n    \"fact\": \"come mi chiamo\",\n    \"category\": \"auto_learned\",\n    \"saved_at\": \"2026-06-17T19:54:23.460044+00:00\",\n    \"source_conversation\": \"69b85a5f-8896-41b7-a9f9-29dffbe76c81\"\n  },\n  {\n    \"fact\": \"Nicola\",\n    \"category\": \"come_mi_chiami\",\n    \"saved_at\": \"2026-06-17T19:55:21.701039+00:00\"\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "content": "Non ho registrazioni di quando mi hai detto \"ciao\" la prima volta. Vuoi che inizi a tenere traccia da ora in poi?"
+    }
+  ],
+  "updated_at": "2026-06-17T20:10:42.582693+00:00"
+}

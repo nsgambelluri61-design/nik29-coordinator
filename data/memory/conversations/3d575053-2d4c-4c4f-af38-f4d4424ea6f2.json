@@ -1,0 +1,14 @@
+{
+  "conversation_id": "3d575053-2d4c-4c4f-af38-f4d4424ea6f2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "no"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Come posso aiutarti? Se vuoi, puoi dirmi cosa desideri fare o chiedere."
+    }
+  ],
+  "updated_at": "2026-06-17T19:36:48.103433+00:00"
+}

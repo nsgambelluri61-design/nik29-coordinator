@@ -1,0 +1,33 @@
+{
+  "conversation_id": "69847942-511c-415f-b886-a8d9c017ce5f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "scrivi il file /tmp/test_nik29.txt con contenuto 'test file creato con successo'"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_na2MjbAT5uwsHlGp8VPsLyuX",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"write\",\"path\":\"/tmp/test_nik29.txt\",\"content\":\"test file creato con successo\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_na2MjbAT5uwsHlGp8VPsLyuX",
+      "content": "File scritto: /tmp/test_nik29.txt (29 bytes)"
+    },
+    {
+      "role": "assistant",
+      "content": "Ho scritto il file /tmp/test_nik29.txt con il contenuto richiesto."
+    }
+  ],
+  "updated_at": "2026-06-18T16:05:02.376691+00:00"
+}

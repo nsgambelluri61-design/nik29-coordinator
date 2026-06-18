@@ -1,0 +1,33 @@
+{
+  "conversation_id": "3ff31d47-d326-4563-9913-f3297259095c",
+  "messages": [
+    {
+      "role": "user",
+      "content": "salva in memoria: tendenze 2026 — materassi ibridi, sostenibilità, personalizzazione"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_3IPQLlAsMbKtuHcsaECWfCQV",
+          "type": "function",
+          "function": {
+            "name": "save_memory",
+            "arguments": "{\"type\":\"fact\",\"key\":\"tendenze_2026\",\"value\":\"materassi ibridi, sostenibilità, personalizzazione\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3IPQLlAsMbKtuHcsaECWfCQV",
+      "content": "Fatto salvato nella categoria 'tendenze_2026'."
+    },
+    {
+      "role": "assistant",
+      "content": "Fatto, ho salvato in memoria le tendenze 2026 per materassi: ibridi, sostenibilità, personalizzazione."
+    }
+  ],
+  "updated_at": "2026-06-18T16:32:56.830231+00:00"
+}

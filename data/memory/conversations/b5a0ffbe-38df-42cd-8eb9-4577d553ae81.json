@@ -1,0 +1,14 @@
+{
+  "conversation_id": "b5a0ffbe-38df-42cd-8eb9-4577d553ae81",
+  "messages": [
+    {
+      "role": "user",
+      "content": "chi sono io?"
+    },
+    {
+      "role": "assistant",
+      "content": "Non ho ancora informazioni su di te. Se vuoi, puoi dirmi qualcosa di te o posso aiutarti a ricordare o salvare dati su di te. Vuoi condividere qualche dettaglio?"
+    }
+  ],
+  "updated_at": "2026-06-17T19:17:02.443171+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "def29bc4-5e35-420e-82e4-001acca247ee",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cerca su internet i prezzi dei materassi Emma Sleep\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_P67KFSTTg3i76druN9Jk8ivF",
+          "type": "function",
+          "function": {
+            "name": "brave_search",
+            "arguments": "{\"query\":\"prezzi materassi Emma Sleep\",\"count\":5,\"language\":\"it\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_P67KFSTTg3i76druN9Jk8ivF",
+      "content": "{'error': 'BRAVE_API_KEY not configured. Set it in environment variables.'}"
+    },
+    {
+      "role": "assistant",
+      "content": "Errore: manca la chiave per la ricerca web, quindi non posso cercare direttamente i prezzi su internet. Vuoi che provi con un altro metodo o su un sito specifico?"
+    }
+  ],
+  "updated_at": "2026-06-18T17:13:57.510282+00:00"
+}
