@@ -1,0 +1,14 @@
+{
+  "conversation_id": "db854198-766f-4940-b03e-e76e0d643509",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mi puoi guidare passo passo x un compiti preciso?"
+    },
+    {
+      "role": "assistant",
+      "content": "Certo, dimmi esattamente che compito vuoi fare (esempio: aggiungere un prodotto, vedere lo stato del sito, fare un backup, ecc.) e ti guido passo passo, senza tecnicismi inutili. Dimmi solo cosa vuoi ottenere."
+    }
+  ],
+  "updated_at": "2026-06-18T19:37:55.985292+00:00"
+}

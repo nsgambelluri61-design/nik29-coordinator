@@ -1,0 +1,14 @@
+{
+  "conversation_id": "d1dd0334-d0b3-451f-82b1-973be444cab5",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ma per poterlo fare qui cosa ti serve?"
+    },
+    {
+      "role": "assistant",
+      "content": "Dipende dal “farlo” cosa intendi! Dimmi esattamente che task vuoi completare (es: caricare una foto, modificare il sito, vedere un errore, ecc.) e ti dico subito cosa mi serve per farlo qui. Vai diretto con la richiesta pratica!"
+    }
+  ],
+  "updated_at": "2026-06-18T19:39:45.515378+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "conversation_id": "33818cfc-4153-405a-beb2-b02bd5f6b894",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mi controlli permaflex siderno"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_IhJm65AjLAPuFamsHTkWemWq",
+          "type": "function",
+          "function": {
+            "name": "web_research",
+            "arguments": "{\"query\":\"Permaflex Siderno\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_IhJm65AjLAPuFamsHTkWemWq",
+      "content": "{'query': 'Permaflex Siderno', 'findings': [{'title': 'Materassi Permaflex a Siderno: offerte, negozi e orari', 'url': 'https://www.promoqui.it/siderno/catalogo/permaflex', 'snippet': 'Scopri il catalogo Permaflex a Siderno ⭐ Oltre i saldi fino al 70% con le promozioni di febbraio: ✅ arredamento nei negozi vicino a me', 'content': 'Cerca tv, lidl, divani...\\nCerca tv, lidl, divani...\\nOlbia, 07026\\nOlbia, 07026\\nTrovami\\nSiderno\\nCatalogo\\nPermaflex\\nVolantini Permaflex a Siderno\\nPERMAFLEX - Interessi zero\\n654.4 km - Siderno\\nFino al 30/6\\nApri\\nPERMAFLEX - Interessi zero\\n654.4 km - Siderno\\nFino al 30/6\\nNegozi Permaflex a Siderno\\nAltri volantini di Arredamento a Siderno\\nNegozi Permaflex a Siderno', 'error': None}, {'title': 'Permaflex Siderno (@permaflex_siderno)', 'url': 'https://www.instagram.com/permaflex_siderno/?hl=it', 'snippet': 'See Instagram photos and videos from <strong>Permaflex</strong> <strong>Siderno</strong> (@<strong>permaflex</strong>_<strong>siderno</strong>)', 'content': 'Instagram', 'error': None}, {'title': 'Permaflex Siderno: Volantino, Orari di apertura e Indirizzi', 'url': 'https://www.doveconviene.it/siderno/volantino/permaflex', 'snippet': 'Permaflex a Siderno: i volantini con le ultime offerte e gli orari. Informati su DoveConviene e risparmia nei negozi di Siderno!', 'content': 'Permaflex, offerte e negozi\\nPermaflex da più di sessant’anni è la garanzia di sonni tranquilli in Italia e nel Mondo. L’omino in pigiama del marchio Permaflex è l’icona della cultura del buon riposo e sinonimo di un artigianato Made in Italy incontrastato nel mondo.\\nTradizione e innovazione\\nSin dal carosello Permaflex ci accompagnato a letto nel migliore dei modi assicurandoci lunghe ore di meritato riposo grazie ad una meticolosa scelta di materiali, cura dei dettagli e innovazione tecnologica che l’hanno caratterizzata nella sua crescita. E proprio Tradizione, Affidabilità, Eleganza e Innovazione sono le parole chiave di questo successo.\\nDormire sogni tranquilli\\nLa linea di prodotti di Permaflex è in grado di soddisfare ogni tipo di sonno, dal pisolino alle grandi dormite, sempre garantendo la migliore qualità al giusto prezzo. Cerchi una linea sartoriale degna del tuo talamo matrimoniale? Sei un tipo da letto a molle o a molle indipendenti? Ami più di ogni altra cosa accomodarti nel caldo abbraccio del lattice? Preferisci la rete in legno o la rete metallica? I rivenditori dei negozi Permaflex sapranno condurti attraverso le scelte su misura per te fra le braccia di Morfeo. Non è un caso se sempre più alberghi scelgono le linee Permaflex per offrire ai loro clienti un riposo a cinque stelle! Scopri su DoveConviene il punto vendita Permaflex più vicino a casa.', 'error': None}], 'pages_read': 3}"
+    },
+    {
+      "role": "assistant",
+      "content": "A Siderno Permaflex è presente e attivo: ci sono negozi fisici e offerte dedicate, trovabili anche su siti come PromoQui e DoveConviene. Hanno anche un profilo Instagram (@permaflex_siderno). Se vuoi info precise su indirizzo, orari o promozioni attuali, ti consiglio di dare un'occhiata a questi portali o direttamente sui loro social. Vuoi che approfondisca un punto in particolare?"
+    }
+  ],
+  "updated_at": "2026-06-18T19:34:03.334317+00:00"
+}

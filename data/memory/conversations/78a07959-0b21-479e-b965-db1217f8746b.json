@@ -1,0 +1,14 @@
+{
+  "conversation_id": "78a07959-0b21-479e-b965-db1217f8746b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "no mi riferisco che a volte non mi rispondi x quello che ti chiesdo"
+    },
+    {
+      "role": "assistant",
+      "content": "Capito. Quando succede, di solito è perché interpreto la richiesta in modo troppo ampio o sbaglio il tool da usare. Da ora, cercherò di essere ancora più diretto e preciso sulle tue domande, usando sempre il tool giusto. Se capita di nuovo, fammelo notare subito: correggo al volo."
+    }
+  ],
+  "updated_at": "2026-06-18T19:36:52.701471+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "conversation_id": "c9f738b2-189f-4619-9e54-114fe66010a0",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ok cosi va meglio"
+    },
+    {
+      "role": "assistant",
+      "content": "Perfetto, allora continuo così. Se vuoi qualcosa, dimmelo diretto e agisco subito."
+    }
+  ],
+  "updated_at": "2026-06-18T19:37:27.416986+00:00"
+}

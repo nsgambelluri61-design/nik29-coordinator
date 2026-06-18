@@ -1,0 +1,14 @@
+{
+  "conversation_id": "de78a849-5bfb-4792-b136-6421305e47a9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "e come farai ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Per caricare e analizzare screenshot qui, mi serve che tu abbia un modo per inviarmi l’immagine (tipo un upload diretto o un link). Se puoi caricare immagini in chat o fornire un link, io poi posso processarle con i miei tool. Dimmi solo come vuoi inviarmi lo screenshot e procedo."
+    }
+  ],
+  "updated_at": "2026-06-18T19:41:21.912293+00:00"
+}

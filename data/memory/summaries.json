@@ -1,156 +1,5 @@
 {
   "conversations": {
-    "ac61b298-2d16-4e10-bb69-f5273fcb7f7b": {
-      "conversation_id": "ac61b298-2d16-4e10-bb69-f5273fcb7f7b",
-      "last_topic": "quindi e piu affidabile?",
-      "key_points": [
-        "quindi e piu affidabile?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:24:31.791525+00:00"
-    },
-    "c16f9074-071c-4411-afad-5a4f721cdba5": {
-      "conversation_id": "c16f9074-071c-4411-afad-5a4f721cdba5",
-      "last_topic": "si spiegamenlo bene",
-      "key_points": [
-        "si spiegamenlo bene"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:24:54.011806+00:00"
-    },
-    "930b0fb2-f386-4c7e-9282-7add4f6a7307": {
-      "conversation_id": "930b0fb2-f386-4c7e-9282-7add4f6a7307",
-      "last_topic": "ma perche mi rispondi cosi?",
-      "key_points": [
-        "ma perche mi rispondi cosi?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:25:15.005843+00:00"
-    },
-    "61c489d1-00e7-40be-bc2a-35433310d7d9": {
-      "conversation_id": "61c489d1-00e7-40be-bc2a-35433310d7d9",
-      "last_topic": "tu mi hai detto cosi Vuoi che te lo spieghi come funziona esattammente ? ed il ti go risposto si spi",
-      "key_points": [
-        "tu mi hai detto cosi Vuoi che te lo spieghi come funziona esattammente ? ed il ti go risposto si spi"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:26:29.657573+00:00"
-    },
-    "7cb0839e-09ae-48d5-a672-0770c4f20847": {
-      "conversation_id": "7cb0839e-09ae-48d5-a672-0770c4f20847",
-      "last_topic": "non hai capito",
-      "key_points": [
-        "non hai capito"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:26:57.404978+00:00"
-    },
-    "a47261c5-888c-4d92-8f70-be0e2ddd298c": {
-      "conversation_id": "a47261c5-888c-4d92-8f70-be0e2ddd298c",
-      "last_topic": "mi riferivo al monolite ed al orchestratore coordinatore",
-      "key_points": [
-        "mi riferivo al monolite ed al orchestratore coordinatore"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:27:24.850406+00:00"
-    },
-    "7e1dffd4-2312-44cd-ba75-7683742f608e": {
-      "conversation_id": "7e1dffd4-2312-44cd-ba75-7683742f608e",
-      "last_topic": "si",
-      "key_points": [],
-      "message_count": 2,
-      "updated_at": "2026-06-18T16:27:37.139994+00:00"
-    },
-    "ab981c52-e44b-4e8c-883f-911e0a64e733": {
-      "conversation_id": "ab981c52-e44b-4e8c-883f-911e0a64e733",
-      "last_topic": "buongiorno nik29, controlla se ildormire.com è online e funziona",
-      "key_points": [
-        "buongiorno nik29, controlla se ildormire.com è online e funziona"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:31:31.122759+00:00"
-    },
-    "9f78d70c-ab49-461a-bfb7-2e767bdb72dc": {
-      "conversation_id": "9f78d70c-ab49-461a-bfb7-2e767bdb72dc",
-      "last_topic": "cerca su internet quanto costano i materassi memory foam dei concorrenti tipo Emma, Kipli, InMateras",
-      "key_points": [
-        "cerca su internet quanto costano i materassi memory foam dei concorrenti tipo Emma, Kipli, InMateras"
-      ],
-      "message_count": 6,
-      "updated_at": "2026-06-18T16:31:37.555918+00:00"
-    },
-    "f32506b4-9c80-4c14-9f15-c9c6aa485089": {
-      "conversation_id": "f32506b4-9c80-4c14-9f15-c9c6aa485089",
-      "last_topic": "fai uno screenshot di https://ildormire.com e dimmi come appare la homepage oggi",
-      "key_points": [
-        "fai uno screenshot di https://ildormire.com e dimmi come appare la homepage oggi"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:31:41.873844+00:00"
-    },
-    "539a5537-7575-4ada-9fbc-5672fcc7c4ee": {
-      "conversation_id": "539a5537-7575-4ada-9fbc-5672fcc7c4ee",
-      "last_topic": "usa il web agent per navigare su https://www.emmasleep.it e scopri i loro prezzi dei materassi matri",
-      "key_points": [
-        "usa il web agent per navigare su https://www.emmasleep.it e scopri i loro prezzi dei materassi matri"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:31:48.565668+00:00"
-    },
-    "0406db4d-f8af-4b0e-a234-3309b029124c": {
-      "conversation_id": "0406db4d-f8af-4b0e-a234-3309b029124c",
-      "last_topic": "salva in memoria: Emma Sleep materasso matrimoniale costa circa 600-900 euro, competitor principale",
-      "key_points": [
-        "salva in memoria: Emma Sleep materasso matrimoniale costa circa 600-900 euro, competitor principale"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:31:52.625031+00:00"
-    },
-    "807206df-e9e8-4d66-8759-0712fd960b01": {
-      "conversation_id": "807206df-e9e8-4d66-8759-0712fd960b01",
-      "last_topic": "cosa ricordi sui competitor e i loro prezzi?",
-      "key_points": [
-        "cosa ricordi sui competitor e i loro prezzi?"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:31:56.512812+00:00"
-    },
-    "ed1131f7-a1c9-4d60-a0e8-1dd117a61eb4": {
-      "conversation_id": "ed1131f7-a1c9-4d60-a0e8-1dd117a61eb4",
-      "last_topic": "esegui un health check completo del sistema",
-      "key_points": [
-        "esegui un health check completo del sistema"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:32:00.307734+00:00"
-    },
-    "641f21b3-830f-4b12-ba7d-49d9b7f4a9dd": {
-      "conversation_id": "641f21b3-830f-4b12-ba7d-49d9b7f4a9dd",
-      "last_topic": "controlla lo stato dello scheduler, ci sono task programmati?",
-      "key_points": [
-        "controlla lo stato dello scheduler, ci sono task programmati?"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:32:05.425734+00:00"
-    },
-    "3e898c64-8c38-4505-b5bb-2c8a63f7ae1c": {
-      "conversation_id": "3e898c64-8c38-4505-b5bb-2c8a63f7ae1c",
-      "last_topic": "che versione sei? quanti tool hai attivi?",
-      "key_points": [
-        "che versione sei? quanti tool hai attivi?"
-      ],
-      "message_count": 5,
-      "updated_at": "2026-06-18T16:32:09.826487+00:00"
-    },
-    "906c262e-62b2-4869-bdbf-f12bba0fb5e0": {
-      "conversation_id": "906c262e-62b2-4869-bdbf-f12bba0fb5e0",
-      "last_topic": "naviga su https://www.materassi.com e dimmi che categorie di prodotti hanno",
-      "key_points": [
-        "naviga su https://www.materassi.com e dimmi che categorie di prodotti hanno"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T16:32:29.796537+00:00"
-    },
     "a885b6ea-bd42-412d-a480-17321c06a728": {
       "conversation_id": "a885b6ea-bd42-412d-a480-17321c06a728",
       "last_topic": "fai uno screenshot di https://www.emmasleep.it e analizza il loro design — colori, layout, call to a",
@@ -447,6 +296,159 @@
       ],
       "message_count": 4,
       "updated_at": "2026-06-18T19:15:58.210602+00:00"
+    },
+    "d82b42db-2669-47c1-b3ed-32b285e374e0": {
+      "conversation_id": "d82b42db-2669-47c1-b3ed-32b285e374e0",
+      "last_topic": "\"rimuovi data/memory dal gitignore e pusha i file di memoria su github\"",
+      "key_points": [
+        "\"rimuovi data/memory dal gitignore e pusha i file di memoria su github\""
+      ],
+      "message_count": 22,
+      "updated_at": "2026-06-18T19:18:22.591036+00:00"
+    },
+    "13aa44c2-4464-4e7a-8ec4-b9a6795a3317": {
+      "conversation_id": "13aa44c2-4464-4e7a-8ec4-b9a6795a3317",
+      "last_topic": "quale sono  lultimi comit",
+      "key_points": [
+        "quale sono  lultimi comit"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T19:19:14.801178+00:00"
+    },
+    "33818cfc-4153-405a-beb2-b02bd5f6b894": {
+      "conversation_id": "33818cfc-4153-405a-beb2-b02bd5f6b894",
+      "last_topic": "mi controlli permaflex siderno",
+      "key_points": [
+        "mi controlli permaflex siderno"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T19:34:03.337236+00:00"
+    },
+    "3607892e-f99a-4560-b9a6-d1e143725114": {
+      "conversation_id": "3607892e-f99a-4560-b9a6-d1e143725114",
+      "last_topic": "si recenzzioni",
+      "key_points": [
+        "si recenzzioni"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T19:34:42.452814+00:00"
+    },
+    "cc0af780-6f15-4644-83e5-fd78b5c36cbd": {
+      "conversation_id": "cc0af780-6f15-4644-83e5-fd78b5c36cbd",
+      "last_topic": "no, stavamo parando di permaflex non il dormire",
+      "key_points": [
+        "no, stavamo parando di permaflex non il dormire"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T19:35:46.043315+00:00"
+    },
+    "03944f2d-8478-4e0a-8429-e807e67a86e1": {
+      "conversation_id": "03944f2d-8478-4e0a-8429-e807e67a86e1",
+      "last_topic": "non sei preciso nelle risposte",
+      "key_points": [
+        "non sei preciso nelle risposte"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:36:17.991922+00:00"
+    },
+    "78a07959-0b21-479e-b965-db1217f8746b": {
+      "conversation_id": "78a07959-0b21-479e-b965-db1217f8746b",
+      "last_topic": "no mi riferisco che a volte non mi rispondi x quello che ti chiesdo",
+      "key_points": [
+        "no mi riferisco che a volte non mi rispondi x quello che ti chiesdo"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:36:52.706011+00:00"
+    },
+    "c9f738b2-189f-4619-9e54-114fe66010a0": {
+      "conversation_id": "c9f738b2-189f-4619-9e54-114fe66010a0",
+      "last_topic": "ok cosi va meglio",
+      "key_points": [
+        "ok cosi va meglio"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:37:27.418967+00:00"
+    },
+    "db854198-766f-4940-b03e-e76e0d643509": {
+      "conversation_id": "db854198-766f-4940-b03e-e76e0d643509",
+      "last_topic": "mi puoi guidare passo passo x un compiti preciso?",
+      "key_points": [
+        "mi puoi guidare passo passo x un compiti preciso?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:37:55.988134+00:00"
+    },
+    "638856a9-f3e5-4b41-9dd1-51314ec31af9": {
+      "conversation_id": "638856a9-f3e5-4b41-9dd1-51314ec31af9",
+      "last_topic": "sai riconoscere degli errori?",
+      "key_points": [
+        "sai riconoscere degli errori?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:38:28.043250+00:00"
+    },
+    "da7f8a93-ccf6-426c-905a-ec6f1f2ca5b3": {
+      "conversation_id": "da7f8a93-ccf6-426c-905a-ec6f1f2ca5b3",
+      "last_topic": "ma non posso incollare screenshot?",
+      "key_points": [
+        "ma non posso incollare screenshot?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:39:07.668014+00:00"
+    },
+    "d1dd0334-d0b3-451f-82b1-973be444cab5": {
+      "conversation_id": "d1dd0334-d0b3-451f-82b1-973be444cab5",
+      "last_topic": "ma per poterlo fare qui cosa ti serve?",
+      "key_points": [
+        "ma per poterlo fare qui cosa ti serve?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:39:45.517344+00:00"
+    },
+    "128b4f21-b178-4a3e-9f59-66a8550fe5f3": {
+      "conversation_id": "128b4f21-b178-4a3e-9f59-66a8550fe5f3",
+      "last_topic": "no intendevo quale strumento o tool ti serve x poter caricare qui i screenshot",
+      "key_points": [
+        "no intendevo quale strumento o tool ti serve x poter caricare qui i screenshot"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:40:32.599784+00:00"
+    },
+    "de78a849-5bfb-4792-b136-6421305e47a9": {
+      "conversation_id": "de78a849-5bfb-4792-b136-6421305e47a9",
+      "last_topic": "e come farai ?",
+      "key_points": [
+        "e come farai ?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T19:41:21.914691+00:00"
+    },
+    "f594fcec-6325-4f13-add6-d1c9ba093647": {
+      "conversation_id": "f594fcec-6325-4f13-add6-d1c9ba093647",
+      "last_topic": "\"fai una ricerca approfondita sui materassi in lattice naturale\"",
+      "key_points": [
+        "\"fai una ricerca approfondita sui materassi in lattice naturale\""
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T19:56:13.199365+00:00"
+    },
+    "8c4a2cba-5f43-4c6a-93d0-35a758a80d09": {
+      "conversation_id": "8c4a2cba-5f43-4c6a-93d0-35a758a80d09",
+      "last_topic": "fai una ricerca approfondita per la rete titan",
+      "key_points": [
+        "fai una ricerca approfondita per la rete titan"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T19:57:18.223274+00:00"
+    },
+    "22b9d7ce-edc0-465a-b0a0-852229db4d60": {
+      "conversation_id": "22b9d7ce-edc0-465a-b0a0-852229db4d60",
+      "last_topic": "fai una ricerca approfondita per la rete titan",
+      "key_points": [
+        "fai una ricerca approfondita per la rete titan"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T20:01:20.911628+00:00"
     }
   }
 }

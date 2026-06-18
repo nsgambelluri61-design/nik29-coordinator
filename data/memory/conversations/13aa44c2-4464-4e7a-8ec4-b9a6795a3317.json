@@ -1,0 +1,33 @@
+{
+  "conversation_id": "13aa44c2-4464-4e7a-8ec4-b9a6795a3317",
+  "messages": [
+    {
+      "role": "user",
+      "content": "quale sono  lultimi comit"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_OYpmJ6vRQlSNgZwaySbBgAWz",
+          "type": "function",
+          "function": {
+            "name": "git_auto",
+            "arguments": "{\"action\":\"log\",\"count\":5}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_OYpmJ6vRQlSNgZwaySbBgAWz",
+      "content": "Ultimi 5 commit:\n* e71af85 chore: rimosso data/memory dal .gitignore e aggiunti file memoria\n* e0572fc Fix Brave Search (ui_lang 422), search rules, brain transplant\n* 213a72e Fix analyze_screenshot: aggiunto parametro url e navigazione\n* a784da1 Advanced browser: web_agent + vision + model routing\n* 7c73489 Browser tools: Playwright + Chromium headless"
+    },
+    {
+      "role": "assistant",
+      "content": "Ecco gli ultimi 5 commit:\n\n- e71af85 chore: rimosso data/memory dal .gitignore e aggiunti file memoria\n- e0572fc Fix Brave Search (ui_lang 422), search rules, brain transplant\n- 213a72e Fix analyze_screenshot: aggiunto parametro url e navigazione\n- a784da1 Advanced browser: web_agent + vision + model routing\n- 7c73489 Browser tools: Playwright + Chromium headless\n\nVuoi vedere il dettaglio di uno di questi?"
+    }
+  ],
+  "updated_at": "2026-06-18T19:19:14.798900+00:00"
+}

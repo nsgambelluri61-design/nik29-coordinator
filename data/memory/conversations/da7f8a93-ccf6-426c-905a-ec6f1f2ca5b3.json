@@ -1,0 +1,14 @@
+{
+  "conversation_id": "da7f8a93-ccf6-426c-905a-ec6f1f2ca5b3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ma non posso incollare screenshot?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, qui non puoi incollare direttamente uno screenshot come si fa su WhatsApp o Telegram.  \nSe vuoi analizzare uno screenshot devi prima caricare l’immagine da qualche parte (Google Drive, Dropbox, o simili), poi mi incolli il link.\n\nSe invece vuoi vedere come appare una pagina web, basta dirmi l’indirizzo: posso fare uno screenshot automatico della pagina e descrivertelo."
+    }
+  ],
+  "updated_at": "2026-06-18T19:39:07.665881+00:00"
+}

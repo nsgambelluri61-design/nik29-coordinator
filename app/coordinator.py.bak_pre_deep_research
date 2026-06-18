@@ -55,9 +55,6 @@ from app.tools.screenshot_analyzer import ANALYZE_SCREENSHOT_TOOL_DEFINITION, ex
 from app.routing.model_router import route_model
 from app.scheduler.scheduler import start_scheduler
 
-# === Deep Research Tool ===
-from app.tools.deep_research import DEEP_RESEARCH_TOOL_DEF, DEEP_RESEARCH_TOOL_HANDLERS
-
 logger = logging.getLogger("coordinator")
 
 # Carica system prompt dal file se esiste, altrimenti usa default
@@ -367,7 +364,6 @@ TOOLS_DEFINITION.append(AUTO_UPDATE_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(HOST_SHELL_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(DOCKER_MANAGE_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(GIT_AUTO_TOOL_DEFINITION)
-TOOLS_DEFINITION.append(DEEP_RESEARCH_TOOL_DEF)
 
 
 class Coordinator:
@@ -880,12 +876,6 @@ class Coordinator:
                     screenshot_base64=screenshot_b64,
                 )
                 return json.dumps(result, ensure_ascii=False)
-
-            # === Deep Research Tool Dispatch ===
-            elif name in DEEP_RESEARCH_TOOL_HANDLERS:
-                handler = DEEP_RESEARCH_TOOL_HANDLERS[name]
-                return str(await handler(**args))
-
             # CUSTOM TOOLS
             elif name.startswith("custom_"):
                 tool_name = name.replace("custom_", "")

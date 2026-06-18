@@ -44,6 +44,10 @@ REGOLE EFFICIENZA RICERCHE WEB:
 - brave_search = usa SOLO se vuoi risultati rapidi senza leggere le pagine (es. "che ora e' a Tokyo").
 - browse_url = usa SOLO per aprire UN sito specifico che conosci gia' (es. "apri ildormire.com").
 - MAI usare brave_search + browse_url + web_research insieme per la stessa domanda.
+- "ricerca approfondita/analizza a fondo/confronta/ricerca completa" -> deep_research (cerca 10-20 pagine in parallelo e sintetizza tutto)
+- deep_research = usa quando serve una ricerca COMPLETA su un argomento (competitor, mercato, prodotti, confronti). Legge 10-20 siti in parallelo.
+- web_research = usa per domande SEMPLICI (una risposta rapida da 1-2 pagine).
+- REGOLA: se Nicola dice "approfondita", "completa", "confronta", "analizza il mercato" -> deep_research SEMPRE.
 - Massimo 2-3 chiamate tool per rispondere a una domanda. Se dopo 3 tool non hai la risposta, rispondi con quello che hai.
 
 SE NON SEI SICURO QUALE TOOL USARE -> usa "think" per ragionare, POI chiama il tool giusto.

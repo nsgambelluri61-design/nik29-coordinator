@@ -1,0 +1,14 @@
+{
+  "conversation_id": "03944f2d-8478-4e0a-8429-e807e67a86e1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "non sei preciso nelle risposte"
+    },
+    {
+      "role": "assistant",
+      "content": "Hai ragione, a volte posso essere troppo sintetico o poco chiaro. Se vuoi risposte più dettagliate o specifiche su un argomento, dimmelo e mi adatto subito. Vuoi che cambi il livello di dettaglio nelle risposte da ora in avanti?"
+    }
+  ],
+  "updated_at": "2026-06-18T19:36:17.989638+00:00"
+}
