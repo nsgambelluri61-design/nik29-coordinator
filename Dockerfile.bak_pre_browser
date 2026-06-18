@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copia requirements e installa dipendenze Python
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install playwright && playwright install chromium --with-deps
 # Copia il codice applicazione
 COPY app/ ./app/
 COPY config/ ./config/

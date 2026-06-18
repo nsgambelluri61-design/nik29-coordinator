@@ -49,7 +49,6 @@ from app.tools.monitoring_tools import MONITORING_TOOLS, MONITORING_TOOL_HANDLER
 from app.tools.scheduler_tools import SCHEDULER_TOOLS, SCHEDULER_TOOL_HANDLERS
 from app.tools.web_tools import WEB_TOOLS, WEB_TOOL_HANDLERS
 from app.monitoring.monitor import create_monitor_task
-from app.tools.browser_tools import BROWSER_TOOLS, BROWSER_TOOL_HANDLERS
 from app.scheduler.scheduler import start_scheduler
 
 logger = logging.getLogger("coordinator")
@@ -344,7 +343,6 @@ TOOLS_DEFINITION = [
     *MONITORING_TOOLS,
     *SCHEDULER_TOOLS,
     *WEB_TOOLS,
-    *BROWSER_TOOLS,
 ]
 
 # Aggiungi tool cognitivi
@@ -816,10 +814,6 @@ class Coordinator:
 
             elif name in WEB_TOOL_HANDLERS:
                 handler = WEB_TOOL_HANDLERS[name]
-                return str(await handler(**args))
-
-            elif name in BROWSER_TOOL_HANDLERS:
-                handler = BROWSER_TOOL_HANDLERS[name]
                 return str(await handler(**args))
             # CUSTOM TOOLS
             elif name.startswith("custom_"):
