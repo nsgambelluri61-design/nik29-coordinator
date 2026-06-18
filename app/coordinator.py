@@ -3,7 +3,7 @@ Coordinatore principale: gestisce la conversazione con l'utente,
 decide quando usare tool nativi o delegare a sub-agenti.
 Usa OpenAI function calling per decidere le azioni.
 
-v0.6.0 - Tool cognitivi, self-improve, auto-update, instructions, memory_v2
+v0.7.0 - Memoria persistente automatica (caricamento all'avvio sessione + auto-save)
 """
 
 import os
@@ -16,6 +16,7 @@ from openai import AsyncOpenAI
 
 from app.memory import memory
 from app import memory_v2
+from app import persistent_memory
 from app.agent_client import agent_client
 from app.tools.shell_tool import ShellTool
 from app.tools.web_tool import WebSearchTool
@@ -362,6 +363,9 @@ class Coordinator:
         # Tool custom
         self._custom_tools: dict = {}
         self._load_custom_tools()
+        # Cache della memoria persistente (ricaricata ad ogni nuova sessione)
+        self._persistent_memory_cache: str = ""
+        self._persistent_memory_loaded_for: Optional[str] = None
 
     async def _send_status(self, message: str):
         """Callback per inviare status updates durante operazioni lunghe."""
@@ -406,8 +410,30 @@ class Coordinator:
         self._custom_tools.clear()
         self._load_custom_tools()
 
-    def _build_system_prompt(self) -> str:
-        """Costruisce il system prompt con contesto aggiornato."""
+    def _load_persistent_memory(self, conversation_id: str) -> str:
+        """
+        Carica la memoria persistente per una nuova sessione.
+        Usa cache se già caricata per questa conversation_id.
+        """
+        # Se è la stessa conversazione, usa la cache
+        if (self._persistent_memory_loaded_for == conversation_id 
+                and self._persistent_memory_cache):
+            return self._persistent_memory_cache
+        
+        # Nuova sessione: carica tutto da disco
+        logger.info(f"Caricamento memoria persistente per sessione: {conversation_id}")
+        self._persistent_memory_cache = persistent_memory.build_persistent_memory_block()
+        self._persistent_memory_loaded_for = conversation_id
+        
+        if self._persistent_memory_cache:
+            logger.info(f"Memoria persistente caricata: {len(self._persistent_memory_cache)} caratteri")
+        else:
+            logger.info("Nessuna memoria persistente trovata (file vuoti o assenti)")
+        
+        return self._persistent_memory_cache
+
+    def _build_system_prompt(self, conversation_id: str = "") -> str:
+        """Costruisce il system prompt con contesto aggiornato e memoria persistente."""
         agents = agent_client.registry.list_agents()
         agents_info = ""
         for a in agents:
@@ -427,17 +453,25 @@ class Coordinator:
         else:
             custom_tools_info = "Nessun tool custom attivo."
 
-        # Contesto da memory_v2
+        # Contesto da memory_v2 (legacy - mantenuto per compatibilità)
         lessons_context = memory_v2.get_lessons_context()
         rules_context = memory_v2.get_rules_context()
 
-        return SYSTEM_PROMPT.format(
+        # Costruisci il prompt base
+        base_prompt = SYSTEM_PROMPT.format(
             agents_info=agents_info,
             memory_context=memory_context,
             custom_tools_info=custom_tools_info,
             lessons_context=lessons_context,
             rules_context=rules_context
         )
+
+        # === NUOVO: Inietta memoria persistente ===
+        persistent_block = self._load_persistent_memory(conversation_id)
+        if persistent_block:
+            base_prompt += "\n" + persistent_block
+
+        return base_prompt
 
     async def process_message(
         self,
@@ -457,8 +491,8 @@ class Coordinator:
         # Carica conversazione precedente
         messages = memory.load_conversation(conversation_id)
 
-        # System prompt
-        system_msg = {"role": "system", "content": self._build_system_prompt()}
+        # System prompt (con memoria persistente automatica)
+        system_msg = {"role": "system", "content": self._build_system_prompt(conversation_id)}
 
         # Gestisci file caricati
         file_info = ""
@@ -558,12 +592,17 @@ class Coordinator:
                 # Salva conversazione
                 memory.save_conversation(conversation_id, messages)
 
+                # === NUOVO: Auto-save apprendimenti a fine conversazione ===
+                persistent_memory.end_session(conversation_id, messages)
+
                 yield {"type": "response", "content": final_content}
                 return
 
         # Se arriviamo qui, troppe iterazioni
         yield {"type": "response", "content": "Ho completato le operazioni richieste. Se serve altro, dimmi pure."}
         memory.save_conversation(conversation_id, messages)
+        # Auto-save anche in caso di max iterazioni
+        persistent_memory.end_session(conversation_id, messages)
 
     def _progress_message(self, func_name: str, args: dict) -> str:
         """Genera un messaggio di progresso per l'utente."""
