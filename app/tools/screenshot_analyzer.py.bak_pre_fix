@@ -22,28 +22,31 @@ ANALYZE_SCREENSHOT_TOOL_DEFINITION = {
     "function": {
         "name": "analyze_screenshot",
         "description": (
-            "Fa uno screenshot di una pagina web e lo analizza visivamente con GPT-4.1 vision. "
-            "Descrive layout, contenuti, colori, bottoni, testi, struttura della pagina. "
-            "Usa questo tool quando devi VEDERE visivamente una pagina web e descriverne l'aspetto."
+            "Analyze a browser screenshot visually using GPT-4.1 vision. "
+            "Can describe page layout, identify buttons, read text, analyze colors, "
+            "find navigation elements, and answer questions about what's visible on the page. "
+            "Use this when you need to visually understand a web page."
         ),
         "parameters": {
             "type": "object",
             "properties": {
-                "url": {
-                    "type": "string",
-                    "description": "URL della pagina da analizzare visivamente (es. https://ildormire.com)"
-                },
                 "question": {
                     "type": "string",
                     "description": (
-                        "Cosa analizzare o cercare nello screenshot. "
-                        "Esempi: 'Che prodotti sono mostrati?', 'Descrivi il layout', "
-                        "'Che colori usa?', 'Come e strutturata la homepage?'. "
-                        "Se non specificato, fara una descrizione generale della pagina."
+                        "What to analyze or look for in the screenshot. "
+                        "Examples: 'What products are shown?', 'Where is the search bar?', "
+                        "'What is the main heading?', 'Describe the page layout'"
+                    )
+                },
+                "screenshot_base64": {
+                    "type": "string",
+                    "description": (
+                        "Base64-encoded screenshot image. If not provided, "
+                        "a fresh screenshot will be taken automatically."
                     )
                 }
             },
-            "required": ["url"]
+            "required": ["question"]
         }
     }
 }
@@ -165,8 +168,7 @@ def get_analyzer(model: str = "gpt-4.1", client: Optional[AsyncOpenAI] = None) -
 
 
 async def execute_analyze_screenshot(
-    url: Optional[str] = None,
-    question: str = "Descrivi questa pagina web in dettaglio: layout, contenuti, colori, navigazione",
+    question: str,
     screenshot_base64: Optional[str] = None,
     browser_screenshot_fn=None,
     context: Optional[str] = None,
