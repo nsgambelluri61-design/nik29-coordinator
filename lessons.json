@@ -1,0 +1,139 @@
+{
+  "lessons": [
+    {
+      "id": "lesson_1",
+      "trigger": "macOS Smart Dashes",
+      "problem": "Converts '-' to em-dash U+2014",
+      "solution": "Verify ASCII 0x2D in tokens/code",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_2",
+      "trigger": "Sharp image processing with PM2",
+      "problem": "PM2 dormire-shop crashes with Sharp on large images",
+      "solution": "Set max_memory_restart to 1GB, sharp.cache(false), sharp.concurrency(1)",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_3",
+      "trigger": "MySQL auth plugin changes after update",
+      "problem": "App cannot connect to database",
+      "solution": "ALTER USER root WITH mysql_native_password",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_4",
+      "trigger": "Function calling with gpt-4.1-mini",
+      "problem": "Model asks clarifications instead of calling tools",
+      "solution": "Add explicit 'ALWAYS prefer tool calls' in prompt",
+      "category": "behavior",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_5",
+      "trigger": "Maestro AI creates PR",
+      "problem": "Can truncate large files in PRs",
+      "solution": "Always verify line count before merging",
+      "category": "process",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_6",
+      "trigger": "LLM JSON response instructions",
+      "problem": "LLM ignores JSON response instructions",
+      "solution": "Use two-pass: intent detection regex + dedicated LLM call with response_format json_object",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_7",
+      "trigger": "Ollama on macOS",
+      "problem": "Sets OLLAMA_HOST without http://",
+      "solution": "Add ensureProtocol() in client",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_8",
+      "trigger": "VPS auto-deploy",
+      "problem": "VPS has no auto-deploy webhook",
+      "solution": "Use scripts/safe-deploy.sh manually",
+      "category": "process",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_9",
+      "trigger": "Manus 1.6 instructions",
+      "problem": "Tends to rewrite files from scratch",
+      "solution": "Give ONE change at a time with exact lines",
+      "category": "process",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_10",
+      "trigger": "Open WebUI Hybrid Search",
+      "problem": "Rebuilds BM25 index every query (slow)",
+      "solution": "Disable it",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_11",
+      "trigger": "PM2 dormire-shop crashes",
+      "problem": "Crashes with Sharp on large images",
+      "solution": "Increase memory limit",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_12",
+      "trigger": "Video 2.0 render",
+      "problem": "Fails with 'Invalid URL'",
+      "solution": "Define resolveLocalUrl() at GLOBAL scope",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_13",
+      "trigger": "Open WebUI Pipe Function",
+      "problem": "Bypasses tool-calling",
+      "solution": "Use direct model as base",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_14",
+      "trigger": "dall-e-3 with project keys",
+      "problem": "Not available",
+      "solution": "Use gpt-image-1, no response_format, handle base64",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "id": "lesson_15",
+      "trigger": "Function calling with gpt-4.1-mini",
+      "problem": "Model asks clarifications instead of calling tools",
+      "solution": "Add explicit prompt instructions",
+      "category": "behavior",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "confidence": 0.9
+    }
+  ]
+}

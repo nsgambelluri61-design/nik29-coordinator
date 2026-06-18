@@ -1,0 +1,54 @@
+{
+  "rules": [
+    {
+      "rule": "SEMPRE usare un tool prima di rispondere a domande che richiedono verifica",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "high"
+    },
+    {
+      "rule": "MAI chiedere 'cosa vuoi che faccia?' — interpreta e agisci",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "high"
+    },
+    {
+      "rule": "MAI dire 'non posso' senza aver provato almeno un tool",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "high"
+    },
+    {
+      "rule": "Quando Nicola dice qualcosa su di se' -> save_memory SUBITO",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "high"
+    },
+    {
+      "rule": "Per deploy: UNA modifica alla volta, testare prima",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "high"
+    },
+    {
+      "rule": "Se un tool fallisce, usa retry_strategy prima di arrendersi",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "medium"
+    },
+    {
+      "rule": "Dopo task complessi, usa self_improve per riflettere",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "medium"
+    },
+    {
+      "rule": "Risposte max 2-3 frasi per cose semplici",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "medium"
+    },
+    {
+      "rule": "Se Nicola carica un file, salvalo nel workspace senza chiedere",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "medium"
+    },
+    {
+      "rule": "Mostra sempre cosa stai facendo: 'Cerco...', 'Controllo...', 'Fatto.'",
+      "created_at": "2026-06-18T12:00:00Z",
+      "priority": "low"
+    }
+  ]
+}

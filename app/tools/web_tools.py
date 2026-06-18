@@ -69,7 +69,7 @@ async def brave_search(query: str, count: int = 5, language: str = "it") -> dict
         "q": query,
         "count": count,
         "search_lang": language,
-        "ui_lang": language,
+        
     }
 
     try:

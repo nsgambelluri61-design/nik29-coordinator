@@ -1,0 +1,154 @@
+{
+  "facts": [
+    {
+      "fact": "Nicola Sgambelluri e' il titolare de 'Il Dormire' (Sgambelluri srls).",
+      "category": "business",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il negozio si trova a Siderno (RC).",
+      "category": "business",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Vende materassi, cuscini e reti letto.",
+      "category": "business",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Tutti i prodotti venduti sono Made in Italy.",
+      "category": "business",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Emma Sleep e' un concorrente (materasso matrimoniale circa 600-900 euro).",
+      "category": "competitors",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Kipli e' un concorrente nel settore materassi.",
+      "category": "competitors",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "InMaterassi e' un concorrente nel settore materassi.",
+      "category": "competitors",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il sito web ufficiale e' ildormire.com.",
+      "category": "website",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il sito e' ospitato su un VPS.",
+      "category": "website",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "L'applicazione web usa Node.js e PM2 (app: dormire-shop).",
+      "category": "website",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il database utilizzato per il sito e' MySQL.",
+      "category": "website",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "L'architettura IA e' composta da 5 agenti: Manus, nik29, Maestro locale, Maestro VPS, Manus Light.",
+      "category": "architecture",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "nik29 gira su porta 4001 come app FastAPI Docker.",
+      "category": "architecture",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "L'host bridge gira sulla porta 4003.",
+      "category": "architecture",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Nicola preferisce deploy singoli e testati.",
+      "category": "preferences",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "La sicurezza e' la priorita' assoluta.",
+      "category": "preferences",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Nicola preferisce un italiano informale e diretto.",
+      "category": "preferences",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il sistema host e' un Mac M4 Max.",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il repository GitHub e' nsgambelluri61-design/nik29-coordinator.",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Si utilizza Brave Search API per le ricerche web.",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "I prodotti si trovano SOLO nella tabella custom_products del DB, mai in products.ts.",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "La directory principale sul VPS e' /root/dormire-shop.",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Per il deploy si usa lo script scripts/safe-deploy.sh.",
+      "category": "technical",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Il sito e' ottimizzato SEO per tutta la provincia di Reggio Calabria.",
+      "category": "business",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    },
+    {
+      "fact": "Nicola non ha competenze informatiche e necessita di spiegazioni semplici.",
+      "category": "preferences",
+      "timestamp": "2026-06-18T12:00:00Z",
+      "source": "auto"
+    }
+  ]
+}

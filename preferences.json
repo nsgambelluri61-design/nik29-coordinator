@@ -1,0 +1,14 @@
+{
+  "preferences": {
+    "language": "italiano informale",
+    "deploy_strategy": "una modifica alla volta, testare prima di pubblicare",
+    "safety": "sicurezza prima di tutto, mai usare browser utente",
+    "communication_style": "diretto, conciso, niente giri di parole",
+    "products_source": "solo custom_products dal database, MAI products.ts statico",
+    "seo_target": "prima pagina Google per provincia Reggio Calabria",
+    "when_uncertain": "agisci comunque, meglio provare che chiedere",
+    "model_preference": "gpt-4.1 fisso (non mini)",
+    "response_length": "breve per cose semplici, elenchi puntati per cose complesse",
+    "error_handling": "ammetti subito, correggi senza scuse lunghe"
+  }
+}
