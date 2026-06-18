@@ -345,7 +345,7 @@ class Coordinator:
     """Coordinatore principale che gestisce la logica di decisione."""
 
     def __init__(self):
-        self.client = AsyncOpenAI()
+        self.client = AsyncOpenAI(timeout=180.0)
         self.shell_tool = ShellTool()
         self.web_tool = WebSearchTool()
         self.file_tool = FileManagerTool()
