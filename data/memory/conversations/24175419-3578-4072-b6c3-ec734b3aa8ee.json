@@ -1,0 +1,14 @@
+{
+  "conversation_id": "24175419-3578-4072-b6c3-ec734b3aa8ee",
+  "messages": [
+    {
+      "role": "user",
+      "content": "come le fai le ricerche su internet"
+    },
+    {
+      "role": "assistant",
+      "content": "Le ricerche su internet le faccio così:\n\n- Uso strumenti automatici che cercano su Google e Brave.\n- Leggo direttamente il contenuto delle pagine più rilevanti (non solo i titoli).\n- Sintetizzo e riassumo quello che trovo, così ti do solo le informazioni utili.\n\nPer domande semplici uso una ricerca rapida su 2-3 siti, per richieste \"approfondite\" leggo anche 10-20 pagine e confronto tutto. Niente risposte \"a memoria\": controllo sempre davvero online."
+    }
+  ],
+  "updated_at": "2026-06-18T20:04:51.439612+00:00"
+}

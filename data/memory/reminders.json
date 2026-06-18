@@ -8,6 +8,15 @@
       "status": "active",
       "created_at": "2026-06-18T16:05:34.798569",
       "completed_at": null
+    },
+    {
+      "id": "rem_20260618_203153",
+      "text": "Ordinare il materasso Iris 120x190",
+      "due": "2026-06-18T21:31:53.363416",
+      "priority": "medium",
+      "status": "active",
+      "created_at": "2026-06-18T20:31:53.363434",
+      "completed_at": null
     }
   ]
 }

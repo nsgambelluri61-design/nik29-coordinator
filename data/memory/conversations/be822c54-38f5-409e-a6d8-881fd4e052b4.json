@@ -1,0 +1,33 @@
+{
+  "conversation_id": "be822c54-38f5-409e-a6d8-881fd4e052b4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\"crea un agente che gestisce i social media\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_uemSWEMhmZudKxyvqkSIwOYx",
+          "type": "function",
+          "function": {
+            "name": "create_agent",
+            "arguments": "{\"name\":\"agente_social_media\",\"role\":\"Social Media Manager per Il Dormire\",\"description\":\"Gestisce la presenza social di Il Dormire: crea post, analizza i trend locali, suggerisce strategie, monitora i competitor e propone campagne.\",\"capabilities\":\"- Crea post social in stile informale per Facebook e Instagram\\n- Analizza trend locali e suggerisce argomenti\\n- Monitora i competitor locali e nazionali\\n- Suggerisce campagne e promozioni\\n- Riassume statistiche e risultati delle campagne\\n- Genera caption e grafiche semplici\\n- Consiglia hashtag rilevanti\\n- Si adatta allo stile comunicativo di Nicola (diretto, locale, no fronzoli)\\n- Può proporre piani editoriali settimanali\",\"tools\":\"web_research,brave_search,deep_research\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_uemSWEMhmZudKxyvqkSIwOYx",
+      "content": "✅ Agente 'agente_social_media' creato con successo!\n- Ruolo: Social Media Manager per Il Dormire\n- Modello: gpt-4.1\n- Tool: web_research, brave_search, deep_research\n- Descrizione: Gestisce la presenza social di Il Dormire: crea post, analizza i trend locali, suggerisce strategie, monitora i competitor e propone campagne.\n\nUsa `delegate_to_agent` per assegnargli un task."
+    },
+    {
+      "role": "assistant",
+      "content": "Agente \"Social Media Manager\" creato. Gestirà post, trend, competitor e campagne per Il Dormire, con stile diretto e locale. Pronto per ricevere task."
+    }
+  ],
+  "updated_at": "2026-06-18T20:43:48.319014+00:00"
+}

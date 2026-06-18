@@ -1,0 +1,33 @@
+{
+  "conversation_id": "d61189a9-e77c-4b4d-a7ef-1291b5eb197a",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\"pusha tutto su github\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_TyXkfCS6k3lrTcxOcZpXVMWO",
+          "type": "function",
+          "function": {
+            "name": "git_auto",
+            "arguments": "{\"action\":\"add_commit_push\",\"message\":\"chore: push automatico di tutte le modifiche locali\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_TyXkfCS6k3lrTcxOcZpXVMWO",
+      "content": "✓ git add completato\n✓ git commit: chore: push automatico di tutte le modifiche locali\n✓ git push completato"
+    },
+    {
+      "role": "assistant",
+      "content": "Tutto pushato su GitHub. Nessun errore."
+    }
+  ],
+  "updated_at": "2026-06-18T20:04:17.872428+00:00"
+}

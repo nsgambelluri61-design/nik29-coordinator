@@ -1,0 +1,14 @@
+{
+  "conversation_id": "2795c186-4488-4e11-838d-369d10de1994",
+  "messages": [
+    {
+      "role": "user",
+      "content": "no stavamo parlando di agentiai llm"
+    },
+    {
+      "role": "assistant",
+      "content": "Ok, ora è chiaro: stiamo parlando di agenti AI basati su LLM (modelli linguistici tipo ChatGPT), non di agenti umani o commerciali.\n\nCi sono diversi tipi di agenti AI LLM che un’azienda come la tua può usare. Ecco i principali:\n\n- Agente risponditore: risponde alle domande dei clienti (tipo chatbot sul sito)\n- Agente catalogo: aggiorna e gestisce i prodotti (può collegarsi al database)\n- Agente social: scrive post, gestisce messaggi e commenti su Facebook/Instagram\n- Agente SEO: analizza testi, suggerisce miglioramenti, monitora ranking Google\n- Agente immagini: fa editing immagini (resize, scontorno, compressione)\n- Agente coordinatore: organizza il lavoro degli altri agenti (es. Nik29)\n- Agente reporting: genera report vendite, traffico, statistiche\n- Agente alert: segnala problemi tecnici (sito giù, ordini bloccati, ecc.)\n\nQuesti agenti possono lavorare insieme o separati, ognuno specializzato su un compito. Dimmi pure se vuoi un esempio pratico per un compito specifico."
+    }
+  ],
+  "updated_at": "2026-06-18T20:29:36.512965+00:00"
+}

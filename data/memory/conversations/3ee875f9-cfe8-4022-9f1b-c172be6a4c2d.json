@@ -1,0 +1,14 @@
+{
+  "conversation_id": "3ee875f9-cfe8-4022-9f1b-c172be6a4c2d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "un agente coordinatore come te quanti agenti puo gestrire?"
+    },
+    {
+      "role": "assistant",
+      "content": "Un agente coordinatore come me può gestire teoricamente decine di agenti, anche 20-30 senza problemi, purché le risorse hardware lo permettano e la rete tra gli agenti sia stabile. La vera limitazione pratica è la potenza del server (CPU, RAM) e la complessità delle interazioni tra gli agenti. Con l’architettura attuale (Docker, microservizi, API), si possono aggiungere agenti specializzati (ad esempio per immagini, SEO, social, ecc.) in modo modulare.\n\nIn sintesi: nessun limite fisso, ma oltre i 30 agenti conviene ottimizzare e monitorare attentamente le risorse."
+    }
+  ],
+  "updated_at": "2026-06-18T20:27:28.654515+00:00"
+}

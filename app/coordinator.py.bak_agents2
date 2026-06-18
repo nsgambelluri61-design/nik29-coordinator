@@ -53,8 +53,6 @@ from app.tools.browser_tools import BROWSER_TOOLS, BROWSER_TOOL_HANDLERS
 from app.tools.web_agent import WEB_AGENT_TOOL_DEFINITION, execute_web_agent
 from app.tools.screenshot_analyzer import ANALYZE_SCREENSHOT_TOOL_DEFINITION, execute_analyze_screenshot
 from app.routing.model_router import route_model
-from app.agents.agent_tools import ALL_AGENT_TOOL_SCHEMAS, handle_create_agent, handle_delegate_to_agent, handle_list_agents
-from app.agents import AgentManager
 from app.scheduler.scheduler import start_scheduler
 
 # === Deep Research Tool ===
@@ -353,7 +351,6 @@ TOOLS_DEFINITION = [
     *SCHEDULER_TOOLS,
     *WEB_TOOLS,
     *BROWSER_TOOLS,
-    *ALL_AGENT_TOOL_SCHEMAS,
     WEB_AGENT_TOOL_DEFINITION,
     ANALYZE_SCREENSHOT_TOOL_DEFINITION,
 ]
@@ -835,19 +832,6 @@ class Coordinator:
             elif name in BROWSER_TOOL_HANDLERS:
                 handler = BROWSER_TOOL_HANDLERS[name]
                 return str(await handler(**args))
-            # === Multi-Agent Framework ===
-            elif name == "create_agent":
-                if not hasattr(self, '_agent_manager'):
-                    self._agent_manager = AgentManager()
-                return await handle_create_agent(args, self._agent_manager)
-            elif name == "delegate_to_agent":
-                if not hasattr(self, '_agent_manager'):
-                    self._agent_manager = AgentManager()
-                return await handle_delegate_to_agent(args, self._agent_manager)
-            elif name == "list_agents":
-                if not hasattr(self, '_agent_manager'):
-                    self._agent_manager = AgentManager()
-                return await handle_list_agents(args, self._agent_manager)
 
             # === Advanced Browser Tools ===
             elif name == "web_agent":

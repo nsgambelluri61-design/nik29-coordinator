@@ -1,0 +1,33 @@
+{
+  "conversation_id": "d76d98bb-3266-4a5c-89c0-b9cf5f51a5e7",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mi cerchi in profndita"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_vB0ESTO3bh3uTTLx6HLh8scN",
+          "type": "function",
+          "function": {
+            "name": "deep_research",
+            "arguments": "{\"query\":\"nicola sgambelluri ildormire siderno\",\"num_results\":15}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_vB0ESTO3bh3uTTLx6HLh8scN",
+      "content": "# Deep Research: nicola sgambelluri ildormire siderno\n\n## Nicola Sgambelluri e Il Dormire a Siderno: Sintesi Completa\n\n### Profilo dell’Azienda\n\n**Il Dormire Sgambelluri Srls** è un’azienda a conduzione familiare con sede a Siderno (Reggio Calabria), specializzata nella vendita di materassi, reti, cuscini e sistemi letto. L’attività si trova in Via dell’Industria, snc, 89048 Siderno (RC) ed è contattabile al numero 392 1191388 [1][2][3][4][5][11].\n\n### Storia e Fondazione\n\nL’azienda nasce da una lunga tradizione familiare nel settore dell’arredamento, iniziata negli anni ’70 dalla famiglia Sgambelluri. Nel 2008, **Nicola Sgambelluri** decide di specializzarsi esclusivamente nei sistemi letto, fondando così Il Dormire come centro dedicato al riposo di qualità [5].\n\nNel 2015 viene lanciato il marchio proprietario **Il Dormire®**, che offre una linea di letti, materassi, reti e cuscini prodotti interamente in Italia da manifatturieri selezionati, con particolare attenzione alla qualità e alla certificazione dei materiali [5].\n\n### Prodotti e Servizi\n\nIl Dormire propone un’ampia gamma di prodotti:\n- **Materassi**: in lattice, ortopedici, a molle, in memory foam\n- **Reti**: ortopediche, motorizzate, presidi medici e sanitari\n- **Cuscini** e **letti**\n- **Collezioni Made in Italy**: tutti i prodotti sono realizzati da manifatturieri italiani selezionati [3][4][5]\n\nServizi aggiuntivi:\n- **Consulenza personalizzata** per la scelta del sistema letto più adatto alle esigenze del cliente\n- **Ritiro materassi usati**\n- **Consegna a domicilio** [3][4]\n\n### Valori e Missione\n\nLa missione dichiarata da Nicola Sgambelluri è “portare nelle case italiane il meglio del riposo, con prodotti Made in Italy e una consulenza che fa la differenza” [5]. I pilastri dell’azienda sono:\n- **Esperienza di oltre 50 anni** nel settore\n- **Filiera corta** e controllo diretto della qualità\n- **Materiali certificati** e lavorazioni artigianali\n- **Recensioni eccellenti** da parte dei clienti, con valutazioni a 5 stelle [2][5][9]\n\n### Reputazione e Recensioni\n\nIl Dormire gode di un’ottima reputazione online:\n- Recensioni a 5 stelle su diversi portali [2][5][9]\n- Apprezzamento per la qualità dei prodotti e la consulenza offerta\n- Presenza attiva sui social, in particolare su Facebook, dove si definiscono “Specialisti del Riposo” e sottolineano l’offerta di prodotti certificati come Dispositivo Medico CE [4]\n\n### Rete e Presenza Locale\n\nIl Dormire è un punto di riferimento a Siderno e nella provincia di Reggio Calabria per chi cerca qualità e specializzazione nei sistemi letto. L’azienda si distingue per la lunga tradizione familiare e per la capacità di innovare mantenendo saldi i valori artigianali [5][9][11].\n\n### Collegamenti con il territorio\n\nLa famiglia Sgambelluri è presente a Siderno anche con altre attività nel settore dell’arredamento e dei serramenti, ma Il Dormire rappresenta la specializzazione nel comparto del riposo [5][10].\n\n---\n\n## Fonti\n\n1. https://www.reteimprese.it/207127  \n2. https://www.reteimprese.it/materassi-dettaglio/siderno/azienda/2660733  \n3. https://www.misterimprese.it/calabria/reggio-calabria/siderno/materassi-vendita-al-dettaglio/2614533.html  \n4. https://www.facebook.com/ildormirematerassi/  \n5. https://www.ildormire.com/chi-siamo  \n9. https://www.aquileinarredamento.it/profile-376538-il-dormire  \n10. https://www.paginegialle.it/siderno-marina-rc/porte/sgambelluri-fratelli  \n11. https://www.paginegialle.it/ildormire-siderno\n\n---\n*Pagine analizzate: 12/15*"
+    },
+    {
+      "role": "assistant",
+      "content": "Ecco cosa dicono su di te e Il Dormire online, in sintesi chiara:\n\n- Il Dormire è a Siderno (RC), nasce da una tradizione familiare dagli anni ’70 con Nicola Sgambelluri che dal 2008 si specializza nei sistemi letto.\n- Vendita di materassi, reti, cuscini, tutti Made in Italy, con collezione a marchio proprio dal 2015.\n- Offri consulenza personalizzata, ritiro materassi usati, consegna a domicilio.\n- Ottima reputazione: recensioni a 5 stelle su vari siti e social.\n- Valori: esperienza, filiera corta, qualità artigianale, materiali certificati.\n- Sei punto di riferimento locale per chi cerca qualità e specializzazione nel riposo.\n- Presente attivamente anche su Facebook come “Specialisti del Riposo”.\n\nSe vuoi dettagli su recensioni, social o altro, dimmi pure."
+    }
+  ],
+  "updated_at": "2026-06-18T20:08:16.271769+00:00"
+}
