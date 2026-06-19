@@ -222,5 +222,16 @@
       }
     },
     "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-19T07:00:03.101351+00:00",
+    "checks": {
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
   }
 ]

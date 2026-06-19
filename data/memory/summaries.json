@@ -1,23 +1,5 @@
 {
   "conversations": {
-    "57629a01-a301-4874-ac8a-d39fc0a73437": {
-      "conversation_id": "57629a01-a301-4874-ac8a-d39fc0a73437",
-      "last_topic": "facciamo una chiacchierata",
-      "key_points": [
-        "facciamo una chiacchierata"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:11:29.205475+00:00"
-    },
-    "a5fda8bf-1d12-4e98-8554-a486b7b6ff6c": {
-      "conversation_id": "a5fda8bf-1d12-4e98-8554-a486b7b6ff6c",
-      "last_topic": "voglio veder come parli",
-      "key_points": [
-        "voglio veder come parli"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:11:50.098140+00:00"
-    },
     "178ae7ef-ffb8-40e6-86f4-6acf7f714afa": {
       "conversation_id": "178ae7ef-ffb8-40e6-86f4-6acf7f714afa",
       "last_topic": "tu puoi creare un agente",
@@ -441,10 +423,34 @@
       "conversation_id": "web_r4f7f7rtfyp",
       "last_topic": "Analizza il file: Alfredo Carbone - Materassi Integrazione_3.jpg\n[File caricato: unknown -> workspac",
       "key_points": [
-        "Analizza il file: Alfredo Carbone - Materassi Integrazione_3.jpg\n[File caricato: unknown -> workspac"
+        "Analizza il file: Alfredo Carbone - Materassi Integrazione_3.jpg\n[File caricato: unknown -> workspac",
+        "pusha tutto su github\""
       ],
-      "message_count": 4,
-      "updated_at": "2026-06-19T04:40:16.417880+00:00"
+      "message_count": 8,
+      "updated_at": "2026-06-19T04:41:49.085519+00:00"
+    },
+    "web_0dbrswme1b0v": {
+      "conversation_id": "web_0dbrswme1b0v",
+      "last_topic": "ciao",
+      "key_points": [
+        "la vedoi la foto che go caricato prima ?",
+        "si controlla"
+      ],
+      "message_count": 14,
+      "updated_at": "2026-06-19T07:00:06.075399+00:00"
+    },
+    "telegram_7072645786": {
+      "conversation_id": "telegram_7072645786",
+      "last_topic": "che puoi fare ?",
+      "key_points": [
+        "che puoi fare ?",
+        "conosci maestro?",
+        "quanta egrande la tua menoria?",
+        "quanta memoria hai?",
+        "mi sai aiutare a risovere problemi vin il mac?"
+      ],
+      "message_count": 52,
+      "updated_at": "2026-06-19T06:23:41.440535+00:00"
     }
   }
 }

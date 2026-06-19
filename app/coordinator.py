@@ -529,15 +529,44 @@ class Coordinator:
         # System prompt (con memoria persistente automatica)
         system_msg = {"role": "system", "content": self._build_system_prompt(conversation_id)}
 
-        # Gestisci file caricati
+        # Gestisci file caricati (con supporto Vision per immagini)
+        import base64 as _b64
+        IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.gif', '.webp', '.bmp'}
         file_info = ""
+        image_parts = []
         if uploaded_files:
-            for f in uploaded_files:
-                file_info += f"\n[File caricato: {f.get('name', 'unknown')} -> workspace/{f.get('name', '')}]"
-
-        # Aggiungi messaggio utente
-        content = user_message + file_info
-        messages.append({"role": "user", "content": content})
+            for uf in uploaded_files:
+                fname = uf.get('filename', uf.get('name', 'unknown'))
+                furl = uf.get('url', '')
+                ext = os.path.splitext(fname)[1].lower()
+                if ext in IMAGE_EXTENSIONS and furl:
+                    # Prova a leggere il file locale per base64
+                    local_path = furl.split('/files/')[-1] if '/files/' in furl else ''
+                    workspace_path = os.path.join('/data/workspace', local_path)
+                    if os.path.exists(workspace_path):
+                        with open(workspace_path, 'rb') as img_f:
+                            img_b64 = _b64.b64encode(img_f.read()).decode('utf-8')
+                        mime_ext = ext.replace('.', '')
+                        if mime_ext == 'jpg': mime_ext = 'jpeg'
+                        image_parts.append({
+                            "type": "image_url",
+                            "image_url": {"url": f"data:image/{mime_ext};base64,{img_b64}"}
+                        })
+                    else:
+                        # URL esterno
+                        image_parts.append({
+                            "type": "image_url",
+                            "image_url": {"url": furl}
+                        })
+                else:
+                    file_info += f"\n[File caricato: {fname}]"
+        # Costruisci messaggio utente (multimodal se ci sono immagini)
+        if image_parts:
+            user_content = [{"type": "text", "text": user_message + file_info}] + image_parts
+            messages.append({"role": "user", "content": user_content})
+        else:
+            content = user_message + file_info
+            messages.append({"role": "user", "content": content})
 
         # Loop di esecuzione tool (max 15 iterazioni per task complessi)
         for iteration in range(15):

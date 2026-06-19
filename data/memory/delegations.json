@@ -41,6 +41,20 @@
       "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
       "success": false,
       "timestamp": "2026-06-19T04:40:13.391643+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza e descrivi il contenuto della foto. Riconosci testi, loghi, colori e qualsiasi informazione utile per un uso commerciale o web.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-19T06:17:49.362753+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza l’immagine e estrai tutti i dettagli visibili utili per catalogo: materiale, colori, finiture, eventuali scritte o etichette, particolari tecnici.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-19T07:02:59.454738+00:00"
     }
   ]
 }

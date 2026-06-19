@@ -325,8 +325,7 @@
         .message.user .message-content {
             background: var(--bg-user-bubble);
             border-bottom-right-radius: 4px;
-            white-space: pre-wrap;
-        }
+              }
 
         .message.assistant .message-content {
             background: var(--bg-bot-bubble);
@@ -827,6 +826,34 @@
             line-height: 1.6;
         }
 
+        
+        /* Copy message button */
+        .message.assistant {
+            position: relative;
+        }
+        .copy-msg-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 4px 10px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-muted);
+            font-size: 11px;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+        .message.assistant:hover .copy-msg-btn {
+            opacity: 1;
+        }
+        .copy-msg-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+            background: var(--bg-secondary);
+        }
         /* Copy button for code blocks */
         .code-block-wrapper {
             position: relative;
@@ -1137,6 +1164,17 @@
                 contentDiv.innerHTML = rendered;
                 // Add copy buttons to code blocks
                 addCopyButtons(contentDiv);
+                // Add copy-message button
+                const copyMsgBtn = document.createElement('button');
+                copyMsgBtn.className = 'copy-msg-btn';
+                copyMsgBtn.textContent = 'Copia';
+                copyMsgBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    navigator.clipboard.writeText(content);
+                    copyMsgBtn.textContent = 'Copiato!';
+                    setTimeout(() => copyMsgBtn.textContent = 'Copia', 2000);
+                };
+                msgDiv.appendChild(copyMsgBtn);
                 // Detect and render file references
                 renderFileAttachments(contentDiv, content);
             } else {
