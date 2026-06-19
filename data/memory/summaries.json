@@ -466,10 +466,11 @@
         "mi crei una descrizione dopo averna anlizata con agente\n[File caricato: unknown -> workspace/]",
         "fai un descizione commerciale",
         "aggiungila alla foto",
-        "fammi vedere lultima foto"
+        "fammi vedere lultima foto",
+        "\"Esegui git_auto con action push, message: fix: persistenza conversazione + preview immagini inline "
       ],
-      "message_count": 14,
-      "updated_at": "2026-06-19T19:49:12.117310+00:00"
+      "message_count": 22,
+      "updated_at": "2026-06-19T19:52:28.429936+00:00"
     }
   }
 }
