@@ -2,25 +2,25 @@
 Client per comunicare con i sub-agenti registrati.
 Gestisce il registro agenti e le chiamate HTTP.
 """
-
 import os
 import json
+import base64
 import logging
 from pathlib import Path
 from typing import Optional
-
 import httpx
 
 logger = logging.getLogger("agent_client")
 
 AGENTS_CONFIG = os.environ.get("AGENTS_CONFIG", "/data/memory/agents.json")
+WORKSPACE_DIR = "/data/workspace"
 
 DEFAULT_AGENTS = [
     {
         "name": "immagini",
-        "description": "Editing immagini: resize, scontorno, compressione, info",
-        "url": "http://nik29-images:4000",
-        "capabilities": ["resize", "remove_bg", "compress", "info", "convert"]
+        "description": "Agente immagini autonomo: analisi Vision, editing, scontorno, composizione, pipeline",
+        "url": "http://nik29-images:4002",
+        "capabilities": ["analyze", "edit", "remove_bg", "composite", "pipeline"]
     }
 ]
 
@@ -68,6 +68,55 @@ class AgentRegistry:
         self._load()
 
 
+def _resolve_file_to_base64(file_info: dict) -> Optional[dict]:
+    """
+    Converte un file (da URL locale o path) in formato base64
+    compatibile con nik29-images /task endpoint.
+    """
+    name = file_info.get("name", "file.jpg")
+    url = file_info.get("url", "")
+    data = file_info.get("data", "")
+
+    # Se ha gia' il campo data in base64, usalo direttamente
+    if data:
+        return {"name": name, "data": data}
+
+    # Prova a risolvere il file dal workspace locale
+    # URL tipo: http://localhost:4001/files/nomefile.jpg
+    if "/files/" in url:
+        filename = url.split("/files/")[-1]
+        filepath = os.path.join(WORKSPACE_DIR, filename)
+        if os.path.exists(filepath):
+            with open(filepath, "rb") as f:
+                b64 = base64.b64encode(f.read()).decode("utf-8")
+            return {"name": name, "data": b64}
+
+    # Prova con il nome del file direttamente nel workspace
+    filepath = os.path.join(WORKSPACE_DIR, name)
+    if os.path.exists(filepath):
+        with open(filepath, "rb") as f:
+            b64 = base64.b64encode(f.read()).decode("utf-8")
+        return {"name": name, "data": b64}
+
+    # Cerca qualsiasi file immagine recente nel workspace
+    workspace = Path(WORKSPACE_DIR)
+    if workspace.exists():
+        image_extensions = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+        image_files = [
+            f for f in workspace.iterdir()
+            if f.suffix.lower() in image_extensions
+        ]
+        if image_files:
+            # Prendi il piu' recente
+            latest = max(image_files, key=lambda f: f.stat().st_mtime)
+            with open(latest, "rb") as f:
+                b64 = base64.b64encode(f.read()).decode("utf-8")
+            return {"name": latest.name, "data": b64}
+
+    logger.warning(f"Impossibile risolvere file: {name} (url: {url})")
+    return None
+
+
 class AgentClient:
     """Client HTTP per comunicare con i sub-agenti."""
 
@@ -81,9 +130,34 @@ class AgentClient:
             return f"Agente '{agent_name}' non trovato. Agenti disponibili: {[a['name'] for a in self.registry.list_agents()]}"
 
         url = f"{agent['url']}/task"
+
+        # Converti i file in base64 per nik29-images
+        resolved_files = []
+        if files:
+            for file_info in files:
+                resolved = _resolve_file_to_base64(file_info)
+                if resolved:
+                    resolved_files.append(resolved)
+
+        # Se non ci sono file risolti, cerca l'immagine piu' recente nel workspace
+        if not resolved_files:
+            workspace = Path(WORKSPACE_DIR)
+            if workspace.exists():
+                image_extensions = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+                image_files = [
+                    f for f in workspace.iterdir()
+                    if f.suffix.lower() in image_extensions
+                ]
+                if image_files:
+                    latest = max(image_files, key=lambda f: f.stat().st_mtime)
+                    with open(latest, "rb") as f:
+                        b64 = base64.b64encode(f.read()).decode("utf-8")
+                    resolved_files.append({"name": latest.name, "data": b64})
+                    logger.info(f"Auto-incluso file recente: {latest.name}")
+
         payload = {
             "instruction": instruction,
-            "files": files or []
+            "files": resolved_files
         }
 
         try:

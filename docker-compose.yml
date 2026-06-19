@@ -29,3 +29,10 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
+    networks:
+      - nik29-network
+
+networks:
+  nik29-network:
+    external: true
+    name: nik29-network
