@@ -3,3 +3,4 @@ data/memory/conversations/
 *.bak
 apply_fix.sh
 fix_agent.sh
+.env
