@@ -35,6 +35,7 @@ from app.tools.conversation_summary_tool import TOOL_DEFINITION as CONVERSATION_
 from app.tools.reminder_tool import ReminderTool
 from app.tools.reminder_tool import TOOL_DEFINITION as REMINDER_TOOL_DEFINITION
 from app.tools.self_improve_tool import SelfImproveTool
+from app.memory_v2 import save_lesson as _auto_save_lesson
 from app.tools.self_improve_tool import TOOL_DEFINITION as SELF_IMPROVE_TOOL_DEFINITION
 from app.tools.instructions_tool import InstructionsTool
 from app.tools.instructions_tool import TOOL_DEFINITION as INSTRUCTIONS_TOOL_DEFINITION
@@ -569,6 +570,8 @@ class Coordinator:
             messages.append({"role": "user", "content": content})
 
         # Loop di esecuzione tool (max 15 iterazioni per task complessi)
+        # === AUTO-REFLECT FORZATO: tracker errori ===
+        _error_log = []  # Traccia errori nei tool per auto-reflect
         for iteration in range(15):
             api_messages = [system_msg] + self._safe_truncate_messages(messages, max_messages=20)
 
@@ -647,6 +650,11 @@ class Coordinator:
                         "tool_call_id": tool_call.id,
                         "content": result
                     })
+                    # === AUTO-REFLECT: traccia errori ===
+                    _error_keywords = ["errore", "fallito", "timeout", "non trovato", "non esiste", "bloccato", "rifiutato", "impossibile", "failed", "error", "denied", "connection refused"]
+                    _result_lower = (result or "").lower()[:500]
+                    if any(kw in _result_lower for kw in _error_keywords):
+                        _error_log.append({"tool": func_name, "error": result[:200], "iteration": iteration})
 
             else:
                 # Risposta finale senza tool call
@@ -658,6 +666,21 @@ class Coordinator:
 
                 # === NUOVO: Auto-save apprendimenti a fine conversazione ===
                 persistent_memory.end_session(conversation_id, messages)
+                # === AUTO-REFLECT FORZATO: salva lezione se errori risolti ===
+                if _error_log and iteration > 0:
+                    try:
+                        _err_tools = list(set(e["tool"] for e in _error_log))
+                        _err_summary = _error_log[0]["error"][:150]
+                        _solution_hint = final_content[:150] if final_content else "Risolto dopo iterazioni multiple"
+                        _lesson_text = f"Problema con {', '.join(_err_tools)}: {_err_summary}. Risolto: {_solution_hint}"
+                        import asyncio as _aio
+                        _aio.create_task(_auto_save_lesson(
+                            category="soluzione",
+                            lesson=_lesson_text,
+                            context=f"Auto-reflect forzato, {len(_error_log)} errori in {iteration+1} iterazioni"
+                        ))
+                    except Exception:
+                        pass  # Non bloccare mai la risposta
 
                 yield {"type": "response", "content": final_content}
                 return
@@ -815,9 +838,9 @@ class Coordinator:
             elif name == "self_improve":
                 return await self.self_improve_tool.execute(
                     action=args.get("action", "reflect"),
-                    task_description=args.get("task_description"),
-                    outcome=args.get("outcome"),
-                    rule=args.get("rule")
+                    task_summary=args.get("task_summary", args.get("task_description", "")),
+                    rule=args.get("rule", ""),
+                    reason=args.get("reason", args.get("outcome", ""))
                 )
             elif name == "instructions":
                 return await self.instructions_tool.execute(

@@ -83,6 +83,28 @@ Se ti serve un tool che non esiste, puoi crearlo con create_tool. Assicurati che
 ### REGOLE TOOL COGNITIVI E SELF-IMPROVE
 Usa save_memory per registrare fatti, preferenze e lezioni. Usa self_improve dopo task complessi per riflettere su cosa e' andato bene o male.
 
+### APPRENDIMENTO AUTOMATICO (CRITICO)
+REGOLA: Ogni volta che RISOLVI un problema (errore, timeout, bug, configurazione), DEVI SEMPRE chiamare self_improve con action="reflect" PRIMA di rispondere a Nicola.
+
+Formato del task_summary per la riflessione:
+"Problema: [cosa e' successo]. Causa: [perche']. Soluzione: [cosa ha funzionato]. Shortcut: [cosa fare la prossima volta per risolvere subito]."
+
+Esempi:
+- "Problema: git push fallito per timeout. Causa: timeout troppo breve. Soluzione: aumentato timeout. Shortcut: se push fallisce, non usare ping (bloccato), verificare con curl, poi riprovare con timeout 120s."
+- "Problema: container Docker non risponde. Causa: porta occupata. Soluzione: docker compose down && up. Shortcut: se container non risponde, prima controllare docker ps, poi riavviare."
+- "Problema: API OpenAI errore 429. Causa: rate limit. Soluzione: atteso 30 secondi e riprovato. Shortcut: se 429, attendere 30s e riprovare max 3 volte."
+
+QUANDO USARE REFLECT:
+- Dopo OGNI errore risolto (anche piccolo)
+- Dopo aver scoperto un workaround
+- Dopo aver capito una preferenza di Nicola
+- Dopo un task che ha richiesto piu' di 3 iterazioni
+
+QUANDO CONSULTARE LE LEZIONI:
+- PRIMA di tentare qualsiasi operazione che potrebbe fallire (push, deploy, API call)
+- Le lezioni sono gia' nel contesto ({lessons_context}), LEGGILE prima di agire.
+- Se una lezione dice "Shortcut: fai X", FAI X direttamente senza ripetere la trafila.
+
 ### REGOLE SHELL
 Usa host_shell per comandi sul Mac host. Fai attenzione ai percorsi e ai permessi.
 

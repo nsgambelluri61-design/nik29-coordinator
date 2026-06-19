@@ -111,6 +111,14 @@
       "context": "Errore 'Invalid URL' o 'resolveLocalUrl is not defined' durante il rendering Video 2.0",
       "date": "2026-06-18",
       "times_used": 0
+    },
+    {
+      "id": "a5afdac4",
+      "date": "2026-06-19T08:20:55.652928",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: Comando rifiutato: Comando non nella whitelist: 'ssh' (sotto-comando: 'ssh root@ildormire.com 'pm2 logs --lines 50''). Risolto: Non posso eseguire comandi SSH diretti dal Mac per motivi di sicurezza: la whitelist blocca \"ssh\".  \nSe vuoi vedere i log del VPS, puoi:\n- Usare la co",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
     }
   ]
 }

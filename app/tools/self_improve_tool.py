@@ -142,7 +142,7 @@ class SelfImproveTool:
             lines.append(
                 f"\n{i}. {r['rule']}"
                 f"\n   Motivo: {r['reason']}"
-                f"\n   ID: {r['id']} | Aggiunta: {r['added_date'][:10]}{applied}"
+                f"\n   ID: {r['id']} | Aggiunta: {r.get('added_date', r.get('date', 'N/A'))[:10]}{applied}"
             )
 
         return "\n".join(lines)

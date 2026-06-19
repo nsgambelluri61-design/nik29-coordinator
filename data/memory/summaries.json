@@ -431,13 +431,16 @@
     },
     "web_0dbrswme1b0v": {
       "conversation_id": "web_0dbrswme1b0v",
-      "last_topic": "ciao",
+      "last_topic": "c'è un bug quando mostri le lezioni salvate, errore 'added_date'. Diagnostica e fixa.\"",
       "key_points": [
-        "la vedoi la foto che go caricato prima ?",
-        "si controlla"
+        "c'è un bug quando mostri le lezioni salvate, errore 'added_date'. Diagnostica e fixa.\"",
+        "forza la soluzione temporanea\"",
+        "mostrami la lista in formato leggibile\"",
+        "si, sistemalo\"",
+        "si prova un altro fix"
       ],
-      "message_count": 14,
-      "updated_at": "2026-06-19T07:00:06.075399+00:00"
+      "message_count": 52,
+      "updated_at": "2026-06-19T08:23:59.140301+00:00"
     },
     "telegram_7072645786": {
       "conversation_id": "telegram_7072645786",

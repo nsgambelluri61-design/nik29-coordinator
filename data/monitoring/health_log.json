@@ -233,5 +233,28 @@
       }
     },
     "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-19T07:36:21.978284+00:00",
+    "checks": {
+      "website": {
+        "url": "https://ildormire.com",
+        "status_code": 200,
+        "reachable": true,
+        "error": null
+      }
+    },
+    "overall_status": "healthy"
+  },
+  {
+    "type": "auto_debug",
+    "timestamp": "2026-06-19T08:04:51.650687+00:00",
+    "issue": "Errore self_improve/get_rules: 'added_date' quando provo a mostrare le lezioni salvate.",
+    "action_taken": "auto",
+    "steps": [
+      "Fetching last 50 log lines from: nik29-coordinator",
+      "Logs: N/A"
+    ],
+    "resolved": false
   }
 ]
