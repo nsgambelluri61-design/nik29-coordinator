@@ -5,6 +5,7 @@ Auto-debug, health checks, and Telegram alerts for nik29-coordinator.
 
 import os
 import json
+import socket
 import asyncio
 import logging
 from datetime import datetime, timezone
@@ -26,6 +27,23 @@ HEALTH_LOG_PATH = "/data/monitoring/health_log.json"
 # UTILITY HELPERS
 # ============================================================
 
+def _bridge_is_reachable() -> bool:
+    """Quick 1s TCP connect check to the bridge host/port."""
+    try:
+        # Parse host and port from HOST_BRIDGE_URL
+        from urllib.parse import urlparse
+        parsed = urlparse(HOST_BRIDGE_URL)
+        host = parsed.hostname or "host.docker.internal"
+        port = parsed.port or 4003
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)
+        result = sock.connect_ex((host, port))
+        sock.close()
+        return result == 0
+    except Exception:
+        return False
+
+
 async def _http_get(url: str, timeout: int = 10) -> dict:
     """Perform a GET request and return status + body snippet."""
     try:
@@ -43,13 +61,16 @@ async def _http_get(url: str, timeout: int = 10) -> dict:
 
 async def _host_bridge_command(command: str) -> dict:
     """Execute a command on the Mac host via host_bridge."""
+    # Fast-fail: check if bridge is reachable before attempting HTTP call
+    if not _bridge_is_reachable():
+        return {"success": False, "error": "Bridge unreachable (fast-fail)"}
     try:
         async with aiohttp.ClientSession() as session:
             payload = {"command": command}
             async with session.post(
                 f"{HOST_BRIDGE_URL}/execute",
                 json=payload,
-                timeout=aiohttp.ClientTimeout(total=30),
+                timeout=aiohttp.ClientTimeout(total=2),
             ) as resp:
                 result = await resp.json()
                 return result

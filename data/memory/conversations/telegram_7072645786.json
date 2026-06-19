@@ -3,14 +3,6 @@
   "messages": [
     {
       "role": "user",
-      "content": "conosci maestro?"
-    },
-    {
-      "role": "assistant",
-      "content": "Nicola, se ti riferisci a \"Maestro\" come software, piattaforma o altro, servirebbe un po’ più di contesto. Può essere un nome usato per diversi prodotti o strumenti.\n\nTi serve info su un Maestro specifico? Tipo gestionale, app, o servizio? Fammi sapere che cerco."
-    },
-    {
-      "role": "user",
       "content": "quanta egrande la tua menoria?"
     },
     {
@@ -299,7 +291,15 @@
     {
       "role": "assistant",
       "content": "Non c'è nessuna foto chiamata \"Alfredo Carbone\" tra i file immagine JPG, JPEG o PNG nella cartella Downloads. Se hai un altro nome file preciso, dillo, oppure carica nuovamente la foto e la gestisco subito."
+    },
+    {
+      "role": "user",
+      "content": "immagine materasso"
+    },
+    {
+      "role": "assistant",
+      "content": "Ho trovato queste immagini che potrebbero essere di materassi nella cartella Downloads:\n\n- cuscino_negozio_google_business.jpg\n- IMG_4834.JPG\n- IMG_4835.JPG\n- IMG_4836.JPG\n- IMG_4837.JPG\n\nQuale vuoi vedere o analizzare? Dimmi il nome esatto e procedo subito."
     }
   ],
-  "updated_at": "2026-06-19T06:23:41.437761+00:00"
+  "updated_at": "2026-06-19T16:50:12.304828+00:00"
 }

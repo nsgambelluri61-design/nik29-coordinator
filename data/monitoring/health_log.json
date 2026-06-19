@@ -256,5 +256,118 @@
       "Logs: N/A"
     ],
     "resolved": false
+  },
+  {
+    "timestamp": "2026-06-19T12:08:02.590505+00:00",
+    "checks": {
+      "website": {
+        "url": "https://ildormire.com",
+        "status_code": 200,
+        "reachable": true,
+        "error": null
+      },
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      },
+      "disk": {
+        "root_usage": "unknown",
+        "warning": false
+      },
+      "memory": {
+        "raw": "unavailable",
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-19T12:11:19.195463+00:00",
+    "checks": {
+      "website": {
+        "url": "https://ildormire.com",
+        "status_code": 200,
+        "reachable": true,
+        "error": null
+      },
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      },
+      "disk": {
+        "root_usage": "unknown",
+        "warning": false
+      },
+      "memory": {
+        "raw": "unavailable",
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-19T16:05:51.227838+00:00",
+    "checks": {
+      "website": {
+        "url": "https://ildormire.com",
+        "status_code": 200,
+        "reachable": true,
+        "error": null
+      },
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      },
+      "disk": {
+        "root_usage": "unknown",
+        "warning": false
+      },
+      "memory": {
+        "raw": "unavailable",
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "type": "alert",
+    "timestamp": "2026-06-19T16:47:42.391932+00:00",
+    "severity": "info",
+    "message": "L\u2019immagine modificata con le etichette \u201cMemory Foam\u201d e \u201cRivestimento traspirante\u201d \u00e8 pronta. Scaricala subito: (link diretto non disponibile in questa chat, ma puoi richiederlo qui o tramite il bot Telegram @nik29coordinatorbot). Se vuoi ricevere il file, rispondi qui oppure scrivimi direttamente su Telegram!",
+    "telegram_result": {
+      "ok": true,
+      "result": {
+        "message_id": 56,
+        "from": {
+          "id": 8838350041,
+          "is_bot": true,
+          "first_name": "nik29",
+          "username": "nik29coordinatorbot"
+        },
+        "chat": {
+          "id": 7072645786,
+          "first_name": "NiK29",
+          "last_name": "Stop",
+          "type": "private"
+        },
+        "date": 1781887662,
+        "text": "\u2139\ufe0f nik29 Alert [INFO]\n\nL\u2019immagine modificata con le etichette \u201cMemory Foam\u201d e \u201cRivestimento traspirante\u201d \u00e8 pronta. Scaricala subito: (link diretto non disponibile in questa chat, ma puoi richiederlo qui o tramite il bot Telegram @nik29coordinatorbot). Se vuoi ricevere il file, rispondi qui oppure scrivimi direttamente su Telegram!",
+        "entities": [
+          {
+            "offset": 3,
+            "length": 18,
+            "type": "bold"
+          },
+          {
+            "offset": 229,
+            "length": 20,
+            "type": "mention"
+          }
+        ]
+      }
+    }
   }
 ]

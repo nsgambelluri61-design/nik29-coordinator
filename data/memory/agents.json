@@ -2,15 +2,9 @@
   "agents": [
     {
       "name": "immagini",
-      "description": "Editing immagini: resize, scontorno, compressione, info",
-      "url": "http://nik29-images:4000",
-      "capabilities": [
-        "resize",
-        "remove_bg",
-        "compress",
-        "info",
-        "convert"
-      ]
+      "description": "Agente immagini autonomo: analisi Vision, editing, scontorno, composizione, pipeline",
+      "url": "http://nik29-images:4002",
+      "capabilities": ["analyze", "edit", "remove_bg", "composite", "pipeline"]
     }
   ]
 }

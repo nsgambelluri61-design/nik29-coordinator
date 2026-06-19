@@ -1,131 +1,5 @@
 {
   "conversations": {
-    "178ae7ef-ffb8-40e6-86f4-6acf7f714afa": {
-      "conversation_id": "178ae7ef-ffb8-40e6-86f4-6acf7f714afa",
-      "last_topic": "tu puoi creare un agente",
-      "key_points": [
-        "tu puoi creare un agente"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:12:23.064677+00:00"
-    },
-    "43789538-4982-4f38-827b-70e95047cca4": {
-      "conversation_id": "43789538-4982-4f38-827b-70e95047cca4",
-      "last_topic": "e come fai?",
-      "key_points": [
-        "e come fai?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:12:52.531931+00:00"
-    },
-    "625c0d3a-b923-452a-bb7d-05bbbcc1f304": {
-      "conversation_id": "625c0d3a-b923-452a-bb7d-05bbbcc1f304",
-      "last_topic": "\"pusha tutto su github\"",
-      "key_points": [
-        "\"pusha tutto su github\""
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:15:26.573501+00:00"
-    },
-    "8b04c072-99e9-4069-9b41-af40af0db2aa": {
-      "conversation_id": "8b04c072-99e9-4069-9b41-af40af0db2aa",
-      "last_topic": "quale l'ultimo?",
-      "key_points": [
-        "quale l'ultimo?"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:15:58.210602+00:00"
-    },
-    "d82b42db-2669-47c1-b3ed-32b285e374e0": {
-      "conversation_id": "d82b42db-2669-47c1-b3ed-32b285e374e0",
-      "last_topic": "\"rimuovi data/memory dal gitignore e pusha i file di memoria su github\"",
-      "key_points": [
-        "\"rimuovi data/memory dal gitignore e pusha i file di memoria su github\""
-      ],
-      "message_count": 22,
-      "updated_at": "2026-06-18T19:18:22.591036+00:00"
-    },
-    "13aa44c2-4464-4e7a-8ec4-b9a6795a3317": {
-      "conversation_id": "13aa44c2-4464-4e7a-8ec4-b9a6795a3317",
-      "last_topic": "quale sono  lultimi comit",
-      "key_points": [
-        "quale sono  lultimi comit"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:19:14.801178+00:00"
-    },
-    "33818cfc-4153-405a-beb2-b02bd5f6b894": {
-      "conversation_id": "33818cfc-4153-405a-beb2-b02bd5f6b894",
-      "last_topic": "mi controlli permaflex siderno",
-      "key_points": [
-        "mi controlli permaflex siderno"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:34:03.337236+00:00"
-    },
-    "3607892e-f99a-4560-b9a6-d1e143725114": {
-      "conversation_id": "3607892e-f99a-4560-b9a6-d1e143725114",
-      "last_topic": "si recenzzioni",
-      "key_points": [
-        "si recenzzioni"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:34:42.452814+00:00"
-    },
-    "cc0af780-6f15-4644-83e5-fd78b5c36cbd": {
-      "conversation_id": "cc0af780-6f15-4644-83e5-fd78b5c36cbd",
-      "last_topic": "no, stavamo parando di permaflex non il dormire",
-      "key_points": [
-        "no, stavamo parando di permaflex non il dormire"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:35:46.043315+00:00"
-    },
-    "03944f2d-8478-4e0a-8429-e807e67a86e1": {
-      "conversation_id": "03944f2d-8478-4e0a-8429-e807e67a86e1",
-      "last_topic": "non sei preciso nelle risposte",
-      "key_points": [
-        "non sei preciso nelle risposte"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:36:17.991922+00:00"
-    },
-    "78a07959-0b21-479e-b965-db1217f8746b": {
-      "conversation_id": "78a07959-0b21-479e-b965-db1217f8746b",
-      "last_topic": "no mi riferisco che a volte non mi rispondi x quello che ti chiesdo",
-      "key_points": [
-        "no mi riferisco che a volte non mi rispondi x quello che ti chiesdo"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:36:52.706011+00:00"
-    },
-    "c9f738b2-189f-4619-9e54-114fe66010a0": {
-      "conversation_id": "c9f738b2-189f-4619-9e54-114fe66010a0",
-      "last_topic": "ok cosi va meglio",
-      "key_points": [
-        "ok cosi va meglio"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:37:27.418967+00:00"
-    },
-    "db854198-766f-4940-b03e-e76e0d643509": {
-      "conversation_id": "db854198-766f-4940-b03e-e76e0d643509",
-      "last_topic": "mi puoi guidare passo passo x un compiti preciso?",
-      "key_points": [
-        "mi puoi guidare passo passo x un compiti preciso?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:37:55.988134+00:00"
-    },
-    "638856a9-f3e5-4b41-9dd1-51314ec31af9": {
-      "conversation_id": "638856a9-f3e5-4b41-9dd1-51314ec31af9",
-      "last_topic": "sai riconoscere degli errori?",
-      "key_points": [
-        "sai riconoscere degli errori?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:38:28.043250+00:00"
-    },
     "da7f8a93-ccf6-426c-905a-ec6f1f2ca5b3": {
       "conversation_id": "da7f8a93-ccf6-426c-905a-ec6f1f2ca5b3",
       "last_topic": "ma non posso incollare screenshot?",
@@ -444,16 +318,158 @@
     },
     "telegram_7072645786": {
       "conversation_id": "telegram_7072645786",
-      "last_topic": "che puoi fare ?",
+      "last_topic": "conosci maestro?",
       "key_points": [
-        "che puoi fare ?",
         "conosci maestro?",
         "quanta egrande la tua menoria?",
         "quanta memoria hai?",
-        "mi sai aiutare a risovere problemi vin il mac?"
+        "mi sai aiutare a risovere problemi vin il mac?",
+        "mi sai aiutare a risolvere problemi con il mac?"
       ],
       "message_count": 52,
-      "updated_at": "2026-06-19T06:23:41.440535+00:00"
+      "updated_at": "2026-06-19T16:50:12.309123+00:00"
+    },
+    "web_irj6pbvuolp": {
+      "conversation_id": "web_irj6pbvuolp",
+      "last_topic": "ciao",
+      "key_points": [
+        "era x testarti"
+      ],
+      "message_count": 10,
+      "updated_at": "2026-06-19T13:27:48.320667+00:00"
+    },
+    "web_ton6acp5wq": {
+      "conversation_id": "web_ton6acp5wq",
+      "last_topic": "ciao",
+      "key_points": [],
+      "message_count": 2,
+      "updated_at": "2026-06-19T14:08:11.638913+00:00"
+    },
+    "web_1t55ueu1f8y": {
+      "conversation_id": "web_1t55ueu1f8y",
+      "last_topic": "\"usa il tool shell per eseguire: docker logs nik29-images --tail 30\"",
+      "key_points": [
+        "\"usa il tool shell per eseguire: docker logs nik29-images --tail 30\"",
+        "\"si, usa host_shell\"",
+        "leggi il file app/agent_client.py e mostrami la funzione send_task — voglio vedere come gestisce la ",
+        "\"cerca in /app/agent_client.py — usa il tool shell con: cat /app/agent_client.py\"\nDentro il containe",
+        "Digli: \"usa shell: find / -name agent_client.py 2>/dev/null\""
+      ],
+      "message_count": 58,
+      "updated_at": "2026-06-19T16:20:34.582472+00:00"
+    },
+    "web_7ccdcov6thq": {
+      "conversation_id": "web_7ccdcov6thq",
+      "last_topic": "analizza immaggine con agente\n[File caricato: unknown -> workspace/]",
+      "key_points": [
+        "analizza immaggine con agente\n[File caricato: unknown -> workspace/]",
+        "si cosa puoi migliorare?",
+        "si fammi veder anteprima",
+        "qui in chat",
+        "mandamelo su telegram"
+      ],
+      "message_count": 34,
+      "updated_at": "2026-06-19T16:52:23.073320+00:00"
+    },
+    "web_gmeeflwa989": {
+      "conversation_id": "web_gmeeflwa989",
+      "last_topic": "scontorna questa immaggine solo il materasso elimina la rete con i piedi\n[File caricato: unknown -> ",
+      "key_points": [
+        "scontorna questa immaggine solo il materasso elimina la rete con i piedi\n[File caricato: unknown -> "
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T16:57:25.257234+00:00"
+    },
+    "web_hqhub19mp1": {
+      "conversation_id": "web_hqhub19mp1",
+      "last_topic": "analizza immagine con agente\n[File caricato: unknown -> workspace/]",
+      "key_points": [
+        "analizza immagine con agente\n[File caricato: unknown -> workspace/]",
+        "puoi scontornare ilinserto in schiuma blu sagomata",
+        "scontorna il cuscino\n[File caricato: unknown -> workspace/]"
+      ],
+      "message_count": 16,
+      "updated_at": "2026-06-19T17:11:27.807726+00:00"
+    },
+    "web_rp8rgl1jit": {
+      "conversation_id": "web_rp8rgl1jit",
+      "last_topic": "scontorna  cuscino\n[File caricato: unknown -> workspace/]",
+      "key_points": [
+        "scontorna  cuscino\n[File caricato: unknown -> workspace/]"
+      ],
+      "message_count": 16,
+      "updated_at": "2026-06-19T17:32:08.397072+00:00"
+    },
+    "web_4tn8vs352b": {
+      "conversation_id": "web_4tn8vs352b",
+      "last_topic": "scontorna\n[File caricato: unknown -> workspace/]",
+      "key_points": [
+        "scontorna\n[File caricato: unknown -> workspace/]"
+      ],
+      "message_count": 12,
+      "updated_at": "2026-06-19T17:37:12.581353+00:00"
+    },
+    "web_188lwnci40x": {
+      "conversation_id": "web_188lwnci40x",
+      "last_topic": "riprova",
+      "key_points": [
+        "e il percorso"
+      ],
+      "message_count": 14,
+      "updated_at": "2026-06-19T17:57:27.390932+00:00"
+    },
+    "web_j9dq8mt153": {
+      "conversation_id": "web_j9dq8mt153",
+      "last_topic": "scontorna\n[File caricato: unknown -> workspace/]",
+      "key_points": [
+        "scontorna\n[File caricato: unknown -> workspace/]"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T19:06:16.034454+00:00"
+    },
+    "web_3bfz8t9zn7z": {
+      "conversation_id": "web_3bfz8t9zn7z",
+      "last_topic": "mostrami anteprima",
+      "key_points": [
+        "mostrami anteprima",
+        "no non era questo quello che volevo",
+        "volevo vedere l'anteprima dell'immagine che  aveva scontornato il agente immagini",
+        "w qui in chat neanche?",
+        "guarda la vecchia conversazione"
+      ],
+      "message_count": 20,
+      "updated_at": "2026-06-19T19:13:46.110940+00:00"
+    },
+    "web_22kf7htcdv3": {
+      "conversation_id": "web_22kf7htcdv3",
+      "last_topic": "mostrami l'immagine scontornata",
+      "key_points": [
+        "mostrami l'immagine scontornata",
+        "scontorna\n[File caricato: unknown -> workspace/]",
+        "la foto la puoi migliorare?",
+        "angolazione diversa"
+      ],
+      "message_count": 18,
+      "updated_at": "2026-06-19T19:24:58.464454+00:00"
+    },
+    "web_wdy5z8cxocd": {
+      "conversation_id": "web_wdy5z8cxocd",
+      "last_topic": "la foto?",
+      "key_points": [],
+      "message_count": 4,
+      "updated_at": "2026-06-19T19:25:58.655422+00:00"
+    },
+    "conv_mqlc4sty_vtp6mt": {
+      "conversation_id": "conv_mqlc4sty_vtp6mt",
+      "last_topic": "ciao",
+      "key_points": [
+        "mi crei una descrizione dopo averna anlizata con agente\n[File caricato: unknown -> workspace/]",
+        "fai un descizione commerciale",
+        "aggiungila alla foto",
+        "fammi vedere lultima foto"
+      ],
+      "message_count": 14,
+      "updated_at": "2026-06-19T19:49:12.117310+00:00"
     }
   }
 }

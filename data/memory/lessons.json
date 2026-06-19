@@ -119,6 +119,206 @@
       "lesson": "Problema con host_shell: Comando rifiutato: Comando non nella whitelist: 'ssh' (sotto-comando: 'ssh root@ildormire.com 'pm2 logs --lines 50''). Risolto: Non posso eseguire comandi SSH diretti dal Mac per motivi di sicurezza: la whitelist blocca \"ssh\".  \nSe vuoi vedere i log del VPS, puoi:\n- Usare la co",
       "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
       "times_used": 0
+    },
+    {
+      "id": "f7d0bd49",
+      "date": "2026-06-19T10:04:52.422531",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.. Risolto: L'agente immagini non è attivo o non risponde.  \nNon posso fare l'analisi avanzata automatica (tipo materiali, suggerimenti tecnici, ecc.) finché non",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "eeed2326",
+      "date": "2026-06-19T10:19:23.939465",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso. Risolto: C'è stato un errore con l'agente immagini: non riesce ad analizzare direttamente immagini da link esterni.\n\nSe vuoi l’analisi, carica l’immagine dal t",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "cee37a81",
+      "date": "2026-06-19T10:30:06.276556",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"Alfredo C. Risolto: L'agente immagini ha dato errore: manca il campo \"data\" nel file caricato. Questo succede perché la chat invia solo un riferimento all’immagine, non i",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "90eb48d9",
+      "date": "2026-06-19T12:08:24.447338",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-19T12:08:02.590505+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Fatto. Risultato: lo stato sistema è \"degraded\" (degradato).\n\nProblemi trovati:\n- Nessun container Docker rilevato sul Mac (bridge non raggiungibile)",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "4168211e",
+      "date": "2026-06-19T12:11:43.328371",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-19T12:11:19.195463+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Il sistema riporta ancora \"degraded\" e il bridge Docker non è raggiungibile, anche se i container sono attivi (lo hai visto tu stesso con docker ps).",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "2c561783",
+      "date": "2026-06-19T12:21:36.912001",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso. Risolto: C'è stato un problema tecnico con l’analisi automatica: il sistema non ha ricevuto correttamente il file immagine. Questo succede perché l’agente imma",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "c690fbc2",
+      "date": "2026-06-19T12:32:00.533413",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"dettaglio. Risolto: Stesso problema tecnico di prima: il sistema immagini vuole il file vero, non solo il link generato dalla chat. Senza caricamento diretto non posso fa",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "60e6e363",
+      "date": "2026-06-19T15:49:23.682784",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: C'è stato un errore di comunicazione con l'agente immagini, quindi il task non è andato a buon fine. Riprovo appena il sistema torna disponibile. Appe",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "bb95d7f6",
+      "date": "2026-06-19T16:05:55.433346",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-19T16:05:51.227838+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Risultato health check:\n\n- Sito ildormire.com: online e raggiungibile (OK)\n- Docker sul Mac: nessun container attivo, bridge non raggiungibile\n- Stato",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "7b110791",
+      "date": "2026-06-19T16:10:05.811949",
+      "category": "errore",
+      "lesson": "Problema: l'agente immagini esegue l'analisi dell'immagine ma non restituisce mai la descrizione testuale all'utente. Causa: output dell'agente non viene passato/mostrato nella chat, manca la restituzione della risposta. Soluzione: tracciare e mostrare al frontend il testo restituito dall'agente immagini dopo ogni analisi. Shortcut: dopo ogni delegate_task con agente immagini, estrarre e mostrare sempre il risultato descrittivo all'utente.",
+      "context": "Riflessione automatica del 19/06/2026 16:10",
+      "times_used": 0
+    },
+    {
+      "id": "d52fd430",
+      "date": "2026-06-19T16:10:12.135082",
+      "category": "soluzione",
+      "lesson": "Problema con self_improve: 🪞 Riflessione completata:\n✅ Lezione salvata [errore] ID: 7b110791\n📝 Problema: l'agente immagini esegue l'analisi dell'immagine ma non restituisce mai . Risolto: Fix prioritario registrato: manca la risposta testuale dall’agente immagini dopo l’analisi. Prossimo step tecnico: sistemare l’integrazione per mostra",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "e33788d9",
+      "date": "2026-06-19T16:15:37.174342",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: File non trovato: app/agent_client.py. Risolto: Il file app/agent_client.py non esiste nella directory. Controlla se il nome o il percorso è corretto, oppure vuoi che cerchi in altre cartelle?",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "d27575f6",
+      "date": "2026-06-19T16:47:45.266804",
+      "category": "soluzione",
+      "lesson": "Problema con send_alert: {'sent': True, 'severity': 'info', 'error': None}. Risolto: Messaggio inviato su Telegram: ti arriverà una notifica dal bot @nik29coordinatorbot. Da lì puoi richiedere o scaricare l’immagine aggiornata. Se non",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "572add6c",
+      "date": "2026-06-19T16:57:25.262230",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Errore: l'agente immagini non ha risposto, quindi non sono riuscito a scontornare il materasso ora. Riprovo tra poco appena il servizio torna attivo,",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b235cb6f",
+      "date": "2026-06-19T17:03:40.879681",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Errore: l’agente immagini non ha risposto, quindi non sono riuscito a scontornare l’inserto ora. Riprovo tra poco appena il servizio torna attivo.",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "752d8442",
+      "date": "2026-06-19T17:08:50.006161",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Errore: l’agente immagini non risponde nemmeno per questa immagine. Appena torna attivo, riprovo subito lo scontorno del cuscino.",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "23c4143a",
+      "date": "2026-06-19T17:11:27.812265",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Niente da fare, l’agente immagini continua a non rispondere. Appena torna online, riprovo in automatico lo scontorno del cuscino senza che tu debba ri",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "03dcbabd",
+      "date": "2026-06-19T17:12:27.912230",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: L'agente immagini non risponde, quindi non riesco a scontornare il cuscino ora. Appena torna online, riprovo in automatico senza che tu debba rifare l",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b3022652",
+      "date": "2026-06-19T17:14:19.961990",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Niente da fare, l’agente immagini continua a non rispondere. Appena torna online, riprovo in automatico lo scontorno del cuscino senza che tu debba ri",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "cb145fa4",
+      "date": "2026-06-19T17:17:25.390440",
+      "category": "errore",
+      "lesson": "Problema: L'agente immagini non risponde alla richiesta di scontornare il cuscino. Causa: Probabile crash o disconnessione del servizio immagini. Soluzione: Attendere che il servizio immagini torni online e riprovare automaticamente senza far rifare la richiesta a Nicola. Shortcut: Se delegate_task per immagini fallisce ripetutamente, avvisa Nicola che riproverai appena il servizio torna attivo, senza altre azioni manuali.",
+      "context": "Riflessione automatica del 19/06/2026 17:17",
+      "times_used": 0
+    },
+    {
+      "id": "fd417522",
+      "date": "2026-06-19T17:17:28.057948",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task, self_improve: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: L'agente immagini è ancora offline. Ho salvato la lezione: quando il servizio non risponde dopo vari tentativi, ti avviso e riprovo in automatico appe",
+      "context": "Auto-reflect forzato, 2 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "1bbfe463",
+      "date": "2026-06-19T19:08:55.294097",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine scontornata nella cartella workspace. Probabile che il file non sia stato salvato correttamente o l'agente immagini non abb",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "447f18b8",
+      "date": "2026-06-19T19:13:26.656779",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non ho accesso diretto alle immagini delle vecchie conversazioni: se il file non è più nella cartella workspace, non posso recuperare l’anteprima né m",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "a09c25d9",
+      "date": "2026-06-19T19:19:26.689710",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine scontornata nella cartella workspace. Probabile che il file non sia stato salvato correttamente o l'agente immagini non abb",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "5a682c7a",
+      "date": "2026-06-19T19:25:58.659631",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine nella cartella workspace. Probabile che la foto non sia stata salvata correttamente o sia stata rimossa. Se vuoi, puoi rica",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
     }
   ]
 }

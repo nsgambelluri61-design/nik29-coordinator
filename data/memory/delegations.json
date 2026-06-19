@@ -55,6 +55,251 @@
       "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
       "success": false,
       "timestamp": "2026-06-19T07:02:59.454738+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza dettagliatamente il materasso nella foto: descrivi materiali apparenti, cuciture, colori, stile e possibile target di mercato. Fornisci anche suggerimenti per migliorare la resa per uso e-com",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-19T10:04:35.655215+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e dammi una descrizione dettagliata del prodotto, materiali, uso ideale e punti di forza. Evidenzia se ci sono caratteristiche uniche visibili.",
+      "result": "Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso.jpg\",\"url\":\"https://oaidalleapiprodscus.blob.core.windows.net/private/org-dxWQ9o7B8IsyYwY",
+      "success": false,
+      "timestamp": "2026-06-19T10:19:06.672729+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e dammi una descrizione dettagliata del prodotto, materiali, uso ideale e punti di forza. Evidenzia se ci sono caratteristiche uniche visibili.",
+      "result": "Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"Alfredo Carbone - Materassi Integrazione_2.jpg\"}}]}",
+      "success": false,
+      "timestamp": "2026-06-19T10:29:37.963581+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine di materasso e genera una descrizione tecnica dettagliata (materiali possibili, usi consigliati, punti di forza visibili, stile percepito).",
+      "result": "Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso.jpg\"}}]}",
+      "success": false,
+      "timestamp": "2026-06-19T12:15:25.569814+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine di un materasso: dammi una descrizione tecnica e commerciale come prodotto per sito e-commerce (materiali, stile, target, punti di forza visivi, stile fotografico). Evidenzia ",
+      "result": "Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso.jpg\",\"url\":\"https://oaidalleapiprodscus.blob.core.windows.net/private/org-u0qfQHuQEkK8bqh",
+      "success": false,
+      "timestamp": "2026-06-19T12:20:32.006578+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine di dettaglio materiale (probabilmente schiuma memory o gel). Fornisci una descrizione tecnica e commerciale per uso e-commerce: che materiale sembra, punti di forza percepiti,",
+      "result": "Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"dettaglio_materiale.jpg\",\"url\":\"https://oaidalleapiprodscus.blob.core.windows.net/private/org-u0qfQ",
+      "success": false,
+      "timestamp": "2026-06-19T12:30:16.297493+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e descrivi il materiale, la texture e l'uso tipico. Se possibile, identifica se si tratta di un materiale per materassi o imbottiture.",
+      "result": "Operazione completata con successo: Immagine analizzata.",
+      "success": true,
+      "timestamp": "2026-06-19T14:21:43.377977+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Applica queste migliorie all'immagine: 1) scontorna il materasso (rimuovi lo sfondo), 2) migliora luminosità e contrasto, 3) correggi e bilancia i colori, 4) elimina imperfezioni o polvere, 5) aggiung",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T15:48:03.908456+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Rispondi a questo test con un semplice OK.",
+      "result": "Operazione completata con successo: Immagine analizzata.",
+      "success": true,
+      "timestamp": "2026-06-19T16:04:37.505557+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e descrivimela in modo dettagliato.",
+      "result": "Operazione completata con successo: Immagine analizzata.",
+      "success": true,
+      "timestamp": "2026-06-19T16:07:53.294190+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Descrivi in dettaglio il contenuto visivo dell'immagine appena caricata (oggetti, colori, eventuali scritte, stile, cosa rappresenta).",
+      "result": "Operazione completata con successo: Immagine analizzata.",
+      "success": true,
+      "timestamp": "2026-06-19T16:08:32.923888+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e descrivi dettagliatamente cosa mostra, i colori predominanti, eventuali testi visibili e il contesto (es: prodotto, ambiente, stile, ecc).",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata:**\n   L’immagine mostra un materasso in sezione, con la parte superiore (probabilmente il rivestimento o uno strato superiore) leggermente sollevata rispetto al corpo principale. Lo strato superiore è bianco con una texture ondulata, mentre la parte sottostante è di colore blu uniforme e ha un aspetto compatto e pieno, tipico delle schiume ad alta de",
+      "success": true,
+      "timestamp": "2026-06-19T16:33:57.668501+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Aggiungi etichette grafiche sugli strati dell’immagine: scrivi “Memory Foam” sullo strato blu e “Rivestimento traspirante” su quello bianco ondulato. Mantieni uno stile pulito e leggibile, adatto per ",
+      "result": "Operazione completata con successo: Immagine analizzata:\n**Analisi dettagliata dell’immagine per uso e-commerce:**\n\n1. **Descrizione dettagliata:**\n   L’immagine mostra un materasso sezionato in due parti principali, visualizzato frontalmente. La parte superiore è una lastra bianca con una texture ondulata e dettagli leggermente verdi, probabilmente il rivestimento o uno strato superficiale di comfort. La parte inferiore è un blocco di materiale blu uniforme, che rappresenta il cuore interno del",
+      "success": true,
+      "timestamp": "2026-06-19T16:36:19.127225+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Fornisci il link o l’anteprima dell’immagine modificata con le etichette sugli strati (Memory Foam e Rivestimento traspirante).",
+      "result": "Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata:**\nL’immagine mostra un prodotto composto da due strati distinti, visualizzati in sezione per evidenziare la composizione interna. Lo strato superiore è bianco con una texture ondulata, che suggerisce una superficie morbida e lavorata, probabilmente un rivestimento o uno strato di comfort. Lo strato inferiore è di colore blu intenso, uniforme e spesso, che sembra essere una base di schiuma o materiale espanso.\n",
+      "success": true,
+      "timestamp": "2026-06-19T16:38:08.208199+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Fornisci il link diretto per scaricare l’immagine modificata con le etichette sugli strati (Memory Foam e Rivestimento traspirante), da mostrare in chat all’utente.",
+      "result": "Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata:**  \nL’immagine mostra un materasso in sezione, con la parte superiore (il rivestimento) sollevata per mostrare lo strato interno. La parte superiore è bianca con una texture ondulata, mentre lo strato interno è di colore blu uniforme, probabilmente in materiale memory foam o gel. Lo sfondo è completamente bianco, senza elementi di distrazione.\n\n2. **Tipo di prodotto:**  \nMaterasso (probabilmente in memory foam",
+      "success": true,
+      "timestamp": "2026-06-19T16:39:44.727070+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Fornisci URL diretto scaricabile dell’immagine modificata per download immediato in chat. Niente descrizioni, solo il link pulito.",
+      "result": "Operazione completata con successo: Immagine analizzata:\n**Analisi dettagliata dell’immagine per uso e-commerce:**\n\n1. **Descrizione dettagliata:**\n   L’immagine mostra un materasso in sezione esplosa, composto da due strati distinti. Lo strato superiore è bianco con una texture ondulata, probabilmente il rivestimento o uno strato superficiale di comfort. Lo strato inferiore è di colore blu intenso, probabilmente una schiuma o materiale tecnico per il supporto. L’immagine è su sfondo bianco, sen",
+      "success": true,
+      "timestamp": "2026-06-19T16:50:58.157789+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna l'immagine: mantieni solo il materasso, elimina la rete e i piedi. Sfondo trasparente.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T16:57:22.498977+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e descrivimi cosa contiene in modo dettagliato, inclusi oggetti principali, sfondo, colori ed eventuali elementi rilevanti per un negozio di materassi.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata:**\n   L’immagine mostra un ambiente interno, probabilmente uno showroom o negozio di materassi. In primo piano, posizionato sopra un materasso bianco, c’è un elemento in schiuma blu sagomata, tagliato a metà per mostrare la sezione interna. Sullo sfondo si vedono altri elementi d’arredo come reti a doghe appoggiate al muro, sedie, scrivanie e lampade",
+      "success": true,
+      "timestamp": "2026-06-19T17:02:17.307842+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna solo l’inserto in schiuma blu sagomata, elimina tutto il resto (materasso, sfondo, oggetti vari). Restituisci file PNG trasparente con solo la schiuma blu.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T17:03:39.192635+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna solo il cuscino visibile nell’immagine, elimina tutto il resto (sfondo, altri oggetti/materasso). Restituisci file PNG trasparente con solo il cuscino.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T17:08:48.391507+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna solo il cuscino visibile nell’immagine, elimina tutto il resto (sfondo, altri oggetti o materasso). Restituisci file PNG trasparente con solo il cuscino.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T17:11:25.548357+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il cuscino, togli tutto lo sfondo e lascia solo il cuscino.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T17:12:25.952961+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il cuscino, togli tutto lo sfondo e lascia solo il cuscino.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T17:14:18.506901+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il cuscino, togli tutto lo sfondo e lascia solo il cuscino.",
+      "result": "Errore comunicazione con 'immagini': Server disconnected without sending a response.",
+      "success": false,
+      "timestamp": "2026-06-19T17:17:22.822187+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il soggetto principale dell'immagine (materasso, cuscino o elemento centrale), fondo trasparente. Nessuna modifica aggiuntiva.",
+      "result": "L'agente 'immagini' si e' disconnesso durante l'elaborazione. Possibile crash per memoria insufficiente. Riprova con un'immagine piu' piccola.",
+      "success": false,
+      "timestamp": "2026-06-19T17:32:55.913459+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il soggetto principale dell’immagine e lascia il fondo trasparente. Nessuna modifica extra.",
+      "result": "L'agente 'immagini' si e' disconnesso durante l'elaborazione. Possibile crash per memoria insufficiente. Riprova con un'immagine piu' piccola.",
+      "success": false,
+      "timestamp": "2026-06-19T17:35:11.137163+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il soggetto principale dell’immagine e lascia il fondo trasparente. Nessuna modifica extra.",
+      "result": "L'agente 'immagini' si e' disconnesso durante l'elaborazione. Possibile crash per memoria insufficiente. Riprova con un'immagine piu' piccola.",
+      "success": false,
+      "timestamp": "2026-06-19T17:37:09.983409+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il cuscino nell'immagine caricata.",
+      "result": "L'agente 'immagini' si e' disconnesso durante l'elaborazione. Possibile crash per memoria insufficiente. Riprova con un'immagine piu' piccola.",
+      "success": false,
+      "timestamp": "2026-06-19T17:39:31.567344+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il cuscino nell'immagine caricata.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata:**\n   L’immagine mostra un ambiente interno, probabilmente uno showroom o un negozio di materassi. In primo piano, appoggiato su un materasso bianco, c’è un elemento in schiuma blu con una forma sagomata e scanalature profonde. Sullo sfondo si vedono reti per letti appoggiate al muro, alcune sedie, una scrivania e altri arredi tipici di uno showroom.",
+      "success": true,
+      "timestamp": "2026-06-19T17:45:36.519587+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna questo file (rimuovi lo sfondo, mantieni solo l’oggetto principale). Restituisci PNG trasparente.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata:**\n   - L’immagine mostra un ambiente interno, probabilmente uno showroom di materassi. In primo piano, posizionato su un materasso bianco, c’è un blocco di schiuma azzurra tagliato a metà, con una superficie sagomata a onde e scanalature. Sullo sfondo si vedono reti per materassi appoggiate al muro, alcune sedie, una scrivania e altri elementi d’arr",
+      "success": true,
+      "timestamp": "2026-06-19T19:06:12.481790+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna questa immagine e salva il risultato in workspace/ come file PNG trasparente.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata di cosa vedo:**\n   L’immagine mostra un materasso bianco con trapuntatura a losanghe come sfondo. Sopra il materasso è posizionato un oggetto in schiuma blu, di forma rettangolare e con una superficie ondulata a rilievi paralleli. L’oggetto sembra essere realizzato in materiale espanso, probabilmente poliuretano, e ha una consistenza porosa. Si intra",
+      "success": true,
+      "timestamp": "2026-06-19T19:21:19.141156+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Genera una descrizione prodotto per e-commerce di questo cuscino ortopedico/supporto in schiuma blu. La descrizione deve essere efficace per la vendita online e adatta a un pubblico locale (Siderno, p",
+      "result": "Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata**  \nL'immagine mostra un oggetto rettangolare in materiale espanso, probabilmente schiuma poliuretanica. La superficie è sagomata con onde o scanalature parallele, che sembrano pensate per favorire la traspirazione o fornire un supporto ergonomico. Lo sfondo è completamente nero, il che isola bene il prodotto e lo rende il punto focale dell'immagine.\n\n2. **Tipo di prodotto**  \nIl prodotto raffigurato sembra ess",
+      "success": true,
+      "timestamp": "2026-06-19T19:22:19.659449+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Applica un effetto prospettico per simulare una nuova angolazione del prodotto. Rendi l'oggetto più dinamico, come se la foto fosse scattata leggermente dall’alto e di lato. Mantieni lo sfondo traspar",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata**:  \n   L’immagine mostra un oggetto di forma rettangolare, realizzato in materiale espanso (probabilmente schiuma o memory foam). La superficie presenta delle scanalature parallele e profonde, che suggeriscono una funzione ergonomica o traspirante. I bordi sono arrotondati e la texture sembra porosa. Lo sfondo è completamente nero, il che isola perf",
+      "success": true,
+      "timestamp": "2026-06-19T19:24:56.258828+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza questa immagine e genera una descrizione dettagliata adatta per un sito di materassi. Individua tipo di prodotto, stile, colori, materiali e qualsiasi dettaglio utile per presentarla ai clien",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco la mia analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata:**\n   L’immagine mostra un materasso matrimoniale fotografato in prospettiva leggermente dall’alto. Il materasso ha uno spessore evidente e presenta una superficie superiore trapuntata con un motivo ondulato. Il bordo laterale è di colore più scuro rispetto alla parte superiore, con cuciture visibili e maniglie laterali per facilitarne il traspo",
+      "success": true,
+      "timestamp": "2026-06-19T19:43:37.597154+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Aggiungi la seguente descrizione commerciale come didascalia o watermark discreto sull’immagine: 'Il nostro materasso matrimoniale unisce comfort e design moderno: superficie trapuntata a onde per un’",
+      "result": "Operazione completata con successo: Immagine analizzata:\nEcco l’analisi dettagliata dell’immagine per uso e-commerce:\n\n1. **Descrizione dettagliata di cosa vedo:**\n   L’immagine mostra un materasso matrimoniale visto in prospettiva leggermente dall’alto. Il materasso ha una superficie superiore trapuntata con un motivo ondulato e scritte che sembrano essere il nome del brand o caratteristiche del prodotto. Il bordo laterale è di colore più scuro rispetto alla superficie superiore e presenta dell",
+      "success": true,
+      "timestamp": "2026-06-19T19:46:12.450697+00:00"
     }
   ]
 }
