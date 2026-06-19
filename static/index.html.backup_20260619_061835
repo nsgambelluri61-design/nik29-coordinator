@@ -973,8 +973,7 @@
 
     <script>
         // === CONFIGURATION ===
-        const SESSION_ID = 'web_' + Math.random().toString(36).substr(2, 12);
-        const WS_URL = `ws://${window.location.host}/ws/${SESSION_ID}`;
+        const WS_URL = `ws://${window.location.host}/ws`;
         const API_URL = `http://${window.location.host}/api/chat`;
 
         // === STATE ===
@@ -1078,30 +1077,25 @@
         // === MESSAGE HANDLING ===
         function handleWSMessage(data) {
             switch (data.type) {
-                case 'response':
+                case 'message':
                     hideTypingIndicator();
                     hideToolIndicator();
-                    appendMessage('assistant', data.content);
+                    if (data.role === 'assistant') {
+                        appendMessage('assistant', data.content);
+                    }
                     isProcessing = false;
                     break;
 
-                case 'progress':
-                    showTypingIndicator();
-                    showToolIndicator(data.content || 'Elaborazione...');
-                    break;
-
-                case 'status':
-                    if (data.content && data.content.includes('Connesso')) {
-                        console.log('Server status:', data.content);
-                    } else if (data.content) {
-                        showToolIndicator(data.content);
+                case 'tool_call':
+                    if (data.status === 'running') {
+                        showToolIndicator(data.name);
+                    } else if (data.status === 'complete') {
+                        hideToolIndicator();
                     }
                     break;
 
-                case 'done':
-                    hideTypingIndicator();
-                    hideToolIndicator();
-                    isProcessing = false;
+                case 'thinking':
+                    showTypingIndicator();
                     break;
 
                 case 'error':
@@ -1111,8 +1105,19 @@
                     isProcessing = false;
                     break;
 
+                case 'tools':
+                    if (data.list) {
+                        populateToolList(data.list);
+                    }
+                    break;
+
+                case 'stream':
+                    // Handle streaming responses
+                    updateStreamingMessage(data.content);
+                    break;
+
                 default:
-                    console.log('Unknown WS message type:', data.type, data);
+                    console.log('Unknown WS message type:', data.type);
             }
         }
 
@@ -1326,10 +1331,9 @@
         function sendViaWebSocket(text) {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({
-                    message: text,
-                    conversation_id: SESSION_ID,
-                    files: [],
-                    message_id: 'msg_' + Math.random().toString(36).substr(2, 8)
+                    type: 'message',
+                    content: text,
+                    model: modelSelect.value
                 }));
             } else {
                 hideTypingIndicator();
@@ -1339,40 +1343,34 @@
         }
 
         async function sendWithFiles(text, files) {
+            const formData = new FormData();
+            formData.append('message', text);
+            formData.append('model', modelSelect.value);
+            
+            files.forEach((file, i) => {
+                formData.append(`file_${i}`, file);
+            });
+
             try {
-                // Step 1: Upload each file to /upload endpoint
-                const uploadedFiles = [];
-                for (const file of files) {
-                    const formData = new FormData();
-                    formData.append('file', file);
-                    const uploadResp = await fetch(`http://${window.location.host}/upload`, {
-                        method: 'POST',
-                        body: formData
-                    });
-                    if (!uploadResp.ok) {
-                        throw new Error(`Upload fallito: HTTP ${uploadResp.status}`);
-                    }
-                    const uploadData = await uploadResp.json();
-                    uploadedFiles.push({
-                        filename: uploadData.filename,
-                        url: uploadData.url,
-                        original_name: file.name
-                    });
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
                 }
-                // Step 2: Send message via WebSocket with file references
-                if (ws && ws.readyState === WebSocket.OPEN) {
-                    ws.send(JSON.stringify({
-                        message: text || `Analizza il file: ${uploadedFiles.map(f => f.original_name).join(', ')}`,
-                        conversation_id: SESSION_ID,
-                        files: uploadedFiles,
-                        message_id: 'msg_' + Math.random().toString(36).substr(2, 8)
-                    }));
-                } else {
-                    throw new Error('WebSocket non connesso');
+
+                const data = await response.json();
+                hideTypingIndicator();
+                
+                if (data.content || data.message) {
+                    appendMessage('assistant', data.content || data.message);
                 }
             } catch (error) {
                 hideTypingIndicator();
                 appendMessage('assistant', `⚠️ Errore nell'invio: ${error.message}`);
+            } finally {
                 isProcessing = false;
             }
         }

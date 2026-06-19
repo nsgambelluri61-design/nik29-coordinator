@@ -1,0 +1,33 @@
+{
+  "conversation_id": "0037f1fe-1fc3-473c-b2c5-36c4aef47a2e",
+  "messages": [
+    {
+      "role": "user",
+      "content": "fammi vedere la lista"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_3YcKaUu0QoMfeRhe3gqmr22k",
+          "type": "function",
+          "function": {
+            "name": "list_agents",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3YcKaUu0QoMfeRhe3gqmr22k",
+      "content": "📋 **Agenti Specialisti Disponibili** (2 totale):\n\n### agente_seo\n- **Ruolo**: Specialista SEO per ildormire.com\n- **Descrizione**: Analizza il posizionamento, le keyword e la concorrenza per il sito ildormire.com. Fornisce report e suggerimenti SEO pratici.\n- **Modello**: gpt-4.1\n- **Tool**: web_research, deep_research, brave_search, browse_url, analyze_screenshot, web_agent\n- **Ultimo uso**: 2026-06-18T20:42:28Z\n- **Task completati**: 1\n\n### agente_social_media\n- **Ruolo**: Social Media Manager per Il Dormire\n- **Descrizione**: Gestisce la presenza social di Il Dormire: crea post, analizza i trend locali, suggerisce strategie, monitora i competitor e propone campagne.\n- **Modello**: gpt-4.1\n- **Tool**: web_research, brave_search, deep_research\n- **Ultimo uso**: 2026-06-18T20:45:17Z\n- **Task completati**: 1\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Ecco la lista degli agenti specialisti disponibili:\n\n- agente_seo: analisi e suggerimenti SEO per ildormire.com\n- agente_social_media: idee e strategie per social media, post e campagne\n\nVuoi delegare un task a uno di questi?"
+    }
+  ],
+  "updated_at": "2026-06-18T20:48:08.395898+00:00"
+}

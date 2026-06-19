@@ -1,0 +1,14 @@
+{
+  "conversation_id": "8e8d1898-7e15-4d7f-a15e-395cf1a70678",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ma tu sui social cerchi?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, non cerco direttamente sui social (Facebook, Instagram, ecc.): le mie ricerche arrivano da web, siti pubblici e motori di ricerca (tipo Google, Brave, ecc.). Se vuoi info da social specifici, serve che mi dici cosa cercare o che mi dai link precisi. Vuoi che provi a trovare info su un profilo o pagina social in particolare?"
+    }
+  ],
+  "updated_at": "2026-06-19T04:15:20.451122+00:00"
+}

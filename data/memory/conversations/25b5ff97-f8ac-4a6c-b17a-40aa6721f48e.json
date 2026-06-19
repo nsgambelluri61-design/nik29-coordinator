@@ -1,0 +1,14 @@
+{
+  "conversation_id": "25b5ff97-f8ac-4a6c-b17a-40aa6721f48e",
+  "messages": [
+    {
+      "role": "user",
+      "content": "puoi collegare alla rete agenti esistenti ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì, posso collegare agenti specialisti già creati alla rete e delegare loro compiti specifici. Gli agenti dialogano tramite il sistema multi-agente, ognuno con il suo ruolo e i suoi tool. Se vuoi “attivare” o mettere in uso un agente già presente, posso elencare quelli disponibili e assegnargli subito un task.\n\nVuoi vedere la lista degli agenti attivi oppure hai un task da affidare a uno di loro?"
+    }
+  ],
+  "updated_at": "2026-06-18T20:47:38.821529+00:00"
+}

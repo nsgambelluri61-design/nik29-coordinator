@@ -1,0 +1,14 @@
+{
+  "conversation_id": "web_5v7oi613jp9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ci sei"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì, sono qui. Dimmi pure cosa ti serve."
+    }
+  ],
+  "updated_at": "2026-06-19T04:36:02.876460+00:00"
+}

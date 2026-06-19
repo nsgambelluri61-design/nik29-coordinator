@@ -1,113 +1,5 @@
 {
   "conversations": {
-    "378b18fb-9ec7-41f2-9dbc-0a14a4402d7d": {
-      "conversation_id": "378b18fb-9ec7-41f2-9dbc-0a14a4402d7d",
-      "last_topic": "cerca i prezzi dei materassi Emma\"",
-      "key_points": [
-        "cerca i prezzi dei materassi Emma\""
-      ],
-      "message_count": 6,
-      "updated_at": "2026-06-18T17:58:02.613711+00:00"
-    },
-    "42977f0e-5c60-4129-a9d8-87905e5f5651": {
-      "conversation_id": "42977f0e-5c60-4129-a9d8-87905e5f5651",
-      "last_topic": "cerca i prezzi dei materassi Emma Sleep\"",
-      "key_points": [
-        "cerca i prezzi dei materassi Emma Sleep\""
-      ],
-      "message_count": 6,
-      "updated_at": "2026-06-18T17:59:53.205407+00:00"
-    },
-    "efe99daf-e0b1-4fe2-a6c4-9a36ea8f2387": {
-      "conversation_id": "efe99daf-e0b1-4fe2-a6c4-9a36ea8f2387",
-      "last_topic": "cerca i prezzi dei materassi Emma Sleep\"",
-      "key_points": [
-        "cerca i prezzi dei materassi Emma Sleep\""
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T18:02:29.981450+00:00"
-    },
-    "425f5791-6ba7-4ded-acf8-e3d6f7483f3b": {
-      "conversation_id": "425f5791-6ba7-4ded-acf8-e3d6f7483f3b",
-      "last_topic": "cerca rete titan a 6 ppiedi",
-      "key_points": [
-        "cerca rete titan a 6 ppiedi"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:02:40.638853+00:00"
-    },
-    "1b8e9d3b-6f36-4889-ab99-061faf7fb84a": {
-      "conversation_id": "1b8e9d3b-6f36-4889-ab99-061faf7fb84a",
-      "last_topic": "puoi cercarla meglio e unarete con 14 doghe 3 sostegni e 6 piedi",
-      "key_points": [
-        "puoi cercarla meglio e unarete con 14 doghe 3 sostegni e 6 piedi"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:03:50.980225+00:00"
-    },
-    "878a0279-0b42-46b4-9c7a-47a56cb48b85": {
-      "conversation_id": "878a0279-0b42-46b4-9c7a-47a56cb48b85",
-      "last_topic": "dammi il link",
-      "key_points": [
-        "dammi il link"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:04:26.295617+00:00"
-    },
-    "65631be6-df06-4095-a516-85c8e918a963": {
-      "conversation_id": "65631be6-df06-4095-a516-85c8e918a963",
-      "last_topic": "preodotto la rete che parlavi",
-      "key_points": [
-        "preodotto la rete che parlavi"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:04:46.164887+00:00"
-    },
-    "f2e5cf63-b420-43bb-ac79-45b548797b67": {
-      "conversation_id": "f2e5cf63-b420-43bb-ac79-45b548797b67",
-      "last_topic": "chi sono io",
-      "key_points": [
-        "chi sono io"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:05:15.149638+00:00"
-    },
-    "cc2b7a8d-af0d-4be4-9fda-113a460de4ed": {
-      "conversation_id": "cc2b7a8d-af0d-4be4-9fda-113a460de4ed",
-      "last_topic": "sai programmare?",
-      "key_points": [
-        "sai programmare?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:05:46.167422+00:00"
-    },
-    "62c877da-2d42-473b-a7fa-99e790d14761": {
-      "conversation_id": "62c877da-2d42-473b-a7fa-99e790d14761",
-      "last_topic": "chi sono io",
-      "key_points": [
-        "chi sono io"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:09:27.669565+00:00"
-    },
-    "66e20706-3eaf-45c3-91dd-82449e430dde": {
-      "conversation_id": "66e20706-3eaf-45c3-91dd-82449e430dde",
-      "last_topic": "he competitor ho",
-      "key_points": [
-        "he competitor ho"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:10:03.982352+00:00"
-    },
-    "e3ebf589-e6a8-4ac4-a9a7-a962c8e14d02": {
-      "conversation_id": "e3ebf589-e6a8-4ac4-a9a7-a962c8e14d02",
-      "last_topic": "i miei competors sono piu a carattere locale",
-      "key_points": [
-        "i miei competors sono piu a carattere locale"
-      ],
-      "message_count": 4,
-      "updated_at": "2026-06-18T19:10:47.115292+00:00"
-    },
     "57629a01-a301-4874-ac8a-d39fc0a73437": {
       "conversation_id": "57629a01-a301-4874-ac8a-d39fc0a73437",
       "last_topic": "facciamo una chiacchierata",
@@ -449,6 +341,110 @@
       ],
       "message_count": 6,
       "updated_at": "2026-06-18T20:45:25.396513+00:00"
+    },
+    "0c18d016-5716-4b52-b727-0d3d08bfebad": {
+      "conversation_id": "0c18d016-5716-4b52-b727-0d3d08bfebad",
+      "last_topic": "Pusha",
+      "key_points": [],
+      "message_count": 4,
+      "updated_at": "2026-06-18T20:47:05.287002+00:00"
+    },
+    "25b5ff97-f8ac-4a6c-b17a-40aa6721f48e": {
+      "conversation_id": "25b5ff97-f8ac-4a6c-b17a-40aa6721f48e",
+      "last_topic": "puoi collegare alla rete agenti esistenti ?",
+      "key_points": [
+        "puoi collegare alla rete agenti esistenti ?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-18T20:47:38.823686+00:00"
+    },
+    "0037f1fe-1fc3-473c-b2c5-36c4aef47a2e": {
+      "conversation_id": "0037f1fe-1fc3-473c-b2c5-36c4aef47a2e",
+      "last_topic": "fammi vedere la lista",
+      "key_points": [
+        "fammi vedere la lista"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-18T20:48:08.398281+00:00"
+    },
+    "2b9f8e1f-6493-4a96-bcaf-6781fb9ede6b": {
+      "conversation_id": "2b9f8e1f-6493-4a96-bcaf-6781fb9ede6b",
+      "last_topic": "fai una ricerca approfndita du ildormire milano",
+      "key_points": [
+        "fai una ricerca approfndita du ildormire milano"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:11:15.933204+00:00"
+    },
+    "8fb32e05-880d-43b4-9c61-7c71c1a22bbd": {
+      "conversation_id": "8fb32e05-880d-43b4-9c61-7c71c1a22bbd",
+      "last_topic": "ma ildormire milano come marchio?",
+      "key_points": [
+        "ma ildormire milano come marchio?"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:12:08.205953+00:00"
+    },
+    "e13f2547-4150-4666-8e97-3e5e53c92c6d": {
+      "conversation_id": "e13f2547-4150-4666-8e97-3e5e53c92c6d",
+      "last_topic": "e come negozio fisico ?",
+      "key_points": [
+        "e come negozio fisico ?"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:13:05.597901+00:00"
+    },
+    "5a3cb748-8e7b-46a1-a0e5-96958bca7621": {
+      "conversation_id": "5a3cb748-8e7b-46a1-a0e5-96958bca7621",
+      "last_topic": "ed il negozio fisico il dormire milano a palmi?",
+      "key_points": [
+        "ed il negozio fisico il dormire milano a palmi?"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:13:54.647885+00:00"
+    },
+    "c1323079-ec90-4500-ab6f-a5f536a2a41f": {
+      "conversation_id": "c1323079-ec90-4500-ab6f-a5f536a2a41f",
+      "last_topic": "fai ricerca approfondita su negozio ildormire milano a palmi",
+      "key_points": [
+        "fai ricerca approfondita su negozio ildormire milano a palmi"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:14:56.395650+00:00"
+    },
+    "8e8d1898-7e15-4d7f-a15e-395cf1a70678": {
+      "conversation_id": "8e8d1898-7e15-4d7f-a15e-395cf1a70678",
+      "last_topic": "ma tu sui social cerchi?",
+      "key_points": [
+        "ma tu sui social cerchi?"
+      ],
+      "message_count": 2,
+      "updated_at": "2026-06-19T04:15:20.452557+00:00"
+    },
+    "aac178b6-1f13-4563-a7ab-bbc4ffa689a5": {
+      "conversation_id": "aac178b6-1f13-4563-a7ab-bbc4ffa689a5",
+      "last_topic": "si profilo istagram il dormire milano ricerca profonda",
+      "key_points": [
+        "si profilo istagram il dormire milano ricerca profonda"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:16:27.700685+00:00"
+    },
+    "web_5v7oi613jp9": {
+      "conversation_id": "web_5v7oi613jp9",
+      "last_topic": "ci sei",
+      "key_points": [],
+      "message_count": 2,
+      "updated_at": "2026-06-19T04:36:02.878193+00:00"
+    },
+    "web_r4f7f7rtfyp": {
+      "conversation_id": "web_r4f7f7rtfyp",
+      "last_topic": "Analizza il file: Alfredo Carbone - Materassi Integrazione_3.jpg\n[File caricato: unknown -> workspac",
+      "key_points": [
+        "Analizza il file: Alfredo Carbone - Materassi Integrazione_3.jpg\n[File caricato: unknown -> workspac"
+      ],
+      "message_count": 4,
+      "updated_at": "2026-06-19T04:40:16.417880+00:00"
     }
   }
 }

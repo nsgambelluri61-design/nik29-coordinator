@@ -1,162 +1,64 @@
-# nik29-coordinator
+# nik29-coordinator Web Chat Upgrade
 
-**Agente coordinatore autonomo a 360° al servizio di Nicola.**
+Questo pacchetto contiene un aggiornamento completo dell'interfaccia web per il progetto `nik29-coordinator`. Sostituisce la vecchia interfaccia in stile terminale verde (Matrix) con una moderna in stile dark theme (simile a Manus/ChatGPT).
 
-nik29 è un coordinatore AI universale che gira in Docker (porta 4001) con FastAPI + WebSocket + OpenAI function calling. A differenza di Maestro (che gestisce solo ildormire.com), nik29 è un agente UNIVERSALE che può fare tutto.
+## Funzionalità Aggiunte
 
-## Versione
-
-**v0.6.0** - Release 17 Giugno 2026
-
-## Caratteristiche
-
-- **WebSocket non-bloccante**: chat real-time con aggiornamenti di progresso
-- **OpenAI function calling**: loop autonomo con gpt-4.1-mini
-- **18 tool nativi**: shell, web search, file manager, memoria, delegazione, Manus, create_tool, think, verify, retry_strategy, conversation_summary, reminder, self_improve, instructions, auto_update
-- **Meta-tool create_tool**: crea nuovi tool a runtime con AI
-- **Tool cognitivi**: pianificazione, verifica, retry intelligente
-- **Self-improve**: lezioni apprese e regole auto-imposte
-- **Auto-update**: aggiornamento automatico da GitHub
-- **Sub-agenti**: architettura modulare con agenti specializzati
+1. **Tema Dark Moderno**: Design pulito, palette colori professionale (`#1a1a2e`), angoli arrotondati e ombre leggere.
+2. **Supporto Upload File**: 
+   - Pulsante a graffetta per allegare file.
+   - Supporto Drag & Drop per trascinare file direttamente nell'area della chat.
+   - Anteprima file e immagini prima dell'invio.
+   - Invio file tramite `multipart/form-data` verso `/api/chat`.
+3. **Markdown Rendering**:
+   - I messaggi del bot vengono formattati correttamente (grassetto, corsivo, liste, tabelle, intestazioni).
+   - Evidenziazione della sintassi del codice tramite `highlight.js`.
+   - Pulsante "Copia" integrato per i blocchi di codice.
+4. **Visualizzazione Allegati**:
+   - Le immagini allegate vengono mostrate inline nella chat.
+   - I file di testo, PDF e altri documenti vengono mostrati come schede cliccabili per il download.
+5. **Miglioramenti UX**:
+   - Indicatori di stato (digitazione in corso, esecuzione tool).
+   - Sidebar responsive (a comparsa su dispositivi mobili).
+   - Supporto per `Shift+Enter` per nuova riga, `Enter` per inviare.
 
 ## Installazione
 
-### Prerequisiti
+L'installazione è automatizzata tramite lo script Python incluso.
 
-- Docker e Docker Compose
-- Chiave API OpenAI
-- (Opzionale) Chiave API Manus
+### Metodo 1: Script di Installazione (Consigliato)
 
-### Setup
+1. Estrai il file zip nel server o nel container dove gira `nik29-coordinator`.
+2. Esegui lo script di patch:
+   ```bash
+   python3 patch_interface.py
+   ```
+3. Lo script cercherà automaticamente la directory del progetto. Se non la trova, puoi specificarla manualmente:
+   ```bash
+   python3 patch_interface.py /percorso/a/nik29-coordinator
+   ```
+4. Lo script creerà automaticamente un backup del file `index.html` originale prima di sostituirlo.
 
-```bash
-# Clona il repository
-git clone https://github.com/nsgambelluri61-design/nik29-coordinator.git
-cd nik29-coordinator
+### Metodo 2: Installazione Manuale
 
-# Configura l'ambiente
-cp .env.example .env
-# Modifica .env con le tue chiavi API
+Se preferisci procedere manualmente:
 
-# Avvia
-docker compose up -d --build
-```
+1. Trova la directory del progetto `nik29-coordinator`.
+2. Vai nella cartella `static/`.
+3. Rinomina l'attuale `index.html` in `index.html.backup`.
+4. Copia il file `static/index.html` presente in questo pacchetto nella cartella `static/` del progetto.
 
-### Verifica
+## Ripristino
 
-```bash
-curl http://localhost:4001/health
-```
-
-## Struttura
-
-```
-nik29-coordinator/
-├── docker-compose.yml          # Configurazione Docker
-├── manifest.json               # Per auto-update (v0.6.0)
-├── README.md                   # Questa documentazione
-├── .env.example                # Template variabili ambiente
-├── .gitignore
-├── Dockerfile
-├── requirements.txt
-├── app/
-│   ├── __init__.py
-│   ├── main.py                 # FastAPI + WebSocket + Frontend
-│   ├── coordinator.py          # Cervello: tool calling loop
-│   ├── memory.py               # Memoria base: save/recall
-│   ├── memory_v2.py            # Memoria strutturata: lessons, rules
-│   ├── agent_client.py         # Client per sub-agenti
-│   └── tools/
-│       ├── __init__.py
-│       ├── shell_tool.py       # Esecuzione comandi
-│       ├── web_tool.py         # Ricerca web
-│       ├── file_tool.py        # Gestione file
-│       ├── delegate_tool.py    # Delega a sub-agenti
-│       ├── manus_tool.py       # ask_manus (2 fasi)
-│       ├── create_tool.py      # Meta-tool creazione tool
-│       ├── think_tool.py       # Pianificazione step-by-step
-│       ├── verify_tool.py      # Verifica risultati
-│       ├── retry_strategy_tool.py
-│       ├── conversation_summary_tool.py
-│       ├── reminder_tool.py
-│       ├── self_improve_tool.py
-│       ├── instructions_tool.py
-│       └── auto_update_tool.py
-├── config/
-│   └── system_prompt.txt       # System prompt completo
-└── data/                       # Creato a runtime (gitignored)
-    ├── memory/
-    └── workspace/
-```
-
-## API Endpoints
-
-| Endpoint | Metodo | Descrizione |
-|----------|--------|-------------|
-| `/` | GET | Frontend chat |
-| `/health` | GET | Health check con versione |
-| `/chat` | POST | REST API (SSE stream) |
-| `/ws/{session_id}` | WS | WebSocket real-time |
-| `/task/{task_id}` | GET | Status task asincroni |
-| `/upload` | POST | Upload file |
-| `/files/{path}` | GET | Serve file dal workspace |
-| `/agents` | GET | Lista sub-agenti |
-| `/agents/health` | GET | Stato sub-agenti |
-| `/agents/reload` | POST | Ricarica configurazione agenti |
-
-## Tool Disponibili
-
-### Nativi
-- **shell**: esecuzione comandi di sistema
-- **web_search**: ricerca internet via DuckDuckGo
-- **file_manager**: CRUD file nel workspace
-- **delegate_task**: delega a sub-agenti
-- **save_memory / recall_memory**: memoria persistente
-
-### Manus Integration
-- **ask_manus_propose**: prepara richiesta (richiede conferma)
-- **ask_manus_execute**: esegue dopo conferma
-- **ask_manus_pending**: lista richieste pendenti
-
-### Meta-tool
-- **create_tool_propose/generate/test/list**: crea nuovi tool a runtime
-
-### Cognitivi
-- **think**: pianificazione multi-step
-- **verify**: verifica risultati
-- **retry_strategy**: strategia retry intelligente
-- **conversation_summary**: riassunto conversazioni
-- **reminder**: promemoria con scheduling
-
-### Self-improvement
-- **self_improve**: rifletti, salva lezioni, gestisci regole
-- **instructions**: gestione istruzioni personalizzate
-- **auto_update**: aggiornamento automatico da GitHub
-
-## Aggiornamento
+In caso di problemi, puoi ripristinare la vecchia interfaccia:
 
 ```bash
-# Controlla aggiornamenti
-docker exec nik29-coordinator curl -s http://localhost:4001/health
-
-# Aggiornamento manuale
-cd nik29-coordinator
-git pull
-docker compose up -d --build
+cd /percorso/a/nik29-coordinator/static
+cp index.html.backup_XXXXXXXX_XXXXXX index.html
 ```
+*(sostituisci XXXXXXXX_XXXXXX con il timestamp reale del backup)*
 
-L'auto-update integrato può anche aggiornare il container dall'interno (con conferma utente).
+## Requisiti
 
-## Sviluppo
-
-```bash
-# Installa dipendenze localmente
-pip install -r requirements.txt
-
-# Avvia in locale (senza Docker)
-uvicorn app.main:app --host 0.0.0.0 --port 4001 --reload
-```
-
-## Licenza
-
-Progetto privato - Nicola Sgambelluri / Sgambelluri srls
+- L'interfaccia richiede una connessione a Internet per scaricare le librerie esterne via CDN (`marked.js`, `highlight.js`, `Google Fonts`).
+- Il backend Python (`nik29-coordinator`) deve essere in esecuzione sulla porta 4001 (o quella configurata).

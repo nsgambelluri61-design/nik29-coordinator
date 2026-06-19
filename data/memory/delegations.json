@@ -34,6 +34,13 @@
       "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
       "success": false,
       "timestamp": "2026-06-18T16:32:31.657207+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza il file in dettaglio: contenuto testuale, immagini, layout, presenza di offerte o info rilevanti per il mercato dei materassi. Riassumi i punti chiave.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-19T04:40:13.391643+00:00"
     }
   ]
 }
