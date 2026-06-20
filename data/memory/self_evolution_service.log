@@ -1,0 +1,5 @@
+[Sat Jun 20 15:19:54 UTC 2026] Avvio self_evolution_service...
+INFO:     Started server process [493]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4005 (Press CTRL+C to quit)

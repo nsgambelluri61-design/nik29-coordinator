@@ -359,6 +359,14 @@
       "lesson": "Problema con health_check: {'timestamp': '2026-06-20T13:20:01.704852+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Ho controllato: il sito ildormire.com è online, ma non riesco a leggere lo stato di Docker, disco e memoria del Mac perché il collegamento di controll",
       "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
       "times_used": 0
+    },
+    {
+      "id": "8afa81ab",
+      "date": "2026-06-20T13:38:05.877533",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata di cosa vedi:**  \nL’immagine mostra una schermata di terminale (. Risolto: Ho analizzato lo screenshot: mostra una schermata di Terminale su Mac, con script di backup automatico (“nik29_backup_v3”), output di comandi, gestion",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
     }
   ]
 }

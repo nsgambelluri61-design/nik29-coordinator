@@ -1,0 +1,17 @@
+[
+  {
+    "event": "create_failed",
+    "name": "meteo",
+    "error": "RuntimeError: Traceback (most recent call last):\n  File \"/app/app/self_evolution_service.py\", line 444, in run_self_test\n    result = await asyncio.wait_for(func(**test_params), timeout=30)\n                                    ^^^^^^^^^^^^^^^^^^^\nTypeError: meteo() missing 1 required positional argument: 'city'\n",
+    "timestamp": "2026-06-20T15:24:28.875912"
+  },
+  {
+    "event": "tool_created",
+    "name": "meteo",
+    "description": "Recupera il meteo attuale di una citta italiana usando Open-Meteo API",
+    "test_attempts": 2,
+    "deployed": false,
+    "commit": "",
+    "timestamp": "2026-06-20T15:36:05.382428"
+  }
+]
