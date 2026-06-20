@@ -461,16 +461,16 @@
     },
     "conv_mqlc4sty_vtp6mt": {
       "conversation_id": "conv_mqlc4sty_vtp6mt",
-      "last_topic": "Analizza il sito ildormire.com e dimmi cosa migliorare per la SEO\"",
+      "last_topic": "[PIANO AUTONOMO — Step 1/4]\nTask originale: Analizza il sito ildormire.com e dimmi cosa migliorare p",
       "key_points": [
-        "Analizza il sito ildormire.com e dimmi cosa migliorare per la SEO\"",
         "Esegui git_auto con action push, message: feat: planner autonomo + fix classificatore + summary comp",
         "fmmelo vedere",
         "Cosa sai sui miei competitor?\"",
-        "\"Quali informazioni hai su di me?\""
+        "\"Quali informazioni hai su di me?\"",
+        "\"Cerca nella memoria cosa sai sulla spedizione dei competitor\""
       ],
-      "message_count": 52,
-      "updated_at": "2026-06-20T08:14:23.264793+00:00"
+      "message_count": 54,
+      "updated_at": "2026-06-20T08:16:46.421393+00:00"
     }
   }
 }
