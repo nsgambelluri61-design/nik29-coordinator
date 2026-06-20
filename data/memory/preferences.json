@@ -27,6 +27,12 @@
     "tool_usage": {
       "value": "Preferire SEMPRE l'uso di un tool per verificare o eseguire un'azione piuttosto che rispondere basandosi solo sulla conoscenza interna o chiedere chiarimenti.",
       "updated_at": "2026-06-18T20:00:00"
+    },
+    "auto_20260620_091121": {
+      "value": "come posso migliorare il mio sito www.ildormire.com?",
+      "updated_at": "2026-06-20T09:11:21.997347+00:00",
+      "source": "auto_learned",
+      "source_conversation": "web_d4386r5qpxn"
     }
   }
 }

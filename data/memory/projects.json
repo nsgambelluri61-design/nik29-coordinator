@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "proj_bebcfaea": {
+      "name": "sito ildormire.com",
+      "color": "#f59e0b",
+      "created_at": "2026-06-20T08:54:37.268433"
+    },
+    "proj_f7176458": {
+      "name": "Sviluppo Nik29",
+      "color": "#ef4444",
+      "created_at": "2026-06-20T08:54:54.496994"
+    }
+  },
+  "assignments": {
+    "null": "proj_f7176458",
+    "web_d4386r5qpxn": "proj_bebcfaea",
+    "web_bmhuwm5fku7": "proj_f7176458"
+  }
+}
