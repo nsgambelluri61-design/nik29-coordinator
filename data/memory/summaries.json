@@ -465,10 +465,14 @@
       "conversation_id": "web_d4386r5qpxn",
       "last_topic": "come posso migliorare il mio sito www.ildormire.com?",
       "key_points": [
-        "come posso migliorare il mio sito www.ildormire.com?"
+        "come posso migliorare il mio sito www.ildormire.com?",
+        "\"Esegui git_auto con action push, message: feat: sidebar conversazioni + progetti\"",
+        "per il mac tu mi ouoi aiutare a sustemarlo?",
+        "controlla lo sato",
+        "si spiegami"
       ],
-      "message_count": 4,
-      "updated_at": "2026-06-20T09:11:21.999676+00:00"
+      "message_count": 18,
+      "updated_at": "2026-06-20T13:20:28.721136+00:00"
     }
   }
 }
