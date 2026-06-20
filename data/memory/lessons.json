@@ -319,6 +319,38 @@
       "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine nella cartella workspace. Probabile che la foto non sia stata salvata correttamente o sia stata rimossa. Se vuoi, puoi rica",
       "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
       "times_used": 0
+    },
+    {
+      "id": "46e4e4a9",
+      "date": "2026-06-19T20:24:35.450194",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Add e commit OK, ma errore in push:\nTimeout: il comando non ha terminato entro 30 secondi.. Risolto: Il commit è già stato salvato, ma il push era solo bloccato dal timeout. Nessuna modifica da committare ora: il repository locale è già aggiornato, ma",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "6cc827aa",
+      "date": "2026-06-19T20:26:21.082935",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: remote: error: GH013: Repository rule violations found for refs/heads/main.        \nremote: \nremote: - GITHUB PUSH PROTECTION        \nremote:   ——————. Risolto: Push bloccato: c’è una OpenAI API Key rilevata nel file .env al commit 244f8f5. GitHub ha rifiutato il push per motivi di sicurezza.\n\nCosa devi fare s",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "603b8b84",
+      "date": "2026-06-19T20:28:30.926174",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: remote: error: GH013: Repository rule violations found for refs/heads/main.        \nremote: \nremote: - GITHUB PUSH PROTECTION        \nremote:   ——————. Risolto: Il push è ancora bloccato: anche se hai rimosso il file .env e aggiunto al .gitignore, la chiave segreta resta nella cronologia vecchia (commit 244f8f",
+      "context": "Auto-reflect forzato, 1 errori in 5 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "f921024d",
+      "date": "2026-06-19T20:49:34.761264",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Timeout nella comunicazione con l'agente 'immagini' (timeout 180s superato). Il task potrebbe essere troppo complesso.. Risolto: La richiesta di miglioramento immagine ha impiegato troppo tempo e l’agente immagini non ha risposto (probabilmente task troppo pesante o file troppo",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
     }
   ]
 }
