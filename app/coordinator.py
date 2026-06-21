@@ -28,6 +28,7 @@ from app.tools.create_tool import CreateToolTool
 from app.tools.think_tool import ThinkTool
 from app.tools.think_tool import TOOL_DEFINITION as THINK_TOOL_DEFINITION
 from app.tools.verify_tool import VerifyTool
+from app.tools.generate_agent_tool import GENERATE_AGENT_TOOL_DEFINITION, LIST_DOCKER_AGENTS_TOOL_DEFINITION, REMOVE_DOCKER_AGENT_TOOL_DEFINITION, execute_generate_agent, execute_list_docker_agents, execute_remove_docker_agent
 from app.tools.verify_tool import TOOL_DEFINITION as VERIFY_TOOL_DEFINITION
 from app.tools.retry_strategy_tool import RetryStrategyTool
 from app.tools.retry_strategy_tool import TOOL_DEFINITION as RETRY_STRATEGY_TOOL_DEFINITION
@@ -61,6 +62,13 @@ from app.scheduler.scheduler import start_scheduler
 
 # === Deep Research Tool ===
 from app.tools.deep_research import DEEP_RESEARCH_TOOL_DEF, DEEP_RESEARCH_TOOL_HANDLERS
+
+# === Self-Evolution Tools Loader ===
+from app.custom_tools_loader import evo_loader
+
+# === PLANNER INTEGRATION (auto-patched) ===
+from app.planner.planner import TaskPlanner
+from app.planner.executor import PlanExecutor
 
 logger = logging.getLogger("coordinator")
 
@@ -373,6 +381,16 @@ TOOLS_DEFINITION.append(HOST_SHELL_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(DOCKER_MANAGE_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(GIT_AUTO_TOOL_DEFINITION)
 TOOLS_DEFINITION.append(DEEP_RESEARCH_TOOL_DEF)
+TOOLS_DEFINITION.append(GENERATE_AGENT_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(LIST_DOCKER_AGENTS_TOOL_DEFINITION)
+TOOLS_DEFINITION.append(REMOVE_DOCKER_AGENT_TOOL_DEFINITION)
+
+# === Carica tool self_evolution ===
+try:
+    evo_loader.load()
+    TOOLS_DEFINITION.extend(evo_loader.definitions)
+except Exception as _e:
+    logger.error(f"Errore caricamento tool self_evolution: {_e}")
 
 
 class Coordinator:
@@ -400,6 +418,12 @@ class Coordinator:
         # Tool custom
         self._custom_tools: dict = {}
         self._load_custom_tools()
+        # Ricarica anche tool self_evolution
+        try:
+            evo_loader.reload()
+            TOOLS_DEFINITION.extend(evo_loader.definitions)
+        except Exception as e:
+            logger.error(f"Errore reload tool self_evolution: {e}")
         # Cache della memoria persistente (ricaricata ad ogni nuova sessione)
         self._persistent_memory_cache: str = ""
         self._persistent_memory_loaded_for: Optional[str] = None
@@ -446,6 +470,12 @@ class Coordinator:
         ]
         self._custom_tools.clear()
         self._load_custom_tools()
+        # Ricarica anche tool self_evolution
+        try:
+            evo_loader.reload()
+            TOOLS_DEFINITION.extend(evo_loader.definitions)
+        except Exception as e:
+            logger.error(f"Errore reload tool self_evolution: {e}")
 
     def _load_persistent_memory(self, conversation_id: str) -> str:
         """
@@ -540,6 +570,58 @@ class Coordinator:
         # Aggiungi messaggio utente
         content = user_message + file_info
         messages.append({"role": "user", "content": content})
+
+
+        # === PLANNER INTEGRATION (auto-patched) ===
+        # Classifica il messaggio: SIMPLE → procedi normalmente, COMPLEX → piano autonomo
+        _planner = TaskPlanner(self.client)
+        _plan = await _planner.analyze(user_message)
+
+        if _plan is not None:
+            # Task complesso: esegui piano step-by-step
+            logger.info(f"Planner: task COMPLEX, piano con {len(_plan.get('steps', []))} step")
+            _executor = PlanExecutor(
+                client=self.client,
+                execute_tool_fn=self._execute_tool,
+                tools_definition=TOOLS_DEFINITION,
+                build_system_prompt_fn=self._build_system_prompt,
+                route_model_fn=route_model,
+                status_queue=self._status_queue,
+                progress_message_fn=self._progress_message,
+                safe_truncate_fn=self._safe_truncate_messages,
+            )
+            async for event in _executor.execute_plan(
+                plan=_plan,
+                messages=messages,
+                system_msg=system_msg,
+                user_message=user_message,
+                conversation_id=conversation_id,
+            ):
+                yield event
+
+            # Salva conversazione dopo piano completato
+            from app.memory import memory as _mem
+            _mem.save_conversation(conversation_id, messages)
+
+            # Auto-reflect se ci sono stati errori
+            if _executor.last_error_log and _executor.last_iterations > 0:
+                try:
+                    _err_tools = list(set(e.get("tool", "unknown") for e in _executor.last_error_log))
+                    _err_summary = _executor.last_error_log[0].get("error", "")[:150]
+                    _lesson = f"Piano autonomo con errori in {', '.join(_err_tools)}: {_err_summary}"
+                    import asyncio as _aio
+                    _aio.create_task(_auto_save_lesson(
+                        category="soluzione",
+                        lesson=_lesson,
+                        context=f"Planner auto-reflect, {len(_executor.last_error_log)} errori in {_executor.last_iterations} iterazioni"
+                    ))
+                except Exception:
+                    pass
+
+            # Auto-save apprendimenti
+            persistent_memory.end_session(conversation_id, messages)
+            return
+        # === END PLANNER INTEGRATION ===
 
         # Loop di esecuzione tool (max 15 iterazioni per task complessi)
         # === AUTO-REFLECT FORZATO: tracker errori ===
@@ -928,10 +1010,25 @@ class Coordinator:
                 )
                 return json.dumps(result, ensure_ascii=False)
 
+            # === Generate Agent Tools (Level 4) ===
+            elif name == "generate_agent":
+                return await execute_generate_agent(args)
+            elif name == "list_docker_agents":
+                return await execute_list_docker_agents(args)
+            elif name == "remove_docker_agent":
+                return await execute_remove_docker_agent(args)
             # === Deep Research Tool Dispatch ===
             elif name in DEEP_RESEARCH_TOOL_HANDLERS:
                 handler = DEEP_RESEARCH_TOOL_HANDLERS[name]
                 return str(await handler(**args))
+
+            # === Self-Evolution Tools Dispatch ===
+            elif name.startswith("custom_") and name.replace("custom_", "") in evo_loader.handlers:
+                evo_tool_name = name.replace("custom_", "")
+                evo_result = await evo_loader.handlers[evo_tool_name](**args)
+                if isinstance(evo_result, dict):
+                    return json.dumps(evo_result, ensure_ascii=False, indent=2)
+                return str(evo_result)
 
             # CUSTOM TOOLS
             elif name.startswith("custom_"):

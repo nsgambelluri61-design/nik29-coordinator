@@ -367,6 +367,38 @@
       "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata di cosa vedi:**  \nL’immagine mostra una schermata di terminale (. Risolto: Ho analizzato lo screenshot: mostra una schermata di Terminale su Mac, con script di backup automatico (“nik29_backup_v3”), output di comandi, gestion",
       "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
       "times_used": 0
+    },
+    {
+      "id": "85522841",
+      "date": "2026-06-20T19:31:27.644164",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Add e commit OK, ma errore in push:\nTimeout: il comando non ha terminato entro 30 secondi.. Risolto: Connessione a GitHub OK. Il push precedente era solo troppo lento, ma la connessione funziona. Ora il repository è già aggiornato, nessuna modifica da",
+      "context": "Auto-reflect forzato, 1 errori in 4 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b666d14c",
+      "date": "2026-06-20T21:07:32.727509",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-20T21:07:27.657968+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Vedo che il Mac non è raggiungibile dal mio sistema (bridge non risponde), quindi non posso controllare lo stato di Docker, disco e memoria. Il sito i",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "360fb52c",
+      "date": "2026-06-21T06:08:29.933029",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: Impossibile connettersi al Host Bridge (localhost:4002). Verifica che host_bridge.py sia in esecuzione sul Mac.. Risolto: Non riesco a vedere dal sistema se il backup è stato fatto, perché il collegamento (host bridge) col Mac non risponde. Devi prima riavviare il bridge",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "d36eba01",
+      "date": "2026-06-21T06:17:21.293127",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Errore in git add: Impossibile connettersi al Host Bridge (localhost:4002). Verifica che host_bridge.py sia in esecuzione sul Mac.. Risolto: Non posso fare il backup su GitHub perché il collegamento col Mac (host bridge) non risponde. Devi prima riavviare il bridge con:\ndocker restart nik29",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
     }
   ]
 }
