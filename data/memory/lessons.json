@@ -399,6 +399,214 @@
       "lesson": "Problema con git_auto: Errore in git add: Impossibile connettersi al Host Bridge (localhost:4002). Verifica che host_bridge.py sia in esecuzione sul Mac.. Risolto: Non posso fare il backup su GitHub perché il collegamento col Mac (host bridge) non risponde. Devi prima riavviare il bridge con:\ndocker restart nik29",
       "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
       "times_used": 0
+    },
+    {
+      "id": "b07811ab",
+      "date": "2026-06-21T07:44:14.420525",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Errore in git add: shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted\nfatal: Unable to . Risolto: Backup fallito: problema di permessi sulla cartella di lavoro (Operation not permitted). Serve sistemare i permessi della cartella del progetto sul Ma",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "7334f8f6",
+      "date": "2026-06-21T08:02:24.782671",
+      "category": "soluzione",
+      "lesson": "Problema con docker_manage: Errore nel riavvio: errore sconosciuto. Risolto: Errore nel riavvio del container nik29-coordinator: \"errore sconosciuto\". Potrebbe essere collegato ai problemi di permessi o al bridge non attivo.\n\nS",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "e16672d1",
+      "date": "2026-06-21T08:04:21.022788",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Errore in git add: . Risolto: Backup su GitHub ancora impossibile: errore già al comando git add (nessun dettaglio aggiuntivo). Il problema persiste, probabilmente sempre legato ai",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "d23b8283",
+      "date": "2026-06-21T08:53:22.837120",
+      "category": "soluzione",
+      "lesson": "Problema con create_tool_generate: ❌ Errore di sintassi anche dopo 3 tentativi:\n```\nLinea 65: expected 'except' or 'finally' block\n```\nGenerazione fallita. Prova a riformulare le capabi. Risolto: Errore nella generazione: c’è un problema di sintassi nel codice creato. Bisogna semplificare o riformulare le capabilities (le funzioni del tool).\n\nV",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "2fb4185c",
+      "date": "2026-06-21T09:35:03.575273",
+      "category": "soluzione",
+      "lesson": "Problema con create_tool_propose: 🛠️ **Proposta nuovo tool: `browser_interact`**\n\n**Descrizione:** Tool Playwright: naviga web, clicca elementi, compila form, screenshot, estrae testo.. Risolto: Vuoi che proceda con la creazione del tool browser_interact con solo queste funzioni base? Conferma e lo genero subito.",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "49de1e34",
+      "date": "2026-06-21T09:35:58.926285",
+      "category": "soluzione",
+      "lesson": "Problema con create_tool_generate: ❌ Errore di sintassi anche dopo 3 tentativi:\n```\nLinea 64: expected 'except' or 'finally' block\n```\nGenerazione fallita. Prova a riformulare le capabi. Risolto: Errore di sintassi anche con la versione semplificata. Il sistema di generazione ha un bug sulla gestione del codice Python (manca un blocco except o",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b6f827fb",
+      "date": "2026-06-21T10:01:49.474211",
+      "category": "soluzione",
+      "lesson": "Problema con create_tool_propose: 🛠️ **Proposta nuovo tool: `browser_screenshot_simple`**\n\n**Descrizione:** Tool per fare uno screenshot di una pagina web tramite Playwright. Inserisci. Risolto: Propongo di partire con browser_screenshot_simple: uno strumento che fa solo screenshot di una pagina web data l’URL. Semplice, zero errori di sintass",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "095fd9a7",
+      "date": "2026-06-21T10:09:49.833524",
+      "category": "soluzione",
+      "lesson": "Problema con analyze_screenshot: Errore nell'esecuzione di analyze_screenshot: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://ildormire.com/\", waiting until. Risolto: Timeout nel caricamento di ildormire.com, la pagina non ha risposto in tempo (problema di lentezza o blocco). Vuoi che riprovi aumentando il tempo di",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "960965cd",
+      "date": "2026-06-21T10:13:08.796335",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-21T10:12:51.144260+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Homepage ildormire.com: barra in alto con logo, menu (Home, Collezioni, Prodotti, Cuscini, Consulenza, Quiz, Contatti, Blog), recensioni 5.0 (16), car",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "84aae2fa",
+      "date": "2026-06-21T10:16:23.359355",
+      "category": "soluzione",
+      "lesson": "Problema con web_research: {'query': 'ildormiremilano', 'findings': [{'title': 'Dove dormire a Milano - VisitMilano', 'url': 'https://visitmilano.org/mangiare-dormire/dove-dormi. Risolto: Ho fatto la ricerca: \"ildormiremilano\" non risulta essere un brand o negozio specifico. I primi risultati mostrano solo:\n\n- Guide su dove dormire a Mi",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "2d9aa06a",
+      "date": "2026-06-21T10:19:38.573960",
+      "category": "soluzione",
+      "lesson": "Problema con web_research: {'query': 'ildormire milano Palmi centro commerciale Le Palme profilo social', 'findings': [{'title': 'Centro Commerciale Le Palme | Palmi | Facebook'. Risolto: Confermo, il nome \"Il Dormire\" compare tra i negozi presenti al Centro Commerciale Le Palme di Palmi (RC), sia nelle informazioni ufficiali che nei pr",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "a0e02f7c",
+      "date": "2026-06-21T10:23:09.263299",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Non trovato: unknown. Risolto: Il file che hai caricato risulta con nome \"unknown\" e non viene trovato nel workspace. Riprova a inviarlo, oppure specifica il nome esatto se lo vedi",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "12fa5c7e",
+      "date": "2026-06-21T10:31:31.962555",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided. Risolto: C'è stato un errore tecnico nell’analisi dello screenshot: la chiave API per il riconoscimento immagini risulta invalida. Quindi, non posso leggere il",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "acd4f91d",
+      "date": "2026-06-21T10:45:10.844921",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided. Risolto: Errore: la chiave API per l’analisi immagini risulta invalida (errore 401 da OpenAI). Devo aggiornare la chiave API per far funzionare questa funzione",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "28b2ec4e",
+      "date": "2026-06-21T10:49:13.687882",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided. Risolto: Ancora errore di chiave API non valida per l’analisi immagini, nonostante il riavvio del container. Serve aggiornare la chiave OpenAI lato nik29-image",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "9d36b32f",
+      "date": "2026-06-21T12:18:29.657511",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided. Risolto: Impossibile analizzare anche questo file: la chiave API per il riconoscimento immagini è ancora invalida (errore 401). Serve aggiornare la chiave Open",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "de769780",
+      "date": "2026-06-21T12:23:01.351173",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided. Risolto: Ancora bloccato: la chiave API per l’analisi immagini è errata. Senza aggiornamento manuale della chiave in nik29-images, non posso analizzare nessuna",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "e9aeb799",
+      "date": "2026-06-21T12:27:26.306379",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.. Risolto: Errore: non riesco a connettermi all’agente immagini dopo il rebuild. Probabile che non sia ancora partito o ci sia un problema sulla porta 4002. Atte",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "f9db70fc",
+      "date": "2026-06-21T12:30:40.041531",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: /app/app/tools/self_improve_tool.py:189:        lines = [f\"📊 Revisione regole ({len(rules)} totali):\"]\n/app/app/tools/host_tools.py:7:Questi tool comu. Risolto: Ho trovato riferimenti a nik29-images e alla porta 4002 in vari file Python, soprattutto in agent_client.py e vision_chat_patch.py. Il sistema cerca a",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "6fe0d87e",
+      "date": "2026-06-21T12:56:13.894312",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.. Risolto: Non posso analizzare l’immagine perché l’agente immagini non è raggiungibile (porta 4002 inattiva). Serve prima risolvere il problema di avvio del con",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "dcee225c",
+      "date": "2026-06-21T12:57:38.744327",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.. Risolto: Ancora impossibile analizzare: l’agente immagini non risponde sulla porta 4002. Finché nik29-images non è attivo, non posso eseguire l’analisi delle i",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "677fda5d",
+      "date": "2026-06-21T13:00:06.697115",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_to_agent: ❌ Agente 'vision_chat_patch' non trovato.\nAgenti disponibili: nessuno. Risolto: Non posso ancora usare process_images_in_message come agente diretto perché non risulta registrato come agente autonomo. Serve integrare la funzione c",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "f9c7e167",
+      "date": "2026-06-21T13:55:26.952254",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo la cartella workspace/ tra i file. Forse il percorso è diverso o non ci sono file salvati lì. Se vuoi, specifica un altro percorso o dimmi d",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "c90d952e",
+      "date": "2026-06-21T14:00:02.922754",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.. Risolto: Non riesco a connettermi all’agente immagini: non risponde sulla porta prevista. Serve riavviare “nik29-images” sul Mac prima di poter analizzare o sc",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "d2b85724",
+      "date": "2026-06-21T14:33:55.491565",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Timeout nella comunicazione con l'agente 'immagini' (timeout 180s superato). Il task potrebbe essere troppo complesso.. Risolto: Ecco il materasso scontornato con sfondo trasparente.  \nScarica qui il file pronto per l’uso:  \n[⬇ Scarica prodotto_scontornato.png](http://localhost:",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "6576d53e",
+      "date": "2026-06-21T14:49:11.117196",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Errore in git add: shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted\nfatal: Unable to . Risolto: Errore: non ho i permessi per accedere alla cartella del progetto, quindi il backup su GitHub è fallito.\n\nDevo controllare i permessi della directory",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
     }
   ]
 }

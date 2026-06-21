@@ -1,14 +1,5 @@
 {
   "conversations": {
-    "de78a849-5bfb-4792-b136-6421305e47a9": {
-      "conversation_id": "de78a849-5bfb-4792-b136-6421305e47a9",
-      "last_topic": "e come farai ?",
-      "key_points": [
-        "e come farai ?"
-      ],
-      "message_count": 2,
-      "updated_at": "2026-06-18T19:41:21.914691+00:00"
-    },
     "f594fcec-6325-4f13-add6-d1c9ba093647": {
       "conversation_id": "f594fcec-6325-4f13-add6-d1c9ba093647",
       "last_topic": "\"fai una ricerca approfondita sui materassi in lattice naturale\"",
@@ -291,16 +282,16 @@
     },
     "telegram_7072645786": {
       "conversation_id": "telegram_7072645786",
-      "last_topic": "elenca i file nella cartella",
+      "last_topic": "come ti chiamo",
       "key_points": [
-        "elenca i file nella cartella",
-        "usa host_shell per fare ls /Users/nicolasgambelluri/Downloads\"",
-        "“usa host_shell per eseguire: ls /Users/nicolasgambelluri/Downloads”",
         "come ti chiamo",
-        "allora la foto?"
+        "allora la foto?",
+        "l'ultima foto di slfredo carbne",
+        "immagine materasso",
+        "a ma sei acceso?"
       ],
       "message_count": 52,
-      "updated_at": "2026-06-20T15:10:10.399753+00:00"
+      "updated_at": "2026-06-21T14:00:35.993306+00:00"
     },
     "web_irj6pbvuolp": {
       "conversation_id": "web_irj6pbvuolp",
@@ -463,16 +454,23 @@
     },
     "web_d4386r5qpxn": {
       "conversation_id": "web_d4386r5qpxn",
-      "last_topic": "ma esiste un elenco?",
+      "last_topic": "\"La chiave l'hai già aggiornata prima. Riavvia il container nik29-images: esegui sul Mac tramite bri",
       "key_points": [
-        "ma esiste un elenco?",
-        "e come fai a generne nuovi?",
-        "ma quindi si possono fare delle richieste ultra specifiche sul web con tool mirati?",
-        "e con bridge cosa puoi fare ?",
-        "no al momento non e istallato"
+        "Analizza il file: Screenshot 2026-06-21 alle 14.17.50.png\n[File caricato: unknown -> workspace/]",
+        "Analizza il file: Screenshot 2026-06-21 alle 14.22.14.png\n[File caricato: unknown -> workspace/]",
+        "\"Controlla i log: esegui sul Mac tramite bridge: export PATH=$PATH:/Applications/Docker.app/Contents",
+        "Analizza il file: Screenshot 2026-06-21 alle 14.56.00.png\n[File caricato: unknown -> workspace/]",
+        "Analizza il file: Screenshot 2026-06-21 alle 14.57.27.png\n[File caricato: unknown -> workspace/]"
       ],
       "message_count": 54,
-      "updated_at": "2026-06-21T06:17:21.289197+00:00"
+      "updated_at": "2026-06-21T13:07:44.541611+00:00"
+    },
+    "web_u21odhkz7fn": {
+      "conversation_id": "web_u21odhkz7fn",
+      "last_topic": "ci sei",
+      "key_points": [],
+      "message_count": 2,
+      "updated_at": "2026-06-21T14:25:21.671633+00:00"
     }
   }
 }

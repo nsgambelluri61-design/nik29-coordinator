@@ -419,5 +419,39 @@
       }
     },
     "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-21T07:39:34.039771+00:00",
+    "checks": {
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-21T08:37:56.812490+00:00",
+    "checks": {
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-21T10:12:51.144260+00:00",
+    "checks": {
+      "website": {
+        "url": "https://ildormire.com",
+        "status_code": 200,
+        "reachable": true,
+        "error": null
+      }
+    },
+    "overall_status": "healthy"
   }
 ]

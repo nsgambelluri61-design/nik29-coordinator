@@ -1,0 +1,14 @@
+{
+  "conversation_id": "web_g5pq1ujr2ap",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao Nicola! Dimmi pure, cosa vuoi fare oggi?"
+    }
+  ],
+  "updated_at": "2026-06-20T08:52:22.704076+00:00"
+}

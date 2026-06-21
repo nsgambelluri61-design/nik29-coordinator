@@ -21,11 +21,6 @@
       "timestamp": "2026-06-18T20:00:00"
     },
     {
-      "fact": "Il sito web è ildormire.com, ospitato su un VPS con Node.js, PM2 e database MySQL.",
-      "category": "architettura",
-      "timestamp": "2026-06-18T20:00:00"
-    },
-    {
       "fact": "Nicola non ha competenze informatiche e necessita di spiegazioni semplici e pratiche.",
       "category": "utente",
       "timestamp": "2026-06-18T20:00:00"
@@ -46,26 +41,6 @@
       "timestamp": "2026-06-18T20:00:00"
     },
     {
-      "fact": "L'ecosistema AI è composto da 5 agenti: Manus (cloud), nik29-coordinator (Mac:4001), Maestro locale (Mac:4002), Maestro VPS e Manus Light (Mac:8080).",
-      "category": "architettura",
-      "timestamp": "2026-06-18T20:00:00"
-    },
-    {
-      "fact": "nik29-coordinator gira in Docker sulla porta 4001, utilizza GPT-4.1 (fisso) e dispone di oltre 34 tool.",
-      "category": "architettura",
-      "timestamp": "2026-06-18T20:00:00"
-    },
-    {
-      "fact": "Il bot Telegram associato a nik29 è @nik29coordinatorbot.",
-      "category": "architettura",
-      "timestamp": "2026-06-18T20:00:00"
-    },
-    {
-      "fact": "Il repository GitHub del progetto è nsgambelluri61-design/nik29-coordinator.",
-      "category": "architettura",
-      "timestamp": "2026-06-18T20:00:00"
-    },
-    {
       "fact": "La roadmap attuale ha completato: Catalogo, Homepage, Telegram nik29, Nik29 Level 3.",
       "category": "progetto",
       "timestamp": "2026-06-18T20:00:00"
@@ -79,6 +54,187 @@
       "fact": "I principali competitor di Nicola Sgambelluri per Il Dormire sono a carattere locale, non solo grandi marchi online.",
       "category": "competitors_local",
       "saved_at": "2026-06-18T19:10:44.768182+00:00"
+    },
+    {
+      "fact": "~/nik29-coordinator",
+      "category": "project_path_mac",
+      "saved_at": "2026-06-21T08:13:37.446845+00:00"
+    },
+    {
+      "fact": "Il bridge gira direttamente sul Mac sulla porta 4010. Si raggiunge via host.docker.internal:4010. Non esiste nessun container nik29-bridge.",
+      "category": "bridge_mac_config",
+      "saved_at": "2026-06-21T08:44:37.199800+00:00"
+    },
+    {
+      "fact": "In arrivo aggiornamento per nik29 relativo a operazioni su internet.",
+      "category": "prossimo_aggiornamento",
+      "saved_at": "2026-06-21T10:05:24.802641+00:00"
+    },
+    {
+      "fact": "Installato aggiornamento browser_interact: puoi navigare il web in modo interattivo con Playwright + GPT-4o vision.",
+      "category": "aggiornamento_20260621_browser_interact",
+      "saved_at": "2026-06-21T10:42:11.544863+00:00"
+    },
+    {
+      "fact": "Installato aggiornamento vision_chat_patch: ora puoi analizzare le immagini inviate in chat.",
+      "category": "aggiornamento_20260621_vision_chat_patch",
+      "saved_at": "2026-06-21T10:42:12.551098+00:00"
+    },
+    {
+      "fact": "PORTA 3000 (Mac): dormire-shop dev - container maestro-sito - sito ildormire.com in sviluppo locale",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 3001 (Mac): Render Server - processo Node.js - API rendering video con FFmpeg",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 3306 (Mac): MySQL - container maestro-mysql - database locale per sviluppo sito",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 4001 (Mac): nik29-coordinator - container Docker - coordinatore AI principale GPT-4.1",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 4002 (Mac): nik29-images - container Docker - agente immagini (scontorno rembg, editing, Vision, pipeline)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 4005 (Mac): Self-Evolution Service - dentro nik29-coordinator - auto-evoluzione Level 4",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 4010 (Mac): Host Bridge - processo Python nativo - ponte tra Docker e Mac per esecuzione comandi",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 8080 (Mac): Open WebUI - container Docker - interfaccia chat alternativa (Manus Light)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 11434 (Mac): Ollama - processo nativo - modelli locali (qwen3:8b, qwen3:30b-a3b, gemma4:12b)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 80/443 (VPS 188.213.175.219): Nginx - reverse proxy HTTPS con Let's Encrypt per ildormire.com",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 3000 (VPS): dormire-shop - PM2 Node.js 22 - sito ildormire.com in PRODUZIONE",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 3001 (VPS): Render Server - PM2 Node.js - API rendering video FFmpeg",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 3306 (VPS): MySQL - database produzione ildormire.com",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "PORTA 3500 (VPS): Maestro Catalogo - PM2 Node.js - servizio scontorno/sfondo con Sharp",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Rete Docker nik29-network: collega nik29-coordinator e nik29-images per comunicazione interna",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Cartella progetto Mac: ~/nik29-coordinator/ (era ~/Downloads/nik29-coordinator-v0.6.0, SPOSTATO)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Cartella bridge Mac: ~/nik29-bridge/ (host_bridge.py + auto_backup.sh)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Cartella nik29-images Mac: ~/nik29-images/ (Dockerfile + app/)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Cartella sito VPS: /root/dormire-shop/ (repo git con backend Node.js)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Repo GitHub coordinator: nsgambelluri61-design/nik29-coordinator (branch main)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Repo GitHub maestro: sgambelluri/maestro-ildormire (branch main)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "REGOLA SACRA: Le porte NON si cambiano MAI. Porte riservate futuro: 4003, 4004, 4006-4009",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "REGOLA SACRA: Deploy VPS solo con scripts/safe-deploy.sh. Mai pushare .env su GitHub.",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "REGOLA SACRA: mem_limit nik29-images deve essere almeno 2GB (rembg e' pesante)",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Variabili env in ~/nik29-coordinator/.env: OPENAI_API_KEY, BRAVE_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_ID",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
+    },
+    {
+      "fact": "Host Bridge avviato da LaunchAgent (auto al login Mac). Ollama e Docker Desktop partono auto al login.",
+      "category": "architettura",
+      "timestamp": "2026-06-21T14:43:16Z",
+      "source": "manus"
     }
   ]
 }

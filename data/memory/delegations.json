@@ -321,6 +321,83 @@
       "result": "Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata di cosa vedi:**  \nL’immagine mostra una schermata di terminale (console) su un sistema operativo macOS. Sono visibili varie operazioni di backup automatico tramite script Python, riferimenti a Docker, comandi di gestione container, e istruzioni su come ripristinare dati in caso di guasto del Mac. In basso, c’è l’output del comando `docker ps -a` che elenca diversi container attivi con dettagli su ID, comando, s",
       "success": true,
       "timestamp": "2026-06-20T13:40:47.080824+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza lo screenshot Screenshot2026-06-21alle12.22.50.png e dimmi se mostra una pagina Facebook di 'Il Dormire Milano'. Riporta nome pagina, eventuali recapiti, foto profilo, dettagli visibili e se ",
+      "result": "Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************KwMA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}.",
+      "success": true,
+      "timestamp": "2026-06-21T10:31:28.711298+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot2026-06-21alle12.44.08.png e descrivimi cosa si vede, layout, testi e dettagli.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************KwMA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}.",
+      "success": true,
+      "timestamp": "2026-06-21T10:45:07.441114+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot2026-06-21alle12.44.08.png e descrivimi cosa si vede, layout, testi e dettagli.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************KwMA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}.",
+      "success": true,
+      "timestamp": "2026-06-21T10:49:09.963841+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot2026-06-21alle14.17.50.png e descrivi layout, testi e dettagli.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************KwMA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}.",
+      "success": true,
+      "timestamp": "2026-06-21T12:18:25.890847+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot2026-06-21alle14.22.14.png e descrivi layout, testi e dettagli.",
+      "result": "Operazione completata con successo: Immagine analizzata:\nErrore durante l'analisi: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************KwMA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}.",
+      "success": true,
+      "timestamp": "2026-06-21T12:22:58.019775+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot2026-06-21alle14.22.14.png e descrivi layout, testi e dettagli.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-21T12:27:23.608546+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot 2026-06-21 alle 14.56.00.png e descrivi layout, testi e dettagli.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-21T12:56:10.773325+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza visivamente il file Screenshot 2026-06-21 alle 14.57.27.png e descrivi layout, testi e dettagli.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-21T12:57:35.760959+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Analizza il file caricato: descrivi soggetto, sfondo, qualità, presenza di scontorno.",
+      "result": "Impossibile connettersi all'agente 'immagini' (http://nik29-images:4002). Verifica che sia in esecuzione.",
+      "success": false,
+      "timestamp": "2026-06-21T13:59:59.844400+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il materasso e rendi lo sfondo trasparente. Salva il file in PNG.",
+      "result": "Timeout nella comunicazione con l'agente 'immagini' (timeout 180s superato). Il task potrebbe essere troppo complesso.",
+      "success": false,
+      "timestamp": "2026-06-21T14:29:24.745478+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Ritaglia solo il materasso e rendi lo sfondo trasparente. Se non riesci, riduci la qualità dell’immagine prima di scontornare.",
+      "result": "Analisi: 1. **Descrizione dettagliata di cosa vedi:**  \nL’immagine mostra un materasso matrimoniale posizionato su una base rettangolare bianca, in un ambiente luminoso e minimalista. Il materasso ha una trapuntatura a quadri e maniglie laterali per facilitarne lo spostamento. Sullo sfondo si intravede una parte di una camera da letto con tende bianche leggere, un tavolino in legno chiaro e parte di un letto rifatto.\n\n2. **Tipo di prodotto:**  \nMaterasso (presumibilmente matrimoniale).\n\n3. **Val",
+      "success": true,
+      "timestamp": "2026-06-21T14:33:17.021993+00:00"
     }
   ]
 }

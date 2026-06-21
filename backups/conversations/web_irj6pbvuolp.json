@@ -1,0 +1,46 @@
+{
+  "conversation_id": "web_irj6pbvuolp",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Dimmi pure cosa ti serve."
+    },
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao Nicola! Dimmi pure cosa vuoi fare oggi."
+    },
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Sono qui. Dimmi cosa ti serve."
+    },
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao Nicola! Dimmi pure, sono pronto."
+    },
+    {
+      "role": "user",
+      "content": "era x testarti"
+    },
+    {
+      "role": "assistant",
+      "content": "Perfetto, test riuscito! Funziono regolarmente. Se vuoi provare altro, sono qui."
+    }
+  ],
+  "updated_at": "2026-06-19T13:27:48.318353+00:00"
+}

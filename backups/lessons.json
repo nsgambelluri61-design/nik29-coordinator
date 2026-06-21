@@ -1,0 +1,404 @@
+{
+  "lessons": [
+    {
+      "id": "l_001",
+      "category": "errore",
+      "lesson": "macOS Smart Dashes converte '-' in em-dash (U+2014) causando errori nei token API. Verificare sempre che i trattini siano ASCII 0x2D.",
+      "context": "Errore durante l'inserimento di token API o comandi su macOS",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_002",
+      "category": "soluzione",
+      "lesson": "Per l'elaborazione immagini con Sharp su PM2: impostare max_memory_restart a 1GB, aggiungere sharp.cache(false) e sharp.concurrency(1).",
+      "context": "Riavvio continuo di PM2 dormire-shop a causa del limite di memoria di 300MB superato da Sharp",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_003",
+      "category": "soluzione",
+      "lesson": "Se il plugin auth di MySQL cambia dopo un aggiornamento: eseguire ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password.",
+      "context": "Impossibile connettersi al database dopo aggiornamento MySQL (auth_socket)",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_004",
+      "category": "procedura",
+      "lesson": "GPT-4.1-mini tende a chiedere chiarimenti invece di usare i tool. Aggiungere regole esplicite nel system prompt per forzare l'uso dei tool.",
+      "context": "Ottimizzazione del comportamento dell'agente",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_005",
+      "category": "procedura",
+      "lesson": "Quando Maestro crea PR con file grandi, verificare che il numero di righe corrisponda all'originale per evitare troncamenti.",
+      "context": "Rischio di merge di file parziali o troncati",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_006",
+      "category": "procedura",
+      "lesson": "Il VPS non ha auto-deploy webhook. Usare scripts/safe-deploy.sh oppure: cd /root/dormire-shop && git pull && npm run build && pm2 restart",
+      "context": "Deploy manuale o tramite script sicuro",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_007",
+      "category": "soluzione",
+      "lesson": "Per generare immagini, usare gpt-image-1 (non dall-e-3), rimuovere il parametro response_format e gestire la risposta in base64.",
+      "context": "Errore 'model does not exist' o 'unknown parameter' con chiavi di progetto",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_008",
+      "category": "errore",
+      "lesson": "Le Pipe Functions di Open WebUI bypassano il meccanismo di tool-calling. Usare modelli diretti come base per i modelli custom.",
+      "context": "Tool non funzionanti con modelli custom basati su Pipe Functions",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_009",
+      "category": "soluzione",
+      "lesson": "Per ottenere JSON da LLM: approccio a due passaggi (rilevamento intent con regex, poi chiamata dedicata con response_format: json_object).",
+      "context": "LLM che ignora le istruzioni di restituire solo JSON",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_010",
+      "category": "soluzione",
+      "lesson": "Ollama su macOS imposta OLLAMA_HOST senza http://. Aggiungere ensureProtocol() nel client per evitare errori di parsing URL.",
+      "context": "Errore 'Failed to parse URL' con Ollama locale",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_011",
+      "category": "errore",
+      "lesson": "Brave Search API: non usare il parametro ui_lang perché causa errore 422. Usare solo q, count, search_lang.",
+      "context": "Errore 422 durante chiamate a Brave Search API",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_012",
+      "category": "procedura",
+      "lesson": "Le modifiche fatte con sed nei container Docker non persistono al riavvio. Modificare i file sorgente e ricostruire l'immagine.",
+      "context": "Modifiche perse dopo il riavvio del container",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_013",
+      "category": "procedura",
+      "lesson": "Istruzioni per Manus: chiedere UNA modifica alla volta, indicare le righe esatte e ribadire 'MAI riscrivere un file da zero'.",
+      "context": "Manus che riscrive file interi invece di applicare modifiche mirate",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "l_014",
+      "category": "soluzione",
+      "lesson": "La funzione resolveLocalUrl() per il rendering video deve essere definita a scope GLOBALE nel render server.",
+      "context": "Errore 'Invalid URL' o 'resolveLocalUrl is not defined' durante il rendering Video 2.0",
+      "date": "2026-06-18",
+      "times_used": 0
+    },
+    {
+      "id": "a5afdac4",
+      "date": "2026-06-19T08:20:55.652928",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: Comando rifiutato: Comando non nella whitelist: 'ssh' (sotto-comando: 'ssh root@ildormire.com 'pm2 logs --lines 50''). Risolto: Non posso eseguire comandi SSH diretti dal Mac per motivi di sicurezza: la whitelist blocca \"ssh\".  \nSe vuoi vedere i log del VPS, puoi:\n- Usare la co",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "f7d0bd49",
+      "date": "2026-06-19T10:04:52.422531",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Impossibile connettersi all'agente 'immagini' (http://nik29-images:4000). Verifica che sia in esecuzione.. Risolto: L'agente immagini non è attivo o non risponde.  \nNon posso fare l'analisi avanzata automatica (tipo materiali, suggerimenti tecnici, ecc.) finché non",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "eeed2326",
+      "date": "2026-06-19T10:19:23.939465",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso. Risolto: C'è stato un errore con l'agente immagini: non riesce ad analizzare direttamente immagini da link esterni.\n\nSe vuoi l’analisi, carica l’immagine dal t",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "cee37a81",
+      "date": "2026-06-19T10:30:06.276556",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"Alfredo C. Risolto: L'agente immagini ha dato errore: manca il campo \"data\" nel file caricato. Questo succede perché la chat invia solo un riferimento all’immagine, non i",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "90eb48d9",
+      "date": "2026-06-19T12:08:24.447338",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-19T12:08:02.590505+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Fatto. Risultato: lo stato sistema è \"degraded\" (degradato).\n\nProblemi trovati:\n- Nessun container Docker rilevato sul Mac (bridge non raggiungibile)",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "4168211e",
+      "date": "2026-06-19T12:11:43.328371",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-19T12:11:19.195463+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Il sistema riporta ancora \"degraded\" e il bridge Docker non è raggiungibile, anche se i container sono attivi (lo hai visto tu stesso con docker ps).",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "2c561783",
+      "date": "2026-06-19T12:21:36.912001",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"materasso. Risolto: C'è stato un problema tecnico con l’analisi automatica: il sistema non ha ricevuto correttamente il file immagine. Questo succede perché l’agente imma",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "c690fbc2",
+      "date": "2026-06-19T12:32:00.533413",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore dall'agente immagini: HTTP 422 - {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"files\",0,\"data\"],\"msg\":\"Field required\",\"input\":{\"name\":\"dettaglio. Risolto: Stesso problema tecnico di prima: il sistema immagini vuole il file vero, non solo il link generato dalla chat. Senza caricamento diretto non posso fa",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "60e6e363",
+      "date": "2026-06-19T15:49:23.682784",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: C'è stato un errore di comunicazione con l'agente immagini, quindi il task non è andato a buon fine. Riprovo appena il sistema torna disponibile. Appe",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "bb95d7f6",
+      "date": "2026-06-19T16:05:55.433346",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-19T16:05:51.227838+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Risultato health check:\n\n- Sito ildormire.com: online e raggiungibile (OK)\n- Docker sul Mac: nessun container attivo, bridge non raggiungibile\n- Stato",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "7b110791",
+      "date": "2026-06-19T16:10:05.811949",
+      "category": "errore",
+      "lesson": "Problema: l'agente immagini esegue l'analisi dell'immagine ma non restituisce mai la descrizione testuale all'utente. Causa: output dell'agente non viene passato/mostrato nella chat, manca la restituzione della risposta. Soluzione: tracciare e mostrare al frontend il testo restituito dall'agente immagini dopo ogni analisi. Shortcut: dopo ogni delegate_task con agente immagini, estrarre e mostrare sempre il risultato descrittivo all'utente.",
+      "context": "Riflessione automatica del 19/06/2026 16:10",
+      "times_used": 0
+    },
+    {
+      "id": "d52fd430",
+      "date": "2026-06-19T16:10:12.135082",
+      "category": "soluzione",
+      "lesson": "Problema con self_improve: 🪞 Riflessione completata:\n✅ Lezione salvata [errore] ID: 7b110791\n📝 Problema: l'agente immagini esegue l'analisi dell'immagine ma non restituisce mai . Risolto: Fix prioritario registrato: manca la risposta testuale dall’agente immagini dopo l’analisi. Prossimo step tecnico: sistemare l’integrazione per mostra",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "e33788d9",
+      "date": "2026-06-19T16:15:37.174342",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: File non trovato: app/agent_client.py. Risolto: Il file app/agent_client.py non esiste nella directory. Controlla se il nome o il percorso è corretto, oppure vuoi che cerchi in altre cartelle?",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "d27575f6",
+      "date": "2026-06-19T16:47:45.266804",
+      "category": "soluzione",
+      "lesson": "Problema con send_alert: {'sent': True, 'severity': 'info', 'error': None}. Risolto: Messaggio inviato su Telegram: ti arriverà una notifica dal bot @nik29coordinatorbot. Da lì puoi richiedere o scaricare l’immagine aggiornata. Se non",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "572add6c",
+      "date": "2026-06-19T16:57:25.262230",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Errore: l'agente immagini non ha risposto, quindi non sono riuscito a scontornare il materasso ora. Riprovo tra poco appena il servizio torna attivo,",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b235cb6f",
+      "date": "2026-06-19T17:03:40.879681",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Errore: l’agente immagini non ha risposto, quindi non sono riuscito a scontornare l’inserto ora. Riprovo tra poco appena il servizio torna attivo.",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "752d8442",
+      "date": "2026-06-19T17:08:50.006161",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Errore: l’agente immagini non risponde nemmeno per questa immagine. Appena torna attivo, riprovo subito lo scontorno del cuscino.",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "23c4143a",
+      "date": "2026-06-19T17:11:27.812265",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Niente da fare, l’agente immagini continua a non rispondere. Appena torna online, riprovo in automatico lo scontorno del cuscino senza che tu debba ri",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "03dcbabd",
+      "date": "2026-06-19T17:12:27.912230",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: L'agente immagini non risponde, quindi non riesco a scontornare il cuscino ora. Appena torna online, riprovo in automatico senza che tu debba rifare l",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b3022652",
+      "date": "2026-06-19T17:14:19.961990",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: Niente da fare, l’agente immagini continua a non rispondere. Appena torna online, riprovo in automatico lo scontorno del cuscino senza che tu debba ri",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "cb145fa4",
+      "date": "2026-06-19T17:17:25.390440",
+      "category": "errore",
+      "lesson": "Problema: L'agente immagini non risponde alla richiesta di scontornare il cuscino. Causa: Probabile crash o disconnessione del servizio immagini. Soluzione: Attendere che il servizio immagini torni online e riprovare automaticamente senza far rifare la richiesta a Nicola. Shortcut: Se delegate_task per immagini fallisce ripetutamente, avvisa Nicola che riproverai appena il servizio torna attivo, senza altre azioni manuali.",
+      "context": "Riflessione automatica del 19/06/2026 17:17",
+      "times_used": 0
+    },
+    {
+      "id": "fd417522",
+      "date": "2026-06-19T17:17:28.057948",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task, self_improve: Errore comunicazione con 'immagini': Server disconnected without sending a response.. Risolto: L'agente immagini è ancora offline. Ho salvato la lezione: quando il servizio non risponde dopo vari tentativi, ti avviso e riprovo in automatico appe",
+      "context": "Auto-reflect forzato, 2 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "1bbfe463",
+      "date": "2026-06-19T19:08:55.294097",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine scontornata nella cartella workspace. Probabile che il file non sia stato salvato correttamente o l'agente immagini non abb",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "447f18b8",
+      "date": "2026-06-19T19:13:26.656779",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non ho accesso diretto alle immagini delle vecchie conversazioni: se il file non è più nella cartella workspace, non posso recuperare l’anteprima né m",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "a09c25d9",
+      "date": "2026-06-19T19:19:26.689710",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine scontornata nella cartella workspace. Probabile che il file non sia stato salvato correttamente o l'agente immagini non abb",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "5a682c7a",
+      "date": "2026-06-19T19:25:58.659631",
+      "category": "soluzione",
+      "lesson": "Problema con file_manager: Percorso non trovato: workspace/. Risolto: Non trovo nessuna immagine nella cartella workspace. Probabile che la foto non sia stata salvata correttamente o sia stata rimossa. Se vuoi, puoi rica",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "46e4e4a9",
+      "date": "2026-06-19T20:24:35.450194",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Add e commit OK, ma errore in push:\nTimeout: il comando non ha terminato entro 30 secondi.. Risolto: Il commit è già stato salvato, ma il push era solo bloccato dal timeout. Nessuna modifica da committare ora: il repository locale è già aggiornato, ma",
+      "context": "Auto-reflect forzato, 1 errori in 3 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "6cc827aa",
+      "date": "2026-06-19T20:26:21.082935",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: remote: error: GH013: Repository rule violations found for refs/heads/main.        \nremote: \nremote: - GITHUB PUSH PROTECTION        \nremote:   ——————. Risolto: Push bloccato: c’è una OpenAI API Key rilevata nel file .env al commit 244f8f5. GitHub ha rifiutato il push per motivi di sicurezza.\n\nCosa devi fare s",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "603b8b84",
+      "date": "2026-06-19T20:28:30.926174",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: remote: error: GH013: Repository rule violations found for refs/heads/main.        \nremote: \nremote: - GITHUB PUSH PROTECTION        \nremote:   ——————. Risolto: Il push è ancora bloccato: anche se hai rimosso il file .env e aggiunto al .gitignore, la chiave segreta resta nella cronologia vecchia (commit 244f8f",
+      "context": "Auto-reflect forzato, 1 errori in 5 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "f921024d",
+      "date": "2026-06-19T20:49:34.761264",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Timeout nella comunicazione con l'agente 'immagini' (timeout 180s superato). Il task potrebbe essere troppo complesso.. Risolto: La richiesta di miglioramento immagine ha impiegato troppo tempo e l’agente immagini non ha risposto (probabilmente task troppo pesante o file troppo",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "15c0745d",
+      "date": "2026-06-20T13:20:05.554389",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-20T13:20:01.704852+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Ho controllato: il sito ildormire.com è online, ma non riesco a leggere lo stato di Docker, disco e memoria del Mac perché il collegamento di controll",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "8afa81ab",
+      "date": "2026-06-20T13:38:05.877533",
+      "category": "soluzione",
+      "lesson": "Problema con delegate_task: Operazione completata con successo: Immagine analizzata:\n1. **Descrizione dettagliata di cosa vedi:**  \nL’immagine mostra una schermata di terminale (. Risolto: Ho analizzato lo screenshot: mostra una schermata di Terminale su Mac, con script di backup automatico (“nik29_backup_v3”), output di comandi, gestion",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "85522841",
+      "date": "2026-06-20T19:31:27.644164",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Add e commit OK, ma errore in push:\nTimeout: il comando non ha terminato entro 30 secondi.. Risolto: Connessione a GitHub OK. Il push precedente era solo troppo lento, ma la connessione funziona. Ora il repository è già aggiornato, nessuna modifica da",
+      "context": "Auto-reflect forzato, 1 errori in 4 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "b666d14c",
+      "date": "2026-06-20T21:07:32.727509",
+      "category": "soluzione",
+      "lesson": "Problema con health_check: {'timestamp': '2026-06-20T21:07:27.657968+00:00', 'checks': {'website': {'url': 'https://ildormire.com', 'status_code': 200, 'reachable': True, 'error. Risolto: Vedo che il Mac non è raggiungibile dal mio sistema (bridge non risponde), quindi non posso controllare lo stato di Docker, disco e memoria. Il sito i",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "360fb52c",
+      "date": "2026-06-21T06:08:29.933029",
+      "category": "soluzione",
+      "lesson": "Problema con host_shell: Impossibile connettersi al Host Bridge (localhost:4002). Verifica che host_bridge.py sia in esecuzione sul Mac.. Risolto: Non riesco a vedere dal sistema se il backup è stato fatto, perché il collegamento (host bridge) col Mac non risponde. Devi prima riavviare il bridge",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    },
+    {
+      "id": "d36eba01",
+      "date": "2026-06-21T06:17:21.293127",
+      "category": "soluzione",
+      "lesson": "Problema con git_auto: Errore in git add: Impossibile connettersi al Host Bridge (localhost:4002). Verifica che host_bridge.py sia in esecuzione sul Mac.. Risolto: Non posso fare il backup su GitHub perché il collegamento col Mac (host bridge) non risponde. Devi prima riavviare il bridge con:\ndocker restart nik29",
+      "context": "Auto-reflect forzato, 1 errori in 2 iterazioni",
+      "times_used": 0
+    }
+  ]
+}

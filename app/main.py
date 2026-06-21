@@ -1,3 +1,4 @@
+from app.memory_watcher import start_memory_watcher
 """
 nik29-coordinator - Main Application
 FastAPI + WebSocket + Frontend Chat inline + Endpoints
@@ -18,6 +19,8 @@ from fastapi.responses import HTMLResponse, JSONResponse, FileResponse, Streamin
 from app.coordinator import coordinator
 from app.agent_client import agent_client
 from app.memory import memory
+from datetime import datetime, timezone
+
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s")
 logger = logging.getLogger("main")
@@ -26,6 +29,9 @@ WORKSPACE_DIR = os.environ.get("WORKSPACE_DIR", "/data/workspace")
 HOST_URL = os.environ.get("HOST_URL", "http://localhost:4001")
 
 app = FastAPI(title="nik29-coordinator", version="0.6.0")
+
+# Backup automatico: monitora memorie e pusha su GitHub
+start_memory_watcher()
 
 # Assicura che workspace esista
 os.makedirs(WORKSPACE_DIR, exist_ok=True)
@@ -630,6 +636,259 @@ FRONTEND_HTML = """<!DOCTYPE html>
     </script>
 </body>
 </html>"""
+
+
+
+# ============================================================
+# CONVERSATIONS & PROJECTS API (sidebar upgrade v1.0)
+# ============================================================
+
+MEMORY_DIR = os.environ.get("MEMORY_DIR", "/data/memory")
+SUMMARIES_FILE = os.path.join(MEMORY_DIR, "summaries.json")
+CONVERSATIONS_DIR = os.path.join(MEMORY_DIR, "conversations")
+PROJECTS_FILE = os.path.join(MEMORY_DIR, "projects.json")
+
+
+def _read_json(filepath, default=None):
+    """Legge JSON in modo sicuro."""
+    if default is None:
+        default = {}
+    try:
+        if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
+            with open(filepath, "r", encoding="utf-8") as f:
+                return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        pass
+    return default
+
+
+def _save_json(filepath, data):
+    """Salva JSON in modo atomico."""
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    tmp = filepath + ".tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp, filepath)
+        return True
+    except OSError:
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        return False
+
+
+@app.get("/api/conversations")
+async def list_conversations():
+    """Lista conversazioni ordinate per data (più recenti prima)."""
+    data = _read_json(SUMMARIES_FILE, {"conversations": {}})
+    conversations = data.get("conversations", {})
+    
+    # Carica progetti per associazione
+    projects_data = _read_json(PROJECTS_FILE, {"projects": {}, "assignments": {}})
+    assignments = projects_data.get("assignments", {})
+    
+    # Ordina per data
+    sorted_convs = sorted(
+        conversations.values(),
+        key=lambda x: x.get("updated_at", ""),
+        reverse=True
+    )
+    
+    result = []
+    for conv in sorted_convs:
+        conv_id = conv.get("conversation_id", "")
+        result.append({
+            "id": conv_id,
+            "topic": conv.get("last_topic", "Conversazione senza titolo"),
+            "updated_at": conv.get("updated_at", ""),
+            "message_count": conv.get("message_count", 0),
+            "project_id": assignments.get(conv_id)
+        })
+    
+    return {"conversations": result}
+
+
+@app.get("/api/conversations/{conv_id}")
+async def get_conversation(conv_id: str):
+    """Ritorna i messaggi di una conversazione specifica."""
+    filepath = os.path.join(CONVERSATIONS_DIR, f"{conv_id}.json")
+    
+    if not os.path.exists(filepath):
+        return JSONResponse({"error": "Conversazione non trovata"}, status_code=404)
+    
+    data = _read_json(filepath, {})
+    messages = data.get("messages", [])
+    
+    return {
+        "conversation_id": conv_id,
+        "messages": messages,
+        "updated_at": data.get("updated_at", ""),
+        "message_count": len(messages)
+    }
+
+
+@app.delete("/api/conversations/{conv_id}")
+async def delete_conversation(conv_id: str):
+    """Elimina una conversazione (file + summary)."""
+    # Rimuovi file conversazione
+    filepath = os.path.join(CONVERSATIONS_DIR, f"{conv_id}.json")
+    if os.path.exists(filepath):
+        os.remove(filepath)
+    
+    # Rimuovi da summaries
+    data = _read_json(SUMMARIES_FILE, {"conversations": {}})
+    conversations = data.get("conversations", {})
+    if conv_id in conversations:
+        del conversations[conv_id]
+        data["conversations"] = conversations
+        _save_json(SUMMARIES_FILE, data)
+    
+    # Rimuovi assegnazione progetto
+    projects_data = _read_json(PROJECTS_FILE, {"projects": {}, "assignments": {}})
+    assignments = projects_data.get("assignments", {})
+    if conv_id in assignments:
+        del assignments[conv_id]
+        projects_data["assignments"] = assignments
+        _save_json(PROJECTS_FILE, projects_data)
+    
+    return {"status": "ok", "deleted": conv_id}
+
+
+@app.put("/api/conversations/{conv_id}/project")
+async def assign_conversation_to_project(conv_id: str, request: Request):
+    """Assegna una conversazione a un progetto."""
+    body = await request.json()
+    project_id = body.get("project_id")
+    
+    projects_data = _read_json(PROJECTS_FILE, {"projects": {}, "assignments": {}})
+    
+    if project_id and project_id not in projects_data.get("projects", {}):
+        return JSONResponse({"error": "Progetto non trovato"}, status_code=404)
+    
+    assignments = projects_data.setdefault("assignments", {})
+    
+    if project_id:
+        assignments[conv_id] = project_id
+    else:
+        assignments.pop(conv_id, None)
+    
+    projects_data["assignments"] = assignments
+    _save_json(PROJECTS_FILE, projects_data)
+    
+    return {"status": "ok", "conversation_id": conv_id, "project_id": project_id}
+
+
+@app.get("/api/projects")
+async def list_projects():
+    """Lista progetti con conteggio conversazioni."""
+    projects_data = _read_json(PROJECTS_FILE, {"projects": {}, "assignments": {}})
+    projects = projects_data.get("projects", {})
+    assignments = projects_data.get("assignments", {})
+    
+    # Conta conversazioni per progetto
+    project_counts = {}
+    for conv_id, proj_id in assignments.items():
+        project_counts[proj_id] = project_counts.get(proj_id, 0) + 1
+    
+    result = []
+    for proj_id, proj in projects.items():
+        result.append({
+            "id": proj_id,
+            "name": proj.get("name", ""),
+            "color": proj.get("color", "#6366f1"),
+            "conversation_count": project_counts.get(proj_id, 0),
+            "created_at": proj.get("created_at", "")
+        })
+    
+    # Ordina per nome
+    result.sort(key=lambda x: x["name"].lower())
+    
+    return {"projects": result}
+
+
+@app.post("/api/projects")
+async def create_project(request: Request):
+    """Crea un nuovo progetto."""
+    body = await request.json()
+    name = body.get("name", "").strip()
+    color = body.get("color", "#6366f1")
+    
+    if not name:
+        return JSONResponse({"error": "Nome progetto obbligatorio"}, status_code=400)
+    
+    projects_data = _read_json(PROJECTS_FILE, {"projects": {}, "assignments": {}})
+    projects = projects_data.setdefault("projects", {})
+    
+    # Genera ID univoco
+    import hashlib
+    project_id = "proj_" + hashlib.md5(f"{name}_{datetime.now().isoformat()}".encode()).hexdigest()[:8]
+    
+    projects[project_id] = {
+        "name": name,
+        "color": color,
+        "created_at": datetime.now().isoformat()
+    }
+    
+    projects_data["projects"] = projects
+    _save_json(PROJECTS_FILE, projects_data)
+    
+    return {
+        "status": "ok",
+        "project": {
+            "id": project_id,
+            "name": name,
+            "color": color,
+            "conversation_count": 0,
+            "created_at": projects[project_id]["created_at"]
+        }
+    }
+
+
+@app.delete("/api/projects/{project_id}")
+async def delete_project(project_id: str):
+    """Elimina un progetto e rimuove tutte le assegnazioni."""
+    projects_data = _read_json(PROJECTS_FILE, {"projects": {}, "assignments": {}})
+    projects = projects_data.get("projects", {})
+    
+    if project_id not in projects:
+        return JSONResponse({"error": "Progetto non trovato"}, status_code=404)
+    
+    del projects[project_id]
+    
+    # Rimuovi assegnazioni
+    assignments = projects_data.get("assignments", {})
+    assignments = {k: v for k, v in assignments.items() if v != project_id}
+    
+    projects_data["projects"] = projects
+    projects_data["assignments"] = assignments
+    _save_json(PROJECTS_FILE, projects_data)
+    
+    return {"status": "ok", "deleted": project_id}
+
+
+@app.put("/api/conversations/{conv_id}/rename")
+async def rename_conversation(conv_id: str, request: Request):
+    """Rinomina una conversazione (aggiorna il topic)."""
+    body = await request.json()
+    new_topic = body.get("topic", "").strip()
+    
+    if not new_topic:
+        return JSONResponse({"error": "Topic obbligatorio"}, status_code=400)
+    
+    data = _read_json(SUMMARIES_FILE, {"conversations": {}})
+    conversations = data.get("conversations", {})
+    
+    if conv_id not in conversations:
+        return JSONResponse({"error": "Conversazione non trovata"}, status_code=404)
+    
+    conversations[conv_id]["last_topic"] = new_topic[:100]
+    data["conversations"] = conversations
+    _save_json(SUMMARIES_FILE, data)
+    
+    return {"status": "ok", "conversation_id": conv_id, "topic": new_topic[:100]}
+
 
 
 @app.get("/", response_class=HTMLResponse)

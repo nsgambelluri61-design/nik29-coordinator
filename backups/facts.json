@@ -1,0 +1,84 @@
+{
+  "facts": [
+    {
+      "fact": "Nicola Sgambelluri è il titolare de 'Il Dormire' (Sgambelluri srls).",
+      "category": "utente",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Il negozio si trova a Siderno (RC), Calabria, Italia.",
+      "category": "business",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Il negozio vende materassi, cuscini, reti letto e topper.",
+      "category": "business",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Tutti i prodotti venduti sono rigorosamente Made in Italy.",
+      "category": "business",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Il sito web è ildormire.com, ospitato su un VPS con Node.js, PM2 e database MySQL.",
+      "category": "architettura",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Nicola non ha competenze informatiche e necessita di spiegazioni semplici e pratiche.",
+      "category": "utente",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "La SEO del sito è ottimizzata per tutta la provincia di Reggio Calabria, con l'obiettivo di raggiungere la top 10 su Google.",
+      "category": "business",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "I principali competitor sono Emma Sleep (prezzi aggressivi, ~949€ matrimoniale), Kipli (biologico/lattice) e InMaterassi (online).",
+      "category": "business",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "La Unique Selling Proposition (USP) include: negozio locale, consulenza personale, qualità Made in Italy, consegna gratuita in zona.",
+      "category": "business",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "L'ecosistema AI è composto da 5 agenti: Manus (cloud), nik29-coordinator (Mac:4001), Maestro locale (Mac:4002), Maestro VPS e Manus Light (Mac:8080).",
+      "category": "architettura",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "nik29-coordinator gira in Docker sulla porta 4001, utilizza GPT-4.1 (fisso) e dispone di oltre 34 tool.",
+      "category": "architettura",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Il bot Telegram associato a nik29 è @nik29coordinatorbot.",
+      "category": "architettura",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "Il repository GitHub del progetto è nsgambelluri61-design/nik29-coordinator.",
+      "category": "architettura",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "La roadmap attuale ha completato: Catalogo, Homepage, Telegram nik29, Nik29 Level 3.",
+      "category": "progetto",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "I prossimi step della roadmap includono: ask_maestro, ask_manus, task specialisti (SEO/Social/Catalogo), video homepage, Open WebUI VPS, PWA.",
+      "category": "progetto",
+      "timestamp": "2026-06-18T20:00:00"
+    },
+    {
+      "fact": "I principali competitor di Nicola Sgambelluri per Il Dormire sono a carattere locale, non solo grandi marchi online.",
+      "category": "competitors_local",
+      "saved_at": "2026-06-18T19:10:44.768182+00:00"
+    }
+  ]
+}

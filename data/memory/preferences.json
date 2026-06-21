@@ -33,6 +33,20 @@
       "updated_at": "2026-06-20T09:11:21.997347+00:00",
       "source": "auto_learned",
       "source_conversation": "web_d4386r5qpxn"
+    },
+    "docker_bridge_path_fix": {
+      "value": "Per usare docker dal bridge Mac serve sempre: export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin prima del comando docker.",
+      "updated_at": "2026-06-21T10:37:42.730615+00:00"
+    },
+    "auto_20260621_103745": {
+      "value": "Ora digli \"ricordati che per usare docker dal bridge devi sempre fare export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin prima del coma",
+      "updated_at": "2026-06-21T10:37:45.622780+00:00",
+      "source": "auto_learned",
+      "source_conversation": "web_d4386r5qpxn"
+    },
+    "image_analysis_method": {
+      "value": "Per analizzare le immagini inviate in chat, usare SEMPRE la funzione process_images_in_message dal modulo vision_chat_patch (GPT-4o diretto). NON cercare mai più nik29-images o la porta 4002.",
+      "updated_at": "2026-06-21T12:59:12.744717+00:00"
     }
   }
 }

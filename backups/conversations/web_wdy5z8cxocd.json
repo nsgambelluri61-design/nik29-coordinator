@@ -1,0 +1,33 @@
+{
+  "conversation_id": "web_wdy5z8cxocd",
+  "messages": [
+    {
+      "role": "user",
+      "content": "la foto?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_VbOxTHQViHhkDKoroy3e3dmR",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"workspace/\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_VbOxTHQViHhkDKoroy3e3dmR",
+      "content": "Percorso non trovato: workspace/"
+    },
+    {
+      "role": "assistant",
+      "content": "Non trovo nessuna immagine nella cartella workspace. Probabile che la foto non sia stata salvata correttamente o sia stata rimossa. Se vuoi, puoi ricaricarla."
+    }
+  ],
+  "updated_at": "2026-06-19T19:25:58.652137+00:00"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "meteo",
+    "description": "Recupera il meteo attuale di una citta italiana usando Open-Meteo API",
+    "parameters": "",
+    "file_path": "/app/app/tools/custom/meteo.py",
+    "created_at": "2026-06-20T15:36:05.377412",
+    "active": true
+  }
+]

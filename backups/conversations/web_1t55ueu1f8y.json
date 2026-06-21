@@ -1,0 +1,404 @@
+{
+  "conversation_id": "web_1t55ueu1f8y",
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_h86oiyyJIvYfOgRk2aHdvTKI",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"tmp\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_h86oiyyJIvYfOgRk2aHdvTKI",
+      "content": "Contenuto di: tmp\n  [FILE] test_nik29.txt (29 bytes)"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_8qJFC1nkMQby0U1ABXv0YIYp",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"output\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_8qJFC1nkMQby0U1ABXv0YIYp",
+      "content": "Percorso non trovato: output"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_PIIfgAwqWqH4S5P2VgToQVt9",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"/output\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_PIIfgAwqWqH4S5P2VgToQVt9",
+      "content": "Percorso non trovato: /output"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_xGswQWgyb9MuXcPUdRXehEzM",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"./\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_xGswQWgyb9MuXcPUdRXehEzM",
+      "content": "Contenuto di: ./\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_0.jpg (7277155 bytes)\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_1.jpg (6628781 bytes)\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_19.jpg (23942044 bytes)\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_2.jpg (3931894 bytes)\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_20.jpg (13956170 bytes)\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_3.jpg (3255635 bytes)\n  [FILE] AlfredoCarbone-MaterassiIntegrazione_6.jpg (6280592 bytes)\n  [FILE] IRIS-DETTAGLI-1-2_9305b451.png (708986 bytes)\n  [FILE] Screenshot2026-06-19alle14.10.14.png (2000948 bytes)\n  [DIR]  data/\n  [DIR]  tmp/"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_MEd2RqyFbFVmDbPES13ewlM0",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"data/memory/\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_MEd2RqyFbFVmDbPES13ewlM0",
+      "content": "Contenuto di: data/memory/\n  [FILE] self_rules.json (3691 bytes)"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_fpfq49QaBLGi8hc5MsgeXJ9U",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"read\",\"path\":\"data/memory/self_rules.json\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_fpfq49QaBLGi8hc5MsgeXJ9U",
+      "content": "--- data/memory/self_rules.json (3691 bytes) ---\n{\n  \"rules\": [\n    {\n      \"id\": 1,\n      \"rule\": \"Quando Nicola chiede di FARE qualcosa, USA SEMPRE un tool. MAI rispondere 'a memoria' se esiste un tool che può verificare o eseguire.\",\n      \"reason\": \"Per garantire precisione e azioni concrete invece di risposte teoriche.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 2,\n      \"rule\": \"Non chiedere mai 'cosa vuoi che faccia?'. INTERPRETA la richiesta e AGISCI autonomamente.\",\n      \"reason\": \"Nicola odia quando l'IA fa domande inutili invece di agire.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 3,\n      \"rule\": \"Per le ricerche semplici, usa 'web_research' UNA SOLA VOLTA e rispondi. Non combinare brave_search, browse_url e web_research per la stessa domanda.\",\n      \"reason\": \"Per ottimizzare i tempi di risposta e l'uso dei tool.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 4,\n      \"rule\": \"Se ricevi più task in sequenza, procedi in autonomia senza chiedere conferma per ogni passaggio. Aggiorna l'utente solo alla fine con il risultato complessivo.\",\n      \"reason\": \"Per ridurre il rumore comunicativo e aumentare l'efficienza.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 5,\n      \"rule\": \"Usa 'brave_search' SOLO se vuoi risultati rapidi senza leggere il contenuto delle pagine (es. informazioni fattuali immediate).\",\n      \"reason\": \"Per evitare chiamate non necessarie e velocizzare le risposte semplici.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 6,\n      \"rule\": \"Usa 'browse_url' SOLO per aprire UN sito specifico che conosci già (es. 'apri ildormire.com').\",\n      \"reason\": \"Per navigazioni dirette senza passare dai motori di ricerca.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 7,\n      \"rule\": \"Se non sei sicuro di quale tool usare, usa prima 'think' per ragionare, POI chiama il tool appropriato.\",\n      \"reason\": \"Per evitare errori di selezione dei tool in situazioni ambigue.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 8,\n      \"rule\": \"MAI dire 'non posso' senza aver PROVATO almeno un tool per risolvere il problema.\",\n      \"reason\": \"Per mantenere un atteggiamento proattivo e orientato alla soluzione.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 9,\n      \"rule\": \"Quando Nicola dice qualcosa su di sé o sul business, SALVA SUBITO l'informazione in memoria usando 'save_memory'.\",\n      \"reason\": \"Per arricchire costantemente la base di conoscenza e personalizzare l'assistenza.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": 10,\n      \"rule\": \"Dopo task complessi, usa 'self_improve' per riflettere su cosa è andato bene o male e salvare eventuali nuove lezioni.\",\n      \"reason\": \"Per garantire un miglioramento continuo delle performance dell'agente.\",\n      \"added_date\": \"2026-06-18T20:00:00\",\n      \"times_applied\": 0\n    },\n    {\n      \"id\": \"d2e2d9e2\",\n      \"rule\": \"Quando il push su GitHub fallisce per timeout, non usare ping perché è bloccato dalla whitelist. Verificare la connessione con curl, poi riprovare con timeout più alto.\",\n      \"reason\": \"Ping non è consentito per motivi di sicurezza; curl permette di testare la connessione e riprovare con timeout più alto aumenta le probabilità di successo senza interventi manuali.\",\n      \"added_date\": \"2026-06-19T07:46:28.197952\",\n      \"times_applied\": 0\n    }\n  ]\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_mLPmKGlEvwVgPqvja2hrGy8O",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"data\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_mLPmKGlEvwVgPqvja2hrGy8O",
+      "content": "Contenuto di: data\n  [DIR]  memory/"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_OpWwH5t2hkzKgJSjoBLUqmIS",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"list\",\"path\":\"data/memory\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_OpWwH5t2hkzKgJSjoBLUqmIS",
+      "content": "Contenuto di: data/memory\n  [FILE] self_rules.json (3691 bytes)"
+    },
+    {
+      "role": "user",
+      "content": "\"usa il tool shell per eseguire: docker logs nik29-images --tail 30\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_H9TScCX4oiq2HlQmuWEJYiwr",
+          "type": "function",
+          "function": {
+            "name": "shell",
+            "arguments": "{\"command\":\"docker logs nik29-images --tail 30\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_H9TScCX4oiq2HlQmuWEJYiwr",
+      "content": "/bin/sh: 1: docker: not found\n\n[Exit code: 127]"
+    },
+    {
+      "role": "assistant",
+      "content": "Errore: il comando docker non è disponibile all'interno del container (shell tool). Se vuoi vedere i log dei container Docker sul Mac, devo usare il tool host_shell. Vuoi che lo faccia?"
+    },
+    {
+      "role": "user",
+      "content": "\"si, usa host_shell\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_DA5jkHY9CNEYRo1ytZSNWqbK",
+          "type": "function",
+          "function": {
+            "name": "host_shell",
+            "arguments": "{\"command\":\"docker logs nik29-images --tail 30\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_DA5jkHY9CNEYRo1ytZSNWqbK",
+      "content": "INFO:     127.0.0.1:58478 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37132 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:57150 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:60314 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:55700 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:34748 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     172.23.0.3:37960 - \"POST /task HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37054 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:54466 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:33178 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:49946 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:44486 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:45580 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:45658 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     172.23.0.3:42580 - \"POST /task HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37572 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:52342 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     172.23.0.3:59522 - \"POST /task HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:44570 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:44460 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:44376 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:47994 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:35040 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:53150 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:50492 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:42698 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:42072 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:39242 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:58500 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37950 - \"GET /health HTTP/1.1\" 200 OK\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Fatto. Gli ultimi log del container nik29-images mostrano solo richieste di health check e task gestiti correttamente, nessun errore rilevante. Vuoi controllare qualcos'altro o cerchi messaggi di errore specifici?"
+    },
+    {
+      "role": "user",
+      "content": "leggi il file app/agent_client.py e mostrami la funzione send_task — voglio vedere come gestisce la risposta dall'agente immagini\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_9Ntv7qP82crT6sKlQKMJnwmp",
+          "type": "function",
+          "function": {
+            "name": "file_manager",
+            "arguments": "{\"action\":\"read\",\"path\":\"app/agent_client.py\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_9Ntv7qP82crT6sKlQKMJnwmp",
+      "content": "File non trovato: app/agent_client.py"
+    },
+    {
+      "role": "assistant",
+      "content": "Il file app/agent_client.py non esiste nella directory. Controlla se il nome o il percorso è corretto, oppure vuoi che cerchi in altre cartelle?"
+    },
+    {
+      "role": "user",
+      "content": "\"cerca in /app/agent_client.py — usa il tool shell con: cat /app/agent_client.py\"\nDentro il container i file Python stanno in /app/, non nel workspace."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_wsJ6vTBwFfKZuV9jh4yMLyEq",
+          "type": "function",
+          "function": {
+            "name": "shell",
+            "arguments": "{\"command\":\"cat /app/agent_client.py\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_wsJ6vTBwFfKZuV9jh4yMLyEq",
+      "content": "cat: /app/agent_client.py: No such file or directory\n\n[Exit code: 1]"
+    },
+    {
+      "role": "assistant",
+      "content": "Il file /app/agent_client.py non esiste nemmeno nella cartella /app/ dentro il container. Se vuoi, posso cercare file simili o verificare la presenza di altri file Python nella directory /app/. Vuoi che faccia una lista dei file Python presenti?"
+    },
+    {
+      "role": "user",
+      "content": "Digli: \"usa shell: find / -name agent_client.py 2>/dev/null\""
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_2KtVzxPE2ViOlEWZEGxDmd2H",
+          "type": "function",
+          "function": {
+            "name": "shell",
+            "arguments": "{\"command\":\"find / -name agent_client.py 2>/dev/null\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2KtVzxPE2ViOlEWZEGxDmd2H",
+      "content": "/app/app/agent_client.py\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_7KhM3NglxYzIyATDxIRSXFmw",
+          "type": "function",
+          "function": {
+            "name": "shell",
+            "arguments": "{\"command\":\"cat /app/app/agent_client.py\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_7KhM3NglxYzIyATDxIRSXFmw",
+      "content": "\"\"\"\nClient per comunicare con i sub-agenti registrati.\nGestisce il registro agenti e le chiamate HTTP.\n\"\"\"\nimport os\nimport json\nimport base64\nimport logging\nfrom pathlib import Path\nfrom typing import Optional\nimport httpx\n\nlogger = logging.getLogger(\"agent_client\")\n\nAGENTS_CONFIG = os.environ.get(\"AGENTS_CONFIG\", \"/data/memory/agents.json\")\nWORKSPACE_DIR = \"/data/workspace\"\n\nDEFAULT_AGENTS = [\n    {\n        \"name\": \"immagini\",\n        \"description\": \"Agente immagini autonomo: analisi Vision, editing, scontorno, composizione, pipeline\",\n        \"url\": \"http://nik29-images:4002\",\n        \"capabilities\": [\"analyze\", \"edit\", \"remove_bg\", \"composite\", \"pipeline\"]\n    }\n]\n\n\nclass AgentRegistry:\n    \"\"\"Registro dei sub-agenti disponibili.\"\"\"\n\n    def __init__(self):\n        self._agents: list = []\n        self._load()\n\n    def _load(self):\n        \"\"\"Carica la configurazione degli agenti.\"\"\"\n        if os.path.exists(AGENTS_CONFIG):\n            try:\n                with open(AGENTS_CONFIG, \"r\", encoding=\"utf-8\") as f:\n                    data = json.load(f)\n                    self._agents = data.get(\"agents\", [])\n                    return\n            except (json.JSONDecodeError, FileNotFoundError):\n                pass\n        # Default\n        self._agents = DEFAULT_AGENTS\n        self._save()\n\n    def _save(self):\n        \"\"\"Salva la configurazione degli agenti.\"\"\"\n        os.makedirs(os.path.dirname(AGENTS_CONFIG), exist_ok=True)\n        with open(AGENTS_CONFIG, \"w\", encoding=\"utf-8\") as f:\n            json.dump({\"agents\": self._agents}, f, ensure_ascii=False, indent=2)\n\n    def list_agents(self) -> list:\n        \"\"\"Lista tutti gli agenti registrati.\"\"\"\n        return self._agents\n\n    def get_agent(self, name: str) -> Optional[dict]:\n        \"\"\"Recupera un agente per nome.\"\"\"\n        for agent in self._agents:\n            if agent[\"name\"] == name:\n                return agent\n        return None\n\n    def reload(self):\n        \"\"\"Ricarica la configurazione.\"\"\"\n        self._load()\n\n\ndef _resolve_file_to_base64(file_info: dict) -> Optional[dict]:\n    \"\"\"\n    Converte un file (da URL locale o path) in formato base64\n    compatibile con nik29-images /task endpoint.\n    \"\"\"\n    name = file_info.get(\"name\", \"file.jpg\")\n    url = file_info.get(\"url\", \"\")\n    data = file_info.get(\"data\", \"\")\n\n    # Se ha gia' il campo data in base64, usalo direttamente\n    if data:\n        return {\"name\": name, \"data\": data}\n\n    # Prova a risolvere il file dal workspace locale\n    # URL tipo: http://localhost:4001/files/nomefile.jpg\n    if \"/files/\" in url:\n        filename = url.split(\"/files/\")[-1]\n        filepath = os.path.join(WORKSPACE_DIR, filename)\n        if os.path.exists(filepath):\n            with open(filepath, \"rb\") as f:\n                b64 = base64.b64encode(f.read()).decode(\"utf-8\")\n            return {\"name\": name, \"data\": b64}\n\n    # Prova con il nome del file direttamente nel workspace\n    filepath = os.path.join(WORKSPACE_DIR, name)\n    if os.path.exists(filepath):\n        with open(filepath, \"rb\") as f:\n            b64 = base64.b64encode(f.read()).decode(\"utf-8\")\n        return {\"name\": name, \"data\": b64}\n\n    # Cerca qualsiasi file immagine recente nel workspace\n    workspace = Path(WORKSPACE_DIR)\n    if workspace.exists():\n        image_extensions = {\".jpg\", \".jpeg\", \".png\", \".webp\", \".gif\"}\n        image_files = [\n            f for f in workspace.iterdir()\n            if f.suffix.lower() in image_extensions\n        ]\n        if image_files:\n            # Prendi il piu' recente\n            latest = max(image_files, key=lambda f: f.stat().st_mtime)\n            with open(latest, \"rb\") as f:\n                b64 = base64.b64encode(f.read()).decode(\"utf-8\")\n            return {\"name\": latest.name, \"data\": b64}\n\n    logger.warning(f\"Impossibile risolvere file: {name} (url: {url})\")\n    return None\n\n\nclass AgentClient:\n    \"\"\"Client HTTP per comunicare con i sub-agenti.\"\"\"\n\n    def __init__(self):\n        self.registry = AgentRegistry()\n\n    async def send_task(self, agent_name: str, instruction: str, files: list = None) -> str:\n        \"\"\"Invia un task a un sub-agente.\"\"\"\n        agent = self.registry.get_agent(agent_name)\n        if not agent:\n            return f\"Agente '{agent_name}' non trovato. Agenti disponibili: {[a['name'] for a in self.registry.list_agents()]}\"\n\n        url = f\"{agent['url']}/task\"\n\n        # Converti i file in base64 per nik29-images\n        resolved_files = []\n        if files:\n            for file_info in files:\n                resolved = _resolve_file_to_base64(file_info)\n                if resolved:\n                    resolved_files.append(resolved)\n\n        # Se non ci sono file risolti, cerca l'immagine piu' recente nel workspace\n        if not resolved_files:\n            workspace = Path(WORKSPACE_DIR)\n            if workspace.exists():\n                image_extensions = {\".jpg\", \".jpeg\", \".png\", \".webp\", \".gif\"}\n                image_files = [\n                    f for f in workspace.iterdir()\n                    if f.suffix.lower() in image_extensions\n                ]\n                if image_files:\n                    latest = max(image_files, key=lambda f: f.stat().st_mtime)\n                    with open(latest, \"rb\") as f:\n                        b64 = base64.b64encode(f.read()).decode(\"utf-8\")\n                    resolved_files.append({\"name\": latest.name, \"data\": b64})\n                    logger.info(f\"Auto-incluso file recente: {latest.name}\")\n\n        payload = {\n            \"instruction\": instruction,\n            \"files\": resolved_files\n        }\n\n        try:\n            async with httpx.AsyncClient(timeout=120) as client:\n                resp = await client.post(url, json=payload)\n                if resp.status_code == 200:\n                    data = resp.json()\n                    return data.get(\"result\", \"Task completato senza risultato.\")\n                else:\n                    return f\"Errore dall'agente {agent_name}: HTTP {resp.status_code} - {resp.text[:200]}\"\n        except httpx.ConnectError:\n            return f\"Impossibile connettersi all'agente '{agent_name}' ({agent['url']}). Verifica che sia in esecuzione.\"\n        except httpx.TimeoutException:\n            return f\"Timeout nella comunicazione con l'agente '{agent_name}'.\"\n        except Exception as e:\n            return f\"Errore comunicazione con '{agent_name}': {str(e)}\"\n\n    async def check_all_agents_health(self) -> dict:\n        \"\"\"Controlla lo stato di salute di tutti gli agenti.\"\"\"\n        results = {}\n        for agent in self.registry.list_agents():\n            try:\n                async with httpx.AsyncClient(timeout=5) as client:\n                    resp = await client.get(f\"{agent['url']}/health\")\n                    results[agent[\"name\"]] = resp.status_code == 200\n            except Exception:\n                results[agent[\"name\"]] = False\n        return results\n\n\n# Singleton\nagent_client = AgentClient()\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Trovato! La funzione send_task in /app/app/agent_client.py gestisce così la risposta dall’agente immagini:\n\n- Invia una POST all’endpoint /task con istruzione e file (in base64).\n- Se la risposta HTTP è 200, prende il campo \"result\" dal JSON e lo restituisce.\n- Se lo status code non è 200, restituisce un messaggio d’errore con codice e testo della risposta.\n- Se c’è errore di connessione, timeout o altra eccezione, restituisce il messaggio d’errore generato.\n\nVuoi vedere il codice preciso della funzione send_task?"
+    },
+    {
+      "role": "user",
+      "content": "si, mostrami il codice preciso. E poi usa host_shell per fare: curl -s http://nik29-images:4002/task -X POST -H 'Content-Type: application/json' -d '{\"instruction\":\"analizza questa immagine e descrivi cosa vedi\",\"files\":[]}' — così vediamo cosa restituisce esattamente l'endpoint /task\""
+    },
+    {
+      "role": "assistant",
+      "content": "Ecco il codice preciso della funzione send_task:\n\n```python\nasync def send_task(self, agent_name: str, instruction: str, files: list = None) -> str:\n    \"\"\"Invia un task a un sub-agente.\"\"\"\n    agent = self.registry.get_agent(agent_name)\n    if not agent:\n        return f\"Agente '{agent_name}' non trovato. Agenti disponibili: {[a['name'] for a in self.registry.list_agents()]}\"\n\n    url = f\"{agent['url']}/task\"\n\n    # Converti i file in base64 per nik29-images\n    resolved_files = []\n    if files:\n        for file_info in files:\n            resolved = _resolve_file_to_base64(file_info)\n            if resolved:\n                resolved_files.append(resolved)\n\n    # Se non ci sono file risolti, cerca l'immagine piu' recente nel workspace\n    if not resolved_files:\n        workspace = Path(WORKSPACE_DIR)\n        if workspace.exists():\n            image_extensions = {\".jpg\", \".jpeg\", \".png\", \".webp\", \".gif\"}\n            image_files = [\n                f for f in workspace.iterdir()\n                if f.suffix.lower() in image_extensions\n            ]\n            if image_files:\n                latest = max(image_files, key=lambda f: f.stat().st_mtime)\n                with open(latest, \"rb\") as f:\n                    b64 = base64.b64encode(f.read()).decode(\"utf-8\")\n                resolved_files.append({\"name\": latest.name, \"data\": b64})\n                logger.info(f\"Auto-incluso file recente: {latest.name}\")\n\n    payload = {\n        \"instruction\": instruction,\n        \"files\": resolved_files\n    }\n\n    try:\n        async with httpx.AsyncClient(timeout=120) as client:\n            resp = await client.post(url, json=payload)\n            if resp.status_code == 200:\n                data = resp.json()\n                return data.get(\"result\", \"Task completato senza risultato.\")\n            else:\n                return f\"Errore dall'agente {agent_name}: HTTP {resp.status_code} - {resp.text[:200]}\"\n    except httpx.ConnectError:\n        return f\"Impossibile connettersi all'agente '{agent_name}' ({agent['url']}). Verifica che sia in esecuzione.\"\n    except httpx.TimeoutException:\n        return f\"Timeout nella comunicazione con l'agente '{agent_name}'.\"\n    except Exception as e:\n        return f\"Errore comunicazione con '{agent_name}': {str(e)}\"\n```\n\nOra lancio il comando curl richiesto per vedere la risposta grezza dell’endpoint.",
+      "tool_calls": [
+        {
+          "id": "call_ALjC3vsxMS1WN0t4Fb9b4BQp",
+          "type": "function",
+          "function": {
+            "name": "host_shell",
+            "arguments": "{\"command\":\"curl -s http://nik29-images:4002/task -X POST -H 'Content-Type: application/json' -d '{\\\"instruction\\\":\\\"analizza questa immagine e descrivi cosa vedi\\\",\\\"files\\\":[]}'\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_ALjC3vsxMS1WN0t4Fb9b4BQp",
+      "content": "{\"success\":false,\"result\":\"Non sono riuscito a interpretare l'istruzione. Per favore, sii più specifico.\",\"output_files\":[],\"steps\":[],\"elapsed_seconds\":0.94}"
+    },
+    {
+      "role": "assistant",
+      "content": "Risposta dell’endpoint /task:\n\n```\n{\n  \"success\": false,\n  \"result\": \"Non sono riuscito a interpretare l'istruzione. Per favore, sii più specifico.\",\n  \"output_files\": [],\n  \"steps\": [],\n  \"elapsed_seconds\": 0.94\n}\n```\n\nQuindi: senza un file immagine o un’istruzione molto dettagliata, l’agente immagini non sa cosa fare e risponde con quell’errore."
+    },
+    {
+      "role": "user",
+      "content": "adesso rifai il test con un'immagine vera —\n[File caricato: unknown -> workspace/]"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_09AZHmLF3HLxUsnLJ0wd7CAT",
+          "type": "function",
+          "function": {
+            "name": "host_shell",
+            "arguments": "{\"command\":\"ls -lh /data/workspace\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_09AZHmLF3HLxUsnLJ0wd7CAT",
+      "content": "ls: /data/workspace: No such file or directory\n\n\n[Exit code: 1]"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_WR7Rastk9rPWWntCx5EKoEdn",
+          "type": "function",
+          "function": {
+            "name": "host_shell",
+            "arguments": "{\"command\":\"ls -lh ./workspace\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_WR7Rastk9rPWWntCx5EKoEdn",
+      "content": "ls: ./workspace: No such file or directory\n\n\n[Exit code: 1]"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_XR9rXISmKt8BnAXLB5uZIoml",
+          "type": "function",
+          "function": {
+            "name": "host_shell",
+            "arguments": "{\"command\":\"ls -lh\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_XR9rXISmKt8BnAXLB5uZIoml",
+      "content": "total 864\n-rw-r--r--   1 nicolasgambelluri  staff   2,5K 17 giu 21:50 AGGIORNAMENTO_MEMORIA.md\ndrwxr-xr-x  26 nicolasgambelluri  staff   832B 19 giu 16:07 app\n-rw-r--r--   1 nicolasgambelluri  staff   4,1K 19 giu 14:39 apply_fix.sh\n-rw-r--r--   1 nicolasgambelluri  staff   1,9K 18 giu 19:13 brain_fix.zip\ndrwxr-xr-x   4 nicolasgambelluri  staff   128B 18 giu 19:03 config\ndrwxr-xr-x   7 nicolasgambelluri  staff   224B 18 giu 22:34 data\n-rw-r--r--   1 nicolasgambelluri  staff    15K 18 giu 21:44 deep_research.py\n-rw-r--r--   1 nicolasgambelluri  staff   1,0K 19 giu 14:39 docker-compose.yml\n-rw-r--r--   1 nicolasgambelluri  staff   620B 18 giu 10:00 docker-compose.yml.bak\n-rw-r--r--   1 nicolasgambelluri  staff   765B 18 giu 10:43 docker-compose.yml.bak_pre_level3\n-rw-r--r--   1 nicolasgambelluri  staff   937B 18 giu 14:06 docker-compose.yml.bak2\n-rw-r--r--   1 nicolasgambelluri  staff   317B 18 giu 10:00 docker-compose.yml.level2_patch\n-rw-r--r--@  1 nicolasgambelluri  staff   835B 18 giu 15:50 Dockerfile\n-rw-r--r--@  1 nicolasgambelluri  staff   765B 18 giu 06:38 Dockerfile.bak_pre_browser\n-rw-r--r--   1 nicolasgambelluri  staff   4,4K 18 giu 18:59 facts.json\n-rw-r--r--   1 nicolasgambelluri  staff   1,2K 19 giu 16:01 fix_agent.sh\n-rw-r--r--   1 nicolasgambelluri  staff   5,5K 18 giu 22:40 fix_agents_patch.py\n-rw-r--r--   1 nicolasgambelluri  staff   4,4K 18 giu 18:59 lessons.json\n-rw-r--r--   1 nicolasgambelluri  staff   576B 17 giu 17:54 manifest.json\n-rw-r--r--   1 nicolasgambelluri  staff   7,6K 18 giu 19:03 nik29_brain.zip\ndrwxr-xr-x   5 nicolasgambelluri  staff   160B 18 giu 16:36 nik29-advanced-browser\n-rw-r--r--   1 nicolasgambelluri  staff    14K 19 giu 06:18 nik29-chat-upgrade-v2.zip\ndrwxr-xr-x   7 nicolasgambelluri  staff   224B 17 giu 22:36 nik29-coordinator\n-rw-r--r--@  1 nicolasgambelluri  staff    12K 18 giu 17:23 patch_advanced_browser_v2.py\n-rw-r--r--   1 nicolasgambelluri  staff    22K 18 giu 17:08 patch_advanced_browser.py\n-rw-r--r--   1 nicolasgambelluri  staff    17K 18 giu 22:29 patch_agents.py\n-rw-r--r--   1 nicolasgambelluri  staff   6,4K 19 giu 10:20 patch_auto_reflect.py\n-rw-r--r--@  1 nicolasgambelluri  staff   5,1K 18 giu 15:50 patch_browser.py\n-rw-r--r--   1 nicolasgambelluri  staff   4,8K 18 giu 12:38 PATCH_COORDINATOR.py\n-rw-r--r--   1 nicolasgambelluri  staff   3,4K 19 giu 07:06 patch_copy_btn.py\n-rw-r--r--   1 nicolasgambelluri  staff   9,5K 18 giu 21:44 patch_deep_research.py\n-rw-r--r--   1 nicolasgambelluri  staff   1,6K 18 giu 12:38 PATCH_DOCKER_COMPOSE.yml\n-rw-r--r--   1 nicolasgambelluri  staff    12K 18 giu 17:46 patch_fix_analyze_screenshot.py\n-rw-r--r--   1 nicolasgambelluri  staff   4,2K 18 giu 19:26 patch_fix_search_rules.py\n-rw-r--r--   1 nicolasgambelluri  staff   4,7K 19 giu 09:45 patch_fix_self_improve.py\n-rw-r--r--   1 nicolasgambelluri  staff   3,9K 18 giu 18:59 patch_install_brain.py\n-rw-r--r--   1 nicolasgambelluri  staff   4,6K 19 giu 06:13 patch_interface.py\n-rw-r--r--@  1 nicolasgambelluri  staff   8,8K 18 giu 14:20 patch_level3_v2.py\n-rw-r--r--@  1 nicolasgambelluri  staff    16K 18 giu 14:06 patch_level3.py\n-rw-r--r--   1 nicolasgambelluri  staff   1,8K 18 giu 22:00 patch_prompt_deep_research.py\n-rw-r--r--   1 nicolasgambelluri  staff    14K 19 giu 06:54 patch_v2_features.py\n-rw-r--r--   1 nicolasgambelluri  staff   714B 18 giu 18:59 preferences.json\n-rw-r--r--   1 nicolasgambelluri  staff   9,6K 18 giu 22:30 README_AGENTS.md\n-rw-r--r--   1 nicolasgambelluri  staff   4,7K 18 giu 21:44 README_DEEP_RESEARCH.md\n-rw-r--r--   1 nicolasgambelluri  staff   7,2K 18 giu 12:38 README_LEVEL3.md\n-rw-r--r--   1 nicolasgambelluri  staff   2,7K 19 giu 06:13 README.md\n-rw-r--r--   1 nicolasgambelluri  staff   171B 18 giu 12:38 requirements_level3.txt\n-rw-r--r--   1 nicolasgambelluri  staff   170B 18 giu 21:46 requirements.txt\ndrwxr-xr-x   3 nicolasgambelluri  staff    96B 18 giu 12:38 scripts\n-rw-r--r--   1 nicolasgambelluri  staff   1,6K 18 giu 18:59 self_rules.json\ndrwxr-xr-x@  4 nicolasgambelluri  staff   128B 19 giu 06:18 static\n-rw-r--r--   1 nicolasgambelluri  staff   4,3K 18 giu 18:59 system_prompt.txt\n-rw-r--r--   1 nicolasgambelluri  staff    43K 18 giu 18:02 test_nik29_full.py\n-rw-r--r--   1 nicolasgambelluri  staff    12K 18 giu 18:30 test_nik29_human.py\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Nella root non c’è la cartella workspace e non si vede neanche il file appena caricato. Probabilmente il file non è stato salvato nella directory giusta. Dimmi il nome preciso del file che hai caricato, così lo cerco ovunque e lo uso per il test sull’agente immagini."
+    }
+  ],
+  "updated_at": "2026-06-19T16:20:34.579028+00:00"
+}

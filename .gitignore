@@ -4,3 +4,4 @@ data/memory/conversations/
 apply_fix.sh
 fix_agent.sh
 .env
+.env

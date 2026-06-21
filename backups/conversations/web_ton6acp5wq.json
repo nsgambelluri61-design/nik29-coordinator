@@ -1,0 +1,14 @@
+{
+  "conversation_id": "web_ton6acp5wq",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! Dimmi pure cosa vuoi fare."
+    }
+  ],
+  "updated_at": "2026-06-19T14:08:11.637368+00:00"
+}

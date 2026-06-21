@@ -15,6 +15,9 @@ Auto-salva nuovi apprendimenti alla fine di ogni conversazione.
 
 import os
 import json
+import asyncio
+from app.semantic_memory import save_memory_semantic
+
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
@@ -402,6 +405,12 @@ def extract_and_save_learnings(messages: list, conversation_id: str) -> None:
         data["facts"] = facts_list[-200:]
         _save_json_safe(FACTS_FILE, data)
         logger.info(f"Auto-salvati {len(new_facts)} nuovi fatti dalla conversazione {conversation_id}")
+        # Salvataggio semantico in background
+        for fact in new_facts[:3]:
+            try:
+                asyncio.create_task(save_memory_semantic(fact, {"source": "facts.json", "category": "auto_learned"}))
+            except Exception as e:
+                logger.error(f"Errore salvataggio semantico: {e}")
     
     # Salva nuove preferenze
     if new_preferences:
@@ -418,6 +427,13 @@ def extract_and_save_learnings(messages: list, conversation_id: str) -> None:
         data["preferences"] = prefs
         _save_json_safe(PREFERENCES_FILE, data)
         logger.info(f"Auto-salvate {len(new_preferences)} nuove preferenze dalla conversazione {conversation_id}")
+        # Salvataggio semantico in background
+        for pref in new_preferences[:3]:
+            try:
+                text = f"Preferenza: {pref}"
+                asyncio.create_task(save_memory_semantic(text, {"source": "preferences.json", "type": "auto_learned"}))
+            except Exception as e:
+                logger.error(f"Errore salvataggio semantico: {e}")
 
 
 def _fact_already_exists(fact_text: str) -> bool:
