@@ -2,9 +2,16 @@
   "agents": [
     {
       "name": "immagini",
-      "description": "Agente immagini autonomo: analisi Vision, editing, scontorno, composizione, pipeline",
+      "description": "Sub-agente immagini Docker: scontorno, analisi Vision, editing, composizione. Comunica via rete Docker interna.",
       "url": "http://nik29-images:4002",
-      "capabilities": ["analyze", "edit", "remove_bg", "composite", "pipeline"]
+      "capabilities": [
+        "analyze",
+        "edit",
+        "remove_bg",
+        "composite",
+        "pipeline",
+        "scontorno"
+      ]
     }
   ]
 }

@@ -235,6 +235,11 @@
       "category": "architettura",
       "timestamp": "2026-06-21T14:43:16Z",
       "source": "manus"
+    },
+    {
+      "fact": "Quando il bridge sulla porta 4010 è attivo, posso eseguire comandi e controlli direttamente sul Mac host tramite terminale. Se il bridge non risponde, vedo solo lo stato dei container Docker, non il Mac vero e proprio.",
+      "category": "controllo_bridge_mac",
+      "saved_at": "2026-06-22T08:20:08.855618+00:00"
     }
   ]
 }

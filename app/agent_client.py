@@ -295,6 +295,58 @@ class AgentClient:
                             )
                     # --- FINE NUOVO ---
 
+                    # --- FIX_IMAGE_PREVIEW_APPLIED ---
+                    # Fallback a 3 livelli: genera markdown inline anche quando
+                    # nik29-images non restituisce output_files espliciti.
+                    if not output_files:
+                        import re as _re
+                        import os as _os
+                        import pathlib as _pl
+
+                        # Livello 1: path assoluto /data/workspace/nome.png nel testo
+                        ws_paths = _re.findall(
+                            r'(/(?:data|app/data)/workspace/[^\s\)\]]+\.(?:png|jpg|jpeg|gif|webp))',
+                            result_text, _re.IGNORECASE
+                        )
+                        for wp in ws_paths:
+                            fname = _os.path.basename(wp)
+                            furl  = f"{HOST_URL}/files/{fname}"
+                            if furl not in result_text and _os.path.exists(wp):
+                                result_text += f"\n\n![{fname}]({furl})\n[⬇ Scarica {fname}]({furl})"
+                                logger.info(f"[FIX_IMAGE_PREVIEW] markdown da path: {wp}")
+
+                        # Livello 2: nome file immagine nel testo, verificato nel workspace
+                        if not ws_paths:
+                            img_names = _re.findall(
+                                r'\b([a-zA-Z0-9_\-\.]+\.(?:png|jpg|jpeg|gif|webp))\b',
+                                result_text, _re.IGNORECASE
+                            )
+                            for fname in list(dict.fromkeys(img_names)):
+                                fpath = _os.path.join(WORKSPACE_DIR, fname)
+                                if _os.path.exists(fpath):
+                                    furl = f"{HOST_URL}/files/{fname}"
+                                    if furl not in result_text:
+                                        result_text += f"\n\n![{fname}]({furl})\n[⬇ Scarica {fname}]({furl})"
+                                        logger.info(f"[FIX_IMAGE_PREVIEW] markdown da nome: {fname}")
+
+                        # Livello 3: parole chiave → file più recente nel workspace
+                        if not ws_paths and "![" not in result_text:
+                            _kws = ["scontorn", "rimoss", "sfondo", "background",
+                                    "rembg", "processata", "elaborata", "completato",
+                                    "successo", "output", "risultato"]
+                            if any(kw in result_text.lower() for kw in _kws):
+                                ws = _pl.Path(WORKSPACE_DIR)
+                                if ws.exists():
+                                    _exts = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
+                                    _imgs = [f for f in ws.iterdir()
+                                             if f.is_file() and f.suffix.lower() in _exts]
+                                    if _imgs:
+                                        latest = max(_imgs, key=lambda f: f.stat().st_mtime)
+                                        furl = f"{HOST_URL}/files/{latest.name}"
+                                        result_text += f"\n\n![{latest.name}]({furl})\n[⬇ Scarica {latest.name}]({furl})"
+                                        logger.info(f"[FIX_IMAGE_PREVIEW] markdown da file recente: {latest.name}")
+                    # --- FINE FIX_IMAGE_PREVIEW_APPLIED ---
+
                     return result_text
                 else:
                     return f"Errore dall'agente {agent_name}: HTTP {resp.status_code} - {resp.text[:200]}"

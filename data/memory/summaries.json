@@ -439,9 +439,15 @@
     "web_g5pq1ujr2ap": {
       "conversation_id": "web_g5pq1ujr2ap",
       "last_topic": "ciao",
-      "key_points": [],
-      "message_count": 2,
-      "updated_at": "2026-06-20T08:52:22.705679+00:00"
+      "key_points": [
+        "che ora sono da te",
+        "tu il mac lo vedi ?",
+        "si  lo stato del disco rigido ssd",
+        "e il tuto stato ?",
+        "ma anche sulla porta 4010"
+      ],
+      "message_count": 38,
+      "updated_at": "2026-06-22T08:20:11.061960+00:00"
     },
     "web_bmhuwm5fku7": {
       "conversation_id": "web_bmhuwm5fku7",

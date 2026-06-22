@@ -453,5 +453,74 @@
       }
     },
     "overall_status": "healthy"
+  },
+  {
+    "type": "auto_debug",
+    "timestamp": "2026-06-21T18:05:32.282109+00:00",
+    "issue": "nik29-images timeout o carico eccessivo: scontorno materasso fallisce sempre.",
+    "action_taken": "restart_container",
+    "steps": [
+      "Restarting container: nik29-images",
+      "Result: {'error': 'Endpoint non trovato', 'path': '/execute'}",
+      "Container may not have restarted correctly."
+    ],
+    "resolved": false
+  },
+  {
+    "timestamp": "2026-06-21T18:37:07.300375+00:00",
+    "checks": {
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-21T19:03:48.366125+00:00",
+    "checks": {
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
+  },
+  {
+    "timestamp": "2026-06-22T08:16:45.690740+00:00",
+    "checks": {
+      "disk": {
+        "root_usage": "unknown",
+        "warning": false
+      }
+    },
+    "overall_status": "healthy"
+  },
+  {
+    "timestamp": "2026-06-22T08:17:10.056687+00:00",
+    "checks": {
+      "website": {
+        "url": "https://ildormire.com",
+        "status_code": 200,
+        "reachable": true,
+        "error": null
+      },
+      "docker": {
+        "containers": [],
+        "count": 0,
+        "bridge_reachable": false
+      },
+      "disk": {
+        "root_usage": "unknown",
+        "warning": false
+      },
+      "memory": {
+        "raw": "unavailable",
+        "bridge_reachable": false
+      }
+    },
+    "overall_status": "degraded"
   }
 ]

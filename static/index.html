@@ -1238,7 +1238,39 @@
             opacity: 0.5;
             transition: opacity 0.15s ease;
         }
-    </style>
+    
+        /* Anteprima immagini in chat - ridimensionate */
+        .message-content img {
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: block;
+            margin: 8px 0;
+        }
+        .message-content img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        /* Overlay full-size */
+        .img-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            cursor: zoom-out;
+        }
+        .img-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+
+        </style>
 </head>
 <body>
     <!-- Sidebar -->
@@ -1711,6 +1743,7 @@
 
         function clearMessages() {
             messagesContainer.innerHTML = '';
+            localStorage.removeItem('nik29_chat_history');
             const es = document.createElement('div');
             es.className = 'empty-state';
             es.id = 'emptyState';
@@ -2035,7 +2068,11 @@
                     };
                 });
             } else {
-                contentDiv.textContent = content;
+                if (typeof content === 'string' && content.includes('[object Object]')) {
+                    contentDiv.textContent = content.replace(/\[object Object\]/g, '').replace(/^,|,$/g, '').trim();
+                } else {
+                    contentDiv.textContent = content;
+                }
             }
 
             msgDiv.appendChild(avatar);
@@ -2189,6 +2226,127 @@
                 wrapper.appendChild(btn);
             });
         }
+
+        
+        // === LOCAL STORAGE PERSISTENCE ===
+        function saveMessages() {
+            const msgs = [];
+            document.querySelectorAll('.message').forEach(msg => {
+                if (msg.id === 'emptyState' || msg.id === 'typingIndicator' || msg.id === 'toolIndicator' || msg.hasAttribute('data-streaming')) return;
+                
+                const role = msg.classList.contains('user') ? 'user' : 'assistant';
+                const contentDiv = msg.querySelector('.message-content');
+                if (!contentDiv) return;
+                
+                let textContent = '';
+                if (role === 'user') {
+                    // Prendi solo i nodi di testo diretti, non il testo dentro le card/immagini
+                    textContent = Array.from(contentDiv.childNodes)
+                        .filter(node => node.nodeType === Node.TEXT_NODE)
+                        .map(node => node.textContent)
+                        .join('')
+                        .trim();
+                } else {
+                    textContent = contentDiv.innerHTML;
+                }
+
+                // Estrai i file allegati
+                const files = [];
+                msg.querySelectorAll('.message-image').forEach(img => {
+                    files.push({ type: 'image/jpeg', url: img.src, name: img.alt || 'image.jpg' });
+                });
+                msg.querySelectorAll('.file-card').forEach(card => {
+                    const nameEl = card.querySelector('.file-card-name');
+                    files.push({ type: 'file', url: card.href, name: nameEl ? nameEl.textContent : 'file' });
+                });
+
+                msgs.push({ role, content: textContent, files });
+            });
+            localStorage.setItem('nik29_chat_history', JSON.stringify(msgs));
+        }
+
+        function loadMessages() {
+            const history = localStorage.getItem('nik29_chat_history');
+            if (history) {
+                try {
+                    const msgs = JSON.parse(history);
+                    if (msgs.length > 0) {
+                        if (emptyState) emptyState.style.display = 'none';
+                        msgs.forEach(msg => {
+                            appendMessageFromHistory(msg.role, msg.content, msg.files);
+                        });
+                    }
+                } catch (e) {
+                    console.error('Errore nel caricamento della cronologia:', e);
+                }
+            }
+        }
+
+        function appendMessageFromHistory(role, content, files = []) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${role}`;
+
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = role === 'user' ? 'U' : 'N';
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+
+            if (role === 'assistant') {
+                contentDiv.innerHTML = content;
+                addCopyButtons(contentDiv);
+                
+                const copyMsgBtn = document.createElement('button');
+                copyMsgBtn.className = 'copy-msg-btn';
+                copyMsgBtn.textContent = 'Copia';
+                copyMsgBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    navigator.clipboard.writeText(contentDiv.innerText);
+                    copyMsgBtn.textContent = 'Copiato!';
+                    setTimeout(() => copyMsgBtn.textContent = 'Copia', 2000);
+                };
+                msgDiv.appendChild(copyMsgBtn);
+            } else {
+                if (typeof content === 'string' && content.includes('[object Object]')) {
+                    contentDiv.textContent = content.replace(/\[object Object\]/g, '').replace(/^,|,$/g, '').trim();
+                } else {
+                    contentDiv.textContent = content;
+                }
+            }
+
+            if (files && files.length > 0) {
+                files.forEach(file => {
+                    if (file.type && file.type.startsWith('image/')) {
+                        const img = document.createElement('img');
+                        img.className = 'message-image';
+                        img.src = file.url;
+                        img.alt = file.name;
+                        contentDiv.appendChild(img);
+                    } else {
+                        const card = createFileCard(file.name, null, file.url);
+                        contentDiv.appendChild(card);
+                    }
+                });
+            }
+
+            msgDiv.appendChild(avatar);
+            msgDiv.appendChild(contentDiv);
+            messagesContainer.appendChild(msgDiv);
+        }
+
+        // Intercetta l'aggiunta di messaggi per salvare
+        const originalAppendMessage = appendMessage;
+        appendMessage = function(role, content, files) {
+            originalAppendMessage(role, content, files);
+            saveMessages();
+        };
+
+        const originalFinalizeStreamingMessage = finalizeStreamingMessage;
+        finalizeStreamingMessage = function() {
+            originalFinalizeStreamingMessage();
+            saveMessages();
+        };
 
         // === SEND MESSAGE ===
         async function sendMessage() {
@@ -2534,11 +2692,29 @@
             }
         });
 
-        // === INITIALIZE ===
+                // === INITIALIZE ===
+        loadMessages();
         connectWebSocket();
         loadConversations();
         loadProjects();
         messageInput.focus();
+    
+        // Click immagine per full-size
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'IMG' && e.target.closest('.message-content')) {
+                const overlay = document.createElement('div');
+                overlay.className = 'img-overlay';
+                const img = document.createElement('img');
+                img.src = e.target.src;
+                overlay.appendChild(img);
+                overlay.onclick = () => overlay.remove();
+                document.body.appendChild(overlay);
+            }
+            if (e.target.closest('.img-overlay')) {
+                e.target.closest('.img-overlay').remove();
+            }
+        });
+
     </script>
 </body>
 </html>

@@ -398,6 +398,48 @@
       "result": "Analisi: 1. **Descrizione dettagliata di cosa vedi:**  \nL’immagine mostra un materasso matrimoniale posizionato su una base rettangolare bianca, in un ambiente luminoso e minimalista. Il materasso ha una trapuntatura a quadri e maniglie laterali per facilitarne lo spostamento. Sullo sfondo si intravede una parte di una camera da letto con tende bianche leggere, un tavolino in legno chiaro e parte di un letto rifatto.\n\n2. **Tipo di prodotto:**  \nMaterasso (presumibilmente matrimoniale).\n\n3. **Val",
       "success": true,
       "timestamp": "2026-06-21T14:33:17.021993+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna il materasso (compresa la sezione azzurra a vista) e rendi lo sfondo trasparente. Salva il file in PNG.",
+      "result": "Timeout nella comunicazione con l'agente 'immagini' (timeout 180s superato). Il task potrebbe essere troppo complesso.",
+      "success": false,
+      "timestamp": "2026-06-21T17:34:54.586771+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna solo il materasso (senza base e sfondo), crea PNG trasparente. Riduci la qualità se serve per evitare timeout.",
+      "result": "Timeout nella comunicazione con l'agente 'immagini' (timeout 180s superato). Il task potrebbe essere troppo complesso.",
+      "success": false,
+      "timestamp": "2026-06-21T17:51:42.653515+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna questa immagine (materasso) e restituisci il file PNG con lo sfondo trasparente.",
+      "result": "Analisi: 1. **Descrizione dettagliata:**  \nL’immagine mostra un materasso matrimoniale posizionato su una base rettangolare bianca in un ambiente luminoso e moderno. Il materasso ha una trapuntatura a quadri regolari, con motivi leggermente visibili, e maniglie laterali per facilitarne lo spostamento. Sullo sfondo si intravede parte di una stanza con tende bianche leggere, un comodino in legno chiaro e una poltrona o letto parzialmente visibile.\n\n2. **Tipo di prodotto:**  \nMaterasso (probabilmen",
+      "success": true,
+      "timestamp": "2026-06-21T19:51:36.220284+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna questa immagine e restituisci il file PNG con lo sfondo trasparente.",
+      "result": "Analisi: Ecco l’analisi dettagliata dell’immagine fornita:\n\n1. **Descrizione dettagliata di cosa vedi**  \nL’immagine mostra un cerchio di colore viola con una grande lettera \"A\" bianca al centro. Lo sfondo esterno al cerchio è nero. Non sono presenti altri elementi visibili o dettagli riconducibili a prodotti fisici.\n\n2. **Tipo di prodotto (se presente)**  \nNon è presente alcun prodotto identificabile come materasso, cuscino, rete, topper o altri articoli per il sonno. L’immagine sembra essere u",
+      "success": true,
+      "timestamp": "2026-06-21T20:05:37.382240+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna questa immagine (materasso) e restituisci il file PNG con sfondo trasparente.",
+      "result": "Analisi: 1. **Descrizione dettagliata:**\nL'immagine mostra un materasso matrimoniale posizionato su una base rettangolare bianca, in un ambiente luminoso e moderno. Il materasso presenta una trapuntatura a quadri regolari e maniglie laterali per facilitarne lo spostamento. Sullo sfondo si intravede una stanza arredata in stile minimalista, con tende bianche leggere, un tavolino in legno chiaro e parte di un letto o divano con cuscini bianchi.\n\n2. **Tipo di prodotto:**  \nMaterasso (probabilmente ",
+      "success": true,
+      "timestamp": "2026-06-21T20:15:50.650350+00:00"
+    },
+    {
+      "agent": "immagini",
+      "instruction": "Scontorna questa immagine (materasso) togliendo tutto lo sfondo, senza alterare i bordi del prodotto.",
+      "result": "Analisi: 1. **Descrizione dettagliata**:  \nL'immagine mostra un materasso matrimoniale posizionato su una base bianca rialzata, in un ambiente luminoso e minimalista. Il materasso ha una trapuntatura a quadri e un rivestimento chiaro, probabilmente in tessuto jacquard o simile, con motivi decorativi tono su tono. Sono visibili due maniglie laterali per facilitare lo spostamento. Sullo sfondo si intravede parte di una camera da letto con tende bianche leggere, un comodino in legno chiaro e un let",
+      "success": true,
+      "timestamp": "2026-06-22T08:21:54.048919+00:00"
     }
   ]
 }
